@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
+import Header from '../components/header/Header'
 
-function Home() {
+const Home: FC = () => {
    return (
       <div className="home-page">
+         <Header />
          <div>Home Page</div>
       </div>
    )

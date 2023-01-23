@@ -1,0 +1,41 @@
+.header {
+   margin: 24px 40px;
+   display: flex;
+   align-items: center;
+   gap: 48px;
+   background-color: #fff;
+}
+
+.header__logo {
+   width: 213px;
+   height: 64px;
+}
+
+.header__links {
+   display: flex;
+}
+
+.header-link {
+   display: flex;
+   align-items: center;
+   padding: 16px 24px;
+   gap: 16px;
+}
+
+
+.header-link__title {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 160%;
+   color: #4B5563;
+}
+
+.header__btns {
+   display: flex;
+   align-items: center;
+   padding: 0;
+   height: 48px;
+   /* align-items: flex-start; */
+   margin-left: auto;
+   gap: 16px;
+}
