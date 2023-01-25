@@ -1,2 +1,0 @@
-# otgadaymelody-web
-otgadaymelody website
