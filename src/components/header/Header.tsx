@@ -9,7 +9,7 @@ import corp from '../../assets/images/header/03_corp.svg'
 import franchise from '../../assets/images/header/04_franchise.svg'
 import location from '../../assets/images/header/Location.svg'
 import "./Header.css"
-import GreenButton from '../GreenButton/GreenButton'
+import BaseButton from '../GreenButton/GreenButton'
 
 const Header: FC = () => {
   return (
@@ -22,7 +22,7 @@ const Header: FC = () => {
             <HeaderLink title='Франшиза' img={franchise}/>
          </div>
          <div className='header__btns'>
-            <GreenButton title='Нижний Новгород' img={location}/>
+            <BaseButton title='Нижний Новгород' img={location}/>
             <TgLogo />
             <VkLogo />
          </div>

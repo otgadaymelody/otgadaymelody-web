@@ -1,8 +1,9 @@
 .btn {
+   box-sizing: border-box;
    display: flex;
    align-items: center;
    background: #C2D72F;
-   height: 14px;
+   height: 48px;
    
    border: 1px solid #C2D72F;
    border-radius: 53px;
@@ -11,14 +12,17 @@
    gap: 8px;
 }
 
-.btn__btn {
-   display: none;
-}
-
 .btn__title {
    color: #fff;
    font-weight: 700;
    font-size: 16px;
    line-height: 140%;
    letter-spacing: 0.01em;
+   /* display: none; */
 }
+
+.btn__title:hover {
+   color: red;
+}
+
+
