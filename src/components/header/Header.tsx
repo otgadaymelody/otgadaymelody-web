@@ -13,7 +13,7 @@ import BaseButton from '../base-button/BaseButton'
 
 const Header: FC = () => {
   return (
-      <header className='header'>
+      <nav className='header'>
          <Logo className='header__logo'/>
          <div className='header__links'>
             <HeaderLink title='Расписание игр' img={schedule}/> 
@@ -27,7 +27,7 @@ const Header: FC = () => {
             <VkLogo />
          </div>
 
-      </header>
+      </nav>
   )
 }
 

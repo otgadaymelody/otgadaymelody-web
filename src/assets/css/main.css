@@ -1,7 +1,7 @@
 :root {
    /* === Fonts === */
-   --font-family-headers: Druk Text Wide Cyr; /* Заголовочный шрифт */
-   --font-family-descriptions: Montserrat; /* Описательный шрифт */
+   --font-family-headers: 'Druk Text Wide Cyr'; /* Заголовочный шрифт */
+   --font-family-descriptions: 'Montserrat'; /* Описательный шрифт */
 
    /* Titles */
    --fonts-h1-main-title: 900 56px/1.4 var(--font-family-headers), sans-serif;
@@ -25,6 +25,7 @@
    --fonts-registration-button-title: 600 18px/1.4 var(--font-family-descriptions), sans-serif;
    --fonts-registration-button-title: 500 18px/1.4 var(--font-family-descriptions), sans-serif;
 
+   --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions), sans-serif;
    --fonts-navigation-link: 500 16px/1.4 var(--font-family-descriptions), sans-serif;
 
 
