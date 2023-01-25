@@ -5,7 +5,7 @@ const Home: FC = () => {
    return (
       <div className="home-page">
          <Header />
-         <div>Home Page</div>
+         <div className='test-div'>Home Page</div>
       </div>
    )
 }

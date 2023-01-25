@@ -7,9 +7,9 @@ import schedule from '../../assets/images/header/01_schedule.svg'
 import album from '../../assets/images/header/02_album.svg'
 import corp from '../../assets/images/header/03_corp.svg'
 import franchise from '../../assets/images/header/04_franchise.svg'
-import location from '../../assets/images/header/Location.svg'
+import location from '../../assets/images/header/location.svg'
 import "./Header.css"
-import BaseButton from '../GreenButton/GreenButton'
+import BaseButton from '../base-button/BaseButton'
 
 const Header: FC = () => {
   return (
