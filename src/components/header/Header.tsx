@@ -13,21 +13,21 @@ import BaseButton from '../base-button/BaseButton'
 
 const Header: FC = () => {
   return (
-      <nav className='header'>
+      <header className='header'>
          <Logo className='header__logo'/>
-         <div className='header__links'>
+         <nav className='header__links'>
             <HeaderLink title='Расписание игр' img={schedule}/> 
             <HeaderLink title='Фотоотчеты' img={album}/>
             <HeaderLink title='Корпоративы' img={corp}/>
             <HeaderLink title='Франшиза' img={franchise}/>
-         </div>
+         </nav>
          <div className='header__btns'>
             <BaseButton title='Нижний Новгород' img={location}/>
             <TgLogo />
             <VkLogo />
          </div>
 
-      </nav>
+      </header>
   )
 }
 
