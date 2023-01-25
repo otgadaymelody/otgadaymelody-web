@@ -12,7 +12,7 @@ const BaseButton: FC<BaseButtonProps> = ({title, img}) => {
   return (
       <button className='btn' onClick={() => console.log("Click BTN")}>
          <img className='btn__image' src={img} alt=""/>
-         <span className='btn__title'>{title}</span>
+         {title !== '' && <span className='btn__title'>{title}</span>}
       </button>
   )
 }
