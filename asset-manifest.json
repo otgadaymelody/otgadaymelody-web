@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/otgadaymelody-web/static/css/main.791929f7.css",
-    "main.js": "/otgadaymelody-web/static/js/main.2cba631d.js",
+    "main.js": "/otgadaymelody-web/static/js/main.0a5ee947.js",
     "static/media/druk-text-wide-cyr-700.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-700.0bb4b28b0c4e31f94418.woff",
     "static/media/druk-text-wide-cyr-900.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-900.bca4bcb3205a7c74ea79.woff",
     "static/media/druk-text-wide-cyr-500.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-500.eb546dc5c7250196e6f2.woff",
@@ -24,10 +24,10 @@
     "static/media/04_franchise.svg": "/otgadaymelody-web/static/media/04_franchise.f7c81c3626de624d919a830c84b48abd.svg",
     "index.html": "/otgadaymelody-web/index.html",
     "main.791929f7.css.map": "/otgadaymelody-web/static/css/main.791929f7.css.map",
-    "main.2cba631d.js.map": "/otgadaymelody-web/static/js/main.2cba631d.js.map"
+    "main.0a5ee947.js.map": "/otgadaymelody-web/static/js/main.0a5ee947.js.map"
   },
   "entrypoints": [
     "static/css/main.791929f7.css",
-    "static/js/main.2cba631d.js"
+    "static/js/main.0a5ee947.js"
   ]
 }
