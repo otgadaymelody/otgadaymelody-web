@@ -1,0 +1,8 @@
+:root {
+   /* === Images === */
+   /* header images */
+   --images-header-schedule: url('../images/header/01_schedule.svg');
+
+   /* === Fonts === */
+   --fonts-header-link: 500 16px/1.4 Montserrat, sans-serif;
+}
