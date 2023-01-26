@@ -32,7 +32,9 @@
    transition: box-shadow 150ms ease-in, border-radius 150ms ease-in;
 }
 
-
+.header-link__show-on-click {
+   display: none;
+}
 
 .header-link__title {
    font: var(--fonts-navigation-link);
@@ -41,35 +43,15 @@
    line-height: 140%; */
    color: var(--color-bg-gray-600);
 
-   /**
-   * Для эксплорера
-   */
    -ms-user-select: none;
-
-   /**
-   * Для мозилы
-   */
    -moz-user-select: none;
-
-   /**
-   * Для конкверора
-   */
    -khtml-user-select: none;
-
-   /**
-   * Для Сафари и Хрома
-   */
    -webkit-user-select: none;
 }
 
-.header__btns {
-   display: flex;
-   align-items: center;
-   padding: 0;
-   height: 48px;
-   /* align-items: flex-start; */
-   /* margin-left: auto; */
-   gap: 16px;
+.header-link__img {
+   background-image: var(--images-header-schedule);
+   background-color: red;
 }
 
 .header-link:hover {
@@ -84,3 +66,46 @@
    border-radius: 16px;
 }
 
+.header-link:active span {
+   color: var(--color-lime);
+}
+
+.header-link:active .header-link__show-on-click {
+   display: block;
+}
+
+.header-link:active .header-link__hide-on-click {
+   display: none;
+}
+
+
+.header__btns {
+   display: flex;
+   align-items: center;
+   padding: 0;
+   height: 48px;
+   /* align-items: flex-start; */
+   /* margin-left: auto; */
+   gap: 16px;
+}
+
+@media (max-width: 1919px) {
+   .header-link__title {
+      font-size: 14px;
+   }
+
+   .header__btns {
+      font-size: 14px;
+   }
+   
+}
+
+@media (max-width: 743px) {
+   .header {
+      padding: 16px 18px;
+   }
+   .header__logo {
+      height: 42px;
+   }
+   
+}

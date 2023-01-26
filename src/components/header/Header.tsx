@@ -4,10 +4,8 @@ import { ReactComponent as Logo } from '../../assets/images/header/logo.svg'
 import { ReactComponent as TgLogo } from '../../assets/images/header/tg.svg'
 import { ReactComponent as VkLogo } from '../../assets/images/header/vk.svg'
 import { ReactComponent as BurgerBtn } from '../../assets/images/header/burger-menu.svg'
-import schedule from '../../assets/images/header/01_schedule.svg'
-import album from '../../assets/images/header/02_album.svg'
-import corp from '../../assets/images/header/03_corp.svg'
-import franchise from '../../assets/images/header/04_franchise.svg'
+import { ReactComponent as LocationBtn } from '../../assets/images/header/loc_button.svg'
+import { navImages } from './nav-images'
 import location from '../../assets/images/header/loc.svg'
 import "./Header.css"
 import BaseButton from '../base-button/BaseButton'
@@ -24,10 +22,10 @@ const Header: FC = () => {
 
             { width > 1439 &&             
                <nav className='header__links'>
-                  <HeaderLink title='Расписание игр' img={schedule}/> 
-                  <HeaderLink title='Фотоотчеты' img={album}/>
-                  <HeaderLink title='Корпоративы' img={corp}/>
-                  <HeaderLink title='Франшиза' img={franchise}/>
+                  <HeaderLink title='Расписание игр' img={navImages[0]}/> 
+                  <HeaderLink title='Фотоотчеты' img={navImages[1]}/>
+                  <HeaderLink title='Корпоративы' img={navImages[2]}/>
+                  <HeaderLink title='Франшиза' img={navImages[3]}/>
                </nav>
             }
 
@@ -39,7 +37,7 @@ const Header: FC = () => {
                <VkLogo /> 
             </div>
          :
-            <BaseButton title='' img={location} />
+            <LocationBtn />
          }
 
       </header>
