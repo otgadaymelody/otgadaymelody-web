@@ -1,0 +1,20 @@
+.banner__background{
+   width: 100%;
+   height: 800px;
+   padding: 88px;
+}
+
+.banner__info {
+   /* margin: 88px; */
+   width: 904px;
+}
+
+.banner__info h1 {
+   font: var(--fonts-h1-main-title);
+   color: var(--color-bg-white);
+}
+
+.banner__info p {
+   font: var(--fonts-p-main-description);
+   color: var(--color-bg-white);
+}

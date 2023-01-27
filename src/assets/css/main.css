@@ -48,6 +48,10 @@
   --images-header-tg: url("../images/header/tg.svg");
   --images-header-vk: url("../images/header/vk.svg");
 
+  /* Home Page images */
+  --images-banner: url("../images/home-page/banner-image.png");
+  --images-mediator-1: url("../images/home-page/mediator-1.svg");
+
   /* === Colors === */
   --color-bg-gray-900: rgba(17, 24, 39, 1);
   --color-bg-gray-700: rgba(55, 65, 81, 1);
@@ -68,6 +72,11 @@
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02),
     -3px 30px 30px rgba(21, 41, 68, 0.03), -1px 7px 16px rgba(21, 41, 68, 0.03),
     0px 0px 0px rgba(21, 41, 68, 0.03);
+
+  /* Masks */
+  --banner-mask: linear-gradient(0deg, rgba(255, 64, 64, 0.1), 
+    rgba(255, 64, 64, 0.1)), linear-gradient(0deg, rgba(255, 64, 64, 0.5), 
+    rgba(255, 64, 64, 0.5));
 }
 
 /* .home-page {
@@ -87,3 +96,17 @@
    font: var(--fonts-h1-headline);
 
 } */
+
+/* .banner-image {
+  max-width: 100%;
+  height: auto;
+  mask-image: var(--images-mediator-1);
+  mask-size: 70%;
+  mask-repeat: no-repeat;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+} */
+
+.container {
+  max-width: 1920px;
+  padding: 0 24px;
+}
