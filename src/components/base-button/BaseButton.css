@@ -14,12 +14,10 @@
 
 .btn__title {
    color: var(--color-bg-white);
-   /* font: var(--fonts-city-list-button); */
    font-weight: 700;
    font-size: 16px;
    line-height: 140%;
    letter-spacing: 1%;
-   /* display: none; */
 }
 
 .btn__title:hover {

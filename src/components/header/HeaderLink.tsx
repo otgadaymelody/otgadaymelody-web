@@ -6,7 +6,6 @@ type HeaderLinkProps = {
 }
 
 const HeaderLink: FC<HeaderLinkProps> = ({title, img}) => {
-  console.log(img);
   return (
     <div className='header__header-link header-link'>
       <img className='header-link__hide-on-click' src={img[0]} alt="img"></img>
