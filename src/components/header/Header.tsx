@@ -13,14 +13,15 @@ import useDeviceType from '../../hooks/useDeviceType'
 
 const Header: FC = () => {
    const deviceType = useDeviceType();
+   const isDesktop = deviceType === 'desktop';
 
    return (
       <header className='header'>
-         { deviceType !== 'desktop' && <BurgerBtn />}
+         { !isDesktop && <BurgerBtn />}
          <div className="header__navbar">
             <Logo className='header__logo'/>
 
-            { deviceType === 'desktop' &&             
+            { isDesktop &&             
                <nav className='header__links'>
                   <HeaderLink title='Расписание игр' img={navImages[0]}/> 
                   <HeaderLink title='Фотоотчеты' img={navImages[1]}/>
@@ -30,14 +31,14 @@ const Header: FC = () => {
             }
 
          </div>
-         { deviceType === 'desktop'  ? 
+         { isDesktop  ? 
             <div className='header__btns'>
                <BaseButton title='Нижний Новгород' img={location}/>
                <TgLogo />
                <VkLogo /> 
             </div>
          :
-            <LocationBtn />
+            <LocationBtn className='header__location-btn'/>
          }
 
       </header>
