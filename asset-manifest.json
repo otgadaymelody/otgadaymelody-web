@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.c6bfb8c8.css",
+    "main.css": "/otgadaymelody-web/static/css/main.8e00b3c0.css",
     "main.js": "/otgadaymelody-web/static/js/main.73910cbf.js",
     "static/media/druk-text-wide-cyr-700.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-700.0bb4b28b0c4e31f94418.woff",
     "static/media/druk-text-wide-cyr-900.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-900.bca4bcb3205a7c74ea79.woff",
@@ -30,11 +30,11 @@
     "index.html": "/otgadaymelody-web/index.html",
     "static/media/burger-menu.svg": "/otgadaymelody-web/static/media/burger-menu.ff558381ceaa57e827d958db43a536a1.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.c6bfb8c8.css.map": "/otgadaymelody-web/static/css/main.c6bfb8c8.css.map",
+    "main.8e00b3c0.css.map": "/otgadaymelody-web/static/css/main.8e00b3c0.css.map",
     "main.73910cbf.js.map": "/otgadaymelody-web/static/js/main.73910cbf.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6bfb8c8.css",
+    "static/css/main.8e00b3c0.css",
     "static/js/main.73910cbf.js"
   ]
 }
