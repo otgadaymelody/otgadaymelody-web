@@ -10,6 +10,7 @@ import location from '../../assets/images/header/loc.svg'
 import "./Header.css"
 import BaseButton from '../base-button/BaseButton'
 import useDeviceType from '../../hooks/useDeviceType'
+import BurgerMenu from './burger-menu/BurgerMenu'
 
 const Header: FC = () => {
    const deviceType = useDeviceType();
@@ -40,7 +41,7 @@ const Header: FC = () => {
          :
             <LocationBtn className='header__location-btn'/>
          }
-
+         <BurgerMenu />
       </header>
   )
 }
