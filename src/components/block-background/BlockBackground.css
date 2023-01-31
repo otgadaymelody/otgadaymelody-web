@@ -1,4 +1,12 @@
 .block-background {
    background: var(--color-gradient);
    border-radius: 64px;
+   overflow: hidden;
+}
+
+.block-background__mediator {
+   /* transform: rotate(45deg); */
+   position: absolute;
+   top: 10px;
+   left: 10px;
 }

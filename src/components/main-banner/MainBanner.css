@@ -18,3 +18,7 @@
    font: var(--fonts-p-main-description);
    color: var(--color-bg-white);
 }
+
+.banner__info span {
+   color: var(--color-lime);
+}
