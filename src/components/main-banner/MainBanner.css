@@ -18,6 +18,10 @@
    text-align: center;
 }
 
+.banner__main-text {
+   z-index: 15;
+}
+
 .banner__info h1 {
    font: var(--fonts-h1-main-title);
    color: var(--color-bg-white);
@@ -34,6 +38,18 @@
 
 .banner__reg-btn {
    max-width: 369px;
+   z-index: 15;
+}
+
+.banner__main-image {
+   position: absolute;
+   bottom: -80px;
+   width: 439px;
+   height: 385px;
+   mask-image: url("../../assets/images/home-page/mediator-top-left.svg");
+   mask-repeat: no-repeat;
+   mask-size: 90%;
+   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 
