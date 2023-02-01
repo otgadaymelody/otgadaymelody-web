@@ -13,14 +13,16 @@ const MainBanner = () => {
 
   return (
     <BlockBackground className="banner__background" mediatorsClasses={mediatorClasses}>
-      {/* <div className="banner__info">
-        <h1><span>Музыкальные</span> битвы 
-        в формате - <span>квиз игры</span></h1>
-        <p>Музыкальные битвы в формате — квиз игры, 
-          в которых команды должны за ограниченное время угадать музыкальные композиции.
-          В игре принимают участие команды по 5 человек.</p>
+      <div className="banner__info">
+        <div className="banner__main-text">
+          <h1><span className='banner__info__bold-title'>Музыкальные</span> битвы 
+          в формате - <span className='banner__info__bold-title'>квиз игры</span></h1>
+          <p>Музыкальные битвы в формате — квиз игры, 
+            в которых команды должны за ограниченное время угадать музыкальные композиции.
+            В игре принимают участие команды по 5 человек.</p>
+        </div>
         <BaseButton title='Расписание игр' img=''/>
-      </div> */}
+      </div>
     </BlockBackground>
   )
 }

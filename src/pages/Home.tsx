@@ -9,7 +9,6 @@ const Home: FC = () => {
          <Header />
          <div className="container">
             <MainBanner />
-            <div className='test-div'>Home Page</div>
          </div>
       </div>
    )

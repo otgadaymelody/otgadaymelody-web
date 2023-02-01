@@ -4,7 +4,7 @@
   --font-family-descriptions: "Montserrat"; /* Описательный шрифт */
 
   /* Titles */
-  --fonts-h1-main-title: 900 56px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h1-main-title: 900 24px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-block-title: 900 50px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-infographic-title: 700 50px/1.4 var(--font-family-headers),
     sans-serif;
@@ -18,7 +18,7 @@
   --fonts-p-infographic-description: 600 24px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-p-main-description: 500 24px/1.4 var(--font-family-descriptions),
+  --fonts-p-main-description: 500 16px/1.4 var(--font-family-descriptions),
     sans-serif;
   --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions),
     sans-serif;
