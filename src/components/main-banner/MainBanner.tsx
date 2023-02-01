@@ -23,8 +23,8 @@ const MainBanner = () => {
             В игре принимают участие команды по 5 человек.</p>
         </div>
         <BaseButton title='Расписание игр' className='banner__reg-btn'/>
-        <img src={bannerImg} className="banner__main-image"/>
       </div>
+      <img src={bannerImg} className="banner__main-image"/>
 
     </BlockBackground>
   )

@@ -1,6 +1,5 @@
 .block-background {
    background: var(--color-gradient);
-   /* border-radius: 64px; */
    position: relative;
    overflow: hidden;
 }

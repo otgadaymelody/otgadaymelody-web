@@ -1,6 +1,7 @@
 .banner__background{
    width: 100%;
-   height: 563px;
+   /* min-height: 563px; */
+   height: calc(563px + 20vw);
    border-radius: 38px;
    /* padding: 88px; */
 }
@@ -38,17 +39,19 @@
 
 .banner__reg-btn {
    max-width: 369px;
+   width: 100%;
    z-index: 15;
 }
 
 .banner__main-image {
    position: absolute;
-   bottom: -80px;
-   width: 439px;
+   bottom: -10%;
+   width: 533px;
    height: 385px;
-   mask-image: url("../../assets/images/home-page/mediator-top-left.svg");
+   mask-image: url("../../assets/images/home-page/mediator-top-right.svg");
    mask-repeat: no-repeat;
-   mask-size: 90%;
+   mask-size: 70%;
+   mask-position: 50% 60%;
    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -76,4 +79,10 @@
 
 .banner__mediator__bottom-right {
    display: none;
+}
+
+@media (min-width: 744px) {
+   .banner__background {
+      height: 783px;
+   }
 }
