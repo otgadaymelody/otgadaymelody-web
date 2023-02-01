@@ -1,16 +1,16 @@
 import React, { FC } from 'react'
 import './BaseButton.css'
 
-type BaseButtonProps = {
+interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
    title: string;
-   img: string;
+   img?: string;
 }
 
-const BaseButton: FC<BaseButtonProps> = ({title, img}) => {
+const BaseButton: FC<BaseButtonProps> = ({title, img, ...props}) => {
   return (
-      <button className='btn' onClick={() => console.log("Click BTN")}>
-         <img className='btn__image' src={img} alt=""/>
-         {title && <span className='btn__title'>{title}</span>}
+      <button className={["base-btn", props.className].join(' ')} onClick={() => console.log("Click BTN")}>
+         {img && <img className='base-btn__image' src={img} alt=""/>}
+         {title && <span className='base-btn__title'>{title}</span>}
       </button>
   )
 }

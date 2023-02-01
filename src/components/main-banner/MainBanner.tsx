@@ -21,8 +21,9 @@ const MainBanner = () => {
             в которых команды должны за ограниченное время угадать музыкальные композиции.
             В игре принимают участие команды по 5 человек.</p>
         </div>
-        <BaseButton title='Расписание игр' img=''/>
+        <BaseButton title='Расписание игр' className='banner__reg-btn'/>
       </div>
+
     </BlockBackground>
   )
 }

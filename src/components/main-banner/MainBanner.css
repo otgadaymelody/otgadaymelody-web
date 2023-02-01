@@ -14,7 +14,7 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   align-content: center;
+   align-items: center;
    text-align: center;
 }
 
@@ -30,6 +30,10 @@
 
 .banner__info__bold-title {
    color: var(--color-lime);
+}
+
+.banner__reg-btn {
+   max-width: 369px;
 }
 
 
