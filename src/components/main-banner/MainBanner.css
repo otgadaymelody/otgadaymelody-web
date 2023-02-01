@@ -1,7 +1,7 @@
 .banner__background{
    width: 100%;
-   height: 800px;
-   padding: 88px;
+   height: 563px;
+   /* padding: 88px; */
 }
 
 .banner__info {
@@ -21,4 +21,28 @@
 
 .banner__info span {
    color: var(--color-lime);
+}
+
+.banner__mediator__top-left {
+   width: 145.65px;
+   height: 127.88px;
+   top: -29px;
+   left: -28px;
+
+}
+
+.banner__mediator__top-right {
+   width: 107.85px;
+   height: 118.94px;
+   /* left: auto; */
+   right: -30.68px;
+   top: -43px;
+}
+
+.banner__mediator__bottom-left {
+   display: none;
+}
+
+.banner__mediator__bottom-right {
+   display: none;
 }

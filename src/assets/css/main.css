@@ -50,7 +50,6 @@
 
   /* Home Page images */
   --images-banner: url("../images/home-page/banner-image.png");
-  --images-mediator-1: url("../images/home-page/mediator-1.svg");
 
   /* === Colors === */
   --color-bg-gray-900: rgba(17, 24, 39, 1);
@@ -108,5 +107,5 @@
 
 .container {
   max-width: 1920px;
-  padding: 0 24px;
+  padding: 0 12px;
 }

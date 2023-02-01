@@ -6,10 +6,5 @@
 }
 
 .block-background__mediator {
-   transform: rotate(45deg);
    position: absolute;
-   height: 256px;
-   width: 260px;
-   top: -40px;
-   left: -40px;
 }

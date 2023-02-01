@@ -4,8 +4,15 @@ import BlockBackground from '../block-background/BlockBackground'
 import './MainBanner.css'
 
 const MainBanner = () => {
+  const mediatorClasses = {
+    topLeft: "banner__mediator__top-left",
+    topRight: "banner__mediator__top-right",
+    bottomLeft: "banner__mediator__bottom-left",
+    bottomRight: "banner__mediator__bottom-right"
+  }
+
   return (
-    <BlockBackground className="banner__background">
+    <BlockBackground className="banner__background" mediatorsClasses={mediatorClasses}>
       {/* <div className="banner__info">
         <h1><span>Музыкальные</span> битвы 
         в формате - <span>квиз игры</span></h1>
