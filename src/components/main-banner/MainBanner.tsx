@@ -12,6 +12,11 @@ const MainBanner = () => {
     bottomRight: "banner__mediator__bottom-right"
   }
 
+  const registrationBtnClasses = {
+    buttonForm: "banner__reg-btn",
+    buttonTitle: "banner_reg-btn-title"
+  }
+
   return (
     <BlockBackground className="banner__background" mediatorsClasses={mediatorClasses}>
       <div className="banner__info">
@@ -22,7 +27,7 @@ const MainBanner = () => {
             в которых команды должны за ограниченное время угадать музыкальные композиции.
             В игре принимают участие команды по 5 человек.</p>
         </div>
-        <BaseButton title='Расписание игр' className='banner__reg-btn'/>
+        <BaseButton title='Расписание игр' styles={registrationBtnClasses}/>
       </div>
       <img src={bannerImg} className="banner__main-image"/>
 

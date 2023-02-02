@@ -25,12 +25,10 @@
 
   --fonts-faq-block: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-registration-button-title: 600 18px/1.4
+  --fonts-registration-button-title: 600 16px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-registration-button-title: 500 18px/1.4
-      var(--font-family-descriptions),
-    sans-serif;
+    
 
   --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions),
     sans-serif;

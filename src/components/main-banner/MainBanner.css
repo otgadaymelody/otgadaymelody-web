@@ -42,6 +42,11 @@
   max-width: 369px;
   width: 100%;
   z-index: 15;
+  height: 52px;
+}
+
+.banner_reg-btn-title {
+  font: var(--fonts-registration-button-title);
 }
 
 .banner__main-image {
@@ -84,6 +89,8 @@
   display: none;
 }
 
+
+/* Media Queries */
 @media (min-width: 744px) {
   .banner__background {
     height: max(783px, calc((100vw - 200px) / 2.25));
@@ -124,6 +131,17 @@
 
   .banner__info p {
     font-size: 18px;
+  }
+
+  .banner__reg-btn {
+    padding: 16px 48px;
+    border: 2px solid var(--color-lime);
+    border-radius: 61px;
+    height: 58px;
+  }
+
+  .banner_reg-btn-title {
+    font-size: 20px;
   }
 }
 
