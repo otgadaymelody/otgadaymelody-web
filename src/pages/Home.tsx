@@ -7,8 +7,11 @@ const Home: FC = () => {
    return (
       <div className="home-page">
          <Header />
-         <div className="container">
-            <MainBanner />
+         <div className="home-page-block">
+            <div className="container">
+               <MainBanner />
+               <span>Home Page v.1.2</span>
+            </div>
          </div>
       </div>
    )

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import './BaseButton.css'
 
 interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-   title: string;
+   title?: string;
    img?: string;
 }
 
