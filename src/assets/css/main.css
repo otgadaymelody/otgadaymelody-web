@@ -28,7 +28,7 @@
   --fonts-registration-button-title: 600 16px/1.4
       var(--font-family-descriptions),
     sans-serif;
-    
+
 
   --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions),
     sans-serif;
@@ -103,7 +103,7 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 } */
 
-.home-page-block {
+.home-page-body {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -34,7 +34,7 @@
   color: var(--color-bg-white);
 }
 
-.banner__info__bold-title {
+.banner__info_bold-title {
   color: var(--color-lime);
 }
 
@@ -66,14 +66,14 @@
 }
 
 /* Mediators */
-.banner__mediator__top-left {
+.banner__mediator_top-left {
   width: 56%;
   height: 62%;
   top: -28%;
   left: -11%;
 }
 
-.banner__mediator__top-right {
+.banner__mediator_top-right {
   width: 107.85px;
   height: 118.94px;
   /* left: auto; */
@@ -81,11 +81,11 @@
   top: -43px;
 }
 
-.banner__mediator__bottom-left {
+.banner__mediator_bottom-left {
   display: none;
 }
 
-.banner__mediator__bottom-right {
+.banner__mediator_bottom-right {
   display: none;
 }
 
@@ -109,18 +109,18 @@
     mask-position: 50% 75%;
   }
 
-  .banner__mediator__bottom-left {
+  .banner__mediator_bottom-left {
     display: block;
     bottom: -49%;
     width: 29%;
     left: -8%;
   }
 
-  .banner__mediator__top-right {
+  .banner__mediator_top-right {
     display: none;
   }
 
-  .banner__mediator__top-left {
+  .banner__mediator_top-left {
     top: -35%;
     left: -20%;
   }

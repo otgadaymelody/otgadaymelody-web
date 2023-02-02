@@ -30,7 +30,7 @@
   transition: box-shadow 150ms ease-in, border-radius 150ms ease-in;
 }
 
-.header-link__show-on-click {
+.header-link_show-on-click {
   display: none;
 }
 
@@ -64,11 +64,11 @@
   color: var(--color-lime);
 }
 
-.header-link:active .header-link__show-on-click {
+.header-link:active .header-link_show-on-click {
   display: block;
 }
 
-.header-link:active .header-link__hide-on-click {
+.header-link:active .header-link_hide-on-click {
   display: none;
 }
 
