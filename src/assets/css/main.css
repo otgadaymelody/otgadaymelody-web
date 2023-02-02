@@ -4,7 +4,7 @@
   --font-family-descriptions: "Montserrat"; /* Описательный шрифт */
 
   /* Titles */
-  --fonts-h1-main-title: 900 56px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h1-main-title: 900 24px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-block-title: 900 50px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-infographic-title: 700 50px/1.4 var(--font-family-headers),
     sans-serif;
@@ -18,19 +18,17 @@
   --fonts-p-infographic-description: 600 24px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-p-main-description: 500 24px/1.4 var(--font-family-descriptions),
+  --fonts-p-main-description: 500 16px/1.4 var(--font-family-descriptions),
     sans-serif;
   --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions),
     sans-serif;
 
   --fonts-faq-block: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-registration-button-title: 600 18px/1.4
+  --fonts-registration-button-title: 600 16px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-registration-button-title: 500 18px/1.4
-      var(--font-family-descriptions),
-    sans-serif;
+
 
   --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions),
     sans-serif;
@@ -47,6 +45,9 @@
   --images-header-location: url("../images/header/loc.svg");
   --images-header-tg: url("../images/header/tg.svg");
   --images-header-vk: url("../images/header/vk.svg");
+
+  /* Home Page images */
+  --images-banner: url("../images/home-page/banner-image.png");
 
   /* === Colors === */
   --color-bg-gray-900: rgba(17, 24, 39, 1);
@@ -68,6 +69,11 @@
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02),
     -3px 30px 30px rgba(21, 41, 68, 0.03), -1px 7px 16px rgba(21, 41, 68, 0.03),
     0px 0px 0px rgba(21, 41, 68, 0.03);
+
+  /* Masks */
+  --banner-mask: linear-gradient(0deg, rgba(255, 64, 64, 0.1), 
+    rgba(255, 64, 64, 0.1)), linear-gradient(0deg, rgba(255, 64, 64, 0.5), 
+    rgba(255, 64, 64, 0.5));
 }
 
 /* .home-page {
@@ -87,3 +93,26 @@
    font: var(--fonts-h1-headline);
 
 } */
+
+/* .banner-image {
+  max-width: 100%;
+  height: auto;
+  mask-image: var(--images-mediator-1);
+  mask-size: 70%;
+  mask-repeat: no-repeat;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+} */
+
+.home-page-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+  padding: 0 12px;
+}
