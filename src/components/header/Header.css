@@ -93,14 +93,14 @@
 }
 
 @media (min-width: 1440px) {
-  .header {
-     padding: 24px 40px;
-  }
+   .header {
+      padding: 24px 40px;
+   }
 
-  .header__logo {
-     width: 159.75px;
-     height: 56px;
-  }
+   .header__logo {
+      width: 159.75px;
+      height: 56px;
+   }
 }
 
 @media (min-width: 1920px) {
