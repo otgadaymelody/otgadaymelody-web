@@ -61,6 +61,7 @@
   mask-size: 100%;
   mask-position: 27% -15%;
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   object-fit: cover;
   max-width: 780px;
 }

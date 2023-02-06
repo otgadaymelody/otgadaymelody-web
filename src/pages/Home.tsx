@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Header from '../components/header/Header'
 import MainBanner from '../components/main-banner/MainBanner'
-import useDeviceType from '../hooks/useDeviceType'
 
-const Home: FC = () => {
+const Home: React.FC = () => {
    return (
       <div className="home-page">
          <Header />
