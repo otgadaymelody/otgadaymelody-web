@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { type FC } from 'react'
 import { concatStyles } from '../../utils/concat-styles';
 import './BaseButton.css'
 
@@ -15,7 +15,7 @@ const BaseButton: FC<BaseButtonProps> = ({title, img, styles, ...props}) => {
   return (
       <button 
          className={styles?.buttonForm ? concatStyles("base-btn", styles.buttonForm) : "base-btn"} 
-         onClick={() => console.log("Click BTN")}
+         onClick={() => { console.log("Click BTN"); }}
       >
          {img && <img className='base-btn__image' src={img} alt=""/>}
          {title && 

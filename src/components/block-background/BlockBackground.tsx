@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React, { type FC } from 'react'
 import './BlockBackground.css'
-import { BlockBackgroundProps } from './BlockBackgroundProps'
+import { type BlockBackgroundProps } from './BlockBackgroundProps'
 import { ReactComponent as TopLeftMediator } from '../../assets/images/home-page/mediator-top-left.svg'
 import { ReactComponent as TopRightMediator } from '../../assets/images/home-page/mediator-top-right.svg'
 import { ReactComponent as BottomLeftMediator } from '../../assets/images/home-page/mediator-bottom-left.svg'

@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React, { type FC } from 'react'
 
-type HeaderLinkProps = {
+interface HeaderLinkProps {
    title: string;
    img: string[];
 }

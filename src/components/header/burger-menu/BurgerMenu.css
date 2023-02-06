@@ -1,6 +1,6 @@
 .burger-menu {
    width: calc(100vw - 20px);
-   height: 100vh;
+   height: calc(100vh - 20px);
    height: -webkit-fill-available;
    padding-bottom: 1rem;
    position: fixed;

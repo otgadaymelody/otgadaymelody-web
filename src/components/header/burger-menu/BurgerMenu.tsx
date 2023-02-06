@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { type FC } from 'react'
 import "./BurgerMenu.css"
 import {ReactComponent as CloseBtn} from '../../../assets/images/header/close-btn.svg'
 import HeaderLink from '../HeaderLink'
@@ -12,7 +12,7 @@ interface BurgerMenuProps {
 const BurgerMenu: FC<BurgerMenuProps> = ({active, setActive}) => {
   return (
     <div className='burger-menu'>
-      <CloseBtn className='burger-menu__close-btn' onClick={() => setActive(false)}/>
+      <CloseBtn className='burger-menu__close-btn' onClick={() => { setActive(false); }}/>
       <div className="burger-menu__content">
         <nav className='burger-menu__links'>
             <HeaderLink title='Расписание игр' img={navImages[0]}/> 

@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 
-function App() {
+function App(): React.ReactElement {
 	return (
 		<div className="App">
 			<BrowserRouter basename={process.env.PUBLIC_URL}>

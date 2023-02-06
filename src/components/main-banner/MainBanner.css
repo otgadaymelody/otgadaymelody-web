@@ -1,10 +1,7 @@
 .banner__background {
   width: 100%;
-  /* min-height: 563px; */
-  max-height: 783px;
-  height: calc(563px + 30vw);
+  height: calc(100vh - 74px - 64px - 52px);
   border-radius: 38px;
-  /* padding: 88px; */
 }
 
 .banner__info {
@@ -94,7 +91,7 @@
 /* Media Queries */
 @media (min-width: 744px) {
   .banner__background {
-    height: max(783px, calc((100vw - 200px) / 2.25));
+    height: calc(100vh - 122px - 64px - 52px);
   }
 
   .banner__main-image {
@@ -147,6 +144,10 @@
 }
 
 @media (min-width: 1440px) {
+  .banner__background {
+    height: calc(100vh - 102px - 1rem);
+  }
+
   .banner__info {
     padding: 2rem 3rem;
     width: 55%;
@@ -166,13 +167,17 @@
 }
 
 @media (min-width: 1920px) {
+  .banner__background {
+    height: calc(100vh - 112px - 1rem);
+    max-height: 640px;
+  }
+
   .banner__info {
     padding: 2rem 4rem;
   }
   .banner__info h1 {
     font-size: 56px;
   }
-
   .banner__info p {
     font-size: 24px;
   }

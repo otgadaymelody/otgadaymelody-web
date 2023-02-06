@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { type FC, useState } from 'react'
 import HeaderLink from './HeaderLink'
 import { ReactComponent as Logo } from '../../assets/images/header/logo.svg'
 import { ReactComponent as TgLogo } from '../../assets/images/header/tg.svg'
@@ -20,7 +20,7 @@ const Header: FC = () => {
 
    return (
       <header className='header'>
-         { !isDesktop && <BurgerBtn onClick={() => setActiveMenu(true)} className="header__btn"/>}
+         { !isDesktop && <BurgerBtn onClick={() => { setActiveMenu(true); }} className="header__btn"/>}
          <div className="header__navbar">
             <Logo className='header__logo'/>
 
