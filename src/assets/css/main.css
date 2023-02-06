@@ -14,6 +14,8 @@
   --fonts-h4-subtitle: 700 26px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h4-card-title: 500 26px/1.4 var(--font-family-headers), sans-serif;
 
+  --fonts-footer-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
+
   /* Descriptions */
   --fonts-p-infographic-description: 600 24px/1.4
       var(--font-family-descriptions),
@@ -46,6 +48,10 @@
   --images-header-tg: url("../images/header/tg.svg");
   --images-header-vk: url("../images/header/vk.svg");
 
+  --footer-background: url("../images/footer/footer-background.svg");
+  --footer-social-btn-tg: url("../images/footer/tg-footer.svg");
+  --footer-social-btn-vk: url("../images/footer/vk-footer.svg");
+  
   /* Home Page images */
   --images-banner: url("../images/home-page/banner-image.png");
 
@@ -75,33 +81,6 @@
     rgba(255, 64, 64, 0.1)), linear-gradient(0deg, rgba(255, 64, 64, 0.5), 
     rgba(255, 64, 64, 0.5));
 }
-
-/* .home-page {
-   max-width: 1920px;
-   margin: 0 auto;
-   padding: 0 24px;
-}
-.test-div {
-   max-width: 100%;
-   margin: 0 24px;
-   border-radius: 64px;
-   height: 256px;
-   text-align: center;
-   /* width: 256px; */
-/* background: var(--color-gradient);
-   box-shadow: var(--shadow);
-   font: var(--fonts-h1-headline);
-
-} */
-
-/* .banner-image {
-  max-width: 100%;
-  height: auto;
-  mask-image: var(--images-mediator-1);
-  mask-size: 70%;
-  mask-repeat: no-repeat;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-} */
 
 .home-page-body {
   display: flex;
