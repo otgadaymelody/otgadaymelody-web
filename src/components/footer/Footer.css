@@ -7,12 +7,10 @@
   gap: 23px;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 
-  background-image: var(--footer-background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-image: var(--footer-background); */
+  background-color: var(--color-lime);
+  overflow-y: hidden;
 }
 
 .footer__logo {
@@ -46,17 +44,43 @@
 
 .footer__composition {
   position: absolute;
-  bottom: 0;
-  left: 0;
-}
+  bottom: -1rem;
+  left: 10%;
+  z-index: 10;
 
-.footer__mediator {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
+  background-image: url('../../assets/images/home-page/mediator-top-left.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .footer__women {
+  background-color: transparent;
+}
 
+.footer__waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.footer__waves svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 43px;
+}
+
+.footer__waves .shape-fill {
+  fill: #FFFFFF;
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    height: 502px;
+  }
 }
 
