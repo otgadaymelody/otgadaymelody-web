@@ -1,14 +1,14 @@
 .burger-menu {
    width: calc(100vw - 20px);
    height: calc(100vh - 20px);
+   height: -webkit-fill-available;
+   padding-bottom: 1rem;
    position: fixed;
+   z-index: 999;
    top: 10px;
    left: 10px;
    background-color: var(--color-lime);
    border-radius: 24px;
-   /* display: flex;
-   flex-direction: column;
-   justify-content: space-between; */
 }
 
 .burger-menu__content {

@@ -4,7 +4,7 @@
   --font-family-descriptions: "Montserrat"; /* Описательный шрифт */
 
   /* Titles */
-  --fonts-h1-main-title: 900 56px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h1-main-title: 900 24px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-block-title: 900 50px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-infographic-title: 700 50px/1.4 var(--font-family-headers),
     sans-serif;
@@ -14,23 +14,23 @@
   --fonts-h4-subtitle: 700 26px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h4-card-title: 500 26px/1.4 var(--font-family-headers), sans-serif;
 
+  --fonts-footer-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
+
   /* Descriptions */
   --fonts-p-infographic-description: 600 24px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-p-main-description: 500 24px/1.4 var(--font-family-descriptions),
+  --fonts-p-main-description: 500 16px/1.4 var(--font-family-descriptions),
     sans-serif;
   --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions),
     sans-serif;
 
   --fonts-faq-block: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-registration-button-title: 600 18px/1.4
+  --fonts-registration-button-title: 600 16px/1.4
       var(--font-family-descriptions),
     sans-serif;
-  --fonts-registration-button-title: 500 18px/1.4
-      var(--font-family-descriptions),
-    sans-serif;
+
 
   --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions),
     sans-serif;
@@ -47,6 +47,13 @@
   --images-header-location: url("../images/header/loc.svg");
   --images-header-tg: url("../images/header/tg.svg");
   --images-header-vk: url("../images/header/vk.svg");
+
+  --footer-background: url("../images/footer/footer-background.svg");
+  --footer-social-btn-tg: url("../images/footer/tg-footer.svg");
+  --footer-social-btn-vk: url("../images/footer/vk-footer.svg");
+  
+  /* Home Page images */
+  --images-banner: url("../images/home-page/banner-image.png");
 
   /* === Colors === */
   --color-bg-gray-900: rgba(17, 24, 39, 1);
@@ -68,22 +75,12 @@
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02),
     -3px 30px 30px rgba(21, 41, 68, 0.03), -1px 7px 16px rgba(21, 41, 68, 0.03),
     0px 0px 0px rgba(21, 41, 68, 0.03);
-}
 
-/* .home-page {
-   max-width: 1920px;
-   margin: 0 auto;
-   padding: 0 24px;
-}
-.test-div {
-   max-width: 100%;
-   margin: 0 24px;
-   border-radius: 64px;
-   height: 256px;
-   text-align: center;
-   /* width: 256px; */
-/* background: var(--color-gradient);
-   box-shadow: var(--shadow);
-   font: var(--fonts-h1-headline);
+  /* Masks */
+  --banner-mask: linear-gradient(0deg, rgba(255, 64, 64, 0.1), 
+    rgba(255, 64, 64, 0.1)), linear-gradient(0deg, rgba(255, 64, 64, 0.5), 
+    rgba(255, 64, 64, 0.5));
 
-} */
+  /* Sizes */
+  --mobile-tab-bar: 116px;
+}
