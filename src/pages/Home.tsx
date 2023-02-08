@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <div className="home-page-body">
         <div className="container">
           <MainBanner />
-          <span style={{ margin: '10px' }}>Home Page v.1.2</span>
+          <span>Home Page v.1.2</span>
         </div>
       </div>
       <Footer />
