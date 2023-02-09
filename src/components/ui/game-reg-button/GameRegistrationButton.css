@@ -1,0 +1,7 @@
+.game-reg-btn {
+   background: #FFFFFF;
+   border-radius: 16px;
+   color: var(--color-gradient);
+   color-scheme: var(--color-gradient);
+   border: 2px solid var(--color-lime);
+}

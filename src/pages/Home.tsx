@@ -3,6 +3,7 @@ import Footer from '../components/footer/Footer';
 import FutureGames from '../components/future-games/FutureGames';
 import Header from '../components/header/Header';
 import MainBanner from '../components/main-banner/MainBanner';
+import GameRegistrationButton from '../components/ui/game-reg-button/GameRegistrationButton';
 
 const Home: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
         <div className="container">
           <MainBanner />
           <FutureGames />
+          <GameRegistrationButton icon={false} />
           <span>Home Page v.1.2</span>
         </div>
       </div>
