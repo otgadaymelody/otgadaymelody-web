@@ -1,0 +1,22 @@
+.future-games {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+   margin-top: 15px;
+   width: 100%;
+   min-width: 336px;
+   height: fit-content;
+   
+   border-radius: 32px;
+}
+
+.future-games__title {
+   padding: 24px 31px;
+   font: var(--fonts-h2-block-title);
+   color: var(--color-bg-white);
+
+   position: relative;
+   z-index: 10;
+}

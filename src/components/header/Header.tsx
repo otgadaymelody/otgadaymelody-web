@@ -8,7 +8,7 @@ import { ReactComponent as LocationBtn } from '../../assets/images/header/loc_bu
 import { navImages } from './nav-images';
 import location from '../../assets/images/header/loc.svg';
 import './Header.css';
-import BaseButton from '../base-button/BaseButton';
+import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import BurgerMenu from './burger-menu/BurgerMenu';
 

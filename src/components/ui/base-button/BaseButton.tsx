@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { concatStyles } from '../../utils/concat-styles';
+import { concatStyles } from '../../../utils/concat-styles';
 import './BaseButton.css';
 
 interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
