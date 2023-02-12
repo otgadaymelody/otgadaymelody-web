@@ -1,9 +1,8 @@
 import React from 'react';
 import Footer from '../components/footer/Footer';
-import FutureGames from '../components/future-games/FutureGames';
+import FutureGamesList from '../components/future-games-list/FutureGamesList';
 import Header from '../components/header/Header';
 import MainBanner from '../components/main-banner/MainBanner';
-import GameRegistrationButton from '../components/ui/game-reg-button/GameRegistrationButton';
 
 const Home: React.FC = () => {
   return (
@@ -12,9 +11,8 @@ const Home: React.FC = () => {
       <div className="home-page-body">
         <div className="container">
           <MainBanner />
-          <FutureGames />
-          <GameRegistrationButton icon={false} />
-          <span>Home Page v.1.2</span>
+          <FutureGamesList />
+          <span>Home Page v.1.3</span>
         </div>
       </div>
       <Footer />

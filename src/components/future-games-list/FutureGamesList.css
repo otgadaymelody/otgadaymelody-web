@@ -1,10 +1,12 @@
-.future-games {
+.future-games-list {
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
 
    margin-top: 15px;
+   padding: 0 1rem;
+   padding-bottom: 12px; /* For Dev */
    width: 100%;
    min-width: 336px;
    height: fit-content;
@@ -12,11 +14,17 @@
    border-radius: 32px;
 }
 
-.future-games__title {
-   padding: 24px 31px;
+.future-games-list__title {
    font: var(--fonts-h2-block-title);
    color: var(--color-bg-white);
 
    position: relative;
    z-index: 10;
+}
+
+.future-games-list__games_list {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
 }

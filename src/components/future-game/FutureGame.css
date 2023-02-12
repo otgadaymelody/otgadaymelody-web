@@ -1,0 +1,38 @@
+.future-game {
+   padding: 16px;
+   border-radius: 24px;
+   background-color: var(--color-bg-white);
+   box-shadow: var(--shadow);
+
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.future-game__title {
+   font: var(--fonts-h4-card-title);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 24px;
+}
+
+.future-game__info-block {
+   height: 93px;
+   background: var(--color-gradient);
+   border-radius: 16px;
+}
+
+.future-game__description {
+   margin-bottom: 24px;
+}
+
+.future-game__main-description {
+   display: flex;
+   justify-content: space-between;
+}
+
+.future-game__address {
+   text-align: start;
+}

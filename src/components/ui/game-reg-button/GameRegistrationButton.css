@@ -1,7 +1,14 @@
 .game-reg-btn {
+   width: 100%;
    background: #FFFFFF;
    border-radius: 16px;
+   padding: 16px 32px;
+   /* TO-DO: Create a gradient for text and border */
    color: var(--color-gradient);
    color-scheme: var(--color-gradient);
    border: 2px solid var(--color-lime);
+
+   font: var(--fonts-registration-button-title);
+
+   cursor: pointer;
 }
