@@ -4,11 +4,20 @@
    border-radius: 16px;
    padding: 16px 32px;
    /* TO-DO: Create a gradient for text and border */
-   color: var(--color-gradient);
-   color-scheme: var(--color-gradient);
-   border: 2px solid var(--color-lime);
+   color: var(--color-pink);
+   border: 2px solid var(--color-pink);
 
    font: var(--fonts-registration-button-title);
 
    cursor: pointer;
+}
+
+.game-reg-btn:hover {
+   background: var(--color-gradient);
+   color: var(--color-bg-white);
+}
+
+.game-reg-btn:active {
+   background: var(--color-pink);
+   color: var(--color-bg-white);
 }
