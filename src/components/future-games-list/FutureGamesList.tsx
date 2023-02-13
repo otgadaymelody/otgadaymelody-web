@@ -6,10 +6,10 @@ import './FutureGamesList.css';
 
 const FutureGamesList = (): React.ReactElement => {
   const mediatorClasses = {
-    topLeft: 'banner__mediator_top-left',
-    topRight: 'banner__mediator_top-right',
-    bottomLeft: 'banner__mediator_bottom-left',
-    bottomRight: 'banner__mediator_bottom-right',
+    topLeft: 'future-games-list__mediator_top-left',
+    topRight: 'future-games-list__mediator_top-right',
+    bottomLeft: 'future-games-list__mediator_bottom-left',
+    bottomRight: 'future-games-list__mediator_bottom-right',
   };
 
   const showMoreBtnClasses = {

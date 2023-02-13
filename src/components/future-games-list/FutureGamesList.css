@@ -36,11 +36,43 @@
    margin-top: 32px;
    width: 100%;
    max-width: 312px;
+
+   position: relative;
+   z-index: 10;
 }
 
 .future-games-list__show-more-title-btn {
    font: var(--fonts-faq-block);
 }
+
+/* Mediators */
+.future-games-list__mediator_top-left {
+   width: 76%;
+   height: 12%;
+   top: -3%;
+   left: -26%;
+ }
+ 
+ .future-games-list__mediator_top-right {
+   width: 49%;
+   height: 17%;
+   right: -16%;
+   top: -9%;
+ }
+ 
+ .future-games-list__mediator_bottom-left {
+   width: 76%;
+   height: 21%;
+   bottom: -9%;
+   left: -19%;
+ }
+ 
+ .future-games-list__mediator_bottom-right {
+   width: 49%;
+   height: 17%;
+   bottom: -4%;
+   right: -16%;
+ }
 
 @media (min-width: 1440px) {
    .future-games-list__games_list {
