@@ -8,13 +8,11 @@ const Home: React.FC = () => {
   return (
     <div className="home-page">
       <Header />
-      <div className="home-page-body">
         <div className="container">
           <MainBanner />
           <FutureGamesList />
           <span>Home Page v.1.3</span>
         </div>
-      </div>
       <Footer />
     </div>
   );
