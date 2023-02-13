@@ -3,13 +3,14 @@ import GameRegistrationButton from '../ui/game-reg-button/GameRegistrationButton
 import './FutureGame.css';
 import { ReactComponent as LocationImg } from '../../assets/images/future-game/Location.svg';
 import { ReactComponent as PriceImg } from '../../assets/images/future-game/Ticket.svg';
+import DateInfoBlock from './date-info-block/DateInfoBlock';
 
 const FutureGame = (): React.ReactElement => {
   return (
     <div className="future-game">
       <div className="future-game__title-block">
         <div className="future-game__title">Title Game</div>
-        <div className="future-game__info-block">Date, Time, other</div>
+        <DateInfoBlock />
       </div>
       <div className="future-game__description-block">
         <div className="future-game__description">
