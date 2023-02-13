@@ -2,6 +2,7 @@ import React from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import FutureGame from '../future-game/FutureGame';
 import BaseButton from '../ui/base-button/BaseButton';
+import { gameList } from './gameList';
 import './FutureGamesList.css';
 
 const FutureGamesList = (): React.ReactElement => {
@@ -21,9 +22,9 @@ const FutureGamesList = (): React.ReactElement => {
     <BlockBackground className="future-games-list" mediatorsClasses={mediatorClasses}>
       <h2 className="future-games-list__title">Предстоящие игры</h2>
       <div className="future-games-list__games_list">
-        <FutureGame className={'future-games-list__game'} />
-        <FutureGame className={'future-games-list__game'} />
-        <FutureGame className={'future-games-list__game'} />
+        <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+        <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+        <FutureGame className={'future-games-list__game'} game={gameList[0]} />
       </div>
       <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
     </BlockBackground>
