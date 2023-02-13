@@ -21,9 +21,9 @@ const FutureGamesList = (): React.ReactElement => {
     <BlockBackground className="future-games-list" mediatorsClasses={mediatorClasses}>
       <h2 className="future-games-list__title">Предстоящие игры</h2>
       <div className="future-games-list__games_list">
-        <FutureGame />
-        <FutureGame />
-        <FutureGame />
+        <FutureGame className={'future-games-list__game'} />
+        <FutureGame className={'future-games-list__game'} />
+        <FutureGame className={'future-games-list__game'} />
       </div>
       <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
     </BlockBackground>

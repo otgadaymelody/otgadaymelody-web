@@ -4,10 +4,11 @@ import './FutureGame.css';
 import { ReactComponent as LocationImg } from '../../assets/images/future-game/Location.svg';
 import { ReactComponent as PriceImg } from '../../assets/images/future-game/Ticket.svg';
 import DateInfoBlock from './date-info-block/DateInfoBlock';
+import { concatStyles } from '../../utils/concat-styles';
 
-const FutureGame = (): React.ReactElement => {
+const FutureGame = (props: any): React.ReactElement => {
   return (
-    <div className="future-game">
+    <div className={concatStyles('future-game', props.className)}>
       <div className="future-game__title-block">
         <div className="future-game__title">Title Game</div>
         <DateInfoBlock />

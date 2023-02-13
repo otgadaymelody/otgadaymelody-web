@@ -41,3 +41,15 @@
 .future-games-list__show-more-title-btn {
    font: var(--fonts-faq-block);
 }
+
+@media (min-width: 1440px) {
+   .future-games-list__games_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .future-games-list__game {
+      width: 400px;
+   }
+}
