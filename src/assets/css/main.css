@@ -24,6 +24,10 @@
     sans-serif;
   --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions),
     sans-serif;
+  --fonts-h5-card-description: 500 20px/1.4 var(--font-family-descriptions),
+    sans-serif;
+  --fonts-span-sub-description: 400 16px/1.4 var(--font-family-descriptions),
+    sans-serif;
 
   --fonts-faq-block: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
 

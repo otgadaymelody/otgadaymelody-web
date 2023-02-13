@@ -31,8 +31,27 @@
 .future-game__main-description {
    display: flex;
    justify-content: space-between;
+   font: var(--fonts-h5-card-description);
+   color: var(--color-bg-gray-900);
+}
+
+.future-game__place {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.future-game__price { 
+   display: flex;
+   align-items: center;
+   gap: 8px;
 }
 
 .future-game__address {
+   margin-top: 6px;
+   width: 100%;
+   font: var(--fonts-span-sub-description);
+   color: var(--color-bg-gray-600);
    text-align: start;
 }
