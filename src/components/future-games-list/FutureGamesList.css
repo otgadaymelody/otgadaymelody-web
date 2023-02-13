@@ -47,31 +47,31 @@
 
 /* Mediators */
 .future-games-list__mediator_top-left {
-   width: 76%;
-   height: 12%;
-   top: -3%;
-   left: -26%;
+   width: 28%;
+   height: auto;
+   top: -3rem;
+   left: -4rem;
  }
  
  .future-games-list__mediator_top-right {
-   width: 49%;
-   height: 17%;
-   right: -16%;
-   top: -9%;
+   width: 28%;
+   height: auto;
+   top: -3rem;
+   right: -4rem;
  }
  
  .future-games-list__mediator_bottom-left {
-   width: 76%;
-   height: 21%;
-   bottom: -9%;
-   left: -19%;
+   width: 42%;
+   height: auto;
+   bottom: -7rem;
+   left: -3rem;
  }
  
  .future-games-list__mediator_bottom-right {
-   width: 49%;
-   height: 17%;
-   bottom: -4%;
-   right: -16%;
+   width: 28%;
+   height: auto;
+   bottom: -3rem;
+   right: -4rem;
  }
 
 @media (min-width: 1440px) {
