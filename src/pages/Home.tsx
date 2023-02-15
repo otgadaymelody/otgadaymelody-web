@@ -7,8 +7,8 @@ import MainBanner from '../components/main-banner/MainBanner';
 const Home: React.FC = () => {
   return (
     <div className="home-page">
-      <Header />
         <div className="container">
+          <Header />
           <MainBanner />
           <FutureGamesList />
           <span>Home Page v.1.3</span>
