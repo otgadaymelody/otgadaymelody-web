@@ -37,6 +37,7 @@
   mask-size: 71%;
   mask-position: 36% 100%;
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .banner-image__wall {
