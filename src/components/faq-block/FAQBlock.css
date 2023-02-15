@@ -36,6 +36,7 @@
    display: flex;
    flex-direction: row;
    align-items: center;
+   justify-content: space-between;
    gap: 40px;
    padding: 16px;
    width: 100%;
@@ -44,6 +45,17 @@
    box-shadow: var(--shadow);
    border-radius: 16px;
 
+   font: var(--fonts-navigation-link);
+   color: var(--color-bg-gray-900);
+
    position: relative;
    z-index: 10;
+}
+
+.faq-block__open-action {
+   width: 24px;
+   height: 24px;
+   background-image: url("../../assets/images/home-page/open-img.svg");
+
+   cursor: pointer;
 }
