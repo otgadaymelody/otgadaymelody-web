@@ -37,21 +37,6 @@ const FAQBlock = (): React.ReactElement => {
             </div>
           </div>
         ))}
-        {/* <li>
-          <span className="faq-block__question-title">Вопрос 1.</span>
-          <div
-            className={openState ? 'faq-block__close-action' : 'faq-block__open-action'}
-            onClick={() => setStateAction(!openState)}
-          ></div>
-        </li>
-        <li>
-          <span className="faq-block__question-title">Вопрос 2.</span>
-          <div className="faq-block__open-action"></div>
-        </li>
-        <li>
-          <span className="faq-block__question-title">Вопрос 3.</span>
-          <div className="faq-block__open-action"></div>
-        </li> */}
       </ul>
     </BlockBackground>
   );
