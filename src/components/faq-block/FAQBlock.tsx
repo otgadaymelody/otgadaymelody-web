@@ -27,15 +27,16 @@ const FAQBlock = (): React.ReactElement => {
       <div className="faq-block__title">Остались вопросы?</div>
       <ul className="faq-block__questions-list">
         {faqQuestions.map((item, i) => (
-          <div className="faq-block__question" key={i} onClick={() => toggle(i)}>
+          <li className="faq-block__question" key={i} onClick={() => toggle(i)}>
             <div className="faq-block__question-title">
               {item.question}
               <img src={selected === i ? closeImg : openImg} />
             </div>
             <div className={selected === i ? 'faq-block__answer show' : 'faq-block__answer'}>
+              <span>Ответ: </span>
               {item.answer}
             </div>
-          </div>
+          </li>
         ))}
       </ul>
     </BlockBackground>
