@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutUs from '../components/about-us/AboutUs';
 import FAQBlock from '../components/faq-block/FAQBlock';
 import Footer from '../components/footer/Footer';
 import FutureGamesList from '../components/future-games-list/FutureGamesList';
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
         <Header />
         <MainBanner />
         <FutureGamesList />
+        <AboutUs />
         <FAQBlock />
         <span>Home Page v.1.3</span>
       </div>
