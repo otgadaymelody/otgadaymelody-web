@@ -1,6 +1,6 @@
 import React from 'react';
 import BlockBackground from '../block-background/BlockBackground';
-import FutureGame from '../future-game/FutureGame';
+import FutureGame from './future-game/FutureGame';
 import BaseButton from '../ui/base-button/BaseButton';
 import { gameList } from './gameList';
 import './FutureGamesList.css';
@@ -26,7 +26,7 @@ const FutureGamesList = (): React.ReactElement => {
         <FutureGame className={'future-games-list__game'} game={gameList[0]} />
         <FutureGame className={'future-games-list__game'} game={gameList[0]} />
       </div>
-      <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
+      {gameList.length > 3 && <BaseButton styles={showMoreBtnClasses} title="Показать еще" />}
     </BlockBackground>
   );
 };

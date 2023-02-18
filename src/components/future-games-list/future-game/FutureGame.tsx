@@ -1,10 +1,10 @@
 import React, { type FC } from 'react';
-import GameRegistrationButton from '../ui/game-reg-button/GameRegistrationButton';
+import GameRegistrationButton from '../../ui/game-reg-button/GameRegistrationButton';
 import './FutureGame.css';
-import { ReactComponent as LocationImg } from '../../assets/images/future-game/Location.svg';
-import { ReactComponent as PriceImg } from '../../assets/images/future-game/Ticket.svg';
+import { ReactComponent as LocationImg } from '../../../assets/images/future-game/Location.svg';
+import { ReactComponent as PriceImg } from '../../../assets/images/future-game/Ticket.svg';
 import DateInfoBlock from './date-info-block/DateInfoBlock';
-import { concatStyles } from '../../utils/concat-styles';
+import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
 
 const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {

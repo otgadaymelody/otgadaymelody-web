@@ -1,87 +1,115 @@
 .future-games-list {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-   margin-top: 15px;
-   padding: 0 1rem;
-   padding-bottom: 12px; /* For Dev */
-   width: 100%;
-   min-width: 336px;
-   height: fit-content;
-   
-   border-radius: 32px;
+  margin-top: 15px;
+  padding: 0 12px;
+  padding-bottom: 12px; /* For Dev */
+  width: 100%;
+  min-width: 336px;
+  height: fit-content;
+
+  border-radius: 32px;
 }
 
 .future-games-list__title {
-   font: var(--fonts-h2-block-title);
-   color: var(--color-bg-white);
+  font: var(--fonts-h2-block-title);
+  color: var(--color-bg-white);
 
-   position: relative;
-   z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .future-games-list__games_list {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   gap: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
-   position: relative;
-   z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .future-games-list__show-more-btn {
-   margin-top: 32px;
-   width: 100%;
-   max-width: 312px;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 312px;
 
-   position: relative;
-   z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .future-games-list__show-more-title-btn {
-   font: var(--fonts-faq-block);
+  font: var(--fonts-faq-block);
 }
 
 /* Mediators */
 .future-games-list__mediator_top-left {
-   width: 28%;
-   height: auto;
-   top: -3rem;
-   left: -4rem;
- }
- 
- .future-games-list__mediator_top-right {
-   width: 28%;
-   height: auto;
-   top: -3rem;
-   right: -4rem;
- }
- 
- .future-games-list__mediator_bottom-left {
-   width: 42%;
-   height: auto;
-   bottom: -7rem;
-   left: -3rem;
- }
- 
- .future-games-list__mediator_bottom-right {
-   width: 28%;
-   height: auto;
-   bottom: -3rem;
-   right: -4rem;
- }
+  width: 28%;
+  height: auto;
+  top: -3rem;
+  left: -4rem;
+}
+
+.future-games-list__mediator_top-right {
+  width: 28%;
+  height: auto;
+  top: -3rem;
+  right: -4rem;
+}
+
+.future-games-list__mediator_bottom-left {
+  width: 42%;
+  height: auto;
+  bottom: -7rem;
+  left: -3rem;
+}
+
+.future-games-list__mediator_bottom-right {
+  width: 28%;
+  height: auto;
+  bottom: -3rem;
+  right: -4rem;
+}
+
+@media (min-width: 744px) {
+  .future-games-list {
+    padding: 0 32px;
+    padding-bottom: 32px;
+  }
+  .future-games-list__games_list {
+    gap: 32px;
+  }
+  .future-games-list__title {
+    font-size: 36px;
+  }
+}
 
 @media (min-width: 1440px) {
-   .future-games-list__games_list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-   }
+  .future-games-list {
+    padding: 0 48px;
+    padding-bottom: 48px;
+  }
+  .future-games-list__games_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-   .future-games-list__game {
-      width: 400px;
-   }
+  .future-games-list__game {
+    width: 400px;
+  }
+
+  .future-games-list__title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .future-games-list__title {
+    font-size: 50px;
+    font-weight: 900;
+  }
 }
