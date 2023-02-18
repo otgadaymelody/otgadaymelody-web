@@ -17,6 +17,7 @@
   --fonts-footer-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
 
   /* Descriptions */
+  --fonts-p-date-info-title: 600 24px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-p-infographic-description: 600 12px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-p-main-description: 500 16px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions), sans-serif;

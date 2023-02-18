@@ -107,6 +107,10 @@
   }
 }
 
+.swiper-slide {
+  box-sizing: border-box;
+}
+
 @media (min-width: 1920px) {
   .future-games-list__title {
     font-size: 50px;
