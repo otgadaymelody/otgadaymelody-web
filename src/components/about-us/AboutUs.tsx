@@ -3,6 +3,7 @@ import aboutUsPreview from '../../assets/images/home-page/about-us-preview.png';
 import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import './AboutUs.css';
+import InfographicBlock from './infographic-block/InfographicBlock';
 
 const AboutUs = (): React.ReactElement => {
   const deviceType = useDeviceType();
@@ -33,7 +34,9 @@ const AboutUs = (): React.ReactElement => {
         </div>
       </div>
 
-      <div className="infographic-block">Блок с инфографикой</div>
+      <div className="infographic-block">
+        <InfographicBlock />
+      </div>
 
       <div className="game-rules-carousel">Карусель с правилами</div>
     </div>
