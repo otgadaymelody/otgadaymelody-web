@@ -1,11 +1,29 @@
 .home-page-body {
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
- 
- .container {
-   max-width: 1920px;
-   margin: 0 auto;
-   padding: 0 12px;
- }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1872px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+@media (min-width: 744px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    padding: 0 24px;
+  }
+}
