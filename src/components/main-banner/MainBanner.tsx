@@ -35,10 +35,8 @@ const MainBanner = (): React.ReactElement => {
       <div className="banner-image">
         <div className="banner-image__wrapper">
           <img src={bannerImg} className="banner-image__img" />
-          {/* <div className="banner-image__wall"></div> */}
         </div>
       </div>
-      
     </BlockBackground>
   );
 };

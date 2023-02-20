@@ -7,7 +7,6 @@
   background-color: var(--color-bg-white);
 }
 
-
 .header__navbar {
   display: flex;
   gap: 48px;
@@ -76,7 +75,6 @@
 .header__btns {
   display: flex;
   align-items: center;
-  padding: 0;
   height: 48px;
   gap: 16px;
 }
@@ -114,6 +112,8 @@
   }
 }
 
-.header__btn {
+.header__btn,
+.header__social-btn,
+.header-link {
   cursor: pointer;
 }

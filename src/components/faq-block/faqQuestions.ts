@@ -1,4 +1,9 @@
-export const faqQuestions = [
+interface faqQuestionsType {
+  question: string;
+  answer: string;
+}
+
+export const faqQuestions: faqQuestionsType[] = [
   {
     question: 'Как нужно готовиться к игре?',
     answer: 'Ответ убил',

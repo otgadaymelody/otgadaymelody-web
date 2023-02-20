@@ -43,8 +43,8 @@ const Header: FC = () => {
       {isDesktop ? (
         <div className="header__btns">
           <BaseButton title="Нижний Новгород" img={location} />
-          <TgLogo />
-          <VkLogo />
+          <TgLogo className="header__social-btn" />
+          <VkLogo className="header__social-btn" />
         </div>
       ) : (
         <LocationBtn className="header__location-btn" />

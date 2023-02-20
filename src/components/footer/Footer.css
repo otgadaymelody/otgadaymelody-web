@@ -4,7 +4,6 @@
   position: relative;
 
   background-color: var(--color-lime);
-
 }
 
 .footer__container {
@@ -82,7 +81,7 @@
 }
 
 .footer__waves .shape-fill {
-  fill: #ffffff;
+  fill: var(--color-bg-white);
 }
 
 @media (min-width: 1440px) {
@@ -91,4 +90,3 @@
     padding-top: 6rem;
   }
 }
-

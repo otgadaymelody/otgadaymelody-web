@@ -26,7 +26,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.R
               <span>{game.price}</span>
             </div>
           </div>
-          <div className="future-game__address">{game.address}</div>
+          <address className="future-game__address">{game.address}</address>
         </div>
         <GameRegistrationButton icon={false} />
       </div>
