@@ -33,10 +33,15 @@ const FutureGamesList = (): React.ReactElement => {
       {isDesktop ? (
         <Swiper
           navigation={true}
-          slidesPerView={4}
+          slidesPerView={3}
           spaceBetween={32}
           modules={[Navigation]}
           className="future-games-list__games_list"
+          breakpoints={{
+            1920: {
+              slidesPerView: 4,
+            },
+          }}
         >
           <SwiperSlide>
             <FutureGame className={'future-games-list__game'} game={gameList[0]} />

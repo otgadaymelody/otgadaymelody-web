@@ -95,7 +95,6 @@
   .future-games-list__games_list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 
   .future-games-list__game {
