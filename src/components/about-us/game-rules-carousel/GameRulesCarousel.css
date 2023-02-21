@@ -20,55 +20,60 @@
 }
 
 .game-rules-carousel__rules-block {
+  height: fit-content;
+  width: 100%;
+  margin: 0;
   margin-top: 20px;
 }
 
-.game-rules-carousel__title {
-  color: var(--color-lime);
-  font: var(--fonts-h2-infographic-title);
+.game-rules-carousel__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 9px 20px;
+  background-color: var(--color-lime);
+  border-radius: 81px;
+  color: var(--color-bg-white);
+  font: var(--fonts-span-carousel-description);
 }
 
-.game-rules-carousel__description {
-  margin: 15px 0;
-  font: var(--fonts-p-main-description);
+.game-rules-carousel__current-page {
+  font: var(--fonts-span-carousel-title);
+}
+
+.game-rules-carousel__slider-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 @media (min-width: 744px) {
+  .game-rules-carousel__img {
+    border-radius: 80px;
+  }
   .game-rules-carousel__rules-block {
     margin-top: 60px;
   }
-  .game-rules-carousel__title {
-    color: var(--color-bg-gray-900);
-    font-size: 26px;
-  }
-  .game-rules-carousel__description {
-    font-size: 20px;
-    margin: 24px 0;
+
+  .game-rules-carousel__slider {
+    width: 211px;
+    padding: 11px 20px;
   }
 }
 
 @media (min-width: 1440px) {
   .game-rules-carousel {
     flex-direction: row;
+    gap: 75px;
   }
+
   .game-rules-carousel__image-block {
     max-width: 50%;
-  }
-  .game-rules-carousel__rules-block {
-    padding-right: 63px;
-  }
-  .game-rules-carousel__title {
-    font-size: 26px;
-  }
-  .game-rules-carousel__description {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 24px 0;
   }
 }
 
 @media (min-width: 1920px) {
-  .game-rules-carousel__rules-block {
-    padding-right: 63px;
-  }
 }

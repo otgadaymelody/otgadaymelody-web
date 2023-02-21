@@ -39,9 +39,7 @@ const AboutUs = (): React.ReactElement => {
         <InfographicBlock />
       </div>
 
-      <div className="game-rules-carousel">
-        <GameRulesCarousel />
-      </div>
+      <GameRulesCarousel />
     </div>
   );
 };
