@@ -25,10 +25,6 @@
   color: var(--color-bg-white);
 }
 
-.infographic-item__text p {
-  margin: 0;
-}
-
 .infographic-item__title {
   font: var(--fonts-h2-infographic-title);
 }
