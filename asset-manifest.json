@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.ef00e07f.css",
-    "main.js": "/otgadaymelody-web/static/js/main.7a866f84.js",
+    "main.css": "/otgadaymelody-web/static/css/main.ef9d2ead.css",
+    "main.js": "/otgadaymelody-web/static/js/main.17ed7c58.js",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
+    "static/media/01.png": "/otgadaymelody-web/static/media/01.78442fd0b55779706674.png",
     "static/media/about-us-preview.png": "/otgadaymelody-web/static/media/about-us-preview.0bdd5bd5d31c070cd90f.png",
     "static/media/women.png": "/otgadaymelody-web/static/media/women.a2a6bd67903c717abfa5.png",
     "static/media/druk-text-wide-cyr-700.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-700.0bb4b28b0c4e31f94418.woff",
@@ -50,12 +51,14 @@
     "static/media/mediator-bottom-right.svg": "/otgadaymelody-web/static/media/mediator-bottom-right.e3bfac3edab95581315ddead33e0b321.svg",
     "static/media/mediator-top-left.svg": "/otgadaymelody-web/static/media/mediator-top-left.b18bb63b59efaa1d8968bd93f2385108.svg",
     "static/media/open-img.svg": "/otgadaymelody-web/static/media/open-img.eb5bed65ba592d810a81b0432005017d.svg",
+    "static/media/next-slide-img.svg": "/otgadaymelody-web/static/media/next-slide-img.d8549574cc802474b7263882e9995f61.svg",
+    "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.ef00e07f.css.map": "/otgadaymelody-web/static/css/main.ef00e07f.css.map",
-    "main.7a866f84.js.map": "/otgadaymelody-web/static/js/main.7a866f84.js.map"
+    "main.ef9d2ead.css.map": "/otgadaymelody-web/static/css/main.ef9d2ead.css.map",
+    "main.17ed7c58.js.map": "/otgadaymelody-web/static/js/main.17ed7c58.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef00e07f.css",
-    "static/js/main.7a866f84.js"
+    "static/css/main.ef9d2ead.css",
+    "static/js/main.17ed7c58.js"
   ]
 }
