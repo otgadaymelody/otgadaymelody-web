@@ -33,7 +33,7 @@ const FutureGamesList = (): React.ReactElement => {
       {isDesktop ? (
         <Swiper
           navigation={true}
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={32}
           modules={[Navigation]}
           className="future-games-list__games_list"
@@ -42,24 +42,29 @@ const FutureGamesList = (): React.ReactElement => {
             <FutureGame className={'future-games-list__game'} game={gameList[0]} />
           </SwiperSlide>
           <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+            <FutureGame className={'future-games-list__game'} game={gameList[1]} />
           </SwiperSlide>
           <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+            <FutureGame className={'future-games-list__game'} game={gameList[2]} />
           </SwiperSlide>
           <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+            <FutureGame className={'future-games-list__game'} game={gameList[3]} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <FutureGame className={'future-games-list__game'} game={gameList[4]} />
           </SwiperSlide>
         </Swiper>
       ) : (
         <div className="future-games-list__games_list">
           <FutureGame className={'future-games-list__game'} game={gameList[0]} />
-          <FutureGame className={'future-games-list__game'} game={gameList[0]} />
-          <FutureGame className={'future-games-list__game'} game={gameList[0]} />
+          <FutureGame className={'future-games-list__game'} game={gameList[1]} />
+          <FutureGame className={'future-games-list__game'} game={gameList[2]} />
         </div>
       )}
 
-      {gameList.length > 3 && <BaseButton styles={showMoreBtnClasses} title="Показать еще" />}
+      {gameList.length > 3 && !isDesktop && (
+        <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
+      )}
     </BlockBackground>
   );
 };
