@@ -1,0 +1,74 @@
+.game-rules-carousel {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-rules-carousel__image-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 374px;
+  background-image: var(--images-mediator-top-left);
+  background-repeat: no-repeat;
+}
+
+.game-rules-carousel__img {
+  padding: 15px;
+  width: 95%;
+  border-radius: 32px;
+}
+
+.game-rules-carousel__rules-block {
+  margin-top: 20px;
+}
+
+.game-rules-carousel__title {
+  color: var(--color-lime);
+  font: var(--fonts-h2-infographic-title);
+}
+
+.game-rules-carousel__description {
+  margin: 15px 0;
+  font: var(--fonts-p-main-description);
+}
+
+@media (min-width: 744px) {
+  .game-rules-carousel__rules-block {
+    margin-top: 60px;
+  }
+  .game-rules-carousel__title {
+    color: var(--color-bg-gray-900);
+    font-size: 26px;
+  }
+  .game-rules-carousel__description {
+    font-size: 20px;
+    margin: 24px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .game-rules-carousel {
+    flex-direction: row;
+  }
+  .game-rules-carousel__image-block {
+    max-width: 50%;
+  }
+  .game-rules-carousel__rules-block {
+    padding-right: 63px;
+  }
+  .game-rules-carousel__title {
+    font-size: 26px;
+  }
+  .game-rules-carousel__description {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 24px 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .game-rules-carousel__rules-block {
+    padding-right: 63px;
+  }
+}

@@ -48,6 +48,7 @@
 
   /* Home Page images */
   --images-banner: url('../images/home-page/banner-image.png');
+  --images-mediator-top-left: url('../images/home-page/mediator-top-left.svg');
 
   /* === Colors === */
   --color-bg-gray-900: rgba(17, 24, 39, 1);

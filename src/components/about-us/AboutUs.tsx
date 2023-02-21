@@ -4,6 +4,7 @@ import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import './AboutUs.css';
 import InfographicBlock from './infographic-block/InfographicBlock';
+import GameRulesCarousel from './game-rules-carousel/GameRulesCarousel';
 
 const AboutUs = (): React.ReactElement => {
   const deviceType = useDeviceType();
@@ -38,7 +39,9 @@ const AboutUs = (): React.ReactElement => {
         <InfographicBlock />
       </div>
 
-      <div className="game-rules-carousel">Карусель с правилами</div>
+      <div className="game-rules-carousel">
+        <GameRulesCarousel />
+      </div>
     </div>
   );
 };
