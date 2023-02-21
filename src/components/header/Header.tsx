@@ -8,7 +8,7 @@ import { ReactComponent as LocationBtn } from '../../assets/images/header/loc_bu
 import { navImages } from './nav-images';
 import location from '../../assets/images/header/loc.svg';
 import './Header.css';
-import BaseButton from '../base-button/BaseButton';
+import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import BurgerMenu from './burger-menu/BurgerMenu';
 
@@ -43,8 +43,8 @@ const Header: FC = () => {
       {isDesktop ? (
         <div className="header__btns">
           <BaseButton title="Нижний Новгород" img={location} />
-          <TgLogo />
-          <VkLogo />
+          <TgLogo className="header__social-btn" />
+          <VkLogo className="header__social-btn" />
         </div>
       ) : (
         <LocationBtn className="header__location-btn" />

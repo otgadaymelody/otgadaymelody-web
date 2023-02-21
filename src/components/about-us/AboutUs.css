@@ -1,0 +1,78 @@
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 150px 0;
+
+  color: var(--color-bg-gray-900);
+}
+
+.game-rules__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-rules__title {
+  font: var(--fonts-h2-faq-title);
+  text-align: start;
+}
+
+.game-rules__subtitle {
+  margin-top: 32px;
+  font: var(--fonts-h4-card-title);
+}
+
+.game-rules__description {
+  font: var(--fonts-p-main-description);
+}
+
+.game-rules__reg-btn {
+  margin-top: 24px;
+  width: 100%;
+  border-radius: 61px;
+  padding: 16px 48px;
+}
+
+.game-rules__reg-btn-title {
+  font-weight: 600;
+}
+
+.game-rules__preview-img {
+  max-width: 100%;
+  border-radius: 32px;
+}
+
+@media (min-width: 744px) {
+  .game-rules__main-info {
+    padding-right: 63px;
+  }
+  .game-rules__title {
+    margin-top: 97px;
+    font-size: 40px;
+  }
+  .game-rules__subtitle {
+    margin-top: 48px;
+    font-size: 24px;
+  }
+
+  .game-rules__description {
+    font-size: 20px;
+  }
+
+  .game-rules__reg-btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .game-rules__wrapper {
+    flex-direction: row;
+    gap: 100px;
+  }
+  .game-rules__preview-img {
+    max-width: 50%;
+    margin-left: -100px;
+  }
+}

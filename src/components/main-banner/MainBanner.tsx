@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseButton from '../base-button/BaseButton';
+import BaseButton from '../ui/base-button/BaseButton';
 import BlockBackground from '../block-background/BlockBackground';
 import './MainBanner.css';
 import bannerImg from '../../assets/images/home-page/banner-image.png';
@@ -32,7 +32,11 @@ const MainBanner = (): React.ReactElement => {
         </div>
         <BaseButton title="Расписание игр" styles={registrationBtnClasses} />
       </div>
-      <img src={bannerImg} className="banner__main-image" />
+      <div className="banner-image">
+        <div className="banner-image__wrapper">
+          <img src={bannerImg} className="banner-image__img" />
+        </div>
+      </div>
     </BlockBackground>
   );
 };

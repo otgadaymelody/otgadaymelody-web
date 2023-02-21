@@ -1,17 +1,21 @@
 import React from 'react';
+import AboutUs from '../components/about-us/AboutUs';
+import FAQBlock from '../components/faq-block/FAQBlock';
 import Footer from '../components/footer/Footer';
+import FutureGamesList from '../components/future-games-list/FutureGamesList';
 import Header from '../components/header/Header';
 import MainBanner from '../components/main-banner/MainBanner';
 
 const Home: React.FC = () => {
   return (
     <div className="home-page">
-      <Header />
-      <div className="home-page-body">
-        <div className="container">
-          <MainBanner />
-          <span>Home Page v.1.2</span>
-        </div>
+      <div className="container">
+        <Header />
+        <MainBanner />
+        <FutureGamesList />
+        <AboutUs />
+        <FAQBlock />
+        <span>Home Page v.1.3</span>
       </div>
       <Footer />
     </div>

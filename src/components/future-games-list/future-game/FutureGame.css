@@ -1,0 +1,59 @@
+.future-game {
+   padding: 16px;
+   border-radius: 24px;
+   background-color: var(--color-bg-white);
+   box-shadow: var(--shadow);
+
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.future-game__title {
+   height: 72px;
+   font: var(--fonts-h4-card-title);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 24px;
+}
+
+.future-game__info-block {
+   height: 93px;
+   background: var(--color-gradient);
+   border-radius: 16px;
+}
+
+.future-game__description {
+   margin-bottom: 24px;
+}
+
+.future-game__main-description {
+   display: flex;
+   justify-content: space-between;
+   font: var(--fonts-h5-card-description);
+   color: var(--color-bg-gray-900);
+}
+
+.future-game__place {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.future-game__price { 
+   display: flex;
+   align-items: center;
+   text-align: start;
+   gap: 8px;
+}
+
+.future-game__address {
+   margin-top: 6px;
+   width: 100%;
+   font: var(--fonts-span-sub-description);
+   color: var(--color-bg-gray-600);
+   text-align: start;
+}
