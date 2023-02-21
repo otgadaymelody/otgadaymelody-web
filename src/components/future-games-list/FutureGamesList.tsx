@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, type FC } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import FutureGame from './future-game/FutureGame';
 import BaseButton from '../ui/base-button/BaseButton';
@@ -11,8 +11,9 @@ import 'swiper/css/pagination';
 
 import { Navigation } from 'swiper';
 import useDeviceType from '../../hooks/useDeviceType';
+import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 
-const FutureGamesList = (): React.ReactElement => {
+const FutureGamesList: FC<BaseComponent> = ({className}): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const mediatorClasses = {
@@ -28,7 +29,7 @@ const FutureGamesList = (): React.ReactElement => {
   };
 
   return (
-    <BlockBackground className="future-games-list" mediatorsClasses={mediatorClasses}>
+    <BlockBackground className={`future-games-list ${className}`} mediatorsClasses={mediatorClasses}>
       <h2 className="future-games-list__title">Предстоящие игры</h2>
       {isDesktop ? (
         <Swiper

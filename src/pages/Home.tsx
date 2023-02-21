@@ -11,13 +11,13 @@ const Home: React.FC = () => {
     <div className="home-page">
       <div className="container">
         <Header />
-        <MainBanner />
-        <FutureGamesList />
-        <AboutUs />
-        <FAQBlock />
+        <MainBanner/>
+        <FutureGamesList className='home-page-block'/>
+        <AboutUs className="home-page-block"/>
+        <FAQBlock className="home-page-block"/>
         <span>Home Page v.1.3</span>
       </div>
-      <Footer />
+      <Footer className="home-page-block"/>
     </div>
   );
 };
