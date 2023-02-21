@@ -1,5 +1,5 @@
-import { dateInfo } from '../FutureGameProps';
+import { DateInfo } from '../FutureGameProps';
 
 export declare interface DateInfoBlockProps extends React.AllHTMLAttributes<HTMLDivElement> {
-  dateInfo: dateInfo;
+  dateInfo: DateInfo;
 }

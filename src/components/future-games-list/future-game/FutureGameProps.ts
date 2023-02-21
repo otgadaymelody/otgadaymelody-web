@@ -1,4 +1,4 @@
-export declare interface dateInfo {
+export declare interface DateInfo {
   day: string;
   month: string;
   time: string;
@@ -11,6 +11,6 @@ export declare interface FutureGameProps extends React.AllHTMLAttributes<HTMLDiv
     location: string;
     address: string;
     price: string;
-    dateInfo: dateInfo;
+    dateInfo: DateInfo;
   };
 }
