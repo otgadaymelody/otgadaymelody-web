@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.d4aa957a.css",
-    "main.js": "/otgadaymelody-web/static/js/main.bc3aa81f.js",
+    "main.css": "/otgadaymelody-web/static/css/main.7e6ea230.css",
+    "main.js": "/otgadaymelody-web/static/js/main.6db1d6a7.js",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
-    "static/media/01.png": "/otgadaymelody-web/static/media/01.78442fd0b55779706674.png",
+    "static/media/01.png": "/otgadaymelody-web/static/media/01.e508eae330f30a29d07b.png",
     "static/media/about-us-preview.png": "/otgadaymelody-web/static/media/about-us-preview.0bdd5bd5d31c070cd90f.png",
+    "static/media/02.png": "/otgadaymelody-web/static/media/02.4b7908c6f1e840945823.png",
     "static/media/women.png": "/otgadaymelody-web/static/media/women.a2a6bd67903c717abfa5.png",
     "static/media/druk-text-wide-cyr-700.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-700.0bb4b28b0c4e31f94418.woff",
     "static/media/druk-text-wide-cyr-900.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-900.bca4bcb3205a7c74ea79.woff",
@@ -25,6 +26,7 @@
     "static/media/info-clock.svg": "/otgadaymelody-web/static/media/info-clock.631976192231548e4e23c5ea12b3587a.svg",
     "static/media/info-total.svg": "/otgadaymelody-web/static/media/info-total.f9539804a482b0a44b6d005153cc5113.svg",
     "static/media/vk.svg": "/otgadaymelody-web/static/media/vk.59b41286fd7a16b450be13951dbb358a.svg",
+    "static/media/main-logo.svg": "/otgadaymelody-web/static/media/main-logo.6112438543ab9acae186.svg",
     "static/media/01_schedule.svg": "/otgadaymelody-web/static/media/01_schedule.78b0166b396d2999d5b5a4bd8a060c6d.svg",
     "static/media/01_schedule_color.svg": "/otgadaymelody-web/static/media/01_schedule_color.3a12f841f08336ab42ffd3170e9f7c80.svg",
     "static/media/02_album.svg": "/otgadaymelody-web/static/media/02_album.092c5ca91f8a068c999484679419ebe6.svg",
@@ -54,11 +56,11 @@
     "static/media/next-slide-img.svg": "/otgadaymelody-web/static/media/next-slide-img.d8549574cc802474b7263882e9995f61.svg",
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.d4aa957a.css.map": "/otgadaymelody-web/static/css/main.d4aa957a.css.map",
-    "main.bc3aa81f.js.map": "/otgadaymelody-web/static/js/main.bc3aa81f.js.map"
+    "main.7e6ea230.css.map": "/otgadaymelody-web/static/css/main.7e6ea230.css.map",
+    "main.6db1d6a7.js.map": "/otgadaymelody-web/static/js/main.6db1d6a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4aa957a.css",
-    "static/js/main.bc3aa81f.js"
+    "static/css/main.7e6ea230.css",
+    "static/js/main.6db1d6a7.js"
   ]
 }
