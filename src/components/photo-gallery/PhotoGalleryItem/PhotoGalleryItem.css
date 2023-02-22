@@ -1,0 +1,59 @@
+.photo-gallery-item {
+  position: relative;
+}
+
+.photo-gallery-item__img {
+  width: 100%;
+  border-radius: 32px;
+  padding: 8px 0;
+}
+
+.photo-gallery-item__wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  align-items: center;
+}
+
+.photo-gallery-item__text-block {
+  display: flex;
+  gap: 4px;
+  height: fit-content;
+  justify-content: center;
+  padding: 6px 4px 6px 8px;
+  background: var(--color-lime);
+  position: relative;
+  z-index: 2;
+}
+
+.photo-gallery-item__wrapper::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 50px;
+  margin: -10px;
+  background-image: url('../../../assets/images/home-page/photo-gallery/main-logo.svg');
+}
+
+.photo-gallery-item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.photo-gallery-item__title {
+  font: var(--fonts-photo-gallery-item-title);
+  color: var(--color-bg-white);
+  text-transform: uppercase;
+}
+
+.photo-gallery-item__subtitle {
+  font: var(--fonts-photo-gallery-item-subtitle);
+  color: var(--color-pink);
+}
+
+.photo-gallery-item__game-index {
+  font: var(--fonts-photo-gallery-item-index);
+  color: var(--color-bg-white);
+}

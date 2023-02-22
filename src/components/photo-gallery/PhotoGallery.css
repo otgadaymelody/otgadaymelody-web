@@ -1,0 +1,9 @@
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-gallery__title {
+  font: var(--fonts-h1-main-title);
+}
