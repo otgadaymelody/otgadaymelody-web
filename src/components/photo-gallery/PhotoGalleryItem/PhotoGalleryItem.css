@@ -1,5 +1,6 @@
 .photo-gallery-item {
   position: relative;
+  overflow: hidden;
 }
 
 .photo-gallery-item__img {
@@ -11,7 +12,7 @@
 .photo-gallery-item__wrapper {
   display: flex;
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
   left: 0;
   align-items: center;
 }
@@ -34,6 +35,8 @@
   height: 50px;
   margin: -10px;
   background-image: url('../../../assets/images/home-page/photo-gallery/main-logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .photo-gallery-item__description {
@@ -56,4 +59,42 @@
 .photo-gallery-item__game-index {
   font: var(--fonts-photo-gallery-item-index);
   color: var(--color-bg-white);
+}
+
+@media (min-width: 744px) {
+  .photo-gallery-item__text-block {
+    padding: 12px 8px 12px 16px;
+  }
+  .photo-gallery-item__wrapper::after {
+    width: 143px;
+    height: 100px;
+    margin: -20px;
+  }
+  .photo-gallery-item__title {
+    font-size: 20px;
+  }
+
+  .photo-gallery-item__subtitle {
+    font-size: 10px;
+  }
+
+  .photo-gallery-item__game-index {
+    font-size: 62px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .photo-gallery-item__img {
+    width: 448px;
+    height: 316px;
+    border-radius: 36px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .photo-gallery-item__img {
+    width: 539px;
+    height: 359px;
+    border-radius: 36px;
+  }
 }

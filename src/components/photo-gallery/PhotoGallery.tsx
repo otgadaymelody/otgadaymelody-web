@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { type FC } from 'react';
 import BaseButton from '../ui/base-button/BaseButton';
 import './PhotoGallery.css';
 import PhotoGalleryItem from './PhotoGalleryItem/PhotoGalleryItem';
+import { type BaseComponent } from '../../shared/interfaces/baseComponent';
+import { photoGalleryList } from './photoGalleryList';
 
-const PhotoGallery = (): React.ReactElement => {
+const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
+  const showAllBtnStyles = {
+    buttonForm: 'photo-gallery__show-all-btn',
+    buttonTitle: 'photo-gallery__show-all-btn-title',
+  };
   return (
-    <div className="photo-gallery">
-      <div className="photo-gallery__title">Посмотрите сами у нас всегда круто !</div>
+    <div className={`photo-gallery ${className}`}>
+      <div className="photo-gallery__title">Посмотрите сами у нас всегда круто!</div>
       <div className="photo-gallery__photos-list">
-        <PhotoGalleryItem />
+        {photoGalleryList.map((item, index) => (
+          <PhotoGalleryItem item={item} key={index} />
+        ))}
       </div>
-      <BaseButton title="Смотреть все фото" />
+      <BaseButton title="Смотреть все фотоотчеты" styles={showAllBtnStyles} />
     </div>
   );
 };

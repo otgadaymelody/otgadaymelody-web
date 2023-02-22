@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { type FC } from 'react';
 import './PhotoGalleryItem.css';
-import testingImg from '../../../assets/images/home-page/photo-gallery/01.png';
-import mainLogo from '../../../assets/images/home-page/photo-gallery/main-logo.svg';
+import { type PhotoGalleryItemProps } from './PhotoGalleryItemProps';
 
-const PhotoGalleryItem = (): React.ReactElement => {
+const PhotoGalleryItem: FC<PhotoGalleryItemProps> = ({ item }): React.ReactElement => {
   return (
     <div className="photo-gallery-item">
-      <img className="photo-gallery-item__img" src={testingImg} />
+      <img className="photo-gallery-item__img" src={item.previewImage} />
       <div className="photo-gallery-item__wrapper">
         <div className="photo-gallery-item__text-block">
           <div className="photo-gallery-item__description">
@@ -14,9 +13,11 @@ const PhotoGalleryItem = (): React.ReactElement => {
               Отгадай <br />
               мелодию
             </span>
-            <span className="photo-gallery-item__subtitle">06.01.23 // ПИВЗАВОД</span>
+            <span className="photo-gallery-item__subtitle">
+              {item.date} &#47;&#47; {item.place.toUpperCase()}
+            </span>
           </div>
-          <div className="photo-gallery-item__game-index">#10</div>
+          <div className="photo-gallery-item__game-index">{item.gameIndex}</div>
         </div>
       </div>
     </div>
