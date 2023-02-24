@@ -1,0 +1,24 @@
+.fact-img-block {
+  position: relative;
+}
+
+.fact-img-block__center-img,
+.fact-img-block__additional-01,
+.fact-img-block__additional-02 {
+  position: absolute;
+}
+
+.fact-img-block__center-img {
+  top: 20%;
+  left: 25%;
+}
+
+.fact-img-block__additional-02 {
+  top: 0;
+  left: -15px;
+}
+
+.fact-img-block__additional-01 {
+  bottom: 0;
+  right: -15px;
+}
