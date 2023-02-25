@@ -34,6 +34,11 @@ const InterestingFacts = (): React.ReactElement => {
     );
   };
 
+  const onSlideChange = (swiper: SwiperType): void => {
+    swiper.pagination.bullets[swiper.previousIndex].setAttribute('value', '100');
+    // console.log(swiper.previousIndex);
+  };
+
   return (
     <BlockBackground mediatorsClasses={mediatorClasses} className="interesting-facts">
       <Swiper
@@ -45,6 +50,8 @@ const InterestingFacts = (): React.ReactElement => {
           disableOnInteraction: false,
         }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
+        onSlideChange={onSlideChange}
+
         // effect={'fade'}
       >
         <SwiperSlide>
