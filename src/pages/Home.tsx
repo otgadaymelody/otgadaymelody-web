@@ -7,6 +7,7 @@ import Header from '../components/header/Header';
 import InterestingFacts from '../components/interesting-facts/InterestingFacts';
 import MainBanner from '../components/main-banner/MainBanner';
 import PhotoGallery from '../components/photo-gallery/PhotoGallery';
+import QuizGame from '../components/quiz-game/QuizGame';
 
 const Home: React.FC = () => {
   return (
@@ -18,10 +19,10 @@ const Home: React.FC = () => {
         <AboutUs className="home-page-block" />
         <div className="home-page__minigames-block home-page-block">
           <InterestingFacts />
+          <QuizGame />
         </div>
         <PhotoGallery className="home-page-block" />
         <FAQBlock className="home-page-block" />
-        <span>Home Page v.1.3</span>
       </div>
       <Footer className="home-page-block" />
     </div>
