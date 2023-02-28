@@ -44,19 +44,17 @@ const QuizGame = (): React.ReactElement => {
         <img src={questionImg01} className="quiz-game__question-image" />
         <div className="quiz-game__game-block">
           <h2 className="quiz-game__question-title">{question.title}</h2>
-          <div className="quiz-game__answers-block">
-            <ul>
-              {question.answers.map((item, index) => (
-                <li
-                  key={index}
-                  className="quiz-game__answer-btn"
-                  onClick={() => onClickAnswer(index)}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="quiz-game__answers-block">
+            {question.answers.map((item, index) => (
+              <li
+                key={index}
+                className="quiz-game__answer-btn"
+                onClick={() => onClickAnswer(index)}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </BlockBackground>
