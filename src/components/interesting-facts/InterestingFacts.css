@@ -1,8 +1,8 @@
 .interesting-facts {
   width: 100%;
-  height: auto;
   border-radius: 32px;
   background: var(--color-gradient);
+  max-width: 715px;
 }
 
 .swiper {

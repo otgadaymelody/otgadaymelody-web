@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.fact-img-block__bg-img {
+  width: 100%;
+}
+
 .fact-img-block__center-img,
 .fact-img-block__additional-01,
 .fact-img-block__additional-02 {
@@ -21,4 +25,18 @@
 .fact-img-block__additional-01 {
   bottom: 0;
   right: -15px;
+}
+
+@media (min-width: 744px) {
+  .fact-img-block {
+    width: 276px;
+  }
+  .fact-img-block__center-img {
+    width: 50%;
+  }
+
+  .fact-img-block__additional-01,
+  .fact-img-block__additional-02 {
+    width: 20%;
+  }
 }
