@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.fb748d6a.css",
-    "main.js": "/otgadaymelody-web/static/js/main.6a1419e5.js",
+    "main.css": "/otgadaymelody-web/static/css/main.61d3ca58.css",
+    "main.js": "/otgadaymelody-web/static/js/main.76acaaf9.js",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
     "static/media/01.png": "/otgadaymelody-web/static/media/01.e508eae330f30a29d07b.png",
     "static/media/about-us-preview.png": "/otgadaymelody-web/static/media/about-us-preview.0bdd5bd5d31c070cd90f.png",
     "static/media/02.png": "/otgadaymelody-web/static/media/02.4b7908c6f1e840945823.png",
     "static/media/women.png": "/otgadaymelody-web/static/media/women.a2a6bd67903c717abfa5.png",
+    "static/media/question-01.svg": "/otgadaymelody-web/static/media/question-01.98aabe57dea193529b2647d148269335.svg",
     "static/media/druk-text-wide-cyr-700.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-700.0bb4b28b0c4e31f94418.woff",
     "static/media/druk-text-wide-cyr-900.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-900.bca4bcb3205a7c74ea79.woff",
     "static/media/druk-text-wide-cyr-500.woff": "/otgadaymelody-web/static/media/druk-text-wide-cyr-500.eb546dc5c7250196e6f2.woff",
@@ -19,18 +20,21 @@
     "static/media/montserrat-v25-latin_cyrillic-500.woff2": "/otgadaymelody-web/static/media/montserrat-v25-latin_cyrillic-500.6bba3d8aaab8fe428846.woff2",
     "static/media/montserrat-v25-latin_cyrillic-600.woff2": "/otgadaymelody-web/static/media/montserrat-v25-latin_cyrillic-600.57bef0d4b76d324bc86f.woff2",
     "static/media/montserrat-v25-latin_cyrillic-regular.woff2": "/otgadaymelody-web/static/media/montserrat-v25-latin_cyrillic-regular.62c0f043622de8dcd791.woff2",
+    "static/media/present.svg": "/otgadaymelody-web/static/media/present.338300bf83d6fb9f6445253b0751563d.svg",
     "static/media/logo.svg": "/otgadaymelody-web/static/media/logo.9b11f303afd61658cfbfdde271d61040.svg",
     "static/media/info-rounds.svg": "/otgadaymelody-web/static/media/info-rounds.045e0dd760fe586cb5ff2839818b6c9e.svg",
     "static/media/info-team.svg": "/otgadaymelody-web/static/media/info-team.d8a5057745d770a6cdb00965c25e158e.svg",
     "static/media/logo-white.svg": "/otgadaymelody-web/static/media/logo-white.89ce42a3f00f2a2282356319ef6abb03.svg",
     "static/media/info-clock.svg": "/otgadaymelody-web/static/media/info-clock.631976192231548e4e23c5ea12b3587a.svg",
     "static/media/info-total.svg": "/otgadaymelody-web/static/media/info-total.f9539804a482b0a44b6d005153cc5113.svg",
+    "static/media/additional-02.svg": "/otgadaymelody-web/static/media/additional-02.dfccddd0d2635707b9760b74225d793c.svg",
     "static/media/vk.svg": "/otgadaymelody-web/static/media/vk.59b41286fd7a16b450be13951dbb358a.svg",
     "static/media/main-logo.svg": "/otgadaymelody-web/static/media/main-logo.6112438543ab9acae186.svg",
     "static/media/01_schedule.svg": "/otgadaymelody-web/static/media/01_schedule.78b0166b396d2999d5b5a4bd8a060c6d.svg",
     "static/media/01_schedule_color.svg": "/otgadaymelody-web/static/media/01_schedule_color.3a12f841f08336ab42ffd3170e9f7c80.svg",
     "static/media/02_album.svg": "/otgadaymelody-web/static/media/02_album.092c5ca91f8a068c999484679419ebe6.svg",
     "static/media/02_album_color.svg": "/otgadaymelody-web/static/media/02_album_color.93df02737261407afe285c34c15a10e8.svg",
+    "static/media/additional-01.svg": "/otgadaymelody-web/static/media/additional-01.2b59e1099d09392a07127b28c0f1a815.svg",
     "static/media/tg.svg": "/otgadaymelody-web/static/media/tg.3e85235cae24429794d03a5b79a35fab.svg",
     "static/media/loc_button.svg": "/otgadaymelody-web/static/media/loc_button.cc2a7a9191708030a0305f85ddb9377e.svg",
     "static/media/Location.svg": "/otgadaymelody-web/static/media/Location.ab7f8a2230ac37082309a7b5856c5f62.svg",
@@ -43,6 +47,7 @@
     "static/media/04_franchise_color.svg": "/otgadaymelody-web/static/media/04_franchise_color.3da9e4a4e3d78cf7e6b96a3a1cfdbbba.svg",
     "static/media/vk-footer.svg": "/otgadaymelody-web/static/media/vk-footer.a27b5847089c2c141766.svg",
     "static/media/Ticket.svg": "/otgadaymelody-web/static/media/Ticket.1d456496f8ecee8a3b4947b97772e9bd.svg",
+    "static/media/center-logo.svg": "/otgadaymelody-web/static/media/center-logo.a31d5fa62bed921a0073cd1de3a24bba.svg",
     "index.html": "/otgadaymelody-web/index.html",
     "static/media/burger-menu.svg": "/otgadaymelody-web/static/media/burger-menu.ff558381ceaa57e827d958db43a536a1.svg",
     "static/media/wave.svg": "/otgadaymelody-web/static/media/wave.070ffc81a107003bcef05f270007d63f.svg",
@@ -57,11 +62,11 @@
     "static/media/next-slide-img.svg": "/otgadaymelody-web/static/media/next-slide-img.d8549574cc802474b7263882e9995f61.svg",
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.fb748d6a.css.map": "/otgadaymelody-web/static/css/main.fb748d6a.css.map",
-    "main.6a1419e5.js.map": "/otgadaymelody-web/static/js/main.6a1419e5.js.map"
+    "main.61d3ca58.css.map": "/otgadaymelody-web/static/css/main.61d3ca58.css.map",
+    "main.76acaaf9.js.map": "/otgadaymelody-web/static/js/main.76acaaf9.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb748d6a.css",
-    "static/js/main.6a1419e5.js"
+    "static/css/main.61d3ca58.css",
+    "static/js/main.76acaaf9.js"
   ]
 }
