@@ -5,6 +5,10 @@
   background: var(--color-gradient);
 }
 
+.swiper {
+  height: 100%;
+}
+
 .swiper-wrapper {
   padding-top: 20px;
   height: calc(100% - 20px);

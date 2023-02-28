@@ -18,14 +18,14 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
       {!lastQuestion ? (
         <div className="quiz-game-modal__info-block">
           <img src={presentImg} />
-          <h1>Верно</h1>
+          <h1 className="quiz-game-modal__result-title">Верно</h1>
           <GameRegistrationButton icon={false} onClick={clickNext} />
         </div>
       ) : (
         <div className="quiz-game-modal__info-block">
           <img src={presentImg} />
-          <h1>Поздравляем</h1>
-          <span>
+          <h1 className="quiz-game-modal__result-title">Поздравляем</h1>
+          <span className="quiz-game-modal__result-description">
             Вы ответили верно на все вопросы и мы приглашаем вас посетить нашу игру в офлайне и
             ощутить все эмоции от живой игры
           </span>
