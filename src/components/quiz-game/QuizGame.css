@@ -5,6 +5,8 @@
   align-items: center;
   border-radius: 32px;
   padding: 16px;
+
+  position: relative;
 }
 
 .quiz-game__title {
