@@ -19,7 +19,7 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
         <div className="quiz-game-modal__info-block">
           <img src={presentImg} />
           <h1 className="quiz-game-modal__result-title">Верно</h1>
-          <GameRegistrationButton icon={false} onClick={clickNext} />
+          <GameRegistrationButton icon={false} onClick={clickNext} title="Следующий вопрос" />
         </div>
       ) : (
         <div className="quiz-game-modal__info-block">

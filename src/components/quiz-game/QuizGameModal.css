@@ -29,7 +29,7 @@
 }
 
 .quiz-game-modal__result-description {
-  font-size: 20px;
-  font-weight: 500;
+  font: var(--fonts-h5-card-description);
   text-align: center;
+  margin-bottom: 67px;
 }
