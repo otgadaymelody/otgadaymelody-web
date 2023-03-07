@@ -2,9 +2,13 @@ import React, { type FC } from 'react';
 import './DateInfoBlock.css';
 import { type DateInfoBlockProps } from './DateInfoBlockProps';
 
-const DateInfoBlock: FC<DateInfoBlockProps> = ({ dateInfo, ...props }): React.ReactElement => {
+const DateInfoBlock: FC<DateInfoBlockProps> = ({
+  dateInfo,
+  className,
+  ...props
+}): React.ReactElement => {
   return (
-    <div className="date-info-block">
+    <div className={className ? `${className} date-info-block` : 'date-info-block'}>
       <div className="date-info-block__date-block">
         <span className="date-info-block__day">{dateInfo.day}</span>
         <span className="date-info-block__month">{dateInfo.month}</span>

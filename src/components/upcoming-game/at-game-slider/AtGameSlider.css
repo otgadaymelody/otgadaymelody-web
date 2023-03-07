@@ -1,0 +1,23 @@
+.at-game-slider__title {
+  font: var(--fonts-h5-subtitle);
+  margin-bottom: 32px;
+}
+
+.swiper-slide {
+  width: fit-content;
+}
+
+@media (min-width: 744px) {
+  .at-game-slider__title {
+    font-size: 26px;
+    margin-bottom: 36px;
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .at-game-slider__title {
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+}

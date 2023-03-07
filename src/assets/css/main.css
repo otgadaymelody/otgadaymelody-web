@@ -12,6 +12,7 @@
   --fonts-h3-block-title: 700 34px/1.4 var(--font-family-headers), sans-serif;
 
   --fonts-h4-subtitle: 700 26px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h5-subtitle: 700 20px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h4-card-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
 
   --fonts-footer-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
@@ -39,6 +40,7 @@
 
   --fonts-interesting-fact: 600 14px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-navigation-link: 500 14px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-upcoming-title: 400 14px/1.4 var(--font-family-descriptions), sans-serif;
 
   --fonts-p-infographic-description: 600 12px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-photo-gallery-item-subtitle: 700 5px/0.8 var(--font-family-descriptions), sans-serif;

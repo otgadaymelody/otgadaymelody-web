@@ -8,6 +8,7 @@ import InterestingFacts from '../components/interesting-facts/InterestingFacts';
 import MainBanner from '../components/main-banner/MainBanner';
 import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
+import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <div className="container">
         <Header />
         <MainBanner />
+        <UpcomingGame className="home-page-block" />
         <FutureGamesList className="home-page-block" />
         <AboutUs className="home-page-block" />
         <div className="home-page__minigames-block home-page-block">
