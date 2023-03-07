@@ -118,4 +118,7 @@
   .upcoming-game__game-description {
     font-size: 24px;
   }
+  .upcoming-game__img {
+    height: 739px;
+  }
 }
