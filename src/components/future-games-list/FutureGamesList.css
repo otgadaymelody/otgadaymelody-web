@@ -30,6 +30,7 @@
 
   position: relative;
   z-index: 10;
+  overflow: visible;
 }
 
 .future-games-list__show-more-btn {
@@ -72,6 +73,23 @@
   height: auto;
   bottom: -3rem;
   right: -4rem;
+}
+
+.future-games-list__slider-button-next,
+.future-games-list__slider-button-prev {
+  position: absolute;
+  top: 45%;
+  display: block;
+  z-index: 20;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.future-games-list__slider-button-prev {
+  left: -23px;
+}
+.future-games-list__slider-button-next {
+  right: -23px;
 }
 
 @media (min-width: 744px) {
