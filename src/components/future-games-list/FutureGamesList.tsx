@@ -1,4 +1,4 @@
-import React, { useState, useRef, type FC } from 'react';
+import React, { useState, useRef, type FC, useEffect } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import FutureGame from './future-game/FutureGame';
 import BaseButton from '../ui/base-button/BaseButton';
@@ -27,6 +27,12 @@ const FutureGamesList: FC<BaseComponent> = ({className}): React.ReactElement => 
     buttonForm: 'future-games-list__show-more-btn',
     buttonTitle: 'future-games-list__show-more-title-btn',
   };
+
+  useEffect(() => {
+    fetch('/games-list')
+      .then(async (res) => {return await res.json()})
+      .then(games => console.log('games', games)).catch(()=>console.log('error'));
+  });
 
   return (
     <BlockBackground className={`future-games-list ${className}`} mediatorsClasses={mediatorClasses}>

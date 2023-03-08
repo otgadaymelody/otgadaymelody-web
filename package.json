@@ -33,6 +33,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint */**.{tsx,ts}"
   },
+  "proxy": "http://localhost:3000",
   "eslintConfig": {
     "extends": [
       "react-app",
