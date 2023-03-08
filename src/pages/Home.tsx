@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import AboutUs from '../components/about-us/AboutUs';
 import FAQBlock from '../components/faq-block/FAQBlock';
 import Footer from '../components/footer/Footer';
@@ -9,8 +9,12 @@ import MainBanner from '../components/main-banner/MainBanner';
 import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
+import useOnScreen from '../hooks/useOnScreen';
 
 const Home: React.FC = () => {
+
+  const ref = useRef<HTMLDivElement>(null)
+  const isVisible = useOnScreen(ref);
   return (
     <div className="home-page">
       <div className="container">
@@ -19,8 +23,8 @@ const Home: React.FC = () => {
         <UpcomingGame className="home-page-block" />
         <FutureGamesList className="home-page-block" />
         <AboutUs className="home-page-block" />
-        <div className="home-page__minigames-block home-page-block">
-          <InterestingFacts />
+        <div ref={ref} className="home-page__minigames-block home-page-block">
+          {isVisible && <InterestingFacts  />}
           <QuizGame />
         </div>
         <PhotoGallery className="home-page-block" />
