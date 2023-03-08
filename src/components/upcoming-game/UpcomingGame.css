@@ -80,6 +80,7 @@
   .upcoming-game {
     display: flex;
     gap: 88px;
+    padding-left: 64px;
   }
   .upcoming-game__game-title {
     font-size: 34px;
@@ -108,6 +109,9 @@
 }
 
 @media (min-width: 1920px) {
+  .upcoming-game {
+    padding-left: 88px;
+  }
   .upcoming-game__title {
     font-size: 20px;
   }
