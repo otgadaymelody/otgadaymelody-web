@@ -16,12 +16,12 @@ const GameRulesCarousel = (): React.ReactElement => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   return (
     <div className="game-rules-carousel">
-      <div className="game-rules-carousel__image-block">
+      <div className="game-rules-carousel__image-wrapper">
         <img className="game-rules-carousel__img" src={carouselImg01} />
       </div>
 
       <Swiper
-        className="game-rules-carousel__rules-block"
+        className="game-rules-carousel__carousel"
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
