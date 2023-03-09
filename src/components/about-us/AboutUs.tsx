@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { type FC } from 'react';
 import aboutUsPreview from '../../assets/images/home-page/about-us-preview.png';
 import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import './AboutUs.css';
 import InfographicBlock from './infographic-block/InfographicBlock';
+import GameRulesCarousel from './game-rules-carousel/GameRulesCarousel';
+import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 
-const AboutUs = (): React.ReactElement => {
+const AboutUs: FC<BaseComponent> = ({className}): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
 
@@ -15,7 +17,7 @@ const AboutUs = (): React.ReactElement => {
   };
 
   return (
-    <div className="about-us">
+    <div className={`about-us ${className}`}>
       <div className="game-rules__wrapper">
         {!isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
         <div className="game-rules__main-info">
@@ -38,7 +40,7 @@ const AboutUs = (): React.ReactElement => {
         <InfographicBlock />
       </div>
 
-      <div className="game-rules-carousel">Карусель с правилами</div>
+      <GameRulesCarousel />
     </div>
   );
 };

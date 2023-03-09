@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { type FC, useState } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import { faqQuestions } from './faqQuestions';
 import openImg from '../../assets/images/home-page/open-img.svg';
 import closeImg from '../../assets/images/home-page/close-img.svg';
 import './FAQBlock.css';
+import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 
-const FAQBlock = (): React.ReactElement => {
+const FAQBlock: FC<BaseComponent> = ({className}): React.ReactElement => {
   const [selected, setSelected] = useState<number | null>(null);
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
@@ -23,7 +24,7 @@ const FAQBlock = (): React.ReactElement => {
   };
 
   return (
-    <BlockBackground className="faq-block" mediatorsClasses={mediatorClasses}>
+    <BlockBackground className={`faq-block ${className}`} mediatorsClasses={mediatorClasses}>
       <div className="faq-block__title">Остались вопросы?</div>
       <ul className="faq-block__questions-list">
         {faqQuestions.map((item, i) => (

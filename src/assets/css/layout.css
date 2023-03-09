@@ -10,6 +10,15 @@
   padding: 0 12px;
 }
 
+.home-page-block {
+  margin-top: 200px;
+}
+
+.home-page__minigames-block {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 744px) {
   .container {
     padding: 0 24px;
@@ -18,12 +27,14 @@
 
 @media (min-width: 1440px) {
   .container {
-    padding: 0 24px;
+    padding: 0 28px;
+  }
+
+  .home-page__minigames-block {
+    flex-direction: row;
+    gap: 15px;
   }
 }
 
 @media (min-width: 1920px) {
-  .container {
-    padding: 0 24px;
-  }
 }
