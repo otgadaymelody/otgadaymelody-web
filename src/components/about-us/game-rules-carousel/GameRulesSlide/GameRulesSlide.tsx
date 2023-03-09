@@ -4,10 +4,10 @@ import './GameRulesSlide.css';
 
 const GameRulesSlide: FC<GameRulesSlideProps> = ({ title, description }): React.ReactElement => {
   return (
-    <div className="game-rules-slide">
-      <div className="game-rules-slide__title">{title}</div>
-      <div className="game-rules-slide__description">{description}</div>
-    </div>
+    <section className="game-rules-slide">
+      <h1 className="game-rules-slide__title">{title}</h1>
+      <p className="game-rules-slide__description">{description}</p>
+    </section>
   );
 };
 
