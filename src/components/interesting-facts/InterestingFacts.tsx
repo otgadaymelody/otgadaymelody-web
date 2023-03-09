@@ -36,7 +36,6 @@ const InterestingFacts = (): React.ReactElement => {
 
   const onSlideChange = (swiper: SwiperType): void => {
     swiper.pagination.bullets[swiper.previousIndex].setAttribute('value', '100');
-    // console.log(swiper.previousIndex);
   };
 
   return (
@@ -51,7 +50,6 @@ const InterestingFacts = (): React.ReactElement => {
         }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         onSlideChange={onSlideChange}
-
         // effect={'fade'}
       >
         <SwiperSlide>
