@@ -33,8 +33,11 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   useEffect(() => {
     fetch('/games-list')
-      .then(async (res) => {return await res.json()})
-      .then(games => console.log('games', games)).catch(()=>console.log('error'));
+      .then(async (res) => {
+        return await res.json();
+      })
+      .then((games) => console.log('games', games))
+      .catch(() => console.log('error'));
   });
 
   return (

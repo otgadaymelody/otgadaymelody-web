@@ -23,6 +23,7 @@
 }
 
 .future-games-list__games_list {
+  --navigation-btn-padding: -23px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -86,10 +87,10 @@
 }
 
 .future-games-list__slider-button-prev {
-  left: -23px;
+  left: var(--navigation-btn-padding);
 }
 .future-games-list__slider-button-next {
-  right: -23px;
+  right: var(--navigation-btn-padding);
 }
 
 @media (min-width: 744px) {
