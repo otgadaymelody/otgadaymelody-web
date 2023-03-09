@@ -6,7 +6,7 @@ import './GameRulesCarousel.css';
 import 'swiper/css';
 
 import GameRulesSlide from './GameRulesSlide/GameRulesSlide';
-import { gameRulesList } from './gameRules';
+import { gameRulesList } from './gameRules.consts';
 import carouselImg01 from '../../../assets/images/home-page/game-rules-carousel/01.png';
 import prevSlideImg from '../../../assets/images/home-page/game-rules-carousel/prev-slide-img.svg';
 import nextSlideImg from '../../../assets/images/home-page/game-rules-carousel/next-slide-img.svg';
