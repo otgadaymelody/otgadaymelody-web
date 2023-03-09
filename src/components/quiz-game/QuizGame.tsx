@@ -17,7 +17,6 @@ const QuizGame = (): React.ReactElement => {
   };
 
   const onClickAnswer = (index: number): void => {
-    console.log(`Step ${step} on ${question.answers[index]}`);
     setModalActive((prev) => !prev);
   };
 
