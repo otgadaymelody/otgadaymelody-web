@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.photo-gallery-item__text-block {
+.photo-gallery-item__text-container {
   display: flex;
   gap: 4px;
   height: fit-content;
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: 744px) {
-  .photo-gallery-item__text-block {
+  .photo-gallery-item__text-container {
     padding: 12px 8px 12px 16px;
   }
   .photo-gallery-item__wrapper::after {

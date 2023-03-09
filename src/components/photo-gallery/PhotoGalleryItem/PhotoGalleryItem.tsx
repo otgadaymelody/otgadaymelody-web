@@ -7,12 +7,12 @@ const PhotoGalleryItem: FC<PhotoGalleryItemProps> = ({ item }): React.ReactEleme
     <div className="photo-gallery-item">
       <img className="photo-gallery-item__img" src={item.previewImage} />
       <div className="photo-gallery-item__wrapper">
-        <div className="photo-gallery-item__text-block">
+        <div className="photo-gallery-item__text-container">
           <div className="photo-gallery-item__description">
-            <span className="photo-gallery-item__title">
+            <div className="photo-gallery-item__title">
               Отгадай <br />
               мелодию
-            </span>
+            </div>
             <span className="photo-gallery-item__subtitle">
               {item.date} &#47;&#47; {item.place.toUpperCase()}
             </span>
