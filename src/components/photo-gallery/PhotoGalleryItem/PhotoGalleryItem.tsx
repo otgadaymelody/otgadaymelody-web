@@ -9,10 +9,10 @@ const PhotoGalleryItem: FC<PhotoGalleryItemProps> = ({ item }): React.ReactEleme
       <div className="photo-gallery-item__wrapper">
         <div className="photo-gallery-item__text-container">
           <div className="photo-gallery-item__description">
-            <div className="photo-gallery-item__title">
+            <h1 className="photo-gallery-item__title">
               Отгадай <br />
               мелодию
-            </div>
+            </h1>
             <span className="photo-gallery-item__subtitle">
               {item.date} &#47;&#47; {item.place.toUpperCase()}
             </span>

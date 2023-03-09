@@ -46,6 +46,7 @@
 }
 
 .photo-gallery-item__title {
+  margin: 0;
   font: var(--fonts-photo-gallery-item-title);
   color: var(--color-bg-white);
   text-transform: uppercase;
