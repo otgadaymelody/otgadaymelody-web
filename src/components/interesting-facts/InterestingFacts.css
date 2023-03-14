@@ -9,11 +9,6 @@
   height: 100%;
 }
 
-.swiper-wrapper {
-  /* padding-top: 20px; */
-  height: calc(100% - 20px);
-}
-
 .custom-button-next,
 .custom-button-prev {
   position: absolute;

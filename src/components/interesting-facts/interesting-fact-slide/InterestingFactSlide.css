@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   justify-content: space-between;
+  height: 100%;
   padding: 16px;
-  gap: 48px;
 }
 
 .interesting-fact-slide__title {
   color: var(--color-bg-white);
   font: var(--fonts-h2-infographic-title);
+  margin-bottom: 48px;
 }
 
 .interesting-fact-slide__image {
@@ -19,7 +19,9 @@
 }
 
 .interesting-fact-slide__description {
+  margin-top: 24px;
   width: 100%;
+
   background-color: var(--color-bg-white);
   border-radius: 16px;
   padding: 16px;
