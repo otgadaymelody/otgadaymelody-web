@@ -9,6 +9,10 @@
   height: 100%;
 }
 
+.swiper-slide {
+  height: unset;
+}
+
 .custom-button-next,
 .custom-button-prev {
   position: absolute;
