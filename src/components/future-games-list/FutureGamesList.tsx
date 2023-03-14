@@ -52,7 +52,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
             nextEl: '.future-games-list__slider-button-next',
             prevEl: '.future-games-list__slider-button-prev',
           }}
-          slidesPerView={3}
+          slidesPerView={'auto'}
           spaceBetween={32}
           modules={[Navigation]}
           className="future-games-list__games_list"
@@ -67,21 +67,6 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               <FutureGame className={'future-games-list__game'} game={item} />
             </SwiperSlide>
           ))}
-          {/* <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[0]} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[1]} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[2]} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[3]} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <FutureGame className={'future-games-list__game'} game={gameList[4]} />
-          </SwiperSlide> */}
           <div className="future-games-list__slider-button-prev">
             <img src={sliderNextImg} />
           </div>
