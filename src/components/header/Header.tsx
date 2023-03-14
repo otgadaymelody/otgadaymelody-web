@@ -5,7 +5,7 @@ import { ReactComponent as TgLogo } from '../../assets/images/header/tg.svg';
 import { ReactComponent as VkLogo } from '../../assets/images/header/vk.svg';
 import { ReactComponent as BurgerBtn } from '../../assets/images/header/burger-menu.svg';
 import { ReactComponent as LocationBtn } from '../../assets/images/header/loc_button.svg';
-import { navImages } from './nav-images';
+import { NAV_IMAGES } from './nav-images.consts';
 import location from '../../assets/images/header/loc.svg';
 import './Header.css';
 import BaseButton from '../ui/base-button/BaseButton';
@@ -33,10 +33,10 @@ const Header: FC = () => {
 
         {isDesktop && (
           <nav className="header__links">
-            <HeaderLink title="Расписание игр" img={navImages[0]} />
-            <HeaderLink title="Фотоотчеты" img={navImages[1]} />
-            <HeaderLink title="Корпоративы" img={navImages[2]} />
-            <HeaderLink title="Франшиза" img={navImages[3]} />
+            <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} />
+            <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} />
+            <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} />
+            <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} />
           </nav>
         )}
       </div>

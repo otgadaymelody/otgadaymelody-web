@@ -7,7 +7,7 @@ import corp_color from '../../assets/images/header/03_corp_color.svg';
 import franchise from '../../assets/images/header/04_franchise.svg';
 import franchise_color from '../../assets/images/header/04_franchise_color.svg';
 
-export const navImages: string[][] = [
+export const NAV_IMAGES: string[][] = [
   [schedule, schedule_color],
   [album, album_color],
   [corp, corp_color],

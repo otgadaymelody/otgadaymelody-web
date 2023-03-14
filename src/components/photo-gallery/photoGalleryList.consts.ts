@@ -8,7 +8,7 @@ export declare interface PhotoGalleryItemType {
   gameIndex: string;
 }
 
-export const photoGalleryList: PhotoGalleryItemType[] = [
+export const PHOTO_GALLERY_LIST: PhotoGalleryItemType[] = [
   {
     previewImage: image01,
     date: '06.01.23',

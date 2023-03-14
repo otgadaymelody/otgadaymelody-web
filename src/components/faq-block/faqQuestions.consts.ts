@@ -3,7 +3,7 @@ interface faqQuestionsType {
   answer: string;
 }
 
-export const faqQuestions: faqQuestionsType[] = [
+export const FAQ_QUESTIONS: faqQuestionsType[] = [
   {
     question: 'Как нужно готовиться к игре?',
     answer: 'Ответ убил',

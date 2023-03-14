@@ -1,4 +1,4 @@
-export const gameRulesList = [
+export const GAME_RULES_LIST = [
   {
     title: 'Музыкальное соревнование',
     description: `В одной игре соревнуется 20-40 команд от 4 до 15 человек. 

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import './QuizGame.css';
 import questionImg01 from '../../assets/images/home-page/quiz-game/question-01.svg';
-import { quizQuestions } from './quizQuestions';
+import { QUIZ_QUESTIONS } from './quizQuestions.consts';
 import QuizGameModal from './QuizGameModal';
 
 const QuizGame = (): React.ReactElement => {
   const [step, setStep] = useState(0);
   const [modalActive, setModalActive] = useState(false);
-  const question = quizQuestions[step];
+  const question = QUIZ_QUESTIONS[step];
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
     topRight: 'banner__mediator_top-right',
@@ -21,7 +21,7 @@ const QuizGame = (): React.ReactElement => {
   };
 
   const clickNext = (): void => {
-    if (step === quizQuestions.length - 1) {
+    if (step === QUIZ_QUESTIONS.length - 1) {
       setModalActive((prev) => !prev);
       setStep(0);
     } else {
@@ -33,7 +33,7 @@ const QuizGame = (): React.ReactElement => {
   return (
     <BlockBackground mediatorsClasses={mediatorClasses} className="quiz-game">
       {modalActive &&
-        (step === quizQuestions.length - 1 ? (
+        (step === QUIZ_QUESTIONS.length - 1 ? (
           <QuizGameModal clickNext={() => clickNext()} lastQuestion={true} />
         ) : (
           <QuizGameModal clickNext={() => clickNext()} lastQuestion={false} />

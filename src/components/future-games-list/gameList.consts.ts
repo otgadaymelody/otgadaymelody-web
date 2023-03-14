@@ -1,4 +1,4 @@
-export const gameList = [
+export const GAME_LIST = [
   {
     title: 'Девяностые #6',
     location: 'Пивзавод',

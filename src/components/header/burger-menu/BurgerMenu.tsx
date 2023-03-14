@@ -2,7 +2,7 @@ import React, { type FC } from 'react';
 import './BurgerMenu.css';
 import { ReactComponent as CloseBtn } from '../../../assets/images/header/close-btn.svg';
 import HeaderLink from '../HeaderLink';
-import { navImages } from '../nav-images';
+import { NAV_IMAGES } from '../nav-images.consts';
 
 interface BurgerMenuProps {
   active: boolean;
@@ -20,10 +20,10 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
       />
       <div className="burger-menu__content">
         <nav className="burger-menu__links">
-          <HeaderLink title="Расписание игр" img={navImages[0]} />
-          <HeaderLink title="Фотоотчеты" img={navImages[1]} />
-          <HeaderLink title="Корпоративы" img={navImages[2]} />
-          <HeaderLink title="Франшиза" img={navImages[3]} />
+          <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} />
+          <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} />
+          <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} />
+          <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} />
         </nav>
         <div className="burger-menu__footer">
           <span>VK</span>
