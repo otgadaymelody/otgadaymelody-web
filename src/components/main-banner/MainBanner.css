@@ -144,7 +144,6 @@
 
   .banner__reg-btn {
     padding: 16px 48px;
-    border: 2px solid var(--color-lime);
     border-radius: 61px;
     height: 58px;
   }
