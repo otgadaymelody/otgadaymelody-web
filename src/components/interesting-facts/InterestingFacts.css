@@ -2,7 +2,6 @@
   width: 100%;
   border-radius: 32px;
   background: var(--color-gradient);
-  max-width: 715px;
 }
 
 .swiper {
@@ -62,6 +61,9 @@ progress[value]::-moz-progress-bar {
 }
 
 @media (min-width: 1440px) {
+  .interesting-facts {
+    max-width: 564px;
+  }
   .swiper-pagination-bullet {
     height: 4px;
   }

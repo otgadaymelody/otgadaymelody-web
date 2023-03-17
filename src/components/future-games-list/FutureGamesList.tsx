@@ -46,45 +46,33 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
       mediatorsClasses={mediatorClasses}
     >
       <h2 className="future-games-list__title">Предстоящие игры</h2>
-      {isDesktop ? (
-        <Swiper
-          navigation={{
-            nextEl: '.future-games-list__slider-button-next',
-            prevEl: '.future-games-list__slider-button-prev',
-          }}
-          slidesPerView={'auto'}
-          spaceBetween={32}
-          modules={[Navigation]}
-          className="future-games-list__games_list"
-          breakpoints={{
-            1920: {
-              slidesPerView: 4,
-            },
-          }}
-        >
-          {GAME_LIST.map((item, index) => (
-            <SwiperSlide key={index}>
-              <FutureGame className={'future-games-list__game'} game={item} />
-            </SwiperSlide>
-          ))}
-          <div className="future-games-list__slider-button-prev">
-            <img src={sliderNextImg} />
-          </div>
-          <div className="future-games-list__slider-button-next">
-            <img src={sliderPrevImg} />
-          </div>
-        </Swiper>
-      ) : (
-        <div className="future-games-list__games_list">
-          <FutureGame className={'future-games-list__game'} game={GAME_LIST[0]} />
-          <FutureGame className={'future-games-list__game'} game={GAME_LIST[1]} />
-          <FutureGame className={'future-games-list__game'} game={GAME_LIST[2]} />
-        </div>
-      )}
 
+      <Swiper
+        navigation={{
+          nextEl: '.future-games-list__slider-button-next',
+          prevEl: '.future-games-list__slider-button-prev',
+        }}
+        slidesPerView={'auto'}
+        spaceBetween={32}
+        modules={[Navigation]}
+        className="future-games-list__games_list"
+      >
+        {GAME_LIST.map((item, index) => (
+          <SwiperSlide key={index}>
+            <FutureGame className={'future-games-list__game'} game={item} />
+          </SwiperSlide>
+        ))}
+        <div className="future-games-list__slider-button-prev">
+          <img src={sliderNextImg} />
+        </div>
+        <div className="future-games-list__slider-button-next">
+          <img src={sliderPrevImg} />
+        </div>
+      </Swiper>
+      {/* 
       {GAME_LIST.length > 3 && !isDesktop && (
         <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
-      )}
+      )} */}
     </BlockBackground>
   );
 };

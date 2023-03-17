@@ -65,6 +65,12 @@
 }
 
 @media (min-width: 1440px) {
+  .about-us {
+    gap: 120px;
+  }
+  .game-rules__title {
+    margin-top: 0;
+  }
   .game-rules__wrapper {
     flex-direction: row;
     gap: 100px;

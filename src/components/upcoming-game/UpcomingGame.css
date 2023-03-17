@@ -85,6 +85,9 @@
   .upcoming-game__game-title {
     font-size: 34px;
   }
+  .upcoming-game__info-block {
+    max-width: 815px;
+  }
   .upcoming-game__registration-info {
     flex-direction: row;
     flex-grow: 0;
@@ -98,7 +101,8 @@
     margin: 0;
   }
   .upcoming-game__img-bg {
-    height: 100%;
+    margin-top: 66px;
+    height: calc(100% - 66px);
     width: 100%;
     border-radius: 64px;
   }
@@ -113,16 +117,13 @@
     padding-left: 88px;
   }
   .upcoming-game__title {
-    font-size: 20px;
+    font-size: 16px;
   }
   .upcoming-game__game-title {
-    font-size: 50px;
+    font-size: 34px;
     font-weight: 900;
   }
   .upcoming-game__game-description {
-    font-size: 24px;
-  }
-  .upcoming-game__img {
-    height: 739px;
+    font-size: 18px;
   }
 }

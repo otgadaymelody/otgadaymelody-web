@@ -170,7 +170,7 @@
 
   .banner__info {
     padding: 2rem 3rem;
-    width: 55%;
+    width: 70%;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
@@ -189,16 +189,15 @@
 @media (min-width: 1920px) {
   .banner__background {
     --header-height: 122px;
-    max-height: 800px;
   }
 
   .banner__info {
     padding: 2rem 4rem;
   }
   .banner__info h1 {
-    font-size: 56px;
+    font-size: 50px;
   }
   .banner__info p {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
