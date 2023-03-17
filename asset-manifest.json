@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/otgadaymelody-web/static/css/main.b7f97cbc.css",
-    "main.js": "/otgadaymelody-web/static/js/main.1c68867a.js",
+    "main.js": "/otgadaymelody-web/static/js/main.6274597c.js",
     "static/media/08.png": "/otgadaymelody-web/static/media/08.73eac112a141104a582e.png",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
     "static/media/01.png": "/otgadaymelody-web/static/media/01.a31aa369b65c8e00ad5d.png",
@@ -43,7 +43,7 @@
     "static/media/Location.svg": "/otgadaymelody-web/static/media/Location.ab7f8a2230ac37082309a7b5856c5f62.svg",
     "static/media/02_album.svg": "/otgadaymelody-web/static/media/02_album.092c5ca91f8a068c999484679419ebe6.svg",
     "static/media/02_album_color.svg": "/otgadaymelody-web/static/media/02_album_color.93df02737261407afe285c34c15a10e8.svg",
-    "static/media/tg.svg": "/otgadaymelody-web/static/media/tg.3e85235cae24429794d03a5b79a35fab.svg",
+    "static/media/tg.svg": "/otgadaymelody-web/static/media/tg.3e85235cae24429794d0.svg",
     "static/media/loc_button.svg": "/otgadaymelody-web/static/media/loc_button.cc2a7a9191708030a0305f85ddb9377e.svg",
     "static/media/03_corp.svg": "/otgadaymelody-web/static/media/03_corp.20672f7fd6978ff0d4401d691d825993.svg",
     "static/media/03_corp_color.svg": "/otgadaymelody-web/static/media/03_corp_color.d68e801c48e3f07f64854860e360bcb2.svg",
@@ -71,10 +71,10 @@
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
     "main.b7f97cbc.css.map": "/otgadaymelody-web/static/css/main.b7f97cbc.css.map",
-    "main.1c68867a.js.map": "/otgadaymelody-web/static/js/main.1c68867a.js.map"
+    "main.6274597c.js.map": "/otgadaymelody-web/static/js/main.6274597c.js.map"
   },
   "entrypoints": [
     "static/css/main.b7f97cbc.css",
-    "static/js/main.1c68867a.js"
+    "static/js/main.6274597c.js"
   ]
 }
