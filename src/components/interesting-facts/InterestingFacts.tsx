@@ -57,9 +57,6 @@ const InterestingFacts = (): React.ReactElement => {
             <InterestingFactSlide fact={item} />
           </SwiperSlide>
         ))}
-        {/* <SwiperSlide>
-          <InterestingFactSlide fact={FACTS_LIST[6]} />
-        </SwiperSlide> */}
         <div className="custom-pagination"></div>
         <div className="custom-button-next"></div>
         <div className="custom-button-prev"></div>
