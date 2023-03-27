@@ -1,30 +1,7 @@
-import image01 from '../../assets/images/home-page/photo-gallery/01.png';
-import image02 from '../../assets/images/home-page/photo-gallery/02.png';
+import slide01 from '../../assets/images/home-page/photo-gallery/slide01.png';
+import slide02 from '../../assets/images/home-page/photo-gallery/slide02.png';
+import slide03 from '../../assets/images/home-page/photo-gallery/slide03.png';
+import slide04 from '../../assets/images/home-page/photo-gallery/slide04.png';
+import slide05 from '../../assets/images/home-page/photo-gallery/slide05.png';
 
-export declare interface PhotoGalleryItemType {
-  previewImage: string;
-  date: string;
-  place: string;
-  gameIndex: string;
-}
-
-export const PHOTO_GALLERY_LIST: PhotoGalleryItemType[] = [
-  {
-    previewImage: image01,
-    date: '06.01.23',
-    place: 'Пивзавод',
-    gameIndex: '#10',
-  },
-  {
-    previewImage: image02,
-    date: '06.01.23',
-    place: 'Пивзавод',
-    gameIndex: '#9',
-  },
-  {
-    previewImage: image01,
-    date: '06.01.23',
-    place: 'Пивзавод',
-    gameIndex: '#8',
-  },
-];
+export const PHOTO_GALLERY_LIST = [slide01, slide02, slide03, slide04, slide05];
