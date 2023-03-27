@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { type Swiper as SwiperType, Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
+import { type Swiper as SwiperType, Navigation, Pagination, Autoplay } from 'swiper';
 import InterestingFactSlide from './interesting-fact-slide/InterestingFactSlide';
 import { FACTS_LIST } from './facts.consts';
 
