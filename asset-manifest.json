@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.88037be8.css",
-    "main.js": "/otgadaymelody-web/static/js/main.9c9c1a02.js",
+    "main.css": "/otgadaymelody-web/static/css/main.f10fd405.css",
+    "main.js": "/otgadaymelody-web/static/js/main.8550586e.js",
     "static/media/08.png": "/otgadaymelody-web/static/media/08.73eac112a141104a582e.png",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
     "static/media/01.png": "/otgadaymelody-web/static/media/01.a31aa369b65c8e00ad5d.png",
     "static/media/about-us-preview.png": "/otgadaymelody-web/static/media/about-us-preview.0bdd5bd5d31c070cd90f.png",
-    "static/media/02.png": "/otgadaymelody-web/static/media/02.c2c1c8e4ae92a1d83a85.png",
     "static/media/03.png": "/otgadaymelody-web/static/media/03.a862f58d680b4c9081e0.png",
     "static/media/04.png": "/otgadaymelody-web/static/media/04.4628267c5f0658d4e3c1.png",
+    "static/media/slide04.png": "/otgadaymelody-web/static/media/slide04.013eb3b294f7a498946b.png",
     "static/media/10.png": "/otgadaymelody-web/static/media/10.4a826d3af884d705ea53.png",
     "static/media/07.png": "/otgadaymelody-web/static/media/07.451418ca4772a3750482.png",
+    "static/media/slide05.png": "/otgadaymelody-web/static/media/slide05.effe2f936a0c42736840.png",
     "static/media/05.png": "/otgadaymelody-web/static/media/05.4356e2beb94cb2b7cce4.png",
+    "static/media/slide02.png": "/otgadaymelody-web/static/media/slide02.ed1bdd6302ea225d8c24.png",
+    "static/media/slide03.png": "/otgadaymelody-web/static/media/slide03.e470475bfe52451f7e74.png",
+    "static/media/slide01.png": "/otgadaymelody-web/static/media/slide01.a2cfea0c79c593c08de4.png",
     "static/media/09.png": "/otgadaymelody-web/static/media/09.4fe47a2819bd45882983.png",
+    "static/media/02.png": "/otgadaymelody-web/static/media/02.c2c1c8e4ae92a1d83a85.png",
     "static/media/06.png": "/otgadaymelody-web/static/media/06.af3664b4b9344965cd7b.png",
     "static/media/women.png": "/otgadaymelody-web/static/media/women.a2a6bd67903c717abfa5.png",
     "static/media/question-01.svg": "/otgadaymelody-web/static/media/question-01.98aabe57dea193529b2647d148269335.svg",
@@ -37,7 +42,6 @@
     "static/media/info-clock.svg": "/otgadaymelody-web/static/media/info-clock.631976192231548e4e23c5ea12b3587a.svg",
     "static/media/info-total.svg": "/otgadaymelody-web/static/media/info-total.f9539804a482b0a44b6d005153cc5113.svg",
     "static/media/vk.svg": "/otgadaymelody-web/static/media/vk.59b41286fd7a16b450be.svg",
-    "static/media/main-logo.svg": "/otgadaymelody-web/static/media/main-logo.6112438543ab9acae186.svg",
     "static/media/01_schedule.svg": "/otgadaymelody-web/static/media/01_schedule.78b0166b396d2999d5b5a4bd8a060c6d.svg",
     "static/media/01_schedule_color.svg": "/otgadaymelody-web/static/media/01_schedule_color.3a12f841f08336ab42ffd3170e9f7c80.svg",
     "static/media/Location.svg": "/otgadaymelody-web/static/media/Location.ab7f8a2230ac37082309a7b5856c5f62.svg",
@@ -71,11 +75,11 @@
     "static/media/next-slide-img.svg": "/otgadaymelody-web/static/media/next-slide-img.d8549574cc802474b7263882e9995f61.svg",
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.88037be8.css.map": "/otgadaymelody-web/static/css/main.88037be8.css.map",
-    "main.9c9c1a02.js.map": "/otgadaymelody-web/static/js/main.9c9c1a02.js.map"
+    "main.f10fd405.css.map": "/otgadaymelody-web/static/css/main.f10fd405.css.map",
+    "main.8550586e.js.map": "/otgadaymelody-web/static/js/main.8550586e.js.map"
   },
   "entrypoints": [
-    "static/css/main.88037be8.css",
-    "static/js/main.9c9c1a02.js"
+    "static/css/main.f10fd405.css",
+    "static/js/main.8550586e.js"
   ]
 }
