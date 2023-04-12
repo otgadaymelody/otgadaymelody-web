@@ -1,0 +1,65 @@
+.game-information-banner {
+  background: var(--color-gradient);
+  border-radius: 24px;
+  padding: 16px;
+  width: 100%;
+}
+
+.game-information-banner__date-info {
+  padding: 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  border-radius: 0;
+  background: none;
+}
+
+.game-information-banner__game-description {
+  padding-top: 12px;
+  color: var(--color-bg-white);
+}
+
+.game-information-banner__main-description {
+  display: flex;
+  justify-content: space-between;
+  font: var(--fonts-h5-card-description);
+}
+
+.game-information-banner__place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.game-information-banner__price {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 8px;
+}
+
+.game-information-banner__address {
+  margin-top: 6px;
+  width: 100%;
+  font: var(--fonts-span-sub-description);
+  text-align: start;
+}
+
+@media (min-width: 1440px) {
+  .game-information-banner {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .game-information-banner__date-info {
+    border-bottom: unset;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 24px;
+  }
+  .game-information-banner__game-description {
+    padding: 24px;
+  }
+  .game-information-banner__main-description {
+    gap: 32px;
+  }
+}

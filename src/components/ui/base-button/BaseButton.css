@@ -1,0 +1,31 @@
+.base-btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-lime);
+  height: 48px;
+
+  border: none;
+  border-radius: 53px;
+  padding: 16px 24px 16px 16px;
+
+  gap: 8px;
+  cursor: pointer;
+}
+
+.base-btn__title {
+  color: var(--color-bg-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 1%;
+}
+
+.base-btn:hover {
+  background-color: var(--color-lime-light);
+}
+
+.base-btn:active {
+  background-color: var(--color-lime-dark);
+}
