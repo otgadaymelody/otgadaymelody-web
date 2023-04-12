@@ -24,6 +24,11 @@
   font: var(--fonts-show-all-btn-title);
 }
 
+.photo-gallery__photo {
+  border-radius: 32px;
+  width: 540px;
+}
+
 @media (min-width: 744px) {
   .photo-gallery__title {
     font-size: 40px;

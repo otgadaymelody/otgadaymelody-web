@@ -6,7 +6,7 @@ import './GameRulesCarousel.css';
 import 'swiper/css';
 
 import GameRulesSlide from './GameRulesSlide/GameRulesSlide';
-import { gameRulesList } from './gameRules.consts';
+import { GAME_RULES_LIST } from './gameRules.consts';
 import carouselImg01 from '../../../assets/images/home-page/game-rules-carousel/01.png';
 import prevSlideImg from '../../../assets/images/home-page/game-rules-carousel/prev-slide-img.svg';
 import nextSlideImg from '../../../assets/images/home-page/game-rules-carousel/next-slide-img.svg';
@@ -29,7 +29,7 @@ const GameRulesCarousel = (): React.ReactElement => {
         }}
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >
-        {gameRulesList.map((item, index) => (
+        {GAME_RULES_LIST.map((item, index) => (
           <SwiperSlide key={index}>
             <GameRulesSlide title={item.title} description={item.description} />
           </SwiperSlide>
@@ -43,8 +43,8 @@ const GameRulesCarousel = (): React.ReactElement => {
             <img src={prevSlideImg} />
           </button>
           <p>
-            <span className="game-rules-carousel__current-page">{currentSlide + 1}</span> /{' '}
-            {gameRulesList.length}
+            <span className="game-rules-carousel__current-page">{currentSlide + 1}</span>
+            {` / ${GAME_RULES_LIST.length}`}
           </p>
           <button
             className="game-rules-carousel__slider-btn"

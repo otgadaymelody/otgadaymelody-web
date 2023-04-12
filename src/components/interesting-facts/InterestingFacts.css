@@ -2,16 +2,14 @@
   width: 100%;
   border-radius: 32px;
   background: var(--color-gradient);
-  max-width: 715px;
 }
 
 .swiper {
   height: 100%;
 }
 
-.swiper-wrapper {
-  padding-top: 20px;
-  height: calc(100% - 20px);
+.swiper-slide {
+  height: unset;
 }
 
 .custom-button-next,
@@ -45,7 +43,7 @@
 .swiper-pagination-bullet {
   width: 100%;
   height: 3px;
-  border-radius: 0;
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.4);
   border: none;
 }
@@ -60,4 +58,13 @@ progress[value]::-webkit-progress-value {
 
 progress[value]::-moz-progress-bar {
   background-color: #fff;
+}
+
+@media (min-width: 1440px) {
+  .interesting-facts {
+    max-width: 564px;
+  }
+  .swiper-pagination-bullet {
+    height: 4px;
+  }
 }

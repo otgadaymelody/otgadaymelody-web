@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { type Swiper as SwiperType, Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
+import { type Swiper as SwiperType, Navigation, Pagination, Autoplay } from 'swiper';
 import InterestingFactSlide from './interesting-fact-slide/InterestingFactSlide';
+import { FACTS_LIST } from './facts.consts';
 
 import './InterestingFacts.css';
 
@@ -41,7 +42,7 @@ const InterestingFacts = (): React.ReactElement => {
   return (
     <BlockBackground mediatorsClasses={mediatorClasses} className="interesting-facts">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        modules={[Navigation, Pagination, Autoplay]}
         navigation={{ nextEl: '.custom-button-next', prevEl: '.custom-button-prev' }}
         pagination={pagination}
         autoplay={{
@@ -50,20 +51,12 @@ const InterestingFacts = (): React.ReactElement => {
         }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         onSlideChange={onSlideChange}
-        // effect={'fade'}
       >
-        <SwiperSlide>
-          <InterestingFactSlide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InterestingFactSlide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InterestingFactSlide />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InterestingFactSlide />
-        </SwiperSlide>
+        {FACTS_LIST.map((item, index) => (
+          <SwiperSlide key={index}>
+            <InterestingFactSlide fact={item} />
+          </SwiperSlide>
+        ))}
         <div className="custom-pagination"></div>
         <div className="custom-button-next"></div>
         <div className="custom-button-prev"></div>

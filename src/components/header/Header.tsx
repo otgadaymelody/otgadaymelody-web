@@ -1,11 +1,10 @@
 import React, { type FC, useState } from 'react';
 import HeaderLink from './HeaderLink';
 import { ReactComponent as Logo } from '../../assets/images/header/logo.svg';
-import { ReactComponent as TgLogo } from '../../assets/images/header/tg.svg';
-import { ReactComponent as VkLogo } from '../../assets/images/header/vk.svg';
+import { ReactComponent as UserLogo } from '../../assets/images/header/user-logo.svg';
 import { ReactComponent as BurgerBtn } from '../../assets/images/header/burger-menu.svg';
 import { ReactComponent as LocationBtn } from '../../assets/images/header/loc_button.svg';
-import { navImages } from './nav-images';
+import { NAV_LINKS } from './nav-links.consts';
 import location from '../../assets/images/header/loc.svg';
 import './Header.css';
 import BaseButton from '../ui/base-button/BaseButton';
@@ -33,18 +32,16 @@ const Header: FC = () => {
 
         {isDesktop && (
           <nav className="header__links">
-            <HeaderLink title="Расписание игр" img={navImages[0]} />
-            <HeaderLink title="Фотоотчеты" img={navImages[1]} />
-            <HeaderLink title="Корпоративы" img={navImages[2]} />
-            <HeaderLink title="Франшиза" img={navImages[3]} />
+            {NAV_LINKS.map((item, index) => (
+              <HeaderLink title={item.title} img={item.images} key={index} />
+            ))}
           </nav>
         )}
       </div>
       {isDesktop ? (
         <div className="header__btns">
           <BaseButton title="Нижний Новгород" img={location} />
-          <TgLogo className="header__social-btn" />
-          <VkLogo className="header__social-btn" />
+          <UserLogo className="header__social-btn" />
         </div>
       ) : (
         <LocationBtn className="header__location-btn" />
