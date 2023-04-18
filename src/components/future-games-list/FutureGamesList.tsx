@@ -52,10 +52,23 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           nextEl: '.future-games-list__slider-button-next',
           prevEl: '.future-games-list__slider-button-prev',
         }}
-        slidesPerView={'auto'}
         spaceBetween={32}
         modules={[Navigation]}
         className="future-games-list__games_list"
+        breakpoints={{
+          360: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
       >
         {GAME_LIST.map((item, index) => (
           <SwiperSlide key={index}>
@@ -69,10 +82,6 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           <img src={sliderPrevImg} />
         </div>
       </Swiper>
-      {/* 
-      {GAME_LIST.length > 3 && !isDesktop && (
-        <BaseButton styles={showMoreBtnClasses} title="Показать еще" />
-      )} */}
     </BlockBackground>
   );
 };
