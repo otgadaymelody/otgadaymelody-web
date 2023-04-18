@@ -34,6 +34,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           slideShadows: false,
         }}
         modules={[EffectCoverflow]}
+        loop={true}
       >
         {PHOTO_GALLERY_LIST.map((item, key) => (
           <SwiperSlide key={key}>
@@ -41,7 +42,11 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <BaseButton title="Смотреть все фотоотчеты" styles={showAllBtnStyles} />
+      <BaseButton
+        title="Смотреть все фотоотчеты"
+        styles={showAllBtnStyles}
+        href="https://vk.com/albums-164712588"
+      />
     </div>
   );
 };

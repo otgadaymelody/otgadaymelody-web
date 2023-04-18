@@ -34,10 +34,10 @@
   gap: 21px;
 }
 
-.footer__tg-btn {
+.footer__inst-btn {
   height: 36px;
   width: 36px;
-  background-image: var(--footer-social-btn-tg);
+  background-image: var(--footer-social-btn-inst);
   cursor: pointer;
 }
 

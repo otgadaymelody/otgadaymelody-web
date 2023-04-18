@@ -120,6 +120,15 @@
     mask-position: 50% -13%;
   }
 
+  .banner__info {
+    padding: 2rem 3rem;
+    width: 90%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 3rem;
+  }
+
   .banner__mediator_bottom-left {
     display: block;
     bottom: -49%;
@@ -171,12 +180,7 @@
   }
 
   .banner__info {
-    padding: 2rem 3rem;
     width: 70%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
-    gap: 3rem;
   }
 
   .banner__info h1 {

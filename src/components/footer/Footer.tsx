@@ -22,7 +22,7 @@ const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
         <h1 className="footer__title">Следите за нами</h1>
         <div className="footer__social-btns">
           <a
-            className="footer__tg-btn"
+            className="footer__inst-btn"
             href="https://www.instagram.com/otgaday.melody/"
             target="_blank"
             rel="noopener noreferrer"

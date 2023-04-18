@@ -23,7 +23,7 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
         </div>
       ) : (
         <div className="quiz-game-modal__info-block">
-          <img src={presentImg} />
+          <img src={presentImg} className="quiz-game-modal__img" />
           <h1 className="quiz-game-modal__result-title">Поздравляем</h1>
           <span className="quiz-game-modal__result-description">
             Вы ответили верно на все вопросы и мы приглашаем вас посетить нашу игру в офлайне и

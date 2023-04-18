@@ -11,7 +11,7 @@
 }
 
 .home-page-block {
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .home-page__minigames-block {
@@ -23,12 +23,19 @@
   .container {
     padding: 0 24px;
   }
+  .home-page-block {
+    margin-top: 100px;
+  }
 }
 
 @media (min-width: 1440px) {
   .container {
     max-width: 1400px;
     padding: 0;
+  }
+
+  .home-page-block {
+    margin-top: 140px;
   }
 
   .home-page__minigames-block {

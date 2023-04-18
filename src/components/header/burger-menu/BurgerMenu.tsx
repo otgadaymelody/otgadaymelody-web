@@ -11,23 +11,25 @@ interface BurgerMenuProps {
 
 const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
   return (
-    <div className="burger-menu">
-      <CloseBtn
-        className="burger-menu__close-btn"
-        onClick={() => {
-          setActive(false);
-        }}
-      />
-      <div className="burger-menu__content">
-        <nav className="burger-menu__links">
-          <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} />
-          <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} />
-          <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} />
-          <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} />
-        </nav>
-        <div className="burger-menu__footer">
-          <span>VK</span>
-          <span>TG</span>
+    <div className="burger-menu__wrapper">
+      <div className="burger-menu">
+        <CloseBtn
+          className="burger-menu__close-btn"
+          onClick={() => {
+            setActive(false);
+          }}
+        />
+        <div className="burger-menu__content">
+          <nav className="burger-menu__links">
+            <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} />
+            <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} />
+            <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} />
+            <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} />
+          </nav>
+          <div className="burger-menu__footer">
+            <span>VK</span>
+            <span>TG</span>
+          </div>
         </div>
       </div>
     </div>
