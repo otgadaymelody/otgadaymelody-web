@@ -33,8 +33,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           modifier: 2,
           slideShadows: false,
         }}
-        navigation={true}
-        modules={[EffectCoverflow, Navigation]}
+        modules={[EffectCoverflow]}
       >
         {PHOTO_GALLERY_LIST.map((item, key) => (
           <SwiperSlide key={key}>

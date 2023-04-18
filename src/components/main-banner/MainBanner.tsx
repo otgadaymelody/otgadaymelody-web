@@ -40,7 +40,11 @@ const MainBanner = (): React.ReactElement => {
                 время угадать музыкальные композиции. В игре принимают участие команды по 5 человек.
               </p>
             </div>
-            <BaseButton title="Расписание игр" styles={registrationBtnClasses} />
+            <BaseButton
+              title="Расписание игр"
+              styles={registrationBtnClasses}
+              href="#upcoming-game"
+            />
           </div>
           <div className="banner-image">
             <div className="banner-image__wrapper">
@@ -60,7 +64,11 @@ const MainBanner = (): React.ReactElement => {
                 время угадать музыкальные композиции. В игре принимают участие команды по 5 человек.
               </p>
             </div>
-            <BaseButton title="Расписание игр" styles={registrationBtnClasses} />
+            <BaseButton
+              title="Расписание игр"
+              styles={registrationBtnClasses}
+              href="#upcoming-game"
+            />
           </div>
           <div className="banner-image">
             <div className="banner-image__wrapper">

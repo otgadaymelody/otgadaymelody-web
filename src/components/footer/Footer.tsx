@@ -6,7 +6,7 @@ import useDeviceType from '../../hooks/useDeviceType';
 import womenImage from '../../assets/images/footer/women.png';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 
-const Footer: FC<BaseComponent> = ({className}): React.ReactElement => {
+const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
 
@@ -21,8 +21,18 @@ const Footer: FC<BaseComponent> = ({className}): React.ReactElement => {
         <Logo className="footer-logo" />
         <h1 className="footer__title">Следите за нами</h1>
         <div className="footer__social-btns">
-          <div className="footer__tg-btn" />
-          <div className="footer__vk-btn" />
+          <a
+            className="footer__tg-btn"
+            href="https://www.instagram.com/otgaday.melody/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+          <a
+            className="footer__vk-btn"
+            href="https://vk.com/otgaday.melody"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </div>
       </div>
       <div className="footer__waves">
