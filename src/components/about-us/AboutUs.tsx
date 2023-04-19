@@ -45,7 +45,7 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
         </section>
       </div>
 
-      <div className="infographic-block">
+      <div className="infographic-block__wrapper">
         <InfographicBlock />
       </div>
 
