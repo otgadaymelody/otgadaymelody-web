@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/otgadaymelody-web/static/css/main.41ef365e.css",
-    "main.js": "/otgadaymelody-web/static/js/main.90e617b4.js",
+    "main.js": "/otgadaymelody-web/static/js/main.92d3e0bd.js",
     "static/media/08.png": "/otgadaymelody-web/static/media/08.73eac112a141104a582e.png",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
     "static/media/01.png": "/otgadaymelody-web/static/media/01.a31aa369b65c8e00ad5d.png",
@@ -76,10 +76,10 @@
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
     "main.41ef365e.css.map": "/otgadaymelody-web/static/css/main.41ef365e.css.map",
-    "main.90e617b4.js.map": "/otgadaymelody-web/static/js/main.90e617b4.js.map"
+    "main.92d3e0bd.js.map": "/otgadaymelody-web/static/js/main.92d3e0bd.js.map"
   },
   "entrypoints": [
     "static/css/main.41ef365e.css",
-    "static/js/main.90e617b4.js"
+    "static/js/main.92d3e0bd.js"
   ]
 }
