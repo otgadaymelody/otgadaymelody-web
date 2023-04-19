@@ -1,5 +1,6 @@
 body {
   background-color: var(--color-bg-white);
+  line-height: var(--line-height-base);
 }
 
 html {

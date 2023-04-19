@@ -3,7 +3,38 @@
   --font-family-headers: 'Druk Text Wide Cyr'; /* Заголовочный шрифт */
   --font-family-descriptions: 'Montserrat'; /* Описательный шрифт */
 
+  /* === Line Heights === */
+  --line-height-base: 1.4;
+  --line-height-small: 1.2; 
+
+  /* === Font Sizes === */
+  --text-xs: 12px;
+  --text-sm: 14px
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
+  --text-3xl: 24px;
+  --text-4xl: 26px;
+  --text-5xl: 34px;
+  --text-6xl: 40px;
+  --text-7xl: 48px;
+  --text-8xl: 50px;
+  --text-9xl: 56px;
+  
+  /* === Font Weights === */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 900;
+
+  /* === Border Radiuses === */
+  --border-base: 32px;
+  --border-lg: 64px;
+
   /* Titles */
+  /* OLD */
   --fonts-h1-main-title: 900 24px/1.4 var(--font-family-headers), sans-serif;
   --fonts-h2-faq-title: 900 28px/1.205 var(--font-family-headers), sans-serif;
   --fonts-h2-block-title: 700 28px/1.4 var(--font-family-headers), sans-serif;
@@ -87,4 +118,8 @@
 
   /* Sizes */
   --mobile-tab-bar: 116px;
+}
+
+.not-found__title {
+  font: var(--text-base);
 }

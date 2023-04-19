@@ -19,6 +19,19 @@
   flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headers);
+}
+
+body {
+  font-family: var(--font-family-description);
+}
+
 @media (min-width: 744px) {
   .container {
     padding: 0 24px;

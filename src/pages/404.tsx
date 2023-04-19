@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout';
 const NotFoundPage = (): React.ReactElement => {
   return (
     <Layout>
-      <h1>404! Page not found</h1>
+      <h2>404! Page not found</h2>
     </Layout>
   );
 };
