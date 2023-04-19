@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import './BurgerMenu.css';
-import { ReactComponent as CloseBtn } from '../../../assets/images/header/close-btn.svg';
+import { ReactComponent as CloseBtn } from '../../../../assets/images/header/close-btn.svg';
 import HeaderLink from '../HeaderLink';
 import { NAV_IMAGES } from '../nav-images.consts';
 

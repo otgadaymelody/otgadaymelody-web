@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import AboutUs from '../components/about-us/AboutUs';
 import FAQBlock from '../components/faq-block/FAQBlock';
-import Footer from '../components/footer/Footer';
+import Footer from '../components/layout/footer/Footer';
 import FutureGamesList from '../components/future-games-list/FutureGamesList';
-import Header from '../components/header/Header';
+import Header from '../components/layout/header/Header';
 import InterestingFacts from '../components/interesting-facts/InterestingFacts';
 import MainBanner from '../components/main-banner/MainBanner';
 import PhotoGallery from '../components/photo-gallery/PhotoGallery';
@@ -12,8 +12,7 @@ import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import useOnScreen from '../hooks/useOnScreen';
 
 const Home: React.FC = () => {
-
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
   return (
     <div className="home-page">
@@ -24,7 +23,7 @@ const Home: React.FC = () => {
         <FutureGamesList className="home-page-block" />
         <AboutUs className="home-page-block" />
         <div ref={ref} className="home-page__minigames-block home-page-block">
-          {isVisible && <InterestingFacts  />}
+          {isVisible && <InterestingFacts />}
           <QuizGame />
         </div>
         <PhotoGallery className="home-page-block" />
