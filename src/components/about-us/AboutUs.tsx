@@ -7,7 +7,7 @@ import InfographicBlock from './infographic-block/InfographicBlock';
 import GameRulesCarousel from './game-rules-carousel/GameRulesCarousel';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 
-const AboutUs: FC<BaseComponent> = ({className}): React.ReactElement => {
+const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
 
@@ -20,20 +20,29 @@ const AboutUs: FC<BaseComponent> = ({className}): React.ReactElement => {
     <div className={`about-us ${className}`}>
       <div className="game-rules__wrapper">
         {!isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
-        <div className="game-rules__main-info">
-          <h1 className="game-rules__title">Как проходят игры?</h1>
+        <section className="game-rules__main-info">
+          <h1 className="game-rules__title">Что такое &quot;Отгадай Мелодию&quot;?</h1>
           {isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
-          <span className="game-rules__description">
-            Командная игра победить в которой помогут эрудиция логика и сообразительность. отгадай
-            мелодию - хороший способ командная игра победить в которой помогут эрудиция логика и
-            сообразительность
-          </span>
+          <p className="game-rules__description">
+            Отгадай Мелодию - это самая народное интеллектуально-музыкальное шоу в формате квиз
+            игры. Где командам предстоит отгадывать знакомые мелодии, петь во весь голос, танцевать
+            и веселиться от души и все это в непередаваемой атмосфере.
+          </p>
+          <br />
+          <p className="game-rules__description">
+            Мы придумали абсолютно новый формат, не похожий на подобные мероприятия, который
+            филигранно балансирует на грани классического квиза с вопросами, самого шумного караоке
+            и тематической вечеринки с жаркими танцами. Что в совокупности закрывает сразу большую
+            часть потребностей человека в качественном и интересном досуге. Отгадай Мелодию на себе
+            опробовали уже десятки тысяч людей в разных городах нашей большой и необъятной страны.
+            Просто поверьте, что такого Вы еще не видели!
+          </p>
           <h2 className="game-rules__subtitle">Нет команды?</h2>
           <span className="game-rules__description">
             Не проблема - регистрируйся на игру, а мы найдем команду!
           </span>
           <BaseButton title="Регистрация на игру" styles={regBtnStyles} />
-        </div>
+        </section>
       </div>
 
       <div className="infographic-block">
