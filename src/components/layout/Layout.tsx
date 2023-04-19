@@ -1,8 +1,9 @@
-import { type FC, PropsWithChildren } from 'react';
+import React from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 
-const Layout: FC<PropsWithChildren> = ({ children }) => {
+const Layout: FC<PropsWithChildren> = ({ children }): React.ReactElement => {
   return (
     <>
       <Header />

@@ -1,9 +1,10 @@
+import React from 'react';
 import Layout from '../components/layout/Layout';
 
-const NotFoundPage = () => {
+const NotFoundPage = (): React.ReactElement => {
   return (
     <Layout>
-      <h1>Not found</h1>
+      <h1>404! Page not found</h1>
     </Layout>
   );
 };
