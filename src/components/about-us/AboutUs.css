@@ -23,6 +23,7 @@
 }
 
 .game-rules__description {
+  margin-top: 24px;
   font: var(--fonts-p-main-description);
 }
 
@@ -40,6 +41,7 @@
 .game-rules__preview-img {
   max-width: 100%;
   border-radius: 32px;
+  position: relative;
 }
 
 @media (min-width: 744px) {
@@ -56,11 +58,15 @@
   }
 
   .game-rules__description {
+    margin-top: 72px;
     font-size: 20px;
   }
 
   .game-rules__reg-btn {
     width: auto;
+  }
+  .game-rules__preview-img {
+    border-radius: 64px;
   }
 }
 
@@ -78,5 +84,9 @@
   .game-rules__preview-img {
     max-width: 50%;
     margin-left: -100px;
+    max-height: 540px;
+  }
+  .game-rules__description {
+    margin-top: 18px;
   }
 }
