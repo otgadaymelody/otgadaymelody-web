@@ -82,8 +82,8 @@
     gap: 100px;
   }
   .game-rules__preview-img {
-    max-width: 50%;
-    margin-left: -100px;
+    max-width: 853px;
+    margin-left: calc(-100vw / 6);
     max-height: 540px;
   }
   .game-rules__description {
