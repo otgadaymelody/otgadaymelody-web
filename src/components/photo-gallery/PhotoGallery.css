@@ -53,7 +53,6 @@
   color: var(--color-pink);
   font-size: var(--text-base);
   font-weight: var(--weight-medium);
-  font-family: var(--font-family-descriptions);
 }
 .photo-gallery__album-link:visited {
   text-decoration: none;
