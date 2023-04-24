@@ -211,9 +211,9 @@
     padding: 2rem 4rem;
   }
   .banner__info h1 {
-    font-size: var(--text-8xl);
+    font-size: var(--text-6xl);
   }
   .banner__info p {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
   }
 }
