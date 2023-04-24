@@ -100,6 +100,7 @@
   --color-bg-gray-700: rgba(55, 65, 81, 1);
   --color-bg-gray-600: rgba(75, 85, 99, 1);
   --color-bg-gray-500: rgba(107, 114, 128, 1);
+  --color-bg-gray-100: rgba(205, 213, 228, 1);
   --color-bg-white: rgba(255, 255, 255, 1);
   --color-gradient: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);
   --color-pink: rgba(240, 31, 119, 1);

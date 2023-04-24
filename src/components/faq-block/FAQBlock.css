@@ -14,7 +14,6 @@
 
 .faq-block__title {
   font: var(--fonts-h2-faq-title);
-  color: var(--color-bg-white);
 
   position: relative;
   z-index: 10;
@@ -36,8 +35,6 @@
   width: 100%;
   list-style-type: none;
   background-color: var(--color-bg-white);
-  box-shadow: var(--shadow);
-  border-radius: 16px;
 
   font: var(--fonts-navigation-link);
   line-height: 1.2;
@@ -46,6 +43,7 @@
 
   position: relative;
   z-index: 10;
+  border-bottom: 1px solid var(--color-bg-gray-100);
 }
 
 .faq-block__question-title {
@@ -89,8 +87,9 @@
   }
 
   .faq-block__question {
-    padding: 40px;
-    font-size: 20px;
+    padding: 24px;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
   }
 }
 

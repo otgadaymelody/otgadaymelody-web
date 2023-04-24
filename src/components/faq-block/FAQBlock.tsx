@@ -24,8 +24,8 @@ const FAQBlock: FC<BaseComponent> = ({ className }): React.ReactElement => {
   };
 
   return (
-    <BlockBackground className={`faq-block ${className}`} mediatorsClasses={mediatorClasses}>
-      <div className="faq-block__title">Остались вопросы?</div>
+    <section className={`faq-block ${className}`}>
+      <h2 className="faq-block__title">Остались вопросы?</h2>
       <ul className="faq-block__questions-list">
         {FAQ_QUESTIONS.map((item, i) => (
           <li className="faq-block__question" key={i} onClick={() => toggle(i)}>
@@ -40,7 +40,7 @@ const FAQBlock: FC<BaseComponent> = ({ className }): React.ReactElement => {
           </li>
         ))}
       </ul>
-    </BlockBackground>
+    </section>
   );
 };
 
