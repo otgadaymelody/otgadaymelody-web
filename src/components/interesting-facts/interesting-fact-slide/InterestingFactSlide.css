@@ -14,7 +14,9 @@
 }
 
 .interesting-fact-slide__image {
-  width: 75%;
+  width: 500px;
+  height: 282px;
+  object-fit: cover;
   border-radius: 32px;
 }
 
