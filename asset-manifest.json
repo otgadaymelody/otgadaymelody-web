@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/otgadaymelody-web/static/css/main.285273f1.css",
-    "main.js": "/otgadaymelody-web/static/js/main.9e19bb5c.js",
+    "main.css": "/otgadaymelody-web/static/css/main.eba638e9.css",
+    "main.js": "/otgadaymelody-web/static/js/main.e190ea89.js",
     "static/media/08.png": "/otgadaymelody-web/static/media/08.73eac112a141104a582e.png",
     "static/media/banner-image.png": "/otgadaymelody-web/static/media/banner-image.b57acd26830a96867d51.png",
     "static/media/01.png": "/otgadaymelody-web/static/media/01.a31aa369b65c8e00ad5d.png",
@@ -69,17 +69,17 @@
     "static/media/mediator-top-right.svg": "/otgadaymelody-web/static/media/mediator-top-right.e00b6503d7f3efbce998db1fcebefc06.svg",
     "static/media/mediator-bottom-right.svg": "/otgadaymelody-web/static/media/mediator-bottom-right.e3bfac3edab95581315ddead33e0b321.svg",
     "static/media/mediator-top-left.svg": "/otgadaymelody-web/static/media/mediator-top-left.b18bb63b59efaa1d8968bd93f2385108.svg",
-    "static/media/open-img.svg": "/otgadaymelody-web/static/media/open-img.eb5bed65ba592d810a81b0432005017d.svg",
     "static/media/slider-next.svg": "/otgadaymelody-web/static/media/slider-next.37c9ede55f69e447e1639c5131e3733f.svg",
     "static/media/slider-prev.svg": "/otgadaymelody-web/static/media/slider-prev.b707781940dc22e9e9bac0b76f14a18a.svg",
+    "static/media/open-img.svg": "/otgadaymelody-web/static/media/open-img.edb780c84beab4c6db7cf210b0ba7d43.svg",
     "static/media/next-slide-img.svg": "/otgadaymelody-web/static/media/next-slide-img.d8549574cc802474b7263882e9995f61.svg",
     "static/media/prev-slide-img.svg": "/otgadaymelody-web/static/media/prev-slide-img.c5de2e4a1945d949307d23fe67916aef.svg",
     "static/media/close-btn.svg": "/otgadaymelody-web/static/media/close-btn.5c25c8d6112847eafcef7cd5d681c833.svg",
-    "main.285273f1.css.map": "/otgadaymelody-web/static/css/main.285273f1.css.map",
-    "main.9e19bb5c.js.map": "/otgadaymelody-web/static/js/main.9e19bb5c.js.map"
+    "main.eba638e9.css.map": "/otgadaymelody-web/static/css/main.eba638e9.css.map",
+    "main.e190ea89.js.map": "/otgadaymelody-web/static/js/main.e190ea89.js.map"
   },
   "entrypoints": [
-    "static/css/main.285273f1.css",
-    "static/js/main.9e19bb5c.js"
+    "static/css/main.eba638e9.css",
+    "static/js/main.e190ea89.js"
   ]
 }
