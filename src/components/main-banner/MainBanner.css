@@ -39,6 +39,7 @@
   width: 100%;
   max-width: 558px;
   scale: 2;
+  object-fit: cover;
 
   mask-image: url('../../assets/images/home-page/banner-image-mask.svg');
   mask-size: 71%;
