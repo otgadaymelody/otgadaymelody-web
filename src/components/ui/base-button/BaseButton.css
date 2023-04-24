@@ -5,7 +5,7 @@
   justify-content: center;
   background: var(--color-lime);
   height: 48px;
-
+  font-family: var(--font-family-descriptions);
   border: none;
   border-radius: 53px;
   padding: 16px 24px 16px 16px;

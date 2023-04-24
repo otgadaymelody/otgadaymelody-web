@@ -12,7 +12,7 @@
 .photo-gallery__photos-list {
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
+  margin-top: 50px;
 
   max-width: calc(100vw - 20px);
 }
@@ -45,6 +45,18 @@
 
 .photo-gallery__slider-button-next {
   left: calc(100vw / 2 + 125px);
+}
+
+.photo-gallery__album-link {
+  margin-top: 16px;
+  text-decoration: none;
+  color: var(--color-pink);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-family-descriptions);
+}
+.photo-gallery__album-link:visited {
+  text-decoration: none;
 }
 
 @media (min-width: 744px) {

@@ -55,11 +55,14 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           <img src={sliderPrevImg} />
         </div>
       </Swiper>
-      <BaseButton
-        title="Смотреть все фотоотчеты"
-        styles={showAllBtnStyles}
+      <a
         href="https://vk.com/albums-164712588"
-      />
+        className="photo-gallery__album-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Смотреть все фотоотчеты
+      </a>
     </div>
   );
 };
