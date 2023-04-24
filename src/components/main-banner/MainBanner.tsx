@@ -32,37 +32,22 @@ const MainBanner = (): React.ReactElement => {
           <div className="banner__info">
             <div className="banner__main-text">
               <h1>
-                <span className="banner__info_bold-title">Музыкальные</span> битвы в формате -{' '}
-                <span className="banner__info_bold-title">квиз игры</span>
+                <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В ФОРМАТЕ -{' '}
+                <span className="banner__info_bold-title">КВИЗ ИГРЫ</span>
               </h1>
-              <p>
-                Музыкальные битвы в формате — квиз игры, в которых команды должны за ограниченное
-                время угадать музыкальные композиции. В игре принимают участие команды по 5 человек.
-              </p>
-            </div>
-            <BaseButton
-              title="Расписание игр"
-              styles={registrationBtnClasses}
-              href="#upcoming-game"
-            />
-          </div>
-          <div className="banner-image">
-            <div className="banner-image__wrapper">
-              <img src={bannerImg} className="banner-image__img" />
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner__info">
-            <div className="banner__main-text">
-              <h1>
-                <span className="banner__info_bold-title">Музыкальные</span> битвы в формате -{' '}
-                <span className="banner__info_bold-title">квиз игры</span>
-              </h1>
-              <p>
-                Музыкальные битвы в формате — квиз игры, в которых команды должны за ограниченное
-                время угадать музыкальные композиции. В игре принимают участие команды по 5 человек.
-              </p>
+              <article className="banner__description-wrapper">
+                <p className="banner__description">
+                  Надоели однотипные мероприятия или хочется попробовать чего-нибудь новенького?
+                </p>
+                <p className="banner__description">
+                  Тогда добавьте в свою жизнь красок и драйва вместе с «Отгадай Мелодию». Уникальный
+                  формат мероприятия, песни, которые Вы точно знаете и любите, жаркие танцы,
+                  интерактивное караоке, розыгрыши и огромное количество подарков!
+                </p>
+                <p className="banner__description">
+                  Уверены, что это будет любовь с первого взгляда.
+                </p>
+              </article>
             </div>
             <BaseButton
               title="Расписание игр"
