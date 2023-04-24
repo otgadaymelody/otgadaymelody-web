@@ -87,18 +87,20 @@
   .photo-gallery__photos-list {
     flex-direction: row;
     gap: 24px;
+    width: 100%;
+    overflow: visible;
   }
 
   .photo-gallery__photo {
     width: 540px;
   }
   .photo-gallery__slider-button-prev {
-    left: calc(100vw / 2 - 295px);
+    left: calc(100% / 2 - 285px);
     scale: 1.25;
   }
 
   .photo-gallery__slider-button-next {
-    left: calc(100vw / 2 + 225px);
+    left: calc(100% / 2 + 240px);
     scale: 1.25;
   }
 }
