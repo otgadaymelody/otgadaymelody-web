@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         <FutureGamesList className="home-page-block" />
         <AboutUs className="home-page-block" />
         <div ref={ref} className="home-page__minigames-block home-page-block">
-          {isVisible && <InterestingFacts />}
+          <InterestingFacts isVisible={isVisible} />
           <QuizGame />
         </div>
         <PhotoGallery className="home-page-block" />
