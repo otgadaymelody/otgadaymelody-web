@@ -13,18 +13,18 @@
 }
 
 .game-rules__title {
-  font: var(--fonts-h2-faq-title);
+  font: var(--fonts-h2-faq-title-DEPRECATED);
   text-align: start;
 }
 
 .game-rules__subtitle {
   margin-top: 32px;
-  font: var(--fonts-h4-card-title);
+  font: var(--fonts-h4-card-title-DEPRECATED);
 }
 
 .game-rules__description {
   margin-top: 24px;
-  font: var(--fonts-p-main-description);
+  font: var(--fonts-p-main-description-DEPRECATED);
 }
 
 .game-rules__reg-btn {

@@ -5,7 +5,7 @@
 }
 
 .photo-gallery__title {
-  font: var(--fonts-h1-main-title);
+  font: var(--fonts-h1-main-title-DEPRECATED);
   text-align: center;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .photo-gallery__show-all-btn-title {
-  font: var(--fonts-show-all-btn-title);
+  font: var(--fonts-show-all-btn-title-DEPRECATED);
 }
 .photo-gallery__photo {
   border-radius: 24px;

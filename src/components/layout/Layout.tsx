@@ -1,14 +1,19 @@
 import React from 'react';
-import { type FC, type PropsWithChildren } from 'react';
 import Footer from './footer/Footer';
 import Header from './header/Header';
+import AppRouter from './app-router/AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 
-const Layout: FC<PropsWithChildren> = ({ children }): React.ReactElement => {
+const Layout = (): React.ReactElement => {
   return (
     <>
-      <Header />
-      <main>{children}</main>
-      <Footer className="footer" />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <div className="container">
+          <Header />
+          <AppRouter />
+        </div>
+        <Footer className="home-page-block" />
+      </BrowserRouter>
     </>
   );
 };

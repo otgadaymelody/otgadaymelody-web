@@ -21,10 +21,10 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
         />
         <div className="burger-menu__content">
           <nav className="burger-menu__links">
-            <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} />
-            <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} />
-            <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} />
-            <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} />
+            <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} url="#upcoming-game" />
+            <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} url="123" />
+            <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} url="123" />
+            <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} url="123" />
           </nav>
           <div className="burger-menu__footer">
             <span>VK</span>

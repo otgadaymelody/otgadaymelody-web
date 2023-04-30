@@ -9,7 +9,7 @@
 
 .interesting-fact-slide__title {
   color: var(--color-bg-white);
-  font: var(--fonts-h2-infographic-title);
+  font: var(--fonts-h2-infographic-title-DEPRECATED);
   margin-bottom: 48px;
 }
 
@@ -29,7 +29,7 @@
   padding: 16px;
   text-align: center;
 
-  font: var(--fonts-interesting-fact);
+  font: var(--fonts-interesting-fact-DEPRECATED);
 
   flex-grow: 1;
   display: flex;

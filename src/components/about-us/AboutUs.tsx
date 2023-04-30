@@ -10,11 +10,6 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
 
-  const regBtnStyles = {
-    buttonForm: 'game-rules__reg-btn',
-    buttonTitle: 'game-rules__reg-btn-title',
-  };
-
   return (
     <div className={`about-us ${className}`}>
       <div className="game-rules__wrapper">

@@ -34,47 +34,39 @@
   --border-lg: 64px;
 
   /* Titles */
-  /* OLD */
-  --fonts-h1-main-title: 900 24px/1.4 var(--font-family-headers), sans-serif;
-  --fonts-h2-faq-title: 900 28px/1.205 var(--font-family-headers), sans-serif;
-  --fonts-h2-block-title: 700 28px/1.4 var(--font-family-headers), sans-serif;
-  --fonts-h2-infographic-title: 700 24px/1.4 var(--font-family-headers), sans-serif;
+  /* DEPRECATED */
+  --fonts-h1-main-title-DEPRECATED: 900 24px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h2-faq-title-DEPRECATED: 900 28px/1.205 var(--font-family-headers), sans-serif;
+  --fonts-h2-block-title-DEPRECATED: 700 28px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h2-infographic-title-DEPRECATED: 700 24px/1.4 var(--font-family-headers), sans-serif;
 
-  --fonts-h3-block-title: 700 34px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h4-subtitle-DEPRECATED: 700 26px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h5-subtitle-DEPRECATED: 700 20px/1.4 var(--font-family-headers), sans-serif;
+  --fonts-h4-card-title-DEPRECATED: 500 20px/1.4 var(--font-family-headers), sans-serif;
 
-  --fonts-h4-subtitle: 700 26px/1.4 var(--font-family-headers), sans-serif;
-  --fonts-h5-subtitle: 700 20px/1.4 var(--font-family-headers), sans-serif;
-  --fonts-h4-card-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
-
-  --fonts-footer-title: 500 20px/1.4 var(--font-family-headers), sans-serif;
-
-  --fonts-photo-gallery-item-title: italic 700 10px/0.93 var(--font-family-headers), sans-serif;
-  --fonts-photo-gallery-item-index: italic 700 30px/0.65 var(--font-family-headers), sans-serif;
+  --fonts-footer-title-DEPRECATED: 500 20px/1.4 var(--font-family-headers), sans-serif;
 
   /* Descriptions */
-  --fonts-span-carousel-title: 500 28px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-span-carousel-title-DEPRECATED: 500 28px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-p-date-info-title: 600 24px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-p-block-description: 400 24px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-p-date-info-title-DEPRECATED: 600 24px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-faq-block: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-h5-card-description: 500 20px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-span-carousel-description: 400 20px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-faq-block-DEPRECATED: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-h5-card-description-DEPRECATED: 500 20px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-span-carousel-description-DEPRECATED: 400 20px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-question-title: 600 18px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-registration-button-title: 500 18px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-question-title-DEPRECATED: 600 18px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-registration-button-title-DEPRECATED: 500 18px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-city-list-button: 700 16px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-show-all-btn-title: 600 16px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-p-main-description: 500 16px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-span-sub-description: 400 16px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-show-all-btn-title-DEPRECATED: 600 16px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-p-main-description-DEPRECATED: 500 16px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-span-sub-description-DEPRECATED: 400 16px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-interesting-fact: 600 14px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-navigation-link: 500 14px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-upcoming-title: 400 14px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-interesting-fact-DEPRECATED: 600 14px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-navigation-link-DEPRECATED: 500 14px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-upcoming-title-DEPRECATED: 400 14px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-p-infographic-description: 600 12px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-photo-gallery-item-subtitle: 700 5px/0.8 var(--font-family-descriptions), sans-serif;
+  --fonts-p-infographic-description-DEPRECATED: 600 12px/1.4 var(--font-family-descriptions), sans-serif;
 
   /* === Images === */
   /* header images */

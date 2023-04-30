@@ -66,13 +66,13 @@
 }
 
 .banner__info h1 {
-  font: var(--fonts-h1-main-title);
+  font: var(--fonts-h1-main-title-DEPRECATED);
   color: var(--color-bg-white);
   margin: 0;
 }
 
 .banner__info p {
-  font: var(--fonts-p-main-description);
+  font: var(--fonts-p-main-description-DEPRECATED);
   color: var(--color-bg-white);
 }
 
@@ -88,7 +88,7 @@
 }
 
 .banner_reg-btn-title {
-  font: var(--fonts-registration-button-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
 }
 
 /* Mediators */

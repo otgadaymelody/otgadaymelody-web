@@ -28,11 +28,11 @@
 }
 
 .quiz-game-modal__result-title {
-  font: var(--fonts-h1-main-title);
+  font: var(--fonts-h1-main-title-DEPRECATED);
 }
 
 .quiz-game-modal__result-description {
-  font: var(--fonts-p-main-description);
+  font: var(--fonts-p-main-description-DEPRECATED);
   text-align: center;
   margin-bottom: 67px;
 }
@@ -44,11 +44,11 @@
     gap: 15px;
   }
   .quiz-game-modal__result-title {
-    font: var(--fonts-h4-subtitle);
+    font: var(--fonts-h4-subtitle-DEPRECATED);
   }
 
   .quiz-game-modal__result-description {
-    font: var(--fonts-h5-card-description);
+    font: var(--fonts-h5-card-description-DEPRECATED);
     text-align: center;
     margin-bottom: 67px;
   }

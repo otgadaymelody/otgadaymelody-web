@@ -13,7 +13,7 @@
 }
 
 .faq-block__title {
-  font: var(--fonts-h2-faq-title);
+  font: var(--fonts-h2-faq-title-DEPRECATED);
 
   position: relative;
   z-index: 10;
@@ -36,7 +36,7 @@
   list-style-type: none;
   background-color: var(--color-bg-white);
 
-  font: var(--fonts-navigation-link);
+  font: var(--fonts-navigation-link-DEPRECATED);
   line-height: 1.2;
   text-align: start;
   color: var(--color-bg-gray-900);

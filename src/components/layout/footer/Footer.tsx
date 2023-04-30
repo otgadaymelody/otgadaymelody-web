@@ -5,6 +5,7 @@ import { ReactComponent as WaveImg } from '@assets/images/footer/wave.svg';
 import useDeviceType from '../../../hooks/useDeviceType';
 import womenImage from '@assets/images/footer/women.png';
 import { type BaseComponent } from '../../../shared/interfaces/baseComponent';
+import { SOCIAL_URL } from '../../../shared/consts/socialURLs.consts';
 
 const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
@@ -23,13 +24,13 @@ const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
         <div className="footer__social-btns">
           <a
             className="footer__inst-btn"
-            href="https://www.instagram.com/otgaday.melody/"
+            href={SOCIAL_URL.INSTAGRAM}
             target="_blank"
             rel="noopener noreferrer"
           />
           <a
             className="footer__vk-btn"
-            href="https://vk.com/otgaday.melody"
+            href={SOCIAL_URL.VK}
             target="_blank"
             rel="noopener noreferrer"
           />

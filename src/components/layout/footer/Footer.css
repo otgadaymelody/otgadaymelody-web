@@ -25,7 +25,7 @@
 }
 
 .footer__title {
-  font: var(--fonts-footer-title);
+  font: var(--fonts-footer-title-DEPRECATED);
   color: var(--color-bg-white);
 }
 

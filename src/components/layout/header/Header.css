@@ -15,6 +15,7 @@
 .header__logo {
   width: 116px;
   height: 35px;
+  cursor: pointer;
 }
 
 .header__links {
@@ -28,6 +29,7 @@
   gap: 16px;
 
   transition: box-shadow 150ms ease-in, border-radius 150ms ease-in;
+  text-decoration: none;
 }
 
 .header-link_show-on-click {
@@ -35,7 +37,7 @@
 }
 
 .header-link__title {
-  font: var(--fonts-navigation-link);
+  font: var(--fonts-navigation-link-DEPRECATED);
   color: var(--color-bg-gray-600);
 
   -ms-user-select: none;

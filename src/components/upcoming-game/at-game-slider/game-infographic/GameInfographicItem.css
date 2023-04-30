@@ -26,7 +26,7 @@
   position: absolute;
   text-align: center;
   color: var(--color-bg-white);
-  font: var(--fonts-p-infographic-description);
+  font: var(--fonts-p-infographic-description-DEPRECATED);
 }
 
 @media (min-width: 744px) {

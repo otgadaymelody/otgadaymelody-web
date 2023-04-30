@@ -18,10 +18,10 @@
 
 .date-info-block__time,
 .date-info-block__day {
-  font: var(--fonts-p-date-info-title);
+  font: var(--fonts-p-date-info-title-DEPRECATED);
 }
 
 .date-info-block__month,
 .date-info-block__day-of-week {
-  font: var(--fonts-registration-button-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
 }
