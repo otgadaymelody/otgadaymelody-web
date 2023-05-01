@@ -1,0 +1,13 @@
+.bestOfBlock__container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 50px;
+    margin: 0 115px;
+}
+
+.bestOfBlock__first, .bestOfBlock__second {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
