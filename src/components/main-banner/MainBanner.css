@@ -128,12 +128,12 @@
   }
 
   .banner__info {
-    padding: 2rem 3rem;
+    padding: 48px;
     width: 90%;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    gap: 3rem;
+    gap: 64px;
   }
 
   .banner__mediator_bottom-left {
@@ -192,6 +192,7 @@
 
   .banner__info {
     width: 70%;
+    padding: 64px 56px;
   }
 
   .banner__info h1 {
@@ -206,10 +207,6 @@
 @media (min-width: 1920px) {
   .banner__background {
     --header-height: 122px;
-  }
-
-  .banner__info {
-    padding: 2rem 4rem;
   }
   .banner__info h1 {
     font-size: var(--text-6xl);

@@ -9,7 +9,7 @@ const GameInfographicItem: FC<GameInfographicItemProps> = ({ title }): React.Rea
     <div className="game-infographic-item">
       <img className="game-infographic-item__mediator" src={mediatorImg} />
       <div className="game-infographic-item__content">
-        <span className="game-infographic-item__description">{title}</span>
+        <span className="game-infographic-item__description">{title || ''}</span>
         <img className="game-infographic-item__description-bg" src={contentBgImg} />
       </div>
     </div>
