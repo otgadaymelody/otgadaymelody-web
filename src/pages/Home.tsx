@@ -8,6 +8,7 @@ import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import useOnScreen from '../hooks/useOnScreen';
+import RegistrationForm from '@components/ui-kit/FormRegistration';
 
 const Home: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       </div>
       <PhotoGallery className="home-page-block" />
       <FAQBlock className="home-page-block" />
+      <RegistrationForm />
     </div>
   );
 };

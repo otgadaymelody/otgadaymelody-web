@@ -1,0 +1,24 @@
+.input {
+  background-color: rgba(248, 249, 251, 1);
+  font: rgba(153, 160, 174, 1);
+  border-radius: var(--border-base);
+  border: 2px solid rgba(205, 207, 216, 1);
+  padding: 18px 24px;
+  width: 100%;
+  font-size: 16px;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-bg-gray-500);
+}
+.input:valid {
+  outline: none;
+  border-color: var(--color-lime);
+}
+.input:invalid {
+  outline: none;
+  border-color: var(--color-pink);
+}
+
+/* background-color: var(--color-bg-gray-100);
+  font: var(--color-bg-gray-500); */
