@@ -15,11 +15,11 @@
 }
 
 .future-games-list__game {
-  width: 400px;
+  width: auto;
 }
 
 .future-games-list__title {
-  font: var(--fonts-h2-block-title);
+  font: var(--fonts-h2-block-title-DEPRECATED);
   color: var(--color-bg-white);
 
   position: relative;
@@ -48,7 +48,7 @@
 }
 
 .future-games-list__show-more-title-btn {
-  font: var(--fonts-faq-block);
+  font: var(--fonts-faq-block-DEPRECATED);
 }
 
 /* Mediators */

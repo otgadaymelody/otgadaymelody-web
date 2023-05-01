@@ -11,7 +11,7 @@
 
 .future-game__title {
   height: 72px;
-  font: var(--fonts-h4-card-title);
+  font: var(--fonts-h4-card-title-DEPRECATED);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@
 .future-game__main-description {
   display: flex;
   justify-content: space-between;
-  font: var(--fonts-h5-card-description);
+  font: var(--fonts-h5-card-description-DEPRECATED);
   color: var(--color-bg-gray-900);
 }
 
@@ -53,7 +53,7 @@
 .future-game__address {
   margin-top: 6px;
   width: 100%;
-  font: var(--fonts-span-sub-description);
+  font: var(--fonts-span-sub-description-DEPRECATED);
   color: var(--color-bg-gray-600);
   text-align: start;
 }

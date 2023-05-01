@@ -18,7 +18,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
     bottomRight: 'banner__mediator_bottom-right',
   };
   return (
-    <div className={`${className} upcoming-game`}>
+    <div className={`${className} upcoming-game`} id="upcoming-game">
       <div className="upcoming-game__info-block">
         <div className="upcoming-game__text-wrapper">
           <div className="upcoming-game__title">Ближайшая игра</div>

@@ -5,6 +5,9 @@ import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import { PHOTO_GALLERY_LIST } from './photoGalleryList.consts';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import sliderNextImg from '../../assets/images/future-game/slider-next.svg';
+import sliderPrevImg from '../../assets/images/future-game/slider-prev.svg';
+
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
@@ -33,16 +36,33 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           modifier: 2,
           slideShadows: false,
         }}
-        navigation={true}
         modules={[EffectCoverflow, Navigation]}
+        loop={true}
+        navigation={{
+          nextEl: '.photo-gallery__slider-button-next',
+          prevEl: '.photo-gallery__slider-button-prev',
+        }}
       >
         {PHOTO_GALLERY_LIST.map((item, key) => (
           <SwiperSlide key={key}>
             <img className="photo-gallery__photo" src={item} />
           </SwiperSlide>
         ))}
+        <div className="photo-gallery__slider-button-prev">
+          <img src={sliderNextImg} />
+        </div>
+        <div className="photo-gallery__slider-button-next">
+          <img src={sliderPrevImg} />
+        </div>
       </Swiper>
-      <BaseButton title="Смотреть все фотоотчеты" styles={showAllBtnStyles} />
+      <a
+        href="https://vk.com/albums-164712588"
+        className="photo-gallery__album-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Смотреть все фотоотчеты
+      </a>
     </div>
   );
 };

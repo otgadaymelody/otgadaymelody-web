@@ -1,11 +1,11 @@
 .game-rules-slide__title {
   color: var(--color-lime);
-  font: var(--fonts-h2-infographic-title);
+  font: var(--fonts-h2-infographic-title-DEPRECATED);
 }
 
 .game-rules-slide__description {
   margin: 15px 0;
-  font: var(--fonts-p-main-description);
+  font: var(--fonts-p-main-description-DEPRECATED);
 }
 
 @media (min-width: 744px) {

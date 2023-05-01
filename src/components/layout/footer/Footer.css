@@ -25,7 +25,7 @@
 }
 
 .footer__title {
-  font: var(--fonts-footer-title);
+  font: var(--fonts-footer-title-DEPRECATED);
   color: var(--color-bg-white);
 }
 
@@ -34,10 +34,10 @@
   gap: 21px;
 }
 
-.footer__tg-btn {
+.footer__inst-btn {
   height: 36px;
   width: 36px;
-  background-image: var(--footer-social-btn-tg);
+  background-image: var(--footer-social-btn-inst);
   cursor: pointer;
 }
 
@@ -54,7 +54,7 @@
   left: 10%;
   z-index: 10;
 
-  background-image: url('../../assets/images/home-page/mediator-top-left.svg');
+  background-image: url('@assets/images/home-page/mediator-top-left.svg');
   background-repeat: no-repeat;
   background-position: bottom;
 }

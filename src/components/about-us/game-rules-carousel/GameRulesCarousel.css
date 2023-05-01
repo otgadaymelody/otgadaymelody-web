@@ -34,11 +34,11 @@
   background-color: var(--color-lime);
   border-radius: 81px;
   color: var(--color-bg-white);
-  font: var(--fonts-span-carousel-description);
+  font: var(--fonts-span-carousel-description-DEPRECATED);
 }
 
 .game-rules-carousel__current-page {
-  font: var(--fonts-span-carousel-title);
+  font: var(--fonts-span-carousel-title-DEPRECATED);
 }
 
 .game-rules-carousel__slider-btn {

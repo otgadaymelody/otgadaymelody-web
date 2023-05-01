@@ -16,18 +16,18 @@
 
 .upcoming-game__title {
   color: var(--color-bg-gray-500);
-  font: var(--fonts-upcoming-title);
+  font: var(--fonts-upcoming-title-DEPRECATED);
   line-height: 17px;
 }
 
 .upcoming-game__game-title {
-  font: var(--fonts-h2-faq-title);
+  font: var(--fonts-h2-faq-title-DEPRECATED);
   margin-top: 4px;
   margin-bottom: 16px;
 }
 
 .upcoming-game__game-description {
-  font: var(--fonts-p-main-description);
+  font: var(--fonts-p-main-description-DEPRECATED);
 }
 
 .upcoming-game__img-block {

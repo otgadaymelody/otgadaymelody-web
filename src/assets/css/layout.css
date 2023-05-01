@@ -11,7 +11,7 @@
 }
 
 .home-page-block {
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .home-page__minigames-block {
@@ -19,9 +19,25 @@
   flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headers);
+}
+
+body {
+  font-family: var(--font-family-descriptions);
+}
+
 @media (min-width: 744px) {
   .container {
     padding: 0 24px;
+  }
+  .home-page-block {
+    margin-top: 100px;
   }
 }
 
@@ -29,6 +45,10 @@
   .container {
     max-width: 1400px;
     padding: 0;
+  }
+
+  .home-page-block {
+    margin-top: 140px;
   }
 
   .home-page__minigames-block {

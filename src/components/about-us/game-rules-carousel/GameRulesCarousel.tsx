@@ -31,7 +31,7 @@ const GameRulesCarousel = (): React.ReactElement => {
       >
         {GAME_RULES_LIST.map((item, index) => (
           <SwiperSlide key={index}>
-            <GameRulesSlide title={item.title} description={item.description} />
+            <GameRulesSlide title={item.title.toUpperCase()} description={item.description} />
           </SwiperSlide>
         ))}
 

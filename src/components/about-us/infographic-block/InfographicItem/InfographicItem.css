@@ -26,12 +26,12 @@
 }
 
 .infographic-item__title {
-  font: var(--fonts-h2-infographic-title);
+  font: var(--fonts-h2-infographic-title-DEPRECATED);
 }
 
 .infographic-item__description {
   text-align: center;
-  font: var(--fonts-p-infographic-description);
+  font: var(--fonts-p-infographic-description-DEPRECATED);
 }
 
 @media (min-width: 744px) {

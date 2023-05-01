@@ -1,23 +1,23 @@
 .game-reg-btn {
-   width: 100%;
-   background: #FFFFFF;
-   border-radius: 16px;
-   padding: 16px 32px;
-   /* TO-DO: Create a gradient for text and border */
-   color: var(--color-pink);
-   border: 2px solid var(--color-pink);
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 32px;
+  /* TO-DO: Create a gradient for text and border */
+  color: var(--color-pink);
+  border: 2px solid var(--color-pink);
 
-   font: var(--fonts-registration-button-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
 
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .game-reg-btn:hover {
-   background: var(--color-gradient);
-   color: var(--color-bg-white);
+  background: var(--color-gradient);
+  color: var(--color-bg-white);
 }
 
 .game-reg-btn:active {
-   background: var(--color-pink);
-   color: var(--color-bg-white);
+  background: var(--color-pink);
+  color: var(--color-bg-white);
 }

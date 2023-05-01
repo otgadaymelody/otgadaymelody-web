@@ -22,7 +22,7 @@
 .game-information-banner__main-description {
   display: flex;
   justify-content: space-between;
-  font: var(--fonts-h5-card-description);
+  font: var(--fonts-h5-card-description-DEPRECATED);
 }
 
 .game-information-banner__place {
@@ -41,7 +41,7 @@
 .game-information-banner__address {
   margin-top: 6px;
   width: 100%;
-  font: var(--fonts-span-sub-description);
+  font: var(--fonts-span-sub-description-DEPRECATED);
   text-align: start;
 }
 

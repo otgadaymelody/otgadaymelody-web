@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { type FC, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType, Navigation, Pagination, Autoplay } from 'swiper';
 import InterestingFactSlide from './interesting-fact-slide/InterestingFactSlide';
@@ -11,14 +11,30 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import BlockBackground from '../block-background/BlockBackground';
+import { type AutoplayOptions } from 'swiper/types';
 
-const InterestingFacts = (): React.ReactElement => {
+declare interface InterestingFactsProps {
+  isVisible: boolean;
+}
+
+const InterestingFacts: FC<InterestingFactsProps> = ({ isVisible }): React.ReactElement => {
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
     topRight: 'banner__mediator_top-right',
     bottomLeft: 'banner__mediator_bottom-left',
     bottomRight: 'banner__mediator_bottom-right',
   };
+
+  let autoplay: AutoplayOptions | boolean = isVisible;
+  if (isVisible) {
+    autoplay = {
+      delay: 2500,
+      disableOnInteraction: false,
+    };
+  }
+  useEffect(() => {
+    console.log(isVisible, autoplay);
+  }, [autoplay]);
 
   const pagination = {
     el: '.custom-pagination',
