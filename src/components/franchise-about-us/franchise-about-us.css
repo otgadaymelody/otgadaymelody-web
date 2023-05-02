@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.FranchiseAboutUs_Container {
+    margin: 50px 0 30px 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.FranchiseAboutUs_title {
+    color: var(--color-lime);
+    font-weight: var(--weight-heavy);
+    font-size: var( --text-9xl);
+    line-height: var(--line-height-small);
+}
+
+.FranchiseAboutUs_title__pink {
+    color: var(--color-pink);
+    font-size: var(--text-6xl);
+}
+
+.FranchiseAboutUs_titleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.FranchiseAboutUs_text {
+    font-family: var(--font-family-descriptions);
+    color: var(--colo-bg-gray-700);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-l);
+    line-height: var(--line-height-base);
+}
+
+.FranchiseAboutUs__image {
+    width: 700px;
+    margin-top: -100px;
+    /* z-index: -1; */
+}
