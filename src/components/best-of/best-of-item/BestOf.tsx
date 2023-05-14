@@ -1,21 +1,31 @@
 import React, { type FC } from 'react';
+import { type BetsOfProps } from './BestOfProps';
 import './BestOf.css';
-import bestPreview from './best-of-demo.png';
 
-const BestOf:  FC = () => {
+const BestOf:  FC<BetsOfProps> = ({ image, title, subtitle, description }): React.ReactElement  => {
+
+    const newDescription = description.split('\n');
 
     return (
-        <section>
-        <div className='bestOf_container'>
-            <div className='bestOf_imgConainer'><img className='bestOf_img' src={bestPreview} alt='happy people'></img></div>
-        <div className='bestOf_textContainer'>
-            <div className='bestOf_title'>Лучшие в своем деле</div>
-            <div className='bestOf_subTitle'>Придумали новый формат, не похожий на подобные мероприятия.</div>
-            <div className='bestOf_description'>Формат собрал в себе элементы классического квиза с вопросами, самого шумного караоке и вечеринки с жаркими танцами. Все это в совокупности закрывает большую часть потребностей человека в качественном и интересном досуге.</div>
-            <div className='bestOf_description'>Просто поверьте, что такого вы еще не видели!</div>
+        <article>
+        <div className='best-of__container'>
+            <div className='best-of__img-conainer'>
+                <img className='best-of__img' src={image} alt='happy people'></img>
+            </div>
+
+        <div className='best-of__text-container'>
+            <h1 className='best-of__title'>{title}</h1>
+            <div className='best-of__subtitle'>{subtitle}</div>
+            {newDescription.map((item, index) => (
+                <p className='best-of__description' key={index}>
+                {item}
+                </p>
+            ))}
+            
+
         </div>
         </div>
-        </section>
+        </article>
     )
 }
 

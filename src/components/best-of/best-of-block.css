@@ -1,12 +1,8 @@
-.bestOfBlock__container {
+.best-of-block__container {
+    width: 95vw;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin: 0 115px;
-}
-
-.bestOfBlock__first, .bestOfBlock__second {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
 }

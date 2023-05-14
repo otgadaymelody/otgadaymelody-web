@@ -1,32 +1,28 @@
-* {
-    box-sizing: border-box;
-}
 
-.FranchiseAboutUs_Container {
-    margin: 50px 0 30px 100px;
+.franchise-about-us__container {
+    margin: 50px 0 150px 100px;
     display: flex;
     flex-direction: row;
 }
 
-
-.FranchiseAboutUs_title {
+.franchise-about-us__title {
     color: var(--color-lime);
     font-weight: var(--weight-heavy);
     font-size: var( --text-9xl);
     line-height: var(--line-height-small);
 }
 
-.FranchiseAboutUs_title__pink {
+.franchise-about-us__title-pink {
     color: var(--color-pink);
     font-size: var(--text-6xl);
 }
 
-.FranchiseAboutUs_titleContainer {
+.franchise-about-us__title-container {
     display: flex;
     flex-direction: column;
 }
 
-.FranchiseAboutUs_text {
+.franchise-about-us__text {
     font-family: var(--font-family-descriptions);
     color: var(--colo-bg-gray-700);
     font-weight: var(--weight-medium);
@@ -34,8 +30,15 @@
     line-height: var(--line-height-base);
 }
 
-.FranchiseAboutUs__image {
+.franchise-about-us__image {
     width: 700px;
-    margin-top: -100px;
-    /* z-index: -1; */
+}
+
+.franchise-about-us__rules-container {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
 }

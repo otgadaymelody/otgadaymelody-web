@@ -1,0 +1,16 @@
+.rules-item__container {
+    border: 6px solid rgba(242, 244, 249, 1);
+    border-radius: 24px;
+    width: 18rem;
+    padding: 0 20px 20px 20px;
+}
+
+.rules-item__title {
+    color: var(--color-bg-gray-700);
+}
+
+.rules-item__subtitle {
+    color: var(--color-bg-gray-600);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-base);
+}

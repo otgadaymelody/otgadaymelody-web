@@ -2,23 +2,18 @@ import React, { type FC } from 'react';
 import BestOf from './best-of-item/BestOf';
 import './best-of-block.css';
 
+import { BESTOF_LIST } from './best.consts';
 
 
 const BestOfBlock:  FC = () => {
 
     return (
-        <div className='bestOfBlock__container' >
-        <div className='bestOfBlock__first'>
-            <BestOf></BestOf>
-            <BestOf></BestOf>
-        </div>
-
-        <div className='bestOfBlock__second'>
-          <BestOf></BestOf>
-          <BestOf></BestOf>
-        </div>
+        <div className='best-of-block__container' >
         
-        
+        {BESTOF_LIST.map((item, index) => (
+            <BestOf key={index} image={item.image} title={item.title} subtitle={item.subtitle} description={item.description}>
+            </BestOf>
+        ))}
         </div>
     )
 }
