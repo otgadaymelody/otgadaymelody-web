@@ -57,7 +57,6 @@ const RegistrationForm: React.FC /* <RegistrationFormProps> */ = () => {
         <Input
           value={numPeople}
           type="number"
-          /* max={8} */
           placeholder="Кол-во человек в команде *"
           onChange={handleNumPeopleChange}
           className="input"
