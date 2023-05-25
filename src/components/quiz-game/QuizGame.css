@@ -2,6 +2,7 @@
   margin-top: 25px; /* FOR DEV */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   border-radius: 32px;
   padding: 16px;
@@ -33,8 +34,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 61px 26px;
-  gap: 10px;
   border-radius: 16px;
   box-shadow: var(--shadow);
   background-color: var(--color-bg-white);
@@ -88,7 +87,6 @@
   }
   .quiz-game__question-image {
     width: 65%;
-    padding: 112px 107px;
   }
 
   .quiz-game__game-block {

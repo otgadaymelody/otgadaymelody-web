@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import './QuizGame.css';
-import questionImg01 from '../../assets/images/home-page/quiz-game/question-01.svg';
 import { QUIZ_QUESTIONS } from './quizQuestions.consts';
 import QuizGameModal from './QuizGameModal';
 
@@ -9,6 +8,7 @@ const QuizGame = (): React.ReactElement => {
   const [step, setStep] = useState(0);
   const [modalActive, setModalActive] = useState(false);
   const question = QUIZ_QUESTIONS[step];
+  const [isCorrect, setIsCorrect] = useState(false);
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
     topRight: 'banner__mediator_top-right',
@@ -17,6 +17,7 @@ const QuizGame = (): React.ReactElement => {
   };
 
   const onClickAnswer = (index: number): void => {
+    setIsCorrect(index === question.correct);
     setModalActive((prev) => !prev);
   };
 
@@ -34,13 +35,13 @@ const QuizGame = (): React.ReactElement => {
     <BlockBackground mediatorsClasses={mediatorClasses} className="quiz-game">
       {modalActive &&
         (step === QUIZ_QUESTIONS.length - 1 ? (
-          <QuizGameModal clickNext={() => clickNext()} lastQuestion={true} />
+          <QuizGameModal clickNext={() => clickNext()} lastQuestion={true} isCorrect={isCorrect} />
         ) : (
-          <QuizGameModal clickNext={() => clickNext()} lastQuestion={false} />
+          <QuizGameModal clickNext={() => clickNext()} lastQuestion={false} isCorrect={isCorrect} />
         ))}
       <h1 className="quiz-game__title">Примеры вопросов на игре</h1>
       <div className="quiz-game__question-block">
-        <img src={questionImg01} className="quiz-game__question-image" />
+        <img src={question.imageUrl} className="quiz-game__question-image" />
         <div className="quiz-game__game-block">
           <h2 className="quiz-game__question-title">{question.title}</h2>
           <ul className="quiz-game__answers-block">

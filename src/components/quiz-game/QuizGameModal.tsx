@@ -6,11 +6,13 @@ import './QuizGameModal.css';
 interface QuizGameModalProps extends React.AllHTMLAttributes<HTMLDivElement> {
   lastQuestion: boolean;
   clickNext: () => void;
+  isCorrect: boolean;
 }
 
 const QuizGameModal: FC<QuizGameModalProps> = ({
   clickNext,
   lastQuestion,
+  isCorrect,
   ...props
 }): React.ReactElement => {
   return (
@@ -18,7 +20,7 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
       {!lastQuestion ? (
         <div className="quiz-game-modal__info-block">
           <img src={presentImg} />
-          <h1 className="quiz-game-modal__result-title">Верно</h1>
+          <h1 className="quiz-game-modal__result-title">{isCorrect ? 'Верно' : 'Вы ошиблись'}</h1>
           <GameRegistrationButton icon={false} onClick={clickNext} title="Следующий вопрос" />
         </div>
       ) : (
