@@ -1,9 +1,7 @@
-
 export const FRANCHISE_RULES_LIST = [
     {
       title: '5 раундов',
       subtitle: '+ блиц-тур',
-        
     },
     {
       title: '2,5 - 3 часа',

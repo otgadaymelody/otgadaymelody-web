@@ -25,14 +25,14 @@
 .best-of__title {
     font-family: var(--font-family-headers);
     color: var(--color-pink);
-    font-weight: 700;
-    font-size: 34px;
+    font-weight: var(--weight-bold);
+    font-size: var(--text-5xl);
 }
 
 .best-of__subtitle {
     font-family: var(--font-family-descriptions);
-    font-size: 22px;
-    font-weight: 700;
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
     line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
@@ -41,8 +41,8 @@
 
 .best-of__description {
     font-family: var(--font-family-descriptions);
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
     line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
