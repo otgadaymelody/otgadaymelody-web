@@ -1,6 +1,6 @@
 .rules-item__container {
-    border: 6px solid rgba(242, 244, 249, 1);
-    border-radius: 24px;
+    border: 6px solid var(--color-bg-slate-100);
+    border-radius: var(--border-sm);
     width: 18rem;
     padding: 0 20px 20px 20px;
 }

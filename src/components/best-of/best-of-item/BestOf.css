@@ -1,9 +1,9 @@
 
 .best-of__container {
     max-width: 40vw;
-    border-radius: 32px;
-    background-color: #fff;
-    border: 6px solid #F2F4F9;
+    border-radius: var(--border-base);
+    background-color: var(--color-bg-white);
+    border: 6px solid var(--color-bg-slate-100);
 }
 
 .best-of__text-container {
