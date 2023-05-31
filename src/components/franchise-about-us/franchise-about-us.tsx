@@ -3,8 +3,12 @@ import '../franchise-about-us/franchise-about-us.css';
 import franchisePreview from '../../assets/images/franchise/franchise-preview.png';
 import RulesItem from './rules-item/rules-item';
 import { FRANCHISE_RULES_LIST } from './rules.consts';
+import useDeviceType from '../../hooks/useDeviceType';
 
 const FranchiseAboutUs: FC = () => {
+  const deviceType = useDeviceType();
+  const isMobile = deviceType === 'mobile';
+  
   return (
     <section className="franchise-about-us__container">
       <div className="franchise-about-us__description-container">
@@ -30,9 +34,9 @@ const FranchiseAboutUs: FC = () => {
         </div>
       </div>
 
-      <div className="franchise-about-us__imageContainer">
+      {!isMobile && <div className="franchise-about-us__imageContainer">
         <img className="franchise-about-us__image" src={franchisePreview}></img>
-      </div>
+      </div> }
     </section>
   );
 };
