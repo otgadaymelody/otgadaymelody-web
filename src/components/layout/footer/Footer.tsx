@@ -23,12 +23,6 @@ const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
         <h1 className="footer__title">Следите за нами</h1>
         <div className="footer__social-btns">
           <a
-            className="footer__inst-btn"
-            href={SOCIAL_URL.INSTAGRAM}
-            target="_blank"
-            rel="noopener noreferrer"
-          />
-          <a
             className="footer__vk-btn"
             href={SOCIAL_URL.VK}
             target="_blank"

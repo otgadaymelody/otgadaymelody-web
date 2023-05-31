@@ -38,15 +38,6 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
           </nav>
           <div className="burger-menu__footer">
             <a
-              className="footer__inst-btn"
-              href={SOCIAL_URL.INSTAGRAM}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                setActive(false);
-              }}
-            />
-            <a
               className="footer__vk-btn"
               href={SOCIAL_URL.VK}
               target="_blank"
