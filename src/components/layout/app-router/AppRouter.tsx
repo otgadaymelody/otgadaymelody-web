@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../../../pages/Home';
 import NotFoundPage from '../../../pages/404';
+import Franchise from '../../../pages/franchise';
 import Games from '../../../pages/Games';
 
 const AppRouter = (): React.ReactElement => {
@@ -9,6 +10,7 @@ const AppRouter = (): React.ReactElement => {
     <Routes>
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/" element={<Home />} />
+      <Route path="/franchise" element={<Franchise />} />
       <Route path="/games" element={<Games />} />
     </Routes>
   );

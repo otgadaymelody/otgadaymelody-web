@@ -1,0 +1,46 @@
+
+.franchise-about-us__container {
+    margin: 50px 0 150px 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.franchise-about-us__title {
+    color: var(--color-lime);
+    font-weight: var(--weight-heavy);
+    font-size: var( --text-9xl);
+    line-height: var(--line-height-small);
+}
+
+.franchise-about-us__title-pink {
+    color: var(--color-pink);
+    font-size: var(--text-6xl);
+}
+
+.franchise-about-us__title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.franchise-about-us__text {
+    font-family: var(--font-family-descriptions);
+    color: var(--colo-bg-gray-700);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-l);
+    line-height: var(--line-height-base);
+}
+
+.franchise-about-us__image {
+    max-width: 750px;
+    max-height: 815px;
+    margin-top: 50px;
+}
+
+.franchise-about-us__rules-container {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+}
