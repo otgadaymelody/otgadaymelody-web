@@ -6,7 +6,7 @@
 }
 
 .infographic-item__image {
-  width: 152px;
+  width: 207px;
   height: auto;
 }
 
@@ -25,13 +25,18 @@
   color: var(--color-bg-white);
 }
 
+/* TO-DO: FIX AFTER CALL DESIGNER */
 .infographic-item__title {
   font: var(--fonts-h2-infographic-title-DEPRECATED);
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .infographic-item__description {
   text-align: center;
   font: var(--fonts-p-infographic-description-DEPRECATED);
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 @media (min-width: 744px) {
