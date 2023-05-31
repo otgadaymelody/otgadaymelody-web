@@ -32,9 +32,7 @@ const InterestingFacts: FC<InterestingFactsProps> = ({ isVisible }): React.React
       disableOnInteraction: false,
     };
   }
-  useEffect(() => {
-    console.log(isVisible, autoplay);
-  }, [autoplay]);
+  useEffect(() => {}, [autoplay]);
 
   const pagination = {
     el: '.custom-pagination',
