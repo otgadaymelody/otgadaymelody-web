@@ -15,10 +15,6 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation } from 'swiper';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
-  const showAllBtnStyles = {
-    buttonForm: 'photo-gallery__show-all-btn',
-    buttonTitle: 'photo-gallery__show-all-btn-title',
-  };
   return (
     <div className={`photo-gallery ${className}`}>
       <div className="photo-gallery__title">Посмотрите сами у нас всегда круто!</div>

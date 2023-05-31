@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 374px;
+  min-height: 300px;
   background-image: var(--images-mediator-top-left);
   background-repeat: no-repeat;
 }
@@ -71,6 +71,7 @@
 
   .game-rules-carousel__image-wrapper {
     max-width: 50%;
+    min-height: 374px;
   }
 }
 

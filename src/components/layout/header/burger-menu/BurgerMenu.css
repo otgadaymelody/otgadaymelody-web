@@ -1,11 +1,6 @@
 .burger-menu {
-  /* width: calc(100vw - 20px);
-  height: calc(100vh - 20px); */
-  /* height: -webkit-fill-available; */
   padding-bottom: 1rem;
   height: 100%;
-  /* top: 10px;
-  left: 10px; */
   background-color: var(--color-lime);
   border-radius: 24px;
 }
@@ -31,15 +26,15 @@
 
 .burger-menu__close-btn {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 25px;
+  left: 25px;
   cursor: pointer;
 }
 
 .burger-menu__footer {
   position: absolute;
   display: flex;
-  bottom: 15px;
+  bottom: 25px;
   gap: 15px;
 }
 

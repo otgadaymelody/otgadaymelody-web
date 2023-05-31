@@ -40,7 +40,13 @@ const Header: FC = () => {
         {isDesktop && (
           <nav className="header__links">
             {NAV_LINKS.map((item, index) => (
-              <HeaderLink title={item.title} img={item.images} url={item.url} key={index} />
+              <HeaderLink
+                title={item.title}
+                img={item.images}
+                url={item.url}
+                key={index}
+                hash={item.hash}
+              />
             ))}
           </nav>
         )}

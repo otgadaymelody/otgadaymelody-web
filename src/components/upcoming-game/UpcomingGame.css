@@ -52,6 +52,7 @@
   left: calc(35% - 50px);
   z-index: 10;
   transform: scaleX(-1);
+  border-radius: 60px;
 }
 
 @media (min-width: 744px) {
