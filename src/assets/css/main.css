@@ -30,6 +30,7 @@
   --weight-heavy: 900;
 
   /* === Border Radiuses === */
+  --border-sm: 24px;
   --border-base: 32px;
   --border-lg: 64px;
 
@@ -100,6 +101,7 @@
   --color-lime: rgba(194, 215, 47, 1);
   --color-lime-light: rgba(213, 234, 65, 1);
   --color-lime-dark: rgba(181, 202, 31, 1);
+  --color-bg-slate-100: rgba(241, 245, 249, 1);
 
   /* === Effects === */
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02), -3px 30px 30px rgba(21, 41, 68, 0.03),
