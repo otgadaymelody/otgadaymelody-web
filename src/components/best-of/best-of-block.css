@@ -6,7 +6,3 @@
     justify-content: center;
     gap: 48px;
 }
-
-@media (min-width: 744px) {
-    .best-of-block__container {}
-}

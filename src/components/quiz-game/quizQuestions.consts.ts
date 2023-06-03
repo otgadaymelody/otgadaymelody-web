@@ -14,13 +14,13 @@ export const QUIZ_QUESTIONS: quizQuestion[] = [
     title: 'Отгадай исполнителя по фото фрагменту клипа?',
     imageUrl: questionImg01,
     answers: ['Григорий Лепс', 't.A.T.u', 'Reflex', 'Чай Вдвоём'],
-    correct: 0,
+    correct: 1,
   },
   {
     title: 'Отгадай песню по эмодзи',
     imageUrl: questionImg02,
     answers: ['Игорь Николаев', 'Michael Jackson', 'Ирина Аллегрова', 'Чили'],
-    correct: 0,
+    correct: 2,
   },
   {
     title: 'Отгадайте песню по клипу сгенерированную нейросетью?',
