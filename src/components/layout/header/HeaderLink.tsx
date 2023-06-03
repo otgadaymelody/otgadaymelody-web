@@ -16,7 +16,25 @@ const HeaderLink: FC<HeaderLinkProps> = ({ title, img, url, hash, linkTitleColor
   if (linkTitleColor === 'white') {
     titleStyles = concatStyles(titleStyles, 'header-link__white');
   }
-  const to = hash ? { pathname: `/${url}`, hash: `${hash}` } : `/${url}`;
+  let to = hash ? { pathname: `/${url}`, hash: `${hash}` } : `/${url}`;
+
+  // TODO delete start
+  if (url.includes('http')) {
+    to = { pathname: url, hash: '' };
+    return (
+      <a
+        href="https://vk.com/albums-164712588"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="header__header-link header-link"
+      >
+        <img className="header-link_hide-on-click" src={img[0]} alt="img"></img>
+        <img className="header-link_show-on-click" src={img[1]} alt="img"></img>
+        <span className={titleStyles}>{title}</span>
+      </a>
+    );
+  }
+  // TODO delete end
   return (
     <Link className="header__header-link header-link" to={to} onClick={onClick}>
       <img className="header-link_hide-on-click" src={img[0]} alt="img"></img>
