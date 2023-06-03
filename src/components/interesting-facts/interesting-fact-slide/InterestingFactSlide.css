@@ -14,8 +14,7 @@
 }
 
 .interesting-fact-slide__image {
-  width: 500px;
-  height: 282px;
+  width: 100%;
   object-fit: cover;
   border-radius: 32px;
 }
@@ -49,6 +48,10 @@
     font-size: 20px;
     padding: 24px;
     border-radius: 32px;
+  }
+  .interesting-fact-slide__image {
+    width: 500px;
+    height: 282px;
   }
 }
 

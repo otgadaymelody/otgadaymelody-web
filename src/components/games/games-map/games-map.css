@@ -1,0 +1,22 @@
+.games-map__container {
+  border: 6px solid var(--color-bg-slate-100);
+  border-radius: var(--border-sm);
+  width: 684px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.games-map__location-img {
+  border: 0;
+  border-radius: 8px;
+}
+.games-map__address {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 2fr;
+}
+.games-map__address:nth-last-child(2) {
+  border-left: 1px solid rgba(224, 224, 224, 1);
+  border-right: 1px solid rgba(224, 224, 224, 1);
+}

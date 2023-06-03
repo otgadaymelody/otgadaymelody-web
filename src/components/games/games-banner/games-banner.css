@@ -1,0 +1,43 @@
+.gamesbanner {
+  display: flex;
+  padding: 32px;
+  width: 684px;
+  height: 468px;
+  background: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);
+  border-radius: 32px;
+}
+.gamesbanner__container {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+}
+.gamesbanner__addition-container-right-up {
+  left: 610px;
+  top: -53px;
+  position: absolute;
+  z-index: 1;
+}
+.gamesbanner__addition-container-right-down {
+  position: absolute;
+  z-index: 1;
+  left: 600px;
+  top: 20px;
+}
+.gamesbanner__addition-container-low {
+  position: absolute;
+  z-index: 1;
+  bottom: -45px;
+  left: -50px;
+}
+.gamesbanner__title {
+  color: var(--color-bg-white);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+}
+.banner__description_part {
+  color: var(--color-bg-white);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+}

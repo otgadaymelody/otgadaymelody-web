@@ -34,16 +34,14 @@
 
 .banner-image__img {
   position: absolute;
-  bottom: 0;
-  right: -56px;
-  width: 100%;
-  max-width: 558px;
-  scale: 2;
+  bottom: -75px;
+  right: -73px;
+  width: 512px;
+  height: 398px;
   object-fit: cover;
 
   mask-image: url('../../assets/images/home-page/banner-image-mask.svg');
-  mask-size: 71%;
-  mask-position: 36% 100%;
+  mask-size: 100%;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
 }
@@ -120,11 +118,10 @@
     --header-height: 122px;
   }
   .banner-image__img {
-    bottom: 0;
-    right: -56px;
-    width: 117%;
-    mask-size: 94%;
-    mask-position: 50% -13%;
+    bottom: -20%;
+    right: -10%;
+    width: 70%;
+    height: calc(83% + 6vw);
   }
 
   .banner__info {
@@ -169,6 +166,9 @@
   .banner_reg-btn-title {
     font-size: 20px;
   }
+  .banner__description-wrapper {
+    max-width: 621px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -202,6 +202,10 @@
   .banner__info p {
     font-size: var(--text-lg);
   }
+  .banner__description-wrapper {
+    padding-right: 50px;
+    max-width: none;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -213,5 +217,8 @@
   }
   .banner__info p {
     font-size: var(--text-lg);
+  }
+  .banner__description-wrapper {
+    padding-right: 130px;
   }
 }

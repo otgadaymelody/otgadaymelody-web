@@ -2,12 +2,16 @@ import React, { type FC } from 'react';
 import './download.css';
 import franchiseDownload from '../../assets/images/franchise/franchise-download-img.png';
 import BaseButton from '../ui/base-button/BaseButton';
+import useDeviceType from '../../hooks/useDeviceType';
 
 const Download: FC = () => {
   const downloadBtnClasses = {
     buttonForm: 'franchise-download__btn',
     buttonTitle: 'franchise-download__btn-title',
   };
+
+  const deviceType = useDeviceType();
+  const isMobile = deviceType === 'mobile';
 
   return (
     <section className="franchise-download">
@@ -18,9 +22,9 @@ const Download: FC = () => {
           </h2>
           <BaseButton title="Скачать" styles={downloadBtnClasses} />
         </div>
-        <div>
+        { !isMobile && <div>
           <img src={franchiseDownload} className="franchise-download__img"></img>
-        </div>
+        </div>}
       </div>
     </section>
   );

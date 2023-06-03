@@ -2,7 +2,8 @@ import React, { type FC } from 'react';
 import './BurgerMenu.css';
 import { ReactComponent as CloseBtn } from '../../../../assets/images/header/close-btn.svg';
 import HeaderLink from '../HeaderLink';
-import { NAV_IMAGES } from '../nav-images.consts';
+import { NAV_LINKS } from '../nav-links.consts';
+import { SOCIAL_URL } from '../../../../shared/consts/socialURLs.consts';
 
 interface BurgerMenuProps {
   active: boolean;
@@ -21,14 +22,30 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
         />
         <div className="burger-menu__content">
           <nav className="burger-menu__links">
-            <HeaderLink title="Расписание игр" img={NAV_IMAGES[0]} url="#upcoming-game" />
-            <HeaderLink title="Фотоотчеты" img={NAV_IMAGES[1]} url="123" />
-            <HeaderLink title="Корпоративы" img={NAV_IMAGES[2]} url="123" />
-            <HeaderLink title="Франшиза" img={NAV_IMAGES[3]} url="123" />
+            {NAV_LINKS.map((item, index) => (
+              <HeaderLink
+                title={item.title}
+                img={item.images}
+                url={item.url}
+                key={index}
+                hash={item.hash}
+                linkTitleColor="white"
+                onClick={() => {
+                  setActive(false);
+                }}
+              />
+            ))}
           </nav>
           <div className="burger-menu__footer">
-            <span>VK</span>
-            <span>TG</span>
+            <a
+              className="footer__vk-btn"
+              href={SOCIAL_URL.VK}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                setActive(false);
+              }}
+            />
           </div>
         </div>
       </div>

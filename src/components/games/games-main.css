@@ -1,0 +1,15 @@
+.gamesmain_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
+.gamesmain_registartion-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 32px;
+}
+.gamesmain_map-container {
+  display: grid;
+  grid-template-rows: 1fr 1.2fr;
+  grid-gap: 32px;
+}

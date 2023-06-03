@@ -22,7 +22,7 @@
 
 .franchise-download__title {
     color: var(--color-bg-white);
-    font-size: var(--text-6xl);
+    font-size: var(--text-xl);
     font-weight: var(--weight-bold);
 }
 
@@ -41,4 +41,10 @@
 
 .franchise-download__img {
     transform: skew(10deg);
+}
+
+@media (min-width: 744px) {
+    .franchise-download__title {
+        font-size: var(--text-6xl);
+    }
 }

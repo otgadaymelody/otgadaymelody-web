@@ -4,17 +4,18 @@ export const NAV_LINKS = [
   {
     title: 'Расписание игр',
     images: NAV_IMAGES[0],
-    url: '#upcoming-game',
+    url: '',
+    hash: '#upcoming-game',
   },
   {
     title: 'Фотоотчеты',
     images: NAV_IMAGES[1],
-    url: 'photo-gallery',
+    url: 'https://vk.com/albums-164712588',
   },
   {
     title: 'Корпоративы',
     images: NAV_IMAGES[2],
-    url: 'corporate',
+    url: 'inprocess',
   },
   {
     title: 'Франшиза',

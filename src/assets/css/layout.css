@@ -19,6 +19,19 @@
   flex-direction: column;
 }
 
+.in-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.in-process__image {
+  max-height: 50%;
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -39,6 +52,10 @@ body {
   .home-page-block {
     margin-top: 100px;
   }
+
+  .in-process__image {
+    max-width: 50%;
+    max-height: unset;   }
 }
 
 @media (min-width: 1440px) {

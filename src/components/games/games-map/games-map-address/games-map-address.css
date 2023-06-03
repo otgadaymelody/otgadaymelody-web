@@ -1,0 +1,16 @@
+.address__container {
+  display: grid;
+  grid-template-rows: 1fr;
+
+  text-align: start;
+}
+.address__header {
+  color: var(--color-bg-gray-900);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+}
+.address__text {
+  color: var(--color-bg-gray-900);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+}
