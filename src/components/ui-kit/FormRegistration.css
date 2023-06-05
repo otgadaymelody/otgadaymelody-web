@@ -5,14 +5,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 684px;
-  max-height: 621px;
+  width: 684px;
+  height: 621px;
   padding: 32px;
   gap: 20px;
   border: 6px solid rgba(243, 244, 246, 1);
 }
 .form-registration__title {
-  font: 700 24px/1.4;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31.2px;
   color: var(--color-bg-gray-700);
 }
 

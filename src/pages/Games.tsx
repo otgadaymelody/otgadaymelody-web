@@ -1,10 +1,10 @@
 import React from 'react';
-import RegistrationForm from '../components/ui-kit/FormRegistration';
+import GamesMain from '../components/games/games-main';
 
 const Games = (): React.ReactElement => {
   return (
     <main>
-      <RegistrationForm />
+      <GamesMain />
     </main>
   );
 };

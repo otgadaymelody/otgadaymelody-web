@@ -25,7 +25,7 @@ const Input: FC<InputProps> = ({
         value={value}
         placeholder=""
         onChange={onChange}
-        className={`input ${className}`}
+        className={`input ${value && 'valueadded'}`}
         id="input-field"
       />
       <label htmlFor="input-field" className={`input-label ${value && 'filled'}`}>
