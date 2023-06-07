@@ -1,4 +1,4 @@
-.gamesmain_container {
+.gamesmain__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 32px;

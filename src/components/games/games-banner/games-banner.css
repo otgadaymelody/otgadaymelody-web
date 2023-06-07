@@ -36,7 +36,7 @@
   font-size: var(--text-3xl);
   font-weight: var(--weight-bold);
 }
-.banner__description_part {
+.banner__part {
   color: var(--color-bg-white);
   font-size: var(--text-lg);
   font-weight: var(--weight-medium);

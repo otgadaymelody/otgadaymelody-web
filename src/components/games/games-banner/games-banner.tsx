@@ -10,14 +10,10 @@ const GamesBanner: FC = () => {
     <section className="gamesbanner">
       <div className="gamesbanner__container">
         <div className="gamesbanner__addition-container-right-up">
-          <div>
-            <img src={vectorRightUp} className=""></img>
-          </div>
+          <img src={vectorRightUp} className=""></img>
         </div>
         <div className="gamesbanner__addition-container-right-down">
-          <div>
-            <img src={vectorRightDown} className=""></img>
-          </div>
+          <img src={vectorRightDown} className=""></img>
         </div>
         <div className="gamesbanner__content-container">
           <h2 className="gamesbanner__title">РОК VS ПОПСА #123</h2>
@@ -26,15 +22,13 @@ const GamesBanner: FC = () => {
           <img src={bannerImg} className="gamesbanner__img"></img>
         </div>
         <div className="banner__description">
-          <p className="banner__description_part">
+          <p className="banner__part">
             Наша уникальная игра – 7 раундов, 39 вопросов, 2+ часа и море позитива. В команде может
             быть от 2 до 9 человек, игра открыта для всех: новых и опытных участников.
           </p>
         </div>
         <div className="gamesbanner__addition-container-low">
-          <div>
-            <img src={vectorLeft} className=""></img>
-          </div>
+          <img src={vectorLeft} className=""></img>
         </div>
       </div>
     </section>

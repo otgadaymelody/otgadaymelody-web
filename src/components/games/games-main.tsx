@@ -7,7 +7,7 @@ import GamesMap from './games-map/games-map';
 
 const GamesMain: FC = () => {
   return (
-    <section className="gamesmain_container">
+    <section className="gamesmain__container">
       <div className="gamesmain_registartion-container">
         <GamesBanner></GamesBanner>
         <RegistrationForm></RegistrationForm>

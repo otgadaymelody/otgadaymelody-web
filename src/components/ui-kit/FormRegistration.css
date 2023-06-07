@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   width: 684px;
-  height: 621px;
+  min-height: 621px;
   padding: 32px;
   gap: 20px;
   border: 6px solid rgba(243, 244, 246, 1);
@@ -27,10 +27,10 @@
 .form-registration__btn-send {
   width: 620px;
 }
-.form-registartion-body_p {
+.form-registartion-body_description {
   font-size: 14px;
   text-align: start;
 }
-.form-registartion-body__span {
+.form-registartion-body__description-selection {
   color: var(--color-pink);
 }

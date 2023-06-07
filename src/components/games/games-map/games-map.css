@@ -16,7 +16,3 @@
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 2fr;
 }
-.games-map__address:nth-last-child(2) {
-  border-left: 1px solid rgba(224, 224, 224, 1);
-  border-right: 1px solid rgba(224, 224, 224, 1);
-}

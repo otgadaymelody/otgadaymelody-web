@@ -42,7 +42,7 @@ const RegistrationForm: React.FC /* <RegistrationFormProps> */ = () => {
 
   return (
     <form className="form-registration">
-      <section className="form-registration__title">
+      <section>
         <h2 className="form-registration__title">Регистрация на игру</h2>
       </section>
       <div className="form-registartion-body__firstblock">
@@ -87,7 +87,7 @@ const RegistrationForm: React.FC /* <RegistrationFormProps> */ = () => {
           className="input"
           labelClassName="input-label"
         />
-        <p className="form-registartion-body_p">
+        <p className="form-registartion-body_description">
           Если в Вашей команде есть именинник (3 дня до и 3 после), пожалуйста, укажите как его
           зовут и мы обязательно поздравим его на мероприятии. Также Вы можете указать любимую
           композицию именинника на поздравление.
@@ -95,9 +95,9 @@ const RegistrationForm: React.FC /* <RegistrationFormProps> */ = () => {
       </div>
       <BaseButton title="Отправить" styles={registrationBtnSendClasses} href="#form-registartion" />
       <div>
-        <p className="form-registartion-body_p">
+        <p className="form-registartion-body_description">
           <span>Нажимая кнопку «Отправить» я подтверждаю что согласен c </span>
-          <span className="form-registartion-body__span">
+          <span className="form-registartion-body__description-selection">
             условиями пользовательского соглашения
           </span>
         </p>
