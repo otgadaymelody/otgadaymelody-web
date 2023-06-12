@@ -6,6 +6,9 @@ import bannerImg from '../../assets/images/home-page/banner-image.png';
 import useDeviceType from '../../hooks/useDeviceType';
 
 const MainBanner = (): React.ReactElement => {
+  const onClickHandler = (): void => {
+    window.location.href = 'https://vk.com/wall-164712588_7382';
+  };
 
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
@@ -34,15 +37,26 @@ const MainBanner = (): React.ReactElement => {
             <p className="banner__description">
               Надоели однотипные мероприятия или хочется попробовать чего-нибудь новенького?
             </p>
-            { !isMobile && <p className="banner__description">
-              Тогда добавьте в свою жизнь красок и драйва вместе с «Отгадай Мелодию». Уникальный
-              формат мероприятия, песни, которые Вы точно знаете и любите, жаркие танцы,
-              интерактивное караоке, розыгрыши и огромное количество подарков!
-            </p> }
-            { !isMobile && <p className="banner__description">Уверены, что это будет любовь с первого взгляда.</p>}
+            {!isMobile && (
+              <p className="banner__description">
+                Тогда добавьте в свою жизнь красок и драйва вместе с «Отгадай Мелодию». Уникальный
+                формат мероприятия, песни, которые Вы точно знаете и любите, жаркие танцы,
+                интерактивное караоке, розыгрыши и огромное количество подарков!
+              </p>
+            )}
+            {!isMobile && (
+              <p className="banner__description">
+                Уверены, что это будет любовь с первого взгляда.
+              </p>
+            )}
           </article>
         </div>
-        <BaseButton title="Расписание игр" styles={registrationBtnClasses} href="#upcoming-game" />
+        <BaseButton
+          title="Расписание игр"
+          styles={registrationBtnClasses}
+          href="#upcoming-game"
+          onClick={onClickHandler}
+        />
       </div>
       <div className="banner-image">
         <div className="banner-image__wrapper">

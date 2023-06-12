@@ -3,6 +3,7 @@ import './download.css';
 import franchiseDownload from '../../assets/images/franchise/franchise-download-img.png';
 import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
+import franch from '../../assets/presentaions/franch.pdf';
 
 const Download: FC = () => {
   const downloadBtnClasses = {
@@ -20,11 +21,15 @@ const Download: FC = () => {
           <h2 className="franchise-download__title">
             Скачать презентацию франшизы «отгадай мелодию»
           </h2>
-          <BaseButton title="Скачать" styles={downloadBtnClasses} />
+          <a href={franch} download="info-otgaday-melody">
+            <BaseButton title="Скачать" styles={downloadBtnClasses} />
+          </a>
         </div>
-        { !isMobile && <div>
-          <img src={franchiseDownload} className="franchise-download__img"></img>
-        </div>}
+        {!isMobile && (
+          <div>
+            <img src={franchiseDownload} className="franchise-download__img"></img>
+          </div>
+        )}
       </div>
     </section>
   );

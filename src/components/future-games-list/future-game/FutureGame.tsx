@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {
   const navigate = useNavigate();
   const onButtonClickHandler = (): void => {
-    navigate('inprocess');
+    window.location.href = 'https://vk.com/wall-164712588_7382';
   };
 
   return (

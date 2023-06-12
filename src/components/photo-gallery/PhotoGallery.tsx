@@ -15,6 +15,9 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation } from 'swiper';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
+  const navigateToVkPost = (): void => {
+    window.location.href = 'https://vk.com/wall-164712588_7382';
+  };
   return (
     <div className={`photo-gallery ${className}`}>
       <div className="photo-gallery__title">Посмотрите сами у нас всегда круто!</div>
@@ -41,7 +44,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
       >
         {PHOTO_GALLERY_LIST.map((item, key) => (
           <SwiperSlide key={key}>
-            <img className="photo-gallery__photo" src={item} />
+            <img className="photo-gallery__photo" src={item} onClick={navigateToVkPost} />
           </SwiperSlide>
         ))}
         <div className="photo-gallery__slider-button-prev">
