@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const navigate = useNavigate();
   const onButtonClickHandler = (): void => {
-    navigate('inprocess');
+    window.location.href = 'https://vk.com/wall-164712588_7382';
   };
 
   const deviceType = useDeviceType();

@@ -1,4 +1,5 @@
 import { NAV_IMAGES } from './nav-images.consts';
+import corp from '../../../assets/presentaions/corp.pdf';
 
 export const NAV_LINKS = [
   {
@@ -15,7 +16,7 @@ export const NAV_LINKS = [
   {
     title: 'Корпоративы',
     images: NAV_IMAGES[2],
-    url: 'inprocess',
+    url: corp,
   },
   {
     title: 'Франшиза',
