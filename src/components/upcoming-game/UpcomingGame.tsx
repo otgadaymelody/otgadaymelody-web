@@ -7,8 +7,14 @@ import girlImg from '../../assets/images/footer/women.png';
 import useDeviceType from '../../hooks/useDeviceType';
 import GameInformationBanner from './game-information-banner/GameInformationBanner';
 import AtGameSlider from './at-game-slider/AtGameSlider';
+import { useNavigate } from 'react-router-dom';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
+  const navigate = useNavigate();
+  const onButtonClickHandler = (): void => {
+    window.location.href = 'https://vk.com/wall-164712588_7382';
+  };
+
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const mediatorClasses = {
@@ -42,7 +48,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
           )}
           <div className="upcoming-game__registration-info">
             <GameInformationBanner />
-            <GameRegistrationButton icon={false} />
+            <GameRegistrationButton icon={false} onClick={onButtonClickHandler} />
           </div>
         </div>
         <AtGameSlider />

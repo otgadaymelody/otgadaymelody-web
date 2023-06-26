@@ -11,6 +11,13 @@
   justify-content: center;
 }
 
+.quiz-game-modal__close {
+  top: -12%;
+  left: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
 .quiz-game-modal__info-block {
   width: 90%;
   display: flex;

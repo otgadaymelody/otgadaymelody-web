@@ -6,8 +6,14 @@ import { ReactComponent as PriceImg } from '../../../assets/images/future-game/T
 import DateInfoBlock from './date-info-block/DateInfoBlock';
 import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
+import { useNavigate } from 'react-router-dom';
 
 const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {
+  const navigate = useNavigate();
+  const onButtonClickHandler = (): void => {
+    window.location.href = 'https://vk.com/wall-164712588_7382';
+  };
+
   return (
     <div className={className ? concatStyles('future-game', className) : 'future-game'}>
       <div className="future-game__title-block">
@@ -28,7 +34,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.R
           </div>
           <address className="future-game__address">{game.address}</address>
         </div>
-        <GameRegistrationButton icon={false} />
+        <GameRegistrationButton icon={false} onClick={onButtonClickHandler} />
       </div>
     </div>
   );

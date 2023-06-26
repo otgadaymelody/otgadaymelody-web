@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/layout/Layout';
-
+import travolta from '../assets/images/not-found/travolta-mem.gif';
 const NotFoundPage = (): React.ReactElement => {
   return (
-    <main>
-      <h2>404! Page not found</h2>
+    <main className="in-process">
+      <h2>404! Страница не найдена</h2>
+      <img className="in-process__image" src={travolta} alt="loading..." />
     </main>
   );
 };

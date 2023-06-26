@@ -57,7 +57,7 @@
 }
 
 .header-link:active {
-  border: 1.5px solid var(--color-lime);
+  outline: 1.5px solid var(--color-lime);
   box-shadow: 0px 4px 12px rgba(194, 215, 47, 0.15);
   border-radius: 16px;
 }
