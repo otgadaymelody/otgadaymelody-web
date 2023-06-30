@@ -16,6 +16,7 @@ const BaseButton: FC<BaseButtonProps> = ({ title, img, styles, href, ...props })
   return (
     <button
       className={styles?.buttonForm ? concatStyles('base-btn', styles.buttonForm) : 'base-btn'}
+      onClick={props.onClick ? props.onClick : () => {}}
     >
       {img && <img className="base-btn__image" src={img} alt="" />}
       {title && (
