@@ -1,0 +1,52 @@
+.franchise-audience {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: -20px;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.franchise-audience__stats-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.franchise-audience__stats {
+    max-width: 334px;
+    margin-top: 66px;
+}
+
+.franchise-audience__title {
+    font-weight: var(--weight-heavy);
+    font-size: var(--text-9xl);
+    line-height: 78.4px;
+    color: var(--color-bg-gray-900);
+}
+
+.franchise-text {
+    font-weight: var(--weight-medium);
+    font-size: var(--text-2xl);
+    line-height: 30.8px;
+    color: var(--color-bg-gray-700);
+}
+
+.franchise-audience__container_right {
+    position: relative;
+}
+
+.franchise-audience__illustration_two {
+    max-width: 823px;
+    margin-right: -100px;
+    z-index: -1;
+}
+
+.franchise-audience__illustration_one {
+    max-width: Hug (385.53px);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}

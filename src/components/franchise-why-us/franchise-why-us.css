@@ -1,0 +1,56 @@
+.franchise-why-us__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.franchise-why-us__title {
+    display: flex;
+    justify-content: center;
+    font-weight: var(--weight-heavy);
+    font-size: var(--text-9xl);
+    line-height: 78.4px;
+    color: var(--color-bg-gray-900);
+}
+
+.franchise-why-us__textblock {
+    display: flex;
+    justify-content: space-around;
+}
+
+.franchise-why-us__textblock:nth-of-type(1) {
+    margin-right: 112px;
+}
+
+.franchise-why-us__textblock:nth-of-type(2) {
+    padding-left: 112px;
+    }
+
+.franchise-why-us__textblock:nth-of-type(3) {
+    padding-right: 112px;
+}
+
+.franchise-why-us__img {
+    width: 700px;
+    height: 630px;
+}
+
+.franchise-why-us__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.franchise-why-us__subtitle {
+    font-weight: var(--weight-bold);
+    font-size: var(--text-5xl);
+    line-height: 40.8px;
+    color: var(--color-bg-gray-700);
+}
+
+.franchise-why-us__text {
+    font-weight: var(--weight-medium);
+    font-size: var(--text-2xl);
+    line-height: 30.8px;
+    color: var(--color-bg-gray-700);
+}
