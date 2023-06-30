@@ -84,7 +84,7 @@ const RegistrationForm: React.FC /* <RegistrationFormProps> */ = () => {
           type="date"
           placeholder="День рождение"
           onChange={handleBirthdayChange}
-          className="input"
+          className="input date"
           labelClassName="input-label"
         />
         <p className="form-registartion-body_description">

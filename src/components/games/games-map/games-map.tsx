@@ -16,7 +16,6 @@ const GamesMap: FC = () => {
           <iframe
             className="games-map__location-img"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea43418cfa649a01497203b847acaceb80789082548582c57556bcd237af108b&amp;source=constructor"
-            width="620"
             height="328"
           ></iframe>
         </div>

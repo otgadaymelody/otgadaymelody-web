@@ -1,6 +1,6 @@
 .gamesmain__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 32px;
 }
 .gamesmain_registartion-container {
@@ -10,6 +10,10 @@
 }
 .gamesmain_map-container {
   display: grid;
-  grid-template-rows: 1fr 1.2fr;
-  grid-gap: 32px;
+  grid-template-rows: 1fr 1.3fr;
+}
+@media (min-width: 744px) {
+  .gamesmain__container {
+    grid-template-columns: 1fr 1fr;
+  }
 }

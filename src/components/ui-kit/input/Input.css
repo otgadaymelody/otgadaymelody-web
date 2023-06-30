@@ -8,9 +8,9 @@
   display: flex;
   position: absolute;
   z-index: 1;
-  padding: 24px 12px;
+  padding: 19px;
   left: 20px;
-  line-height: 14px;
+  line-height: 16px;
   pointer-events: none;
   color: rgba(153, 160, 174, 1);
   transform: translateY(-30px) translateX(-10px) scale(1);
@@ -26,7 +26,7 @@
   font-size: var(--text-base);
   border-radius: 16px;
   border: 2px solid rgba(205, 207, 216, 1);
-  padding: 18px 24px;
+  padding: 16px;
   width: 100%;
   height: 56px;
 }
@@ -50,5 +50,6 @@ input[type='date']:not(:focus):in-range::-webkit-datetime-edit-year-field,
 input[type='date']:not(:focus):in-range::-webkit-datetime-edit-month-field,
 input[type='date']:not(:focus):in-range::-webkit-datetime-edit-day-field,
 input[type='date']:not(:focus):in-range::-webkit-datetime-edit-text {
-  color: transparent;
+  -webkit-appearance: none;
+  display: none;
 }

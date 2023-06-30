@@ -7,7 +7,7 @@
 .address__header {
   color: var(--color-bg-gray-900);
   font-weight: var(--weight-semibold);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
 }
 .address__text {
   color: var(--color-bg-gray-900);

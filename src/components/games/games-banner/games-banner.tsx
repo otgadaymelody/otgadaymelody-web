@@ -18,7 +18,7 @@ const GamesBanner: FC = () => {
         <div className="gamesbanner__content-container">
           <h2 className="gamesbanner__title">РОК VS ПОПСА #123</h2>
         </div>
-        <div>
+        <div className="gamesbanner__img-container">
           <img src={bannerImg} className="gamesbanner__img"></img>
         </div>
         <div className="banner__description">
