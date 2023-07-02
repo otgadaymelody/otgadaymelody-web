@@ -30,6 +30,9 @@
   --weight-heavy: 900;
 
   /* === Border Radiuses === */
+  --border-xxxs:6px;
+  --border-xxs: 8px;
+  --border-xs: 16px;
   --border-sm: 24px;
   --border-base: 32px;
   --border-lg: 64px;
@@ -93,7 +96,10 @@
   --color-bg-gray-700: rgba(55, 65, 81, 1);
   --color-bg-gray-600: rgba(75, 85, 99, 1);
   --color-bg-gray-500: rgba(107, 114, 128, 1);
+  --color-bg-gray-300:rgba(153, 160, 174, 1);
   --color-bg-gray-100: rgba(205, 213, 228, 1);
+  --color-bg-gray-50:rgba(205, 207, 216, 1);
+  --color-bg-gray-0:rgba(248, 249, 251, 1);
   --color-bg-white: rgba(255, 255, 255, 1);
   --color-gradient: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);
   --color-pink: rgba(240, 31, 119, 1);
@@ -102,6 +108,7 @@
   --color-lime-light: rgba(213, 234, 65, 1);
   --color-lime-dark: rgba(181, 202, 31, 1);
   --color-bg-slate-100: rgba(241, 245, 249, 1);
+  --color-bg-slate-200:rgba(243, 244, 246, 1);
 
   /* === Effects === */
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02), -3px 30px 30px rgba(21, 41, 68, 0.03),

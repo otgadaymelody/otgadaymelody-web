@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import './games-main.css';
-import RegistrationForm from '../ui-kit/FormRegistration';
+import RegistrationForm from './form-registration/FormRegistration';
 import GamesBanner from './games-banner/games-banner';
 import Description from './description/description';
 import GamesMap from './games-map/games-map';

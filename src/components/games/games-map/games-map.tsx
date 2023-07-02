@@ -9,7 +9,12 @@ const GamesMap: FC = () => {
       <div className="games-map__container">
         <div className="games-map__address">
           {GAMES_MAP_LIST.map((item, index) => (
-            <GamesMapAddress key={index} header={item.header} text={item.text}></GamesMapAddress>
+            <div key={index} className="games-map__address-elements">
+              <GamesMapAddress header={item.day.header} text={item.day.text} />
+              <GamesMapAddress header={item.time.header} text={item.time.text} />
+              <GamesMapAddress header={item.price.header} text={item.price.text} />
+              <GamesMapAddress header={item.location.header} text={item.location.text} />
+            </div>
           ))}
         </div>
         <div className="games-map__location">

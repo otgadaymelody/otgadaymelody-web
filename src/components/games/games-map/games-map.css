@@ -10,16 +10,20 @@
 
 .games-map__location-img {
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--border-xxs);
   width: 100%;
 }
 .games-map__address {
+  display: flex;
+  flex-direction: row;
+}
+.games-map__address-elements {
   display: grid;
-  gap: 24px;
   grid-template-columns: 0.5fr 1fr 1fr;
+  gap: 24px;
 }
 @media (min-width: 744px) {
-  .games-map__address {
+  .games-map__address-elements {
     grid-template-columns: 0.5fr 1fr 1fr 2fr;
   }
   .games-map__container {

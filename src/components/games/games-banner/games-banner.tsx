@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import bannerImg from '../../../assets/images/games/games-banner.png';
+import bannerImg from '../../../assets/images/games/games-banner.svg';
 import vectorRightUp from '../../../assets/images/games/games-banner-addition-upper.svg';
 import vectorRightDown from '../../../assets/images/games/vector1.svg';
 import vectorLeft from '../../../assets/images/games/games-banner-addition-low.svg';
@@ -10,10 +10,10 @@ const GamesBanner: FC = () => {
     <section className="gamesbanner">
       <div className="gamesbanner__container">
         <div className="gamesbanner__addition-container-right-up">
-          <img src={vectorRightUp} className=""></img>
+          <img src={vectorRightUp}></img>
         </div>
         <div className="gamesbanner__addition-container-right-down">
-          <img src={vectorRightDown} className=""></img>
+          <img src={vectorRightDown}></img>
         </div>
         <div className="gamesbanner__content-container">
           <h2 className="gamesbanner__title">РОК VS ПОПСА #123</h2>
@@ -28,7 +28,7 @@ const GamesBanner: FC = () => {
           </p>
         </div>
         <div className="gamesbanner__addition-container-low">
-          <img src={vectorLeft} className=""></img>
+          <img src={vectorLeft}></img>
         </div>
       </div>
     </section>
