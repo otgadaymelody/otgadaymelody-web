@@ -1,0 +1,20 @@
+.description__container {
+  border: 6px solid var(--color-bg-slate-100);
+  border-radius: var(--border-base);
+  width: 100%;
+  padding: 32px;
+}
+.description__text {
+  color: var(--color-bg-gray-500);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+}
+.description__start {
+  color: var(--color-bg-gray-600);
+  font-weight: var(--weight-semibold);
+}
+@media (min-width: 744px) {
+  .description__text {
+    font-size: var(--text-lg);
+  }
+}

@@ -1,0 +1,55 @@
+.input-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.input-label {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  padding: 19px;
+  left: 20px;
+  line-height: 16px;
+  pointer-events: none;
+  color: var(--color-bg-gray-300);
+  transform: translateY(-30px) translateX(-10px) scale(1);
+  transition: transform 200ms;
+  top: 30px;
+}
+
+.input {
+  box-sizing: border-box;
+  outline: 0;
+  background-color: var(--color-bg-gray-0);
+  color: var(--color-bg-gray-900);
+  font-size: var(--text-base);
+  border-radius: var(--border-xs);
+  border: 2px solid var(--color-bg-gray-50);
+  padding: 16px;
+  width: 100%;
+  height: 56px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-bg-gray-500);
+}
+
+.input:focus-within ~ .input-label,
+.input:not(:placeholder-shown) {
+  color: var(--color-bg-gray-500);
+}
+.valueadded {
+  border: 2px solid var(--color-lime);
+}
+.filled {
+  transform: translateY(-70px) translateX(-10px) scale(0.8);
+}
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-year-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-month-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-day-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
