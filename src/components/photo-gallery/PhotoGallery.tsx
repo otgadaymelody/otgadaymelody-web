@@ -41,6 +41,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           nextEl: '.photo-gallery__slider-button-next',
           prevEl: '.photo-gallery__slider-button-prev',
         }}
+        loopedSlides={2}
       >
         {PHOTO_GALLERY_LIST.map((item, key) => (
           <SwiperSlide key={key}>
