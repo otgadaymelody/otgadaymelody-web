@@ -2,27 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
   overflow: hidden;
+  margin-left: -12px;
 }
-
 .photo-gallery__title {
   font: var(--fonts-h1-main-title-DEPRECATED);
   text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
 }
-
 .photo-gallery__photos-list {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-
-  max-width: calc(100vw - 20px);
 }
-
 .photo-gallery__show-all-btn {
   width: 100%;
   padding: 16px 48px;
 }
-
 .photo-gallery__show-all-btn-title {
   font: var(--fonts-show-all-btn-title-DEPRECATED);
 }
@@ -30,24 +28,23 @@
   border-radius: 24px;
   width: 328px;
 }
-
 .photo-gallery__slider-button-prev,
 .photo-gallery__slider-button-next {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
   display: block;
   z-index: 20;
   cursor: pointer;
-  overflow: visible;
 }
 .photo-gallery__slider-button-prev {
-  left: calc(100vw / 2 - 195px);
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
-
 .photo-gallery__slider-button-next {
-  left: calc(100vw / 2 + 125px);
+  right: 40%;
+  transform: translate(50%, -50%);
 }
-
 .photo-gallery__album-link {
   margin-top: 16px;
   text-decoration: none;
@@ -60,10 +57,14 @@
 }
 
 @media (min-width: 744px) {
+  .photo-gallery{
+    margin-left: -24px;
+  }
   .photo-gallery__title {
     font-size: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
-
   .photo-gallery__show-all-btn {
     width: max-content;
     height: max-content;
@@ -75,40 +76,50 @@
     border-radius: 32px;
     width: 424px;
   }
-  .photo-gallery__slider-button-prev {
-    left: calc(100vw / 2 - 240px);
-  }
-
-  .photo-gallery__slider-button-next {
-    left: calc(100vw / 2 + 170px);
-  }
 }
 
 @media (min-width: 1440px) {
+  .photo-gallery{
+    margin-left: calc(-100vw / 30);
+  }
   .photo-gallery__photos-list {
     flex-direction: row;
     gap: 24px;
     width: 100%;
     overflow: visible;
   }
-
   .photo-gallery__photo {
     width: 540px;
   }
   .photo-gallery__slider-button-prev {
-    left: calc(100% / 2 - 285px);
     scale: 1.25;
   }
-
   .photo-gallery__slider-button-next {
-    left: calc(100% / 2 + 240px);
     scale: 1.25;
   }
 }
 
+@media (min-width: 1540px) {
+  .photo-gallery{
+    margin-left: calc(-100vw / 15);
+  }
+}
+
+@media (min-width: 1670px) {
+  .photo-gallery{
+    margin-left: calc(-100vw / 10);
+  }
+}
+
+@media (min-width: 1793px) {
+  .photo-gallery{
+    margin-left: calc(-100vw / 8);
+  }
+}
+
 @media (min-width: 1920px) {
-  .photo-gallery {
-    overflow: visible;
+  .photo-gallery{
+    margin-left: calc(-100vw / 6.5);
   }
   .photo-gallery__title {
     font-size: 50px;

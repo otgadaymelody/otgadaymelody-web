@@ -20,7 +20,8 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   };
   return (
     <div className={`photo-gallery ${className}`}>
-      <div className="photo-gallery__title">Посмотрите сами у нас всегда круто!</div>
+      <div className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</div>
+      <div className="photo-gallery__swiper-wrapper">
       <Swiper
         className="photo-gallery__photos-list"
         effect={'coverflow'}
@@ -55,6 +56,8 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           <img src={sliderPrevImg} />
         </div>
       </Swiper>
+      </div>
+      
       <a
         href="https://vk.com/albums-164712588"
         className="photo-gallery__album-link"
