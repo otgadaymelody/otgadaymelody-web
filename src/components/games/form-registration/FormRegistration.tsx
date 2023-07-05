@@ -43,44 +43,48 @@ const RegistrationForm = (): React.ReactElement => {
         <Input
           value={formData.teamName}
           type="text"
-          placeholder="Название команды *"
+          placeholder="Название команды "
           onChange={handleChange}
           name="teamName"
           className="input"
           labelClassName="input-label"
+          required={true}
         />
         <Input
           value={formData.numPeople}
           type="number"
-          placeholder="Кол-во человек в команде *"
+          placeholder="Кол-во человек в команде "
           onChange={handleChange}
           name="numPeople"
           className="input"
           labelClassName="input-label"
+          required={true}
         />
       </section>
       <Input
         value={formData.telNumber}
         type="tel"
-        placeholder="Номер телефона капитана *"
+        placeholder="Номер телефона капитана "
         onChange={handleChange}
         name="telNumber"
         className="input"
         labelClassName="input-label"
+        required={true}
       />
       <Input
         value={formData.socialMediaPage}
-        placeholder="Страница капитана в социальных сетях *"
+        placeholder="Страница капитана в социальных сетях "
         onChange={handleChange}
         name="socialMediaPage"
         className="input"
         labelClassName="input-label"
+        required={true}
       />
       <div>
         <Input
           value={formData.birthday}
           type="date"
-          placeholder="День рождение"
+          placeholder="День рождения"
           onChange={handleChange}
           name="birthday"
           className="input date"

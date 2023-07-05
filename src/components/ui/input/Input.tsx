@@ -9,6 +9,7 @@ interface InputProps {
   className?: string;
   labelClassName?: string;
   name: string;
+  required?: boolean;
 }
 
 const Input: FC<InputProps> = ({
@@ -19,6 +20,7 @@ const Input: FC<InputProps> = ({
   type,
   labelClassName,
   name,
+  required,
 }) => {
   return (
     <div className="input-container">
@@ -30,9 +32,10 @@ const Input: FC<InputProps> = ({
         className={`input ${value && 'valueadded'}`}
         id="input-field"
         name={name}
+        required={required}
       />
       <label htmlFor="input-field" className={`input-label ${value && 'filled'}`}>
-        {placeholder ?? 'Enter Name'}
+        {placeholder}{required && <span className={`label-required`}>*</span> }
       </label>
     </div>
   );
