@@ -29,12 +29,12 @@ const Input: FC<InputProps> = ({
         value={value}
         placeholder=""
         onChange={onChange}
-        className={`input ${value && 'valueadded'}`}
+        className={`input ${value && 'input-filled'}`}
         id="input-field"
         name={name}
         required={required}
       />
-      <label htmlFor="input-field" className={`input-label ${value && 'filled'}`}>
+      <label htmlFor="input-field" className={`input-label ${value && 'label-filled'}`}>
         {placeholder}{required && <span className={`label-required`}>*</span> }
       </label>
     </div>

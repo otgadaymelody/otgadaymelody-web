@@ -1,3 +1,6 @@
+/* * {
+  outline: 1px solid rebeccapurple;
+} */
 .input-container {
   display: flex;
   width: 100%;
@@ -9,7 +12,7 @@
   z-index: 1;
   top: 31px;
   padding: 16px;
-  margin-left: 16px;
+  margin-left: 12px;
 
   pointer-events: none;
   color: var(--color-bg-gray-300);
@@ -43,15 +46,24 @@
 .input:not(:placeholder-shown) {
   color: var(--color-bg-gray-500);
 }
-.valueadded {
-  border: 2px solid var(--color-lime);
+.input-filled {
+  border: 2px solid var(--color-bg-gray-50);
 }
-.filled {
+.label-filled {
+  box-sizing:border-box;
   top: 61px;
   padding: 0 5px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 39%, var(--color-bg-gray-0) 39%, var(--color-bg-gray-0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 38%, var(--color-bg-gray-0) 38%, var(--color-bg-gray-0) 100%);
 
   transform: translateY(-70px) translateX(-10px) scale(0.875);
+}
+
+.success {
+  border: 2px solid var(--color-lime);
+}
+
+.error {
+  border: 2px solid var(--color-pink);
 }
 
 input[type='date']:not(:focus):in-range::-webkit-datetime-edit-year-field,
