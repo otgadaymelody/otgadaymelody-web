@@ -44,3 +44,28 @@
     justify-content: flex-start;
     gap: 24px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .franchise-about-us__image {
+        display: none;
+    }
+
+    .franchise-about-us__text {
+        text-align: justify;
+    }
+
+    .franchise-about-us__container {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .franchise-about-us__container {
+        width: 85vw;
+        margin-left: 5%;
+    }
+
+    .franchise-about-us__image {
+        display: none;
+    }
+}

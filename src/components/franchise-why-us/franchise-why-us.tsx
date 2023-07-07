@@ -6,7 +6,7 @@ const WhyUs: FC = () => {
   return (
     <section className="franchise-why-us__container">
       <h2 className="franchise-why-us__title">Почему именно мы?</h2>
-      <div className="franchise-why-us__textblock">
+      <section className="franchise-why-us__textblock">
         <div>
           <img src={franchiseWhyUs} className="franchise-why-us__img"></img>
         </div>
@@ -24,8 +24,8 @@ const WhyUs: FC = () => {
             подобных проектов.
           </p>
         </div>
-      </div>
-      <div className="franchise-why-us__textblock">
+      </section>
+      <section className="franchise-why-us__textblock">
         <div className="franchise-why-us__text-container">
           <h3 className="franchise-why-us__subtitle">Музыка - беспроигрышный вариант</h3>
           <p className="franchise-why-us__text">
@@ -40,8 +40,8 @@ const WhyUs: FC = () => {
         <div>
           <img src={franchiseWhyUs} className="franchise-why-us__img"></img>
         </div>
-      </div>
-      <div className="franchise-why-us__textblock">
+      </section>
+      <section className="franchise-why-us__textblock">
         <div>
           <img src={franchiseWhyUs} className="franchise-why-us__img"></img>
         </div>
@@ -57,7 +57,7 @@ const WhyUs: FC = () => {
             если и этого Вам будет мало, то посмотрите два видеоотчет с наших мероприятий.
           </p>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

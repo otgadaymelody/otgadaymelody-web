@@ -10,7 +10,7 @@ const FranAudience: FC = () => {
     <section className="franchise-audience">
       <div>
         <h2 className="franchise-audience__title">Аудитория</h2>
-        <p className="franchise-text">
+        <p className="franchise--audience__text">
           Мы безгранично любим тех, кто посещает наши игры, и бесспорно можем сказать, что это самая
           лучшая аудитория на свете. Это взрослыелюди с активной жизненной позицией, которые любят
           музыку, драйв и интересное времяпрепровождение.
@@ -21,10 +21,10 @@ const FranAudience: FC = () => {
         </div>
       </div>
 
-      <div className="franchise-audience__container_right">
+      <section className="franchise-audience__container franchise-audience__container_right">
         <img src={FranAudiencePic3} className="franchise-audience__illustration_one"></img>
         <img src={FranAudiencePic4} className="franchise-audience__illustration_two"></img>
-      </div>
+      </section>
     </section>
   );
 };

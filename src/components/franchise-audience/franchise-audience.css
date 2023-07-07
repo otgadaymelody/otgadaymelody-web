@@ -1,9 +1,7 @@
 .franchise-audience {
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 100px;
-    margin-top: 200px;
     margin-left: 100px;
     margin-right: -20px;
     padding-right: 0;
@@ -23,14 +21,12 @@
 .franchise-audience__title {
     font-weight: var(--weight-heavy);
     font-size: var(--text-9xl);
-    line-height: 78.4px;
     color: var(--color-bg-gray-900);
 }
 
-.franchise-text {
+.franchise--audience__text {
     font-weight: var(--weight-medium);
     font-size: var(--text-2xl);
-    line-height: 30.8px;
     color: var(--color-bg-gray-700);
 }
 
@@ -45,8 +41,39 @@
 }
 
 .franchise-audience__illustration_one {
-    max-width: Hug (385.53px);
+    max-width: 385.53px;
     position: absolute;
     top: 50%;
-    right: 50%;
+    right: 60%;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .franchise-audience{
+        width: 85vw;
+        margin-left: 5%;
+    }
+    .franchise-audience__container_right{
+        display: none;
+    }
+/* 
+    .franchise-audience__illustration_one {
+        display: none;
+    } */
+
+    .franchise-audience__title {
+        font-size: var(--text-6xl);
+    }
+
+    .franchise--audience__text {
+        font-size: var(--text-1xl);
+    }
+
+    .franchise-audience__stats-wrapper {
+        flex-direction: column;
+    }
+
+
 }

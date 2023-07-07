@@ -43,8 +43,37 @@
     transform: skew(10deg);
 }
 
-@media (min-width: 744px) {
+/* @media (min-width: 744px) {
     .franchise-download__title {
         font-size: var(--text-6xl);
     }
+} */
+
+/* @media (min-width: 768px) and (max-width: 1024px)  {
+    .franchise-about-us__image {
+        display: none;
+    }
+
+    .franchise-about-us__text {
+        text-align: justify;
+    }
+
+    .franchise-about-us__container {
+        margin-right: 50px;
+    }
+} */
+
+@media (max-width: 768px) {
+    .franchise-download__img {
+        display: none;
+    }
+
+    .franchise-download__title {
+        font-size: var(--text-3xl);
+    }
+
+    .franchise-download__content-container {
+        padding-left: 10%;
+    }
+
 }
