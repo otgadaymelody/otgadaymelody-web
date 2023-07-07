@@ -1,0 +1,25 @@
+.game-table__title {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(20%, 375px)
+    minmax(20%, 375px)
+    minmax(4.5%, 90px)
+    minmax(3.2%, 60px)
+    minmax(10.8%, 200px)
+    minmax(2.4%, 45px)
+    minmax(3%, 24px);
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 16px;
+
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+}
+
+.game-table__row {
+  padding-left: 30px;
+  border-radius: var(--border-base);
+  border: 6px solid var(--color-bg-slate-100);
+}

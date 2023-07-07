@@ -1,0 +1,38 @@
+.franchisee-games__bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.franchisee-games__title {
+  font-size: var(--text-5xl);
+  margin-top: 10px;
+  margin-right: 48px;
+  margin-bottom: 10px;
+}
+
+.bar__wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.base-btn {
+  margin-left: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* вынести в отдельный компонент, поменять цвет на bg-gray-200 */
+.games-toggle-btn {
+  width: 315px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-bg-gray-300);
+  padding: 0px 4px;
+}
+
+.toggle-switch {
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 10px;
+}
