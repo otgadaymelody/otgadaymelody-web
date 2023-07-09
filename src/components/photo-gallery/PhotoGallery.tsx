@@ -1,5 +1,4 @@
-import React, { type FC } from 'react';
-import BaseButton from '../ui/base-button/BaseButton';
+import React, {type FC} from 'react';
 import './PhotoGallery.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import { PHOTO_GALLERY_LIST } from './photoGalleryList.consts';
@@ -12,52 +11,62 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Navigation } from 'swiper';
+import {EffectCoverflow, Navigation} from 'swiper';
 
-const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
+const PhotoGallery: FC<BaseComponent> = ({className}): React.ReactElement => {
   const navigateToVkPost = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7382';
   };
+  // const onLoopedSlidesChange = (swiper:any): void => {
+  //   swiper.params.loopedSlides = 2;
+  //   swiper.loopDestroy();
+  //   swiper.loopCreate();
+  //   swiper.update();
+  // }
+  //
   return (
     <div className={`photo-gallery ${className}`}>
-      <div className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</div>
+      <h1 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h1>
       <div className="photo-gallery__swiper-wrapper">
-      <Swiper
-        className="photo-gallery__photos-list"
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        initialSlide={2}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: -32,
-          depth: 100,
-          modifier: 2,
-          slideShadows: false,
-        }}
-        modules={[EffectCoverflow, Navigation]}
-        loop={true}
-        navigation={{
-          nextEl: '.photo-gallery__slider-button-next',
-          prevEl: '.photo-gallery__slider-button-prev',
-        }}
-        loopedSlides={2}
-      >
-        {PHOTO_GALLERY_LIST.map((item, key) => (
-          <SwiperSlide key={key}>
-            <img className="photo-gallery__photo" src={item} onClick={navigateToVkPost} />
-          </SwiperSlide>
-        ))}
-        <div className="photo-gallery__slider-button-prev">
-          <img src={sliderNextImg} />
-        </div>
-        <div className="photo-gallery__slider-button-next">
-          <img src={sliderPrevImg} />
-        </div>
-      </Swiper>
+        <Swiper
+          className="photo-gallery__photos-list"
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          initialSlide={2}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: -32,
+            depth: 100,
+            modifier: 2,
+            slideShadows: false,
+          }}
+          modules={[EffectCoverflow, Navigation]}
+          loop={true}
+          navigation={{
+            nextEl: '.photo-gallery__slider-button-next',
+            prevEl: '.photo-gallery__slider-button-prev',
+          }}
+          loopedSlides={2}
+          // onClick={()=>onLoopedSlidesChange(Swiper)}
+        >
+          {PHOTO_GALLERY_LIST.map((item, key) => (
+            <SwiperSlide key={key}>
+              <img className="photo-gallery__photo" src={item} onClick={navigateToVkPost} alt={`Фото ${key}`}/>
+            </SwiperSlide>
+          ))}
+          <div className='photo-gallery__buttons-wrapper'>
+            <div className="photo-gallery__slider-button-prev">
+              <img src={sliderNextImg} alt={'Кнопка назад'}/>
+            </div>
+            <div className="photo-gallery__slider-button-next">
+              <img src={sliderPrevImg} alt={'Кнопка вперед'}/>
+            </div>
+          </div>
+        
+        </Swiper>
       </div>
-      
       <a
         href="https://vk.com/albums-164712588"
         className="photo-gallery__album-link"
