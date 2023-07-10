@@ -8,7 +8,7 @@ import FranAudiencePic4 from '../../assets/images/franchise/franchise-audience-4
 const FranAudience: FC = () => {
   return (
     <section className="franchise-audience">
-      <div>
+      <div className="franchise-audience__description_wrapper">
         <h2 className="franchise-audience__title">Аудитория</h2>
         <p className="franchise--audience__text">
           Мы безгранично любим тех, кто посещает наши игры, и бесспорно можем сказать, что это самая
@@ -22,8 +22,8 @@ const FranAudience: FC = () => {
       </div>
 
       <section className="franchise-audience__container franchise-audience__container_right">
-        <img src={FranAudiencePic3} className="franchise-audience__illustration_one"></img>
-        <img src={FranAudiencePic4} className="franchise-audience__illustration_two"></img>
+        <img src={FranAudiencePic3} className="franchise-audience__illustration_stats"></img>
+        <img src={FranAudiencePic4} className="franchise-audience__illustration_photo"></img>
       </section>
     </section>
   );

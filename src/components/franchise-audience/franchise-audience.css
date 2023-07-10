@@ -1,10 +1,9 @@
 .franchise-audience {
+    width: 98vw;
+    padding-top: 100px;
+    padding-left: 5%;
     display: flex;
-    flex-direction: row;
-    gap: 100px;
-    margin-left: 100px;
-    margin-right: -20px;
-    padding-right: 0;
+    gap: 5%;
     overflow: hidden;
 }
 
@@ -14,7 +13,7 @@
 }
 
 .franchise-audience__stats {
-    max-width: 334px;
+    width: 334px;
     margin-top: 66px;
 }
 
@@ -34,17 +33,16 @@
     position: relative;
 }
 
-.franchise-audience__illustration_two {
-    max-width: 823px;
-    margin-right: -100px;
+.franchise-audience__illustration_photo {
+    width: 823px;
     z-index: -1;
 }
 
-.franchise-audience__illustration_one {
-    max-width: 385.53px;
+.franchise-audience__illustration_stats {
+    max-width: 100%;
     position: absolute;
     top: 50%;
-    right: 60%;
+    right: 55%;
 }
 
 
@@ -58,10 +56,6 @@
     .franchise-audience__container_right{
         display: none;
     }
-/* 
-    .franchise-audience__illustration_one {
-        display: none;
-    } */
 
     .franchise-audience__title {
         font-size: var(--text-6xl);
