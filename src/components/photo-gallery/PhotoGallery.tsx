@@ -2,7 +2,8 @@ import React, {type FC} from 'react';
 import './PhotoGallery.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import { PHOTO_GALLERY_LIST } from './photoGalleryList.consts';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper,SwiperSlide} from 'swiper/react';
+import {EffectCoverflow, Navigation} from 'swiper';
 
 import sliderNextImg from '../../assets/images/future-game/slider-next.svg';
 import sliderPrevImg from '../../assets/images/future-game/slider-prev.svg';
@@ -11,19 +12,18 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 
-import {EffectCoverflow, Navigation} from 'swiper';
 
 const PhotoGallery: FC<BaseComponent> = ({className}): React.ReactElement => {
+  const [loopedSlides, setLoopedSlides] = React.useState<number>(1);
   const navigateToVkPost = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7382';
   };
-  // const onLoopedSlidesChange = (swiper:any): void => {
-  //   swiper.params.loopedSlides = 2;
-  //   swiper.loopDestroy();
-  //   swiper.loopCreate();
-  //   swiper.update();
-  // }
-  //
+ 
+  const onLoopedSlidesChange = (swiper: any):void => {
+      setLoopedSlides(2);
+      swiper.params.loopedSlides = loopedSlides
+  }
+  
   return (
     <div className={`photo-gallery ${className}`}>
       <h1 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h1>
@@ -48,8 +48,8 @@ const PhotoGallery: FC<BaseComponent> = ({className}): React.ReactElement => {
             nextEl: '.photo-gallery__slider-button-next',
             prevEl: '.photo-gallery__slider-button-prev',
           }}
-          loopedSlides={2}
-          // onClick={()=>onLoopedSlidesChange(Swiper)}
+          loopedSlides={loopedSlides}
+          onSlideChange={(swiper) => {onLoopedSlidesChange(swiper)}}
         >
           {PHOTO_GALLERY_LIST.map((item, key) => (
             <SwiperSlide key={key}>
@@ -64,7 +64,6 @@ const PhotoGallery: FC<BaseComponent> = ({className}): React.ReactElement => {
               <img src={sliderPrevImg} alt={'Кнопка вперед'}/>
             </div>
           </div>
-        
         </Swiper>
       </div>
       <a
