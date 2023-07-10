@@ -24,7 +24,7 @@ const Input: FC<InputProps> = ({
 }) => {
   return (
     <div className="input-container">
-      <input
+      <input 
         type={type ?? 'text'}
         value={value}
         placeholder=""
