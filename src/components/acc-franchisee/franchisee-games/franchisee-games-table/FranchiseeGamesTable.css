@@ -1,5 +1,15 @@
-.game-table__title {
+.game-table {
   width: 100%;
+}
+
+.game-table__title {
+  margin-bottom: 16px;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-500);
+}
+
+.game-table__title--grid {
   display: grid;
   grid-template-columns:
     minmax(20%, 375px)
@@ -9,16 +19,19 @@
     minmax(10.8%, 200px)
     minmax(2.4%, 45px)
     minmax(3%, 24px);
-  gap: 20px;
+  gap: 50px;
+  justify-items: start;
+  justify-content: space-between;
   padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 16px;
-
-  font-size: var(--text-xs);
-  font-weight: var(--weight-medium);
+  padding-right: 15px;
 }
 
-.game-table__row {
+.game-table__body {
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
+td {
   padding-left: 30px;
   border-radius: var(--border-base);
   border: 6px solid var(--color-bg-slate-100);

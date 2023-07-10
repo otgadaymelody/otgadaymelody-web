@@ -22,17 +22,17 @@
   padding-right: 40px;
 }
 
-/* вынести в отдельный компонент, поменять цвет на bg-gray-200 */
+/* вынести в отдельный компонент*/
 .games-toggle-btn {
   width: 315px;
   height: 48px;
-  border-radius: 12px;
-  background: var(--color-bg-gray-300);
+  border-radius: var(--border-xxs);
+  background: var(--color-bg-gray-200);
   padding: 0px 4px;
 }
 
 .toggle-switch {
   height: 40px;
   padding: 0px 20px;
-  border-radius: 10px;
+  border-radius: var(--border-xxs);
 }

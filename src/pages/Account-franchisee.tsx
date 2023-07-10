@@ -1,5 +1,5 @@
 import React from "react";
-import FranciseeGames from "../components/acc-franchisee/franchisee-games/FranciseeGames";
+import FranciseeGames from "../components/acc-franchisee/franchisee-games/FranchiseeGames";
 
 
 const AccountFranchisee = (): React.ReactElement => {
