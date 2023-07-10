@@ -16,7 +16,7 @@ import { EffectCoverflow, Navigation } from 'swiper';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const navigateToVkPost = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7382';
+    window.location.href = 'https://vk.com/wall-164712588_7623';
   };
   return (
     <div className={`photo-gallery ${className}`}>

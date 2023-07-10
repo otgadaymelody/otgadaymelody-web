@@ -7,7 +7,7 @@ import useDeviceType from '../../hooks/useDeviceType';
 
 const MainBanner = (): React.ReactElement => {
   const onClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7382';
+    window.location.href = 'https://vk.com/wall-164712588_7623';
   };
 
   const deviceType = useDeviceType();
