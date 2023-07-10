@@ -1,13 +1,11 @@
 .franchisee-games__bar {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .franchisee-games__title {
   font-size: var(--text-5xl);
-  margin-top: 10px;
   margin-right: 48px;
-  margin-bottom: 10px;
 }
 
 .bar__wrapper {

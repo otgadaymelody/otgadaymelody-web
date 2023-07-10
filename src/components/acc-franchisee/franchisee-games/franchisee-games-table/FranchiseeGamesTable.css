@@ -3,7 +3,6 @@
 }
 
 .game-table__title {
-  margin-bottom: 16px;
   font-size: var(--text-xs);
   font-weight: var(--weight-medium);
   color: var(--color-bg-gray-500);
@@ -19,6 +18,7 @@
     minmax(10.8%, 200px)
     minmax(2.4%, 45px)
     minmax(3%, 24px);
+  grid-auto-rows: minmax(40px, auto);
   gap: 50px;
   justify-items: start;
   justify-content: space-between;
