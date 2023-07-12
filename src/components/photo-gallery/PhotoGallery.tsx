@@ -5,6 +5,8 @@ import { PHOTO_GALLERY_LIST } from './photoGalleryList.consts';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation } from 'swiper';
 
+import type { Swiper as SwiperClass } from 'swiper/types';
+
 import sliderNextImg from '../../assets/images/future-game/slider-next.svg';
 import sliderPrevImg from '../../assets/images/future-game/slider-prev.svg';
 
@@ -14,14 +16,18 @@ import 'swiper/css/navigation';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const [loopedSlides, setLoopedSlides] = React.useState<number>(1);
+  const [navigationClicked, setNavigationClicked] = React.useState<boolean>(false);
   const navigateToVkPost = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7382';
   };
-  const onLoopedSlidesChange = (swiper: any): void => {
+  const onLoopedSlidesChange = (swiper: SwiperClass): void => {
     setLoopedSlides(2);
-    swiper.params.loopedSlides = loopedSlides;
+    setNavigationClicked(true);
+    swiper.params.loopedSlides = 2;
   };
-  const onPrevSlideChange = (swiper: any): void => {
+  const onPrevSlideChange = (swiper: SwiperClass): void => {
+    setLoopedSlides(3);
+    setNavigationClicked(true);
     swiper.params.loopedSlides = 3;
   };
 
@@ -50,11 +56,11 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
             prevEl: '.photo-gallery__slider-button-prev',
           }}
           loopedSlides={loopedSlides}
-          onBeforeSlideChangeStart={(swiper) => {
-            onLoopedSlidesChange(swiper);
+          onNavigationNext={(swiperIns) => {
+            onLoopedSlidesChange(swiperIns);
           }}
-          onSlidePrevTransitionEnd={(swiper) => {
-            onPrevSlideChange(swiper);
+          onNavigationPrev={(swiperIns) => {
+            onPrevSlideChange(swiperIns);
           }}
         >
           {PHOTO_GALLERY_LIST.map((item, key) => (

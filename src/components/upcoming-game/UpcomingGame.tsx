@@ -48,7 +48,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
           )}
           <div className="upcoming-game__registration-info">
             <GameInformationBanner />
-            <GameRegistrationButton icon={false} onClick={onButtonClickHandler} />
+            <GameRegistrationButton onClick={onButtonClickHandler} />
           </div>
         </div>
         <AtGameSlider />
