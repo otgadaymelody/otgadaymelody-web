@@ -46,7 +46,7 @@
   text-decoration: none;
 }
 
-@media (min-width: 414px) {
+@media (max-width: 743px) {
   .photo-gallery{
     margin-left: -12px;
   }
@@ -116,13 +116,13 @@
 
 @media (min-width: 1840px) {
   .photo-gallery{
-    margin-left: calc((((1400*100vw)/1900) - 100vw)/2);
+    margin-left: calc((((1400*100vw)/1840) - 100vw)/2);
   }
 }
 
 @media (min-width: 1920px) {
   .photo-gallery{
-    margin-left: calc((((1400*100vw)/1940) - 100vw)/2);
+    margin-left: calc((((1400*100vw)/1920) - 100vw)/2);
   }
   .photo-gallery__title {
     font-size: 50px;
