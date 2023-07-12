@@ -12,21 +12,17 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 
-
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const [loopedSlides, setLoopedSlides] = React.useState<number>(1);
-  
   const navigateToVkPost = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7382';
   };
-
   const onLoopedSlidesChange = (swiper: any): void => {
     setLoopedSlides(2);
     swiper.params.loopedSlides = loopedSlides;
   };
-
   const onPrevSlideChange = (swiper: any): void => {
-      swiper.params.loopedSlides = 3; 
+    swiper.params.loopedSlides = 3;
   };
 
   return (
@@ -57,7 +53,9 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
           onBeforeSlideChangeStart={(swiper) => {
             onLoopedSlidesChange(swiper);
           }}
-          onSlidePrevTransitionEnd={(swiper) => {onPrevSlideChange(swiper)}}
+          onSlidePrevTransitionEnd={(swiper) => {
+            onPrevSlideChange(swiper);
+          }}
         >
           {PHOTO_GALLERY_LIST.map((item, key) => (
             <SwiperSlide key={key}>
