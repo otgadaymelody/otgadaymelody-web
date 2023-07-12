@@ -11,9 +11,13 @@
 .gamesmain_map-container {
   display: grid;
   grid-template-rows: 1fr 1.3fr;
+  gap: 25px;
 }
 @media (min-width: 744px) {
   .gamesmain__container {
     grid-template-columns: 1fr 1fr;
+  }
+  .gamesmain_map-container {
+    gap: 10px;
   }
 }

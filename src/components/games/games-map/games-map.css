@@ -22,6 +22,7 @@
   grid-template-columns: 0.5fr 1fr 1fr;
   gap: 24px;
 }
+
 @media (min-width: 744px) {
   .games-map__address-elements {
     grid-template-columns: 0.5fr 1fr 1fr 2fr;
