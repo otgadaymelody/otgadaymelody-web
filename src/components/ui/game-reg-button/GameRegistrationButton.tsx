@@ -2,7 +2,6 @@ import React, { type FC } from 'react';
 import './GameRegistrationButton.css';
 
 interface GameRegistrationButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  icon: boolean;
   title?: string;
 }
 

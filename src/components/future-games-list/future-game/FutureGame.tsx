@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {
   const navigate = useNavigate();
   const onButtonClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7382';
+    window.location.href = 'https://vk.com/wall-164712588_7623';
   };
 
   return (
@@ -34,7 +34,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.R
           </div>
           <address className="future-game__address">{game.address}</address>
         </div>
-        <GameRegistrationButton icon={false} onClick={onButtonClickHandler} />
+        <GameRegistrationButton onClick={onButtonClickHandler} />
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
           </div>
           <img src={presentImg} />
           <h1 className="quiz-game-modal__result-title">{isCorrect ? 'Верно' : 'Вы ошиблись'}</h1>
-          <GameRegistrationButton icon={false} onClick={clickNext} title="Следующий вопрос" />
+          <GameRegistrationButton onClick={clickNext} title="Следующий вопрос" />
         </div>
       ) : (
         <div className="quiz-game-modal__info-block">
@@ -46,7 +46,7 @@ const QuizGameModal: FC<QuizGameModalProps> = ({
           <span className="quiz-game-modal__result-description">
             {isAllCorrect ? goodResult : badResult}
           </span>
-          <GameRegistrationButton icon={false} onClick={clickNext} />
+          <GameRegistrationButton onClick={clickNext} />
         </div>
       )}
     </div>
