@@ -49,6 +49,7 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
+          error="oops"
         />
         <Input
           value={formData.numPeople}
@@ -59,6 +60,7 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
+          help="Введите информацию"
         />
       </section>
       <Input
@@ -70,6 +72,7 @@ const RegistrationForm = (): React.ReactElement => {
         className="input"
         labelClassName="input-label"
         required={true}
+        success={true}
       />
       <Input
         value={formData.socialMediaPage}

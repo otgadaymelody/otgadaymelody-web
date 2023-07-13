@@ -10,6 +10,9 @@ interface InputProps {
   labelClassName?: string;
   name: string;
   required?: boolean;
+  help?: string;
+  error?: string;
+  success?: boolean;
 }
 
 const Input: FC<InputProps> = ({
@@ -21,22 +24,30 @@ const Input: FC<InputProps> = ({
   labelClassName,
   name,
   required,
+  help,
+  error,
+  success,
 }) => {
   return (
     <div className="input-container">
-      <input 
+      <input
         type={type ?? 'text'}
         value={value}
         placeholder=""
         onChange={onChange}
-        className={`input ${value && 'input-filled'}`}
+        className={`input ${value && 'input-filled'} ${error ? 'error' : ''} ${
+          success ? 'success' : ''
+        }`}
         id="input-field"
         name={name}
         required={required}
       />
       <label htmlFor="input-field" className={`input-label ${value && 'label-filled'}`}>
-        {placeholder}{required && <span className={`label-required`}>*</span> }
+        {placeholder}
+        {required && <span className={`label-required`}>*</span>}
       </label>
+      {help && <p className="caption-message">{help}</p>}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 };

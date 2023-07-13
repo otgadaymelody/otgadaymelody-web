@@ -1,5 +1,6 @@
 .input-container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   position: relative;
 }
@@ -52,9 +53,22 @@
 .label-filled {
   top: 61px;
   padding: 0 5px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 38%, var(--color-bg-gray-0) 38%, var(--color-bg-gray-0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 38%,
+    var(--color-bg-gray-0) 38%,
+    var(--color-bg-gray-0) 100%
+  );
 
   transform: translateY(-70px) translateX(-10px) scale(0.875);
+}
+
+.caption-message {
+  width: 100%;
+  margin: 4px auto auto 8px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-500);
 }
 
 .success {
@@ -63,6 +77,14 @@
 
 .error {
   border: 2px solid var(--color-pink);
+}
+
+.error-message {
+  width: 100%;
+  margin: 4px auto auto 8px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-pink);
 }
 
 input[type='date']:not(:focus):in-range::-webkit-datetime-edit-year-field,
