@@ -49,6 +49,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .franchise-download {
+        width: 90vw;
+    }
     .franchise-download__img {
         display: none;
     }
