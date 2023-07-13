@@ -1,6 +1,5 @@
 import React from 'react';
 import BaseButton from '../ui/base-button/BaseButton';
-import BlockBackground from '../block-background/BlockBackground';
 import './MainBanner.css';
 import bannerImg from '../../assets/images/home-page/main-banner-photo.png';
 import dots from '../../assets/images/home-page/dots.png';
@@ -14,13 +13,6 @@ const MainBanner = (): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
 
-  // const mediatorClasses = {
-  //   topLeft: 'banner__mediator_top-left',
-  //   topRight: 'banner__mediator_top-right',
-  //   bottomLeft: 'banner__mediator_bottom-left',
-  //   bottomRight: 'banner__mediator_bottom-right',
-  // };
-
   const registrationBtnClasses = {
     buttonForm: 'banner__reg-btn',
     buttonTitle: 'banner_reg-btn-title',
@@ -31,12 +23,12 @@ const MainBanner = (): React.ReactElement => {
       <div className="banner__info">
         <div className="banner__main-text">
           <h1>
-            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В ФОРМАТЕ -{' '}
+            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -{' '}
             <span className="banner__info_bold-title">КВИЗ ИГРЫ</span>
           </h1>
-          <article className="banner__description-wrapper">
+          <article>
             {!isMobile && (
-              <p className="banner__description">
+              <p>
                 Добавьте красок и драйва в жизнь с &quot;Отгадай Мелодию&ldquo;. Уникальный формат
                 мероприятия с популярными песнями, танцами, караоке, розыгрышами и множеством
                 подарков! Любовь с первого взгляда гарантирована.
@@ -52,11 +44,11 @@ const MainBanner = (): React.ReactElement => {
         />
       </div>
       <div className="banner-image">
-        <img src={bannerImg} className="banner-image__img" />
+        <img src={bannerImg} className="banner-image__img" alt={'Девушка с микрофоном'} />
       </div>
       {isMobile && (
         <div className="banner__dots">
-          <img src={dots} className="banner__dots__img" />
+          <img src={dots} className="banner__dots__img" alt={'Точки'} />
         </div>
       )}
     </div>
