@@ -1,8 +1,9 @@
 
 .franchise-about-us__container {
-    margin: 50px 0 150px 50px;
+    width: 95vw;
+    padding-left: 5%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
 
 .franchise-about-us__title {
@@ -31,9 +32,8 @@
 }
 
 .franchise-about-us__image {
-    max-width: 750px;
-    max-height: 815px;
-    margin-top: 50px;
+    width: 700px;
+    margin-top: 50px; 
 }
 
 .franchise-about-us__rules-container {
@@ -41,6 +41,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
     gap: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .franchise-about-us__image {
+        display: none;
+    }
+
+    .franchise-about-us__text {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    .franchise-about-us__container {
+        width: 85vw;
+        margin-left: 5%;
+    }
+
+    .franchise-about-us__image {
+        display: none;
+    }
 }

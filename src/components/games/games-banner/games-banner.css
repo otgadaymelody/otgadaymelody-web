@@ -16,30 +16,25 @@
   position: relative;
   padding-bottom: 10px;
 }
-.gamesbanner__addition-container-right-down {
-  display: none;
-}
 .gamesbanner__addition-container-right-up {
-  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 97%;
+  bottom: 90%;
+}
+.gamesbanner__addition-container-right-down {
+  position: absolute;
+  z-index: 1;
+  left: 95%;
+  bottom: 85%;
 }
 .gamesbanner__addition-container-low {
   position: absolute;
   z-index: 1;
-  bottom: -45px;
-  left: -50px;
+  top: 92%;
+  right: 100%;
 }
-.gamesbanner__addition-container-right-up {
-  position: absolute;
-  z-index: 1;
-  left: 610px;
-  top: -53px;
-}
-.gamesbanner__addition-container-right-down {
-  position: absolute;
-  z-index: 1;
-  left: 600px;
-  top: 20px;
-}
+
 .gamesbanner__img {
   max-width: 100%;
   border-radius: 24px;

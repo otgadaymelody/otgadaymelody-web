@@ -53,3 +53,18 @@
         max-width: 40vw;
     }
 }
+
+
+@media (max-width: 768px) {
+    .best-of__title {
+        font-size: var(--text-3xl);
+    }
+
+    .best-of__subtitle {
+        font-size: var(--text-xl);
+    }
+
+    .best-of__description {
+        font-size: var(--text-base);
+    }
+}

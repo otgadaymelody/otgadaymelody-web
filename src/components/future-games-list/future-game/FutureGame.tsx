@@ -34,7 +34,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.R
           </div>
           <address className="future-game__address">{game.address}</address>
         </div>
-        <GameRegistrationButton icon={false} onClick={onButtonClickHandler} />
+        <GameRegistrationButton onClick={onButtonClickHandler} />
       </div>
     </div>
   );

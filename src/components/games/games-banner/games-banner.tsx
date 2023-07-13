@@ -1,8 +1,8 @@
 import React, { type FC } from 'react';
 import bannerImg from '../../../assets/images/games/games-banner.svg';
-import vectorRightUp from '../../../assets/images/games/games-banner-addition-upper.svg';
-import vectorRightDown from '../../../assets/images/games/vector1.svg';
-import vectorLeft from '../../../assets/images/games/games-banner-addition-low.svg';
+import vectorRightUp from '../../../assets/icons/games/games-banner-addition-right-up.svg';
+import vectorRightDown from '../../../assets/icons/games/games-banner-addition-left.svg';
+import vectorLeft from '../../../assets/icons/games/games-banner-addition-right-low.svg';
 import './games-banner.css';
 
 const GamesBanner: FC = () => {

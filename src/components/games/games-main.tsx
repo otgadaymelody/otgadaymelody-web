@@ -4,6 +4,7 @@ import RegistrationForm from './form-registration/FormRegistration';
 import GamesBanner from './games-banner/games-banner';
 import Description from './description/description';
 import GamesMap from './games-map/games-map';
+import FAQBlock from '../faq-block/FAQBlock';
 
 const GamesMain: FC = () => {
   return (
@@ -15,6 +16,9 @@ const GamesMain: FC = () => {
       <div className="gamesmain_map-container">
         <GamesMap></GamesMap>
         <Description></Description>
+      </div>
+      <div className="gamesmain_block-container">
+        <FAQBlock className="gamesmain_block-part"></FAQBlock>
       </div>
     </section>
   );
