@@ -3,7 +3,8 @@ import './UpcomingGame.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import GameRegistrationButton from '../ui/game-reg-button/GameRegistrationButton';
 import BlockBackground from '../block-background/BlockBackground';
-import girlImg from '../../assets/images/footer/women.png';
+// import girlImg from '../../assets/images/footer/women.png';
+import womenImg from '../../assets/images/home-page/upcoming-game/upcoming-banner-img.png';
 import useDeviceType from '../../hooks/useDeviceType';
 import GameInformationBanner from './game-information-banner/GameInformationBanner';
 import AtGameSlider from './at-game-slider/AtGameSlider';
@@ -25,12 +26,16 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   };
   return (
     <div className={`${className} upcoming-game`} id="upcoming-game">
+      {isDesktop && (
+        <div className="upcoming-game__img-block">
+          <BlockBackground mediatorsClasses={mediatorClasses} className="upcoming-game__img-bg" />
+          <img className="upcoming-game__img" src={womenImg} />
+        </div>
+      )}
       <div className="upcoming-game__info-block">
         <div className="upcoming-game__text-wrapper">
           <div className="upcoming-game__title">Ближайшая игра</div>
-          <div className="upcoming-game__game-title">
-            Новогодний <br /> Караоке Эдишн
-          </div>
+          <div className="upcoming-game__game-title">Россия #24</div>
           <div className="upcoming-game__game-description">
             Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами! Год самыми
             известными и любимыми караоке хитами!
@@ -43,7 +48,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 mediatorsClasses={mediatorClasses}
                 className="upcoming-game__img-bg"
               />
-              <img className="upcoming-game__img" src={girlImg} />
+              <img className="upcoming-game__img" src={womenImg} />
             </div>
           )}
           <div className="upcoming-game__registration-info">
@@ -53,12 +58,6 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
         </div>
         <AtGameSlider />
       </div>
-      {isDesktop && (
-        <div className="upcoming-game__img-block">
-          <BlockBackground mediatorsClasses={mediatorClasses} className="upcoming-game__img-bg" />
-          <img className="upcoming-game__img" src={girlImg} />
-        </div>
-      )}
     </div>
   );
 };
