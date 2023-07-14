@@ -11,7 +11,8 @@ interface InputProps {
   name: string;
   required?: boolean;
   help?: string;
-  error?: string;
+  error?: boolean;
+  errorMessage?: string;
   success?: boolean;
 }
 
@@ -26,6 +27,7 @@ const Input: FC<InputProps> = ({
   required,
   help,
   error,
+  errorMessage,
   success,
 }) => {
   return (
@@ -47,7 +49,7 @@ const Input: FC<InputProps> = ({
         {required && <span className={`label-required`}>*</span>}
       </label>
       {help && <p className="caption-message">{help}</p>}
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 };

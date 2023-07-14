@@ -12,6 +12,22 @@ interface FormData {
   birthday: string;
 }
 
+interface ErrorData {
+  teamName: boolean;
+  numPeople: boolean;
+  telNumber: boolean;
+  socialMediaPage: boolean;
+  birthday: boolean;
+}
+
+interface ErrorMessagesData {
+  teamName: string;
+  numPeople: string;
+  telNumber: string;
+  socialMediaPage: string;
+  birthday: string;
+}
+
 const RegistrationForm = (): React.ReactElement => {
   const [formData, setFormData] = useState<FormData>({
     teamName: '',
@@ -21,8 +37,41 @@ const RegistrationForm = (): React.ReactElement => {
     birthday: '',
   });
 
+  const [errors, setErrors] = useState<ErrorData>({
+    teamName: false,
+    numPeople: false,
+    telNumber: false,
+    socialMediaPage: false,
+    birthday: false,
+  });
+
+  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>({
+    teamName: '',
+    numPeople: '',
+    telNumber: '',
+    socialMediaPage: '',
+    birthday: '',
+  });
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
+
+    setErrors({
+      ...errors,
+      [name]: false,
+    });
+
+    if (name === 'telNumber' && !+value) {
+      setErrors({
+        ...errors,
+        [name]: true,
+      });
+      setErrorMessages({
+        ...errorMessages,
+        [name]: 'Вводите только цифры',
+      });
+    }
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
@@ -49,7 +98,7 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
-          error="oops"
+          success={true}
         />
         <Input
           value={formData.numPeople}
@@ -72,7 +121,8 @@ const RegistrationForm = (): React.ReactElement => {
         className="input"
         labelClassName="input-label"
         required={true}
-        success={true}
+        error={errors.telNumber}
+        errorMessage={errorMessages.telNumber}
       />
       <Input
         value={formData.socialMediaPage}
