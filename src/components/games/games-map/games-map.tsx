@@ -10,7 +10,7 @@ const GamesMap: FC = () => {
         <div className="games-map__address">
           {GAMES_MAP_LIST.map((item, index) => (
             <div key={index} className="games-map__address-elements">
-              <div className="games-map__address-elements-firstpart">
+              <div className="games-map__address-elements-date">
                 <GamesMapAddress header={item.day.header} text={item.day.text} />
                 <GamesMapAddress header={item.time.header} text={item.time.text} />
               </div>

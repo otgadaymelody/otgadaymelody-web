@@ -22,7 +22,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
-.games-map__address-elements-firstpart {
+.games-map__address-elements-date {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
