@@ -1,4 +1,4 @@
-import best from '../../assets/images/franchise/best-of-demo.png';
+import best from '../../../assets/images/franchise/best-of-demo.png';
 
 export const BESTOF_LIST = [
     {
