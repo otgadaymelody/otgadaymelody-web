@@ -1,37 +1,31 @@
-.notification__container {
+.notification-success__container {
     width: 300px;
     height: 56px;
     border-radius: var(--border-xs);
-    border: 2px solid var(--color-red);
+    border: 2px solid var(--color-lime);
     background-color: var(--color-bg-white);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.notification__img{
-    width: 24px;
-    height: 24px;
+.notification-success__message_wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 5%;
 }
 
-.notification__container p {
-    margin-left: -30px;
+.notification-success__message {
     font-weight: var(--weight-medium);
     font-size: var(--text-base);
     color: var(--bg-gray-900);
 }
 
-.notification__container button {
+.notification-success__close-btn {
     border: none;
     background-color: var(--color-bg-white);
-}
-
-.notification__close-btn-img {
-    width: 16px;
-    height: 16px;
-}
-
-.notification__close-btn {
     cursor: pointer;
     padding-top: 5px;
+    padding-right: 5%;
 }
