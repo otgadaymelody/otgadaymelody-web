@@ -3,30 +3,11 @@ import './FormRegistration.css';
 import '../../ui/input/Input.css';
 import Input from '../../ui/input/Input';
 import BaseButton from '@components/ui/base-button/BaseButton';
-
-interface FormData {
-  teamName: string;
-  numPeople: string;
-  telNumber: string;
-  socialMediaPage: string;
-  birthday: string;
-}
-
-interface ErrorData {
-  teamName: boolean;
-  numPeople: boolean;
-  telNumber: boolean;
-  socialMediaPage: boolean;
-  birthday: boolean;
-}
-
-interface ErrorMessagesData {
-  teamName: string;
-  numPeople: string;
-  telNumber: string;
-  socialMediaPage: string;
-  birthday: string;
-}
+import {
+  type FormData,
+  type ErrorData,
+  type ErrorMessagesData,
+} from './FormRegistration.interfaces';
 
 const RegistrationForm = (): React.ReactElement => {
   const [formData, setFormData] = useState<FormData>({
@@ -61,6 +42,7 @@ const RegistrationForm = (): React.ReactElement => {
       [name]: false,
     });
 
+    // TODO need to refactor
     if (name === 'telNumber' && !+value) {
       setErrors({
         ...errors,
@@ -92,7 +74,7 @@ const RegistrationForm = (): React.ReactElement => {
         <Input
           value={formData.teamName}
           type="text"
-          placeholder="Название команды "
+          placeholder="Название команды"
           onChange={handleChange}
           name="teamName"
           className="input"
@@ -103,7 +85,7 @@ const RegistrationForm = (): React.ReactElement => {
         <Input
           value={formData.numPeople}
           type="number"
-          placeholder="Кол-во человек в команде "
+          placeholder="Кол-во человек в команде"
           onChange={handleChange}
           name="numPeople"
           className="input"
@@ -115,7 +97,7 @@ const RegistrationForm = (): React.ReactElement => {
       <Input
         value={formData.telNumber}
         type="tel"
-        placeholder="Номер телефона капитана "
+        placeholder="Номер телефона капитана"
         onChange={handleChange}
         name="telNumber"
         className="input"
@@ -126,7 +108,7 @@ const RegistrationForm = (): React.ReactElement => {
       />
       <Input
         value={formData.socialMediaPage}
-        placeholder="Страница капитана в социальных сетях "
+        placeholder="Страница капитана в социальных сетях"
         onChange={handleChange}
         name="socialMediaPage"
         className="input"

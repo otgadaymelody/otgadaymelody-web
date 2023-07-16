@@ -46,7 +46,7 @@ const Input: FC<InputProps> = ({
       />
       <label htmlFor="input-field" className={`input-label ${value && 'label-filled'}`}>
         {placeholder}
-        {required && <span className={`label-required`}>*</span>}
+        {required && <span className={`label-required`}> *</span>}
       </label>
       {help && <p className="caption-message">{help}</p>}
       {error && <p className="error-message">{errorMessage}</p>}
