@@ -1,5 +1,4 @@
 import React, { type FC } from 'react';
-import './ImageVector.css';
 
 interface ImageVectorProps {
   game: string;

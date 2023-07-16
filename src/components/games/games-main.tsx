@@ -24,7 +24,7 @@ const GamesMain: FC = () => {
       <div className="gamesmain__block-container">
         <ImageVector
           game="game1"
-          className="gamesmain__block-imagepart"
+          className="gamesmain__block-imagepart-container"
           firstImageUrl={firstImageUrl}
           secondImageUrl={secondImageUrl}
           firstImageClassName="gamesmain__block-imagepart-image"

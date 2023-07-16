@@ -1,7 +1,7 @@
 .games-map__container {
   border: 6px solid var(--color-bg-slate-100);
   border-radius: var(--border-base);
-  width: 100%;
+  max-width: 99%;
   padding: 24px;
   display: grid;
   grid-template-columns: 1fr;

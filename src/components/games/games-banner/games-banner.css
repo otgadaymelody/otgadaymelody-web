@@ -1,7 +1,7 @@
 .gamesbanner {
   display: flex;
   padding: 32px;
-  max-width: 100%;
+  width: 99%;
   height: 468px;
   background: var(--color-gradient);
   border-radius: var(--border-base);
@@ -34,8 +34,8 @@
   right: 100%;
 }
 
-.gamesbanner__img-container {
-  max-width: 100%;
+.gamesbanner__img {
+  width: 100%;
   position: relative;
   display: flex;
 }
