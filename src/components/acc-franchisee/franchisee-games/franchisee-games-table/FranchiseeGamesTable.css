@@ -1,38 +1,91 @@
-.game-table {
+.games-table {
+  position: relative;
   width: 100%;
+  border-collapse: collapse;
 }
 
-.game-table__title {
+.games-table__head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* background-color: var(--color-bg-white); */
+  text-align: left;
+}
+
+.games-table__head-item {
+  padding: 0 20px 20px 20px;
   font-size: var(--text-xs);
   font-weight: var(--weight-medium);
   color: var(--color-bg-gray-500);
 }
 
-.game-table__title--grid {
-  display: grid;
-  grid-template-columns:
-    minmax(20%, 375px)
-    minmax(20%, 375px)
-    minmax(4.5%, 90px)
-    minmax(3.2%, 60px)
-    minmax(10.8%, 200px)
-    minmax(2.4%, 45px)
-    minmax(3%, 24px);
-  grid-auto-rows: minmax(40px, auto);
-  gap: 50px;
-  justify-items: start;
-  justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 15px;
+.games-table__body {
+  outline: 6px solid var(--color-bg-slate-100);
+  border-radius: var(--border-sm);
+  color: var(--color-bg-gray-900);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
 }
 
-.game-table__body {
-  padding-left: 30px;
-  padding-right: 15px;
+.games-table__data {
+  border-bottom: 1px solid var(--color-bg-gray-200);
 }
 
-td {
-  padding-left: 30px;
-  border-radius: var(--border-base);
-  border: 6px solid var(--color-bg-slate-100);
+.tbody__row:hover {
+  background-color: var(--color-bg-slate-100);
+}
+
+.tbody__row:last-child .games-table__data {
+  border-bottom: none;
+}
+
+.games-table__head-item:first-child,
+.games-table__data:first-child {
+  padding-left: 32px;
+}
+
+.games-table__head-item:last-child,
+.games-table__data:last-child {
+  padding-right: 32px;
+}
+
+.games-table__data {
+  padding: 24px 20px;
+}
+
+.games-table__data:first-child {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+}
+
+.games-table__data:nth-child(6) {
+  color: var(--color-pink);
+}
+
+#seats-progress {
+  max-width: 50%;
+  margin-right: 16px;
+}
+
+.dots-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tbody__row:first-child td:first-child {
+  border-top-left-radius: 24px;
+}
+
+.tbody__row:first-child td:last-child {
+  border-top-right-radius: 24px;
+}
+
+.tbody__row:last-child td:first-child {
+  border-bottom-left-radius: 24px;
+}
+
+.tbody__row:last-child td:last-child {
+  border-bottom-right-radius: 24px;
 }
