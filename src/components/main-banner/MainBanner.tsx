@@ -25,8 +25,8 @@ const MainBanner = (): React.ReactElement => {
       <div className="banner__info">
         <div className="banner__main-text">
           <h1>
-            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -
-            <span className="banner__info_bold-title"> КВИЗ ИГРЫ</span>
+            <span className="banner__title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -
+            <span className="banner__title"> КВИЗ ИГРЫ</span>
           </h1>
           <article>
             {!isMobile && (

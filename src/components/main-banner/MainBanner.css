@@ -28,7 +28,7 @@
   font: var(--fonts-p-main-description-DEPRECATED);
   color: var(--color-bg-white);
 }
-.banner__info_bold-title {
+.banner__title {
   color: var(--color-lime);
 }
 .banner__reg-btn {
@@ -88,7 +88,7 @@
     bottom: 0;
   }
   .banner-image__img {
-    width: calc(366px + 10%);
+    width: 415px;
   }
   .banner__reg-btn {
     padding: 16px 48px;
