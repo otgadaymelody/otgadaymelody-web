@@ -1,6 +1,6 @@
 .form-registration {
   border-radius: var(--border-base);
-  background: var(--color-bg-white);
+  background-color: var(--color-bg-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,8 +26,9 @@
   width: 100%;
 }
 .form-registartion-body__description {
-  font-size: var(--text-sm);
+  margin-top: 5px;
   text-align: start;
+  font-size: var(--text-sm);
 }
 .form-registartion-body__description-selection {
   color: var(--color-pink);
