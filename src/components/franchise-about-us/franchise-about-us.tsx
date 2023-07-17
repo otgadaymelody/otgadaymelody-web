@@ -8,7 +8,7 @@ import useDeviceType from '../../hooks/useDeviceType';
 const FranchiseAboutUs: FC = () => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
-  
+
   return (
     <section className="franchise-about-us__container">
       <div className="franchise-about-us__description-container">
@@ -34,9 +34,11 @@ const FranchiseAboutUs: FC = () => {
         </div>
       </div>
 
-      {!isMobile && <div className="franchise-about-us__imageContainer">
-        <img className="franchise-about-us__image" src={franchisePreview}></img>
-      </div> }
+      {!isMobile && (
+        <div className="franchise-about-us__image-container">
+          <img className="franchise-about-us__image" src={franchisePreview}></img>
+        </div>
+      )}
     </section>
   );
 };

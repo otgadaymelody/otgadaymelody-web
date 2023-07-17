@@ -1,7 +1,8 @@
 .franchise-download {
+    width: 95vw;
     display: flex;
     justify-content: center;
-    margin-top: 249px;
+    padding-top: 249px;
 }
 
 .franchise-download__container {
@@ -20,9 +21,13 @@
     transform: skew(10deg);
 }
 
+.franchise-download__content-container a {
+    text-decoration: none;
+}
+
 .franchise-download__title {
     color: var(--color-bg-white);
-    font-size: var(--text-xl);
+    font-size: var(--text-6xl);
     font-weight: var(--weight-bold);
 }
 
@@ -43,8 +48,17 @@
     transform: skew(10deg);
 }
 
-@media (min-width: 744px) {
-    .franchise-download__title {
-        font-size: var(--text-6xl);
+@media (max-width: 768px) {
+    .franchise-download__img {
+        display: none;
     }
+
+    .franchise-download__title {
+        font-size: var(--text-3xl);
+    }
+
+    .franchise-download__content-container {
+        padding-left: 10%;
+    }
+
 }

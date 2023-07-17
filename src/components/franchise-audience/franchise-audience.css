@@ -1,0 +1,73 @@
+.franchise-audience {
+    width: 98vw;
+    padding-top: 100px;
+    padding-left: 5%;
+    display: flex;
+    gap: 5%;
+    overflow: hidden;
+}
+
+.franchise-audience__stats-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.franchise-audience__stats {
+    width: 334px;
+    margin-top: 66px;
+}
+
+.franchise-audience__title {
+    font-weight: var(--weight-heavy);
+    font-size: var(--text-9xl);
+    color: var(--color-bg-gray-900);
+}
+
+.franchise--audience__text {
+    font-weight: var(--weight-medium);
+    font-size: var(--text-2xl);
+    color: var(--color-bg-gray-700);
+}
+
+.franchise-audience__container_right {
+    position: relative;
+}
+
+.franchise-audience__illustration_photo {
+    width: 823px;
+    z-index: -1;
+}
+
+.franchise-audience__illustration_stats {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .franchise-audience{
+        width: 85vw;
+        margin-left: 5%;
+    }
+    .franchise-audience__container_right{
+        display: none;
+    }
+
+    .franchise-audience__title {
+        font-size: var(--text-6xl);
+    }
+
+    .franchise--audience__text {
+        font-size: var(--text-1xl);
+    }
+
+    .franchise-audience__stats-wrapper {
+        flex-direction: column;
+    }
+
+
+}

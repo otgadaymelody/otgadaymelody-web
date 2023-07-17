@@ -3,14 +3,11 @@ import './FormRegistration.css';
 import '../../ui/input/Input.css';
 import Input from '../../ui/input/Input';
 import BaseButton from '@components/ui/base-button/BaseButton';
-
-interface FormData {
-  teamName: string;
-  numPeople: string;
-  telNumber: string;
-  socialMediaPage: string;
-  birthday: string;
-}
+import {
+  type FormData,
+  type ErrorData,
+  type ErrorMessagesData,
+} from './FormRegistration.interfaces';
 
 const RegistrationForm = (): React.ReactElement => {
   const [formData, setFormData] = useState<FormData>({
@@ -21,8 +18,42 @@ const RegistrationForm = (): React.ReactElement => {
     birthday: '',
   });
 
+  const [errors, setErrors] = useState<ErrorData>({
+    teamName: false,
+    numPeople: false,
+    telNumber: false,
+    socialMediaPage: false,
+    birthday: false,
+  });
+
+  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>({
+    teamName: '',
+    numPeople: '',
+    telNumber: '',
+    socialMediaPage: '',
+    birthday: '',
+  });
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
+
+    setErrors({
+      ...errors,
+      [name]: false,
+    });
+
+    // TODO need to refactor
+    if (name === 'telNumber' && !+value) {
+      setErrors({
+        ...errors,
+        [name]: true,
+      });
+      setErrorMessages({
+        ...errorMessages,
+        [name]: 'Вводите только цифры',
+      });
+    }
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
@@ -43,44 +74,52 @@ const RegistrationForm = (): React.ReactElement => {
         <Input
           value={formData.teamName}
           type="text"
-          placeholder="Название команды *"
+          placeholder="Название команды"
           onChange={handleChange}
           name="teamName"
           className="input"
           labelClassName="input-label"
+          required={true}
+          success={true}
         />
         <Input
           value={formData.numPeople}
           type="number"
-          placeholder="Кол-во человек в команде *"
+          placeholder="Кол-во человек в команде"
           onChange={handleChange}
           name="numPeople"
           className="input"
           labelClassName="input-label"
+          required={true}
+          help="Введите информацию"
         />
       </section>
       <Input
         value={formData.telNumber}
         type="tel"
-        placeholder="Номер телефона капитана *"
+        placeholder="Номер телефона капитана"
         onChange={handleChange}
         name="telNumber"
         className="input"
         labelClassName="input-label"
+        required={true}
+        error={errors.telNumber}
+        errorMessage={errorMessages.telNumber}
       />
       <Input
         value={formData.socialMediaPage}
-        placeholder="Страница капитана в социальных сетях *"
+        placeholder="Страница капитана в социальных сетях"
         onChange={handleChange}
         name="socialMediaPage"
         className="input"
         labelClassName="input-label"
+        required={true}
       />
       <div>
         <Input
           value={formData.birthday}
           type="date"
-          placeholder="День рождение"
+          placeholder="День рождения"
           onChange={handleChange}
           name="birthday"
           className="input date"
