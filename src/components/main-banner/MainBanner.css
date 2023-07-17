@@ -55,7 +55,6 @@
   z-index: 1;
 }
 
-/* Media Queries */
 @media (min-width: 744px) {
   .banner__background {
     transform: skew(-3deg);

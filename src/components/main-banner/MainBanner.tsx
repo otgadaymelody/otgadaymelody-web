@@ -1,7 +1,8 @@
 import React from 'react';
 import BaseButton from '../ui/base-button/BaseButton';
 import './MainBanner.css';
-import bannerImg from '../../assets/images/home-page/main-banner-photo.png';
+import bannerImgWith from '../../assets/images/home-page/main-banner-photo.png';
+import bannerImgWithout from '../../assets/images/home-page/main-banner-photo-without-o.png';
 import dots from '../../assets/images/home-page/dots.png';
 import useDeviceType from '../../hooks/useDeviceType';
 
@@ -12,6 +13,7 @@ const MainBanner = (): React.ReactElement => {
 
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
+  const isTablet = deviceType === 'tablet';
 
   const registrationBtnClasses = {
     buttonForm: 'banner__reg-btn',
@@ -19,12 +21,12 @@ const MainBanner = (): React.ReactElement => {
   };
 
   return (
-    <div className="banner__background">
+    <section className="banner__background">
       <div className="banner__info">
         <div className="banner__main-text">
           <h1>
-            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -{' '}
-            <span className="banner__info_bold-title">КВИЗ ИГРЫ</span>
+            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -
+            <span className="banner__info_bold-title"> КВИЗ ИГРЫ</span>
           </h1>
           <article>
             {!isMobile && (
@@ -44,14 +46,18 @@ const MainBanner = (): React.ReactElement => {
         />
       </div>
       <div className="banner-image">
-        <img src={bannerImg} className="banner-image__img" alt={'Девушка с микрофоном'} />
+        <img
+          src={isTablet ? bannerImgWithout : bannerImgWith}
+          className="banner-image__img"
+          alt={'Девушка с микрофоном'}
+        />
       </div>
       {isMobile && (
         <div className="banner__dots">
-          <img src={dots} className="banner__dots__img" alt={'Точки'} />
+          <img src={dots} alt={'Точки'} />
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
