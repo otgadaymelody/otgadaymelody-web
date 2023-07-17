@@ -1,8 +1,9 @@
 import React from 'react';
 import BaseButton from '../ui/base-button/BaseButton';
-import BlockBackground from '../block-background/BlockBackground';
 import './MainBanner.css';
-import bannerImg from '../../assets/images/home-page/banner-image.png';
+import bannerImgWith from '../../assets/images/home-page/main-banner-photo.png';
+import bannerImgWithout from '../../assets/images/home-page/main-banner-photo-without-o.png';
+import dots from '../../assets/images/home-page/dots.png';
 import useDeviceType from '../../hooks/useDeviceType';
 
 const MainBanner = (): React.ReactElement => {
@@ -12,13 +13,7 @@ const MainBanner = (): React.ReactElement => {
 
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
-
-  const mediatorClasses = {
-    topLeft: 'banner__mediator_top-left',
-    topRight: 'banner__mediator_top-right',
-    bottomLeft: 'banner__mediator_bottom-left',
-    bottomRight: 'banner__mediator_bottom-right',
-  };
+  const isTablet = deviceType === 'tablet';
 
   const registrationBtnClasses = {
     buttonForm: 'banner__reg-btn',
@@ -26,27 +21,19 @@ const MainBanner = (): React.ReactElement => {
   };
 
   return (
-    <BlockBackground className="banner__background" mediatorsClasses={mediatorClasses}>
+    <section className="banner__background">
       <div className="banner__info">
         <div className="banner__main-text">
           <h1>
-            <span className="banner__info_bold-title">МУЗЫКАЛЬНЫЕ</span> ШОУ В ФОРМАТЕ -{' '}
-            <span className="banner__info_bold-title">КВИЗ ИГРЫ</span>
+            <span className="banner__title">МУЗЫКАЛЬНЫЕ</span> ШОУ В&nbsp;ФОРМАТЕ -
+            <span className="banner__title"> КВИЗ ИГРЫ</span>
           </h1>
-          <article className="banner__description-wrapper">
-            <p className="banner__description">
-              Надоели однотипные мероприятия или хочется попробовать чего-нибудь новенького?
-            </p>
+          <article>
             {!isMobile && (
-              <p className="banner__description">
-                Тогда добавьте в свою жизнь красок и драйва вместе с «Отгадай Мелодию». Уникальный
-                формат мероприятия, песни, которые Вы точно знаете и любите, жаркие танцы,
-                интерактивное караоке, розыгрыши и огромное количество подарков!
-              </p>
-            )}
-            {!isMobile && (
-              <p className="banner__description">
-                Уверены, что это будет любовь с первого взгляда.
+              <p>
+                Добавьте красок и драйва в жизнь с &quot;Отгадай Мелодию&ldquo;. Уникальный формат
+                мероприятия с популярными песнями, танцами, караоке, розыгрышами и множеством
+                подарков! Любовь с первого взгляда гарантирована.
               </p>
             )}
           </article>
@@ -59,11 +46,18 @@ const MainBanner = (): React.ReactElement => {
         />
       </div>
       <div className="banner-image">
-        <div className="banner-image__wrapper">
-          <img src={bannerImg} className="banner-image__img" />
-        </div>
+        <img
+          src={isTablet ? bannerImgWithout : bannerImgWith}
+          className="banner-image__img"
+          alt={'Девушка с микрофоном'}
+        />
       </div>
-    </BlockBackground>
+      {isMobile && (
+        <div className="banner__dots">
+          <img src={dots} alt={'Точки'} />
+        </div>
+      )}
+    </section>
   );
 };
 
