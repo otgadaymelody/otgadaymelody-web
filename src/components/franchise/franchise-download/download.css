@@ -2,7 +2,6 @@
     width: 95vw;
     display: flex;
     justify-content: center;
-    padding-top: 249px;
 }
 
 .franchise-download__container {
@@ -49,6 +48,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .franchise-download {
+        width: 90vw;
+    }
     .franchise-download__img {
         display: none;
     }

@@ -1,9 +1,9 @@
 import React, { type FC } from 'react';
-import '../franchise-about-us/franchise-about-us.css';
-import franchisePreview from '../../assets/images/franchise/franchise-preview.png';
+import './franchise-about-us.css';
+import franchisePreview from '../../../assets/images/franchise/franchise-preview.png';
 import RulesItem from './rules-item/rules-item';
 import { FRANCHISE_RULES_LIST } from './rules.consts';
-import useDeviceType from '../../hooks/useDeviceType';
+import useDeviceType from '../../../hooks/useDeviceType';
 
 const FranchiseAboutUs: FC = () => {
   const deviceType = useDeviceType();

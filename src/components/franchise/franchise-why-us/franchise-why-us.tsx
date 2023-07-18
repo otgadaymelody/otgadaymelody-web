@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import './franchise-why-us.css';
-import franchiseWhyUs from '../../assets/images/franchise/franchise-why-us-demo.png';
+import franchiseWhyUs from '../../../assets/images/franchise/franchise-why-us-demo.png';
 
 const WhyUs: FC = () => {
   return (

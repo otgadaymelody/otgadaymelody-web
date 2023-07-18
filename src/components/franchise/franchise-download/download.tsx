@@ -1,9 +1,9 @@
 import React, { type FC } from 'react';
 import './download.css';
-import franchiseDownload from '../../assets/images/franchise/franchise-download-img.png';
-import BaseButton from '../ui/base-button/BaseButton';
-import useDeviceType from '../../hooks/useDeviceType';
-import franch from '../../assets/presentaions/franch.pdf';
+import franchiseDownload from '../../../assets/images/franchise/franchise-download-img.png';
+import BaseButton from '../../ui/base-button/BaseButton';
+import useDeviceType from '../../../hooks/useDeviceType';
+import franch from '../../../assets/presentaions/franch.pdf';
 
 const Download: FC = () => {
   const downloadBtnClasses = {
