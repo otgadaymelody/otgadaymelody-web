@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.notification-success__message_wrapper {
+.notification-success__message-wrapper {
     display: flex;
     gap: 12px;
     align-items: center;
