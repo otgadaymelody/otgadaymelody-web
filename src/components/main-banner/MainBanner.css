@@ -104,13 +104,13 @@
   top: -43px;
 }
 
-/* .banner__mediator_bottom-left {
+.banner__mediator_bottom-left {
   display: none;
-} */
-/* 
+}
+
 .banner__mediator_bottom-right {
   display: none;
-} */
+}
 
 /* Media Queries */
 @media (min-width: 744px) {
