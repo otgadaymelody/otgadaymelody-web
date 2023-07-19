@@ -27,7 +27,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
       {isDesktop && (
         <div className="upcoming-game__img-block">
           <BlockBackground mediatorsClasses={mediatorClasses} className="upcoming-game__img-bg" />
-          <img className="upcoming-game__img" src={womenImg} />
+          <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
         </div>
       )}
       <div className="upcoming-game__info-block">
@@ -49,7 +49,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                   mediatorsClasses={mediatorClasses}
                   className="upcoming-game__img-bg"
                 />
-                <img className="upcoming-game__img" src={womenImg} />
+                <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
               </div>
               <div className="upcoming-game__game-description">
                 Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!
