@@ -1,9 +1,10 @@
 .game-infographic-item {
+  width: 217px;
+  height: 198px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
 }
 
 .game-infographic-item__mediator {
@@ -13,7 +14,7 @@
 .game-infographic-item__content {
   position: relative;
   width: fit-content;
-  bottom: 25px;
+  bottom: 42px;
 }
 
 .game-infographic-item__description-bg {

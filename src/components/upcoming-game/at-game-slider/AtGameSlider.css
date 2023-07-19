@@ -1,3 +1,6 @@
+.at-game-slider {
+  width: 100%;
+}
 .at-game-slider__title {
   font: var(--fonts-h5-subtitle-DEPRECATED);
   margin-bottom: 32px;
