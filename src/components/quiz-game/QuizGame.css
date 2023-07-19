@@ -7,7 +7,6 @@
   border-radius: 32px;
   padding: 16px;
   width: 100%;
-
   position: relative;
 }
 
@@ -76,32 +75,6 @@
   border-radius: 16px;
   border: 1px solid #e4e7ec;
 }
-/* .home-page__minigames-block svg.banner__mediator_top-right {
-  width: 358px;
-  height: 320px;
-  right: -105px;
-  top: -64px;
-}
-.home-page__minigames-block svg.banner__mediator_top-left {
-  width: 380px;
-  height: 340px;
-  left: -77px;
-  top: -64px;
-}
-.home-page__minigames-block svg.banner__mediator_bottom-left {
-  width: 306px;
-  height: 274px;
-  transform: rotate(90deg);
-  left: -91px;
-  bottom: -179px;
-}
-.home-page__minigames-block svg.banner__mediator_bottom-right {
-  width: 316px;
-  height: 283px;
-  transform: rotate(-90deg);
-  right: -109.072px;
-  bottom: -114.238px;
-} */
 @media (min-width: 744px) {
   .quiz-game {
     padding: 32px;
