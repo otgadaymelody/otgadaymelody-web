@@ -1,45 +1,29 @@
-* {
-  outline: 1px solid lime;
-}
 .footer {
   position: relative;
   height: 293px;
-  max-width: 100vw;
+  margin: 24px;
   padding: 32px;
-
-  background-color: var(--color-lime);
   border-radius: 200px;
-}
-
-.footer__container {
-  position: relative;
-  max-width: 100vw;
-  height: 100%;
-  margin: 0 auto;
 
   display: flex;
-  /* flex-direction: column; */
-  /* gap: 24px; */
   align-items: center;
   justify-content: space-between;
+
+  background-color: var(--color-lime);
 }
 
-.wrapper {
+.footer__infoblock {
+  width: 18%;
+  margin-right: 40.5%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  margin-right: 40%;
-  /* align-self: center; */
-}
-
-.footer__icon {
-  /* width: 17%; */
 }
 
 .footer__logo {
   width: 212px;
-  /* height: auto;  */
 }
 
 .footer__title {
@@ -51,13 +35,6 @@
   display: flex;
 }
 
-/* .footer__inst-btn {
-  height: 36px;
-  width: 36px;
-  background-image: var(--footer-social-btn-inst);
-  cursor: pointer;
-} */
-
 .footer__vk-btn {
   height: 36px;
   width: 36px;
@@ -65,45 +42,25 @@
   cursor: pointer;
 }
 
-/* .footer__composition {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  z-index: 10;
-
-  background-image: url('@assets/images/home-page/mediator-top-left.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-} */
-
-/* .footer__women {
-  background-color: transparent;
-} */
-
-/* .footer__waves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.footer__waves svg {
-  position: relative;
-  display: block;
-  width: calc(120% + 1.3px);
-  height: 43px;
-}
-
-.footer__waves .shape-fill {
-  fill: var(--color-bg-white);
-} */
-
-/* @media (min-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
   .footer {
-    height: 502px;
-    padding-top: 6rem;
+    justify-content: center;
+    padding: 40px;
   }
-} */
+  .footer__infoblock {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: center;
+    border-radius: 0;
+    margin: 0;
+  }
+  .footer__infoblock {
+    width: 100%;
+    margin: 0;
+  }
+}
