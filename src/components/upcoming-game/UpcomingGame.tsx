@@ -1,7 +1,6 @@
 import React, { type FC } from 'react';
 import './UpcomingGame.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
-import GameRegistrationButton from '../ui/game-reg-button/GameRegistrationButton';
 import BlockBackground from '../block-background/BlockBackground';
 import womenImg from '../../assets/images/home-page/upcoming-game/upcoming-banner-img.png';
 import useDeviceType from '../../hooks/useDeviceType';
@@ -9,9 +8,6 @@ import GameInformationBanner from './game-information-banner/GameInformationBann
 import AtGameSlider from './at-game-slider/AtGameSlider';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
-  const onButtonClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7623';
-  };
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
@@ -60,7 +56,6 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
           )}
           <div className="upcoming-game__registration-info">
             <GameInformationBanner />
-            <GameRegistrationButton onClick={onButtonClickHandler} />
           </div>
         </div>
         <AtGameSlider />

@@ -1,27 +1,28 @@
 .date-info-block {
-  width: 100%;
-  padding: 16px 24px;
-  border-radius: 16px;
   display: flex;
   justify-content: center;
   gap: 32px;
   background: var(--color-gradient);
   color: var(--color-bg-white);
+  border-radius: var(--border-xs);
+  padding: 16px 0px;
 }
 
 .date-info-block__date-block,
 .date-info-block__time-block {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2px;
 }
 
 .date-info-block__time,
 .date-info-block__day {
-  font: var(--fonts-p-date-info-title-DEPRECATED);
+  font: var(--fonts-faq-block-DEPRECATED);
 }
 
 .date-info-block__month,
 .date-info-block__day-of-week {
-  font: var(--fonts-registration-button-title-DEPRECATED);
+  font: var(--fonts-p-main-description-DEPRECATED);
 }

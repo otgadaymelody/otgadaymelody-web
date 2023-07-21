@@ -1,0 +1,59 @@
+.game-btn {
+  width: 100%;
+  background: var(--color-gradient);
+  border-radius: var(--border-xs);
+  padding: 16px 32px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.game-btn::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 14px;
+  background-color: var(--color-bg-white);
+  z-index: -1;
+  transition: 200ms;
+}
+
+.game-btn::after {
+  content: attr(data-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
+  background: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.game-btn:hover::before {
+  opacity: 0%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.game-btn:hover::after {
+  content: attr(data-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
+  background: var(--color-bg-white);
+  background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.game-btn:active {
+  background: var(--color-pink);
+}
+.game-btn:active::after {
+  content: attr(data-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
+  background: var(--color-bg-white);
+  background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}

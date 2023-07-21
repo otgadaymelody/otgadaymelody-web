@@ -5,9 +5,15 @@
   font: var(--fonts-h5-subtitle-DEPRECATED);
   margin-bottom: 32px;
 }
-
 .swiper-slide {
   width: fit-content;
+}
+.at-game-slider__buttons-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: -20px;
+  z-index: 1;
 }
 
 @media (min-width: 744px) {

@@ -30,6 +30,7 @@
 }
 .upcoming-game__game-description {
   font: var(--fonts-p-main-description-DEPRECATED);
+  color: var(--color-bg-gray-700);
 }
 .upcoming-game__img-block {
   position: relative;
@@ -130,11 +131,6 @@
   .upcoming-game__img {
     height: 545px;
     left: -40px;
-    top: 82px;
-  }
-}
-@media (min-width: 1440px) {
-  .upcoming-game__img {
-    top: 15px;
+    top: 36px;
   }
 }
