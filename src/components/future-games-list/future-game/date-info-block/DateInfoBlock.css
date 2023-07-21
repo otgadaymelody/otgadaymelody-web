@@ -5,7 +5,7 @@
   background: var(--color-gradient);
   color: var(--color-bg-white);
   border-radius: var(--border-xs);
-  padding: 16px 0px;
+  padding: 16px 0;
 }
 
 .date-info-block__date-block,

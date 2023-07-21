@@ -1,6 +1,5 @@
 import React from 'react';
 import DateInfoBlock from '../../future-games-list/future-game/date-info-block/DateInfoBlock';
-import GameRegistrationButton from '../../ui/game-reg-button/GameRegistrationButton';
 import useDeviceType from '../../../hooks/useDeviceType';
 import './GameInformationBanner.css';
 import { ReactComponent as LocationImg } from '../../../assets/images/home-page/upcoming-game/Location.svg';

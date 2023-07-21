@@ -7,8 +7,8 @@
   gap: 16px;
   align-self: stretch;
   border-radius: 32px;
-  border: 6px solid var(--bg-gray-100, #f3f4f6);
-  background: var(--bg-white, #fff);
+  border: 6px solid var(--color-bg-slate-200);
+  background: var(--color-bg-white);
 }
 
 .game-information-banner__info {
@@ -46,7 +46,7 @@
 .game-information-banner__info hr {
   width: 1px;
   height: 71px;
-  background: var(--bg-gray-200, #e5e7eb);
+  background: var(--color-bg-gray-200);
   margin: 0;
   border: none;
 }
@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0px 16px;
+    padding: 0 16px;
     align-items: center;
   }
   .game-information-banner__date-place {
