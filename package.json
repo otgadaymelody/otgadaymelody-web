@@ -33,7 +33,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint */**.{tsx,ts}"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "https://www.otgadaymelody.ru/",
   "eslintConfig": {
     "extends": [
       "react-app",

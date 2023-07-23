@@ -32,7 +32,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
   };
 
   useEffect(() => {
-    fetch('/games-list')
+    fetch('/api/future-games')
       .then(async (res) => {
         return await res.json();
       })
