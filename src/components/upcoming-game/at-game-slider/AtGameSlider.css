@@ -1,6 +1,7 @@
 .at-game-slider {
   width: 100%;
   height: 130px;
+  border-radius: 21px;
 }
 .at-game-slider__title {
   font: var(--fonts-h5-subtitle-DEPRECATED);
@@ -25,6 +26,7 @@
 @media (min-width: 744px) {
   .at-game-slider {
     height: 197px;
+    border-radius: 32px;
   }
   .at-game-slider__title {
     font-size: 26px;
