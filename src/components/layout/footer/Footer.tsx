@@ -9,12 +9,11 @@ import { SOCIAL_URL } from '../../../shared/consts/socialURLs.consts';
 const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
-  const isTabletLg = deviceType === 'tablet - lg';
 
   return (
     <footer className={`footer ${className}`}>
-      {(isDesktop || isTabletLg) && <img src={footerIcon} className="footer__icon" />}
-      <div className="footer__infoblock">
+      {isDesktop && <img src={footerIcon} className="footer__icon" />}
+      <section className="footer__infoblock">
         <Logo className="footer-logo" />
         <h1 className="footer__title">Следите за нами</h1>
         <div className="footer__social-btns">
@@ -25,7 +24,7 @@ const Footer: FC<BaseComponent> = ({ className }): React.ReactElement => {
             rel="noopener noreferrer"
           />
         </div>
-      </div>
+      </section>
     </footer>
   );
 };
