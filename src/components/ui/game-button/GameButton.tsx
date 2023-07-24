@@ -1,5 +1,4 @@
 import React, { type FC } from 'react';
-import { concatStyles } from '../../../utils/concat-styles';
 import './GameButton.css';
 
 interface GameButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
