@@ -71,7 +71,7 @@
   padding: 16px 24px;
   cursor: pointer;
 
-  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.15);
+  box-shadow: var(--box-shadow);
   border-radius: 16px;
   border: 1px solid #e4e7ec;
 }

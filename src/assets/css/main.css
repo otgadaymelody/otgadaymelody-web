@@ -115,6 +115,7 @@
   /* === Effects === */
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02), -3px 30px 30px rgba(21, 41, 68, 0.03),
     -1px 7px 16px rgba(21, 41, 68, 0.03), 0px 0px 0px rgba(21, 41, 68, 0.03);
+  --box-shadow: - 0 4px 12px rgba(75, 85, 99, 0.15);
 
   /* Masks */
   --banner-mask: linear-gradient(0deg, rgba(255, 64, 64, 0.1), rgba(255, 64, 64, 0.1)),

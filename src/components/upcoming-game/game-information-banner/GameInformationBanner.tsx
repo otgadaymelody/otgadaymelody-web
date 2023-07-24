@@ -31,16 +31,16 @@ const GameInformationBanner = (): React.ReactElement => {
           <DateInfoBlock dateInfo={dateInfo} className="game-information-banner__date-info" />
           <hr />
           <div className="game-information-banner__price">
-            <div>
+            <div className="game-information-banner__price-amount">
               <PriceImg />
               <span>{price} р </span>
             </div>
-            <span>С человека</span>
+            <span className="game-information-banner__price-person">С человека</span>
           </div>
         </div>
         {!isMobile && <hr />}
         <div className="game-information-banner__place">
-          <div>
+          <div className="game-information-banner__location">
             <LocationImg />
             <span>{addressInfo.location}</span>
           </div>
@@ -48,7 +48,7 @@ const GameInformationBanner = (): React.ReactElement => {
         </div>
       </div>
       <div className="game-information-banner__buttons">
-        <GameButton styles="game-information-banner__btn-more" title="Подробнее" />
+        <GameButton styles="game-information-banner__btn-more" title="Подробнее" grey />
         <GameButton
           styles="game-information-banner__btn-registration"
           title="Регистрация на игру"

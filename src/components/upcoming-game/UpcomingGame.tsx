@@ -29,13 +29,13 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
       <div className="upcoming-game__info-block">
         <div className="upcoming-game__main-info">
           <div className="upcoming-game__text-wrapper">
-            <div className="upcoming-game__title">Ближайшая игра</div>
-            <div className="upcoming-game__game-title">Россия #24</div>
+            <span className="upcoming-game__title">Ближайшая игра</span>
+            <h3 className="upcoming-game__game-title">Россия #24</h3>
             {!isMobile && (
-              <div className="upcoming-game__game-description">
+              <p className="upcoming-game__game-description">
                 Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами! Год самыми
                 известными и любимыми караоке хитами!
-              </div>
+              </p>
             )}
           </div>
           {isMobile && (
@@ -47,11 +47,11 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 />
                 <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
               </div>
-              <div className="upcoming-game__game-description">
+              <p className="upcoming-game__game-description">
                 Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!
                 <br />
                 Год самыми известными и любимыми караоке хитами!
-              </div>
+              </p>
             </>
           )}
           <div className="upcoming-game__registration-info">

@@ -24,9 +24,11 @@
 .upcoming-game__title {
   color: var(--color-bg-gray-500);
   font: var(--fonts-upcoming-title-DEPRECATED);
+  margin: 0;
 }
 .upcoming-game__game-title {
   font: var(--fonts-h2-faq-title-DEPRECATED);
+  margin: 0;
 }
 .upcoming-game__game-description {
   font: var(--fonts-p-main-description-DEPRECATED);

@@ -9,7 +9,9 @@
   z-index: 1;
   cursor: pointer;
 }
-
+.grey{
+  background: var(--color-bg-gray-200);
+}
 .game-btn::before {
   content: '';
   position: absolute;
@@ -22,11 +24,18 @@
   z-index: -1;
   transition: 200ms;
 }
-
 .game-btn::after {
   content: attr(data-title);
   font: var(--fonts-registration-button-title-DEPRECATED);
   background: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.grey::after {
+  content: attr(data-title);
+  font: var(--fonts-registration-button-title-DEPRECATED);
+  background: var(--color-bg-gray-700);
   background-clip: text;
   color: transparent;
   transition: 200ms;

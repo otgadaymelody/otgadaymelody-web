@@ -7,17 +7,19 @@ interface GameButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
   img?: string;
   styles?: string;
   href?: string;
+  grey?: true;
 }
 const GameButton: FC<GameButtonProps> = ({
   title,
   img,
   styles,
   href,
+  grey,
   ...props
 }): React.ReactElement => {
   return (
     <button
-      className={styles ? concatStyles('game-btn', styles) : 'game-btn'}
+      className={`game-btn${grey ? ' grey' : ''}${styles ? ` ${styles}` : ''}`}
       onClick={props.onClick ? props.onClick : () => {}}
       data-title={title}
     >

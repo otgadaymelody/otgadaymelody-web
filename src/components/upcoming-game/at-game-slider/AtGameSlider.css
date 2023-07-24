@@ -1,5 +1,6 @@
 .at-game-slider {
   width: 100%;
+  height: 130px;
 }
 .at-game-slider__title {
   font: var(--fonts-h5-subtitle-DEPRECATED);
@@ -15,8 +16,16 @@
   right: -20px;
   z-index: 1;
 }
-
+.at-game-slider__slider-button-next{
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 @media (min-width: 744px) {
+  .at-game-slider {
+    height: 197px;
+  }
   .at-game-slider__title {
     font-size: 26px;
     margin-bottom: 36px;

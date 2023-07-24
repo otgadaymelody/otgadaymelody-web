@@ -14,7 +14,6 @@ const AtGameSlider = (): React.ReactElement => {
   return (
     <Swiper
       className="at-game-slider"
-      spaceBetween={32}
       slidesPerView={'auto'}
       loop={true}
       navigation={{
@@ -30,9 +29,9 @@ const AtGameSlider = (): React.ReactElement => {
       ))}
       {!isMobile && (
         <div className="at-game-slider__buttons-wrapper">
-          <div className="at-game-slider__slider-button-next">
+          <button className="at-game-slider__slider-button-next">
             <img src={sliderPrevImg} alt={'Кнопка вперед'} />
-          </div>
+          </button>
         </div>
       )}
     </Swiper>

@@ -33,7 +33,6 @@
   gap: 24px;
   background: none;
 }
-
 .game-information-banner__date-info .date-info-block__time,
 .game-information-banner__date-info .date-info-block__day {
   color: var(--color-bg-gray-700);
@@ -42,7 +41,6 @@
 .game-information-banner__date-info .date-info-block__day-of-week {
   color: var(--color-bg-gray-600);
 }
-
 .game-information-banner__info hr {
   width: 1px;
   height: 71px;
@@ -57,25 +55,20 @@
   align-items: flex-start;
   gap: 2px;
 }
-.game-information-banner__price div,
-.game-information-banner__place div {
+.game-information-banner__price-amount,
+.game-information-banner__location {
   display: flex;
   align-items: center;
   gap: 8px;
   align-self: stretch;
-}
-.game-information-banner__price div span,
-.game-information-banner__place div span {
   font: var(--fonts-faq-block-DEPRECATED);
   color: var(--color-bg-gray-700);
 }
-
-.game-information-banner__price span,
-.game-information-banner__place address {
+.game-information-banner__price-person,
+.game-information-banner__address {
   color: var(--color-bg-gray-600);
   font: var(--fonts-p-main-description-DEPRECATED);
 }
-
 .game-information-banner__buttons {
   width: 100%;
   display: flex;
