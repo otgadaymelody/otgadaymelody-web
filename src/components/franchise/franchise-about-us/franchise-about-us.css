@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.franchise-about-us__description-container {
+    width: 45%;
+}
+
 .franchise-about-us__title {
     color: var(--color-lime);
     font-weight: var(--weight-heavy);
@@ -31,8 +35,13 @@
     line-height: var(--line-height-base);
 }
 
+.franchise-about-us__image-container {
+    width: 50%;
+}
+
 .franchise-about-us__image {
     width: 700px;
+    max-width: 700px;
     margin-top: 50px; 
 }
 

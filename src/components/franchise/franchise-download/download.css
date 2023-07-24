@@ -1,7 +1,6 @@
 .franchise-download {
     width: 95vw;
-    display: flex;
-    justify-content: center;
+    padding-left: 5%;
 }
 
 .franchise-download__container {

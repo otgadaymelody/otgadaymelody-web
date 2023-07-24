@@ -3,7 +3,10 @@
     padding-left: 5%;
     display: flex;
     gap: 5%;
-    overflow: hidden;
+}
+
+.franchise-audience__description_wrapper {
+    width: 50%;
 }
 
 .franchise-audience__stats-wrapper {
@@ -13,6 +16,7 @@
 
 .franchise-audience__stats {
     width: 334px;
+    max-width: 334px;
     margin-top: 66px;
 }
 
@@ -30,15 +34,18 @@
 
 .franchise-audience__container_right {
     position: relative;
+    width: 45%;
 }
 
 .franchise-audience__illustration_photo {
     width: 823px;
+    max-width: 100%;
     z-index: -1;
 }
 
 .franchise-audience__illustration_stats {
-    max-width: 100%;
+    width: 100%;
+    max-width: 65%;
     position: absolute;
     top: 50%;
     right: 55%;
@@ -67,6 +74,12 @@
     .franchise-audience__stats-wrapper {
         flex-direction: column;
     }
+}
 
+@media (min-width: 1455px) and (max-width: 2000px) {
+
+    .franchise-audience {
+        width: 70vw;
+    }
 
 }
