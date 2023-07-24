@@ -6,7 +6,7 @@ const GameRulesSlide: FC<GameRulesSlideProps> = ({ title, description }): React.
   const newDesc = description.split('\n');
   return (
     <section className="game-rules-slide">
-      <h1 className="game-rules-slide__title">{title}</h1>
+      <h3 className="game-rules-slide__title">{title}</h3>
       {newDesc.map((item, index) => (
         <p className="game-rules-slide__description" key={index}>
           {item}
