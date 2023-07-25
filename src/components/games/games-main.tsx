@@ -6,8 +6,8 @@ import Description from './description/description';
 import GamesMap from './games-map/games-map';
 import FAQBlock from '../faq-block/FAQBlock';
 import PhotoNearBorderItem from './PhotoNearBorderItem/PhotoNearBorderItem';
-import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.png';
-import VectorUrl from '../../assets/images/image-vector/Vector 37.png';
+import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.svg';
+import VectorUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-vector-first.svg';
 const GamesMain: FC = () => {
   return (
     <section className="gamesmain__container">
@@ -23,7 +23,7 @@ const GamesMain: FC = () => {
       </div>
       <div className="gamesmain__block-container">
         <PhotoNearBorderItem
-          game="game1"
+          game="gameone"
           className="gamesmain__block-imagepart-container"
           ImageUrl={ImageUrl}
           VectorUrl={VectorUrl}
