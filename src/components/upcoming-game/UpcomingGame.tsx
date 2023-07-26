@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { type FC, useEffect } from 'react';
 import './UpcomingGame.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import BlockBackground from '../block-background/BlockBackground';
@@ -6,11 +6,23 @@ import womenImg from '../../assets/images/home-page/upcoming-game/upcoming-banne
 import useDeviceType from '../../hooks/useDeviceType';
 import GameInformationBanner from './game-information-banner/GameInformationBanner';
 import AtGameSlider from './at-game-slider/AtGameSlider';
+import { api } from '../../api/api';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
+
+  useEffect(() => {
+    api
+      .getNextGame()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
