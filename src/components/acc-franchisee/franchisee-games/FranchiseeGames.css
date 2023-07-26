@@ -1,5 +1,7 @@
 .franchisee-games__bar {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
   margin-bottom: 24px;
 }
 
@@ -8,29 +10,8 @@
   margin-right: 48px;
 }
 
-.bar__wrapper {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.base-btn {
+.franchisee-games .base-btn {
   margin-left: auto;
   padding-left: 40px;
   padding-right: 40px;
-}
-
-/* вынести в отдельный компонент*/
-.games-toggle-btn {
-  width: 315px;
-  height: 48px;
-  border-radius: var(--border-xxs);
-  background: var(--color-bg-gray-200);
-  padding: 0px 4px;
-}
-
-.toggle-switch {
-  height: 40px;
-  padding: 0px 20px;
-  border-radius: var(--border-xxs);
 }
