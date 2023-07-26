@@ -1,7 +1,6 @@
 
 .franchise-about-us__container {
     width: 95vw;
-    padding-left: 2%;
     display: flex;
     justify-content: center;
 }
@@ -13,13 +12,13 @@
 .franchise-about-us__title {
     color: var(--color-lime);
     font-weight: var(--weight-heavy);
-    font-size: var( --text-9xl);
+    font-size: calc(var( --text-9xl) + 1vw);
     line-height: var(--line-height-small);
 }
 
 .franchise-about-us__title-pink {
     color: var(--color-pink);
-    font-size: var(--text-6xl);
+    font-size: calc(var(--text-6xl) + 1vw);
 }
 
 .franchise-about-us__title-container {
@@ -31,12 +30,14 @@
     font-family: var(--font-family-descriptions);
     color: var(--colo-bg-gray-700);
     font-weight: var(--weight-medium);
-    font-size: var(--text-l);
+    font-size: calc(var(--text-l) + 1vw);
     line-height: var(--line-height-base);
 }
 
 .franchise-about-us__image-container {
-    width: 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .franchise-about-us__image {
@@ -53,23 +54,35 @@
     gap: 24px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px)  {
+@media (max-width: 1340px) {
     .franchise-about-us__image {
         display: none;
     }
 
+    .franchise-about-us__description-container {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+
     .franchise-about-us__text {
         text-align: justify;
+    }
+
+    .franchise-about-us__rules-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
     .franchise-about-us__container {
-        width: 85vw;
-        margin-left: 5%;
+        width: 95vw;
     }
 
-    .franchise-about-us__image {
-        display: none;
+    .franchise-about-us__rules-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
