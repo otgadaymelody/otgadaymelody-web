@@ -1,0 +1,54 @@
+.games-switch {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--color-bg-gray-200);
+  padding: 0px 4px;
+}
+
+.games-switch * {
+  z-index: 2;
+}
+
+.games-switch__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.games-switch__label {
+  width: 155px;
+  color: var(--color-bg-gray-500);
+  font-size: var(--text-base);
+  font-weight: 600;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.games-switch__input:checked + .games-switch__label {
+  color: var(--color-pink);
+}
+
+.games-switch__glider {
+  position: absolute;
+  display: flex;
+  height: 40px;
+  width: 155px;
+  background-color: var(--color-bg-white);
+  border-radius: var(--border-xxs);
+  z-index: 1;
+  transition: 0.15s ease-out;
+}
+
+#switch-upcoming:checked ~ .games-switch__glider {
+  transform: translateX(0);
+}
+
+#switch-past:checked ~ .games-switch__glider {
+  transform: translateX(100%);
+}
