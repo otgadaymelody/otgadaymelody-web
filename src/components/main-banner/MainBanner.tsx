@@ -3,7 +3,7 @@ import BaseButton from '../ui/base-button/BaseButton';
 import './MainBanner.css';
 import bannerImgWith from '../../assets/images/home-page/main-banner-photo.png';
 import bannerImgWithout from '../../assets/images/home-page/main-banner-photo-without-o.png';
-import dots from '../../assets/images/home-page/dots.png';
+import dots from '../../assets/images/home-page/dots.svg';
 import useDeviceType from '../../hooks/useDeviceType';
 
 const MainBanner = (): React.ReactElement => {

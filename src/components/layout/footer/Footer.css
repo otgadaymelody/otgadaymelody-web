@@ -1,44 +1,38 @@
 .footer {
-  height: 414px;
-  max-width: 100vw;
   position: relative;
+  height: 293px;
+  margin: 0;
+  padding: 32px;
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--color-lime);
 }
 
-.footer__container {
-  position: relative;
-  max-width: 100vw;
-  height: 100%;
-  margin: 0 auto;
+.footer__infoblock {
+  width: 100%;
+  margin: 0;
 
   display: flex;
   flex-direction: column;
-  gap: 23px;
   align-items: center;
-  justify-content: center;
+  gap: 24px;
 }
 
 .footer__logo {
   width: 212px;
-  height: auto;
 }
 
 .footer__title {
-  font: var(--fonts-footer-title-DEPRECATED);
+  font: var(--fonts-h5-card-description-DEPRECATED);
   color: var(--color-bg-white);
 }
 
 .footer__social-btns {
   display: flex;
-  gap: 21px;
-}
-
-.footer__inst-btn {
-  height: 36px;
-  width: 36px;
-  background-image: var(--footer-social-btn-inst);
-  cursor: pointer;
 }
 
 .footer__vk-btn {
@@ -48,45 +42,35 @@
   cursor: pointer;
 }
 
-.footer__composition {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  z-index: 10;
-
-  background-image: url('@assets/images/home-page/mediator-top-left.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.footer__women {
-  background-color: transparent;
-}
-
-.footer__waves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.footer__waves svg {
-  position: relative;
-  display: block;
-  width: calc(120% + 1.3px);
-  height: 43px;
-}
-
-.footer__waves .shape-fill {
-  fill: var(--color-bg-white);
-}
-
-@media (min-width: 1440px) {
+@media screen and (min-width: 769px) {
   .footer {
-    height: 502px;
-    padding-top: 6rem;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .footer__infoblock {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin: 24px;
+    border-radius: 200px;
+  }
+
+  .footer__infoblock {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer {
+    justify-content: space-between;
+  }
+
+  .footer__infoblock {
+    margin-right: 37.5%;
   }
 }

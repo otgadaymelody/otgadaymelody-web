@@ -11,6 +11,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.4.0",
     "babel-eslint": "^10.1.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -32,7 +33,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint */**.{tsx,ts}"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "https://www.otgadaymelody.ru/",
   "eslintConfig": {
     "extends": [
       "react-app",
