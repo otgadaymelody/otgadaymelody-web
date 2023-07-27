@@ -8,9 +8,8 @@ const PersonalInfo = (): React.ReactElement => {
     <>
       <img src={avatar} alt="аватар франчайзи" />
       <div className="name">
-        <span className="name__firstname">Иван Иванович</span>
-        <br />
-        <span className="name__lastname">Иванов</span>
+        <div className="name__firstname">Иван Иванович</div>
+        <div className="name__lastname">Иванов</div>
       </div>
       <DropdownBtn className="dropdown" />
     </>

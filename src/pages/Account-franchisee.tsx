@@ -1,13 +1,21 @@
-import React from "react";
-import FranciseeGames from "../components/acc-franchisee/franchisee-games/FranchiseeGames";
-
+import React from 'react';
+import FranciseeGames from '../components/acc-franchisee/franchisee-games/FranchiseeGames';
+import { Navigate } from 'react-router-dom';
 
 const AccountFranchisee = (): React.ReactElement => {
-    return (
+  const isAdmin = true;
+
+  return (
+    <>
+      {isAdmin ? (
         <main className="account-francisee">
-            <FranciseeGames/>
+          <FranciseeGames />
         </main>
-    )
-}
+      ) : (
+        <Navigate to={'/'} />
+      )}
+    </>
+  );
+};
 
 export default AccountFranchisee;
