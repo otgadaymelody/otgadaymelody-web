@@ -1,9 +1,9 @@
 import React, { type FC } from 'react';
 import './franchise-audience.css';
-import FranAudiencePic1 from '../../assets/images/franchise/franchise-audience-1.png';
-import FranAudiencePic2 from '../../assets/images/franchise/franchise-audience-2.png';
-import FranAudiencePic3 from '../../assets/images/franchise/franchise-audience-3.png';
-import FranAudiencePic4 from '../../assets/images/franchise/franchise-audience-4.png';
+import FranAudiencePic1 from '../../../assets/images/franchise/franchise-audience-1.png';
+import FranAudiencePic2 from '../../../assets/images/franchise/franchise-audience-2.png';
+import FranAudiencePic3 from '../../../assets/images/franchise/franchise-audience-3.png';
+import FranAudiencePic4 from '../../../assets/images/franchise/franchise-audience-4.png';
 
 const FranAudience: FC = () => {
   return (

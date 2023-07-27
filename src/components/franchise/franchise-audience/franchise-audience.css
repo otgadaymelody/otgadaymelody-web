@@ -1,0 +1,98 @@
+.franchise-audience {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.franchise-audience__description_wrapper {
+    width: 50%;
+}
+
+.franchise-audience__stats-wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.franchise-audience__stats {
+    max-width: 50%;
+    margin-top: 66px;
+}
+
+.franchise-audience__title {
+    font-weight: var(--weight-heavy);
+    font-size: var(--text-8xl);
+    color: var(--color-bg-gray-900);
+}
+
+.franchise--audience__text {
+    font-weight: var(--weight-medium);
+    font-size: var(--text-2xl);
+    color: var(--color-bg-gray-700);
+}
+
+.franchise-audience__container_right {
+    position: relative;
+    width: 45%;
+}
+
+.franchise-audience__illustration_photo {
+    width: 823px;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.franchise-audience__illustration_stats {
+    width: 100%;
+    max-width: 65%;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+}
+
+@media (max-width: 1340px) {
+    .franchise-audience__illustration_photo {
+        display: none;
+    }
+
+    .franchise-audience__container_right {
+        display: none;
+    }
+
+    .franchise-audience__illustration_stats {
+        display: none;
+    }
+
+    .franchise-audience__stats-wrapper {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .franchise-audience__stats {
+        margin: auto;
+        max-width: 50%;
+    }
+
+    .franchise-audience__title {
+        font-size: var(--text-5xl);
+    }
+
+    .franchise--audience__text {
+        font-size: var(--text-xl);
+}
+
+.franchise-audience__description_wrapper {
+    width: 90%;
+}
+}
+
+@media (max-width: 490px) {
+
+    .franchise-audience__title {
+        font-size: var(--text-xl);
+    }
+}

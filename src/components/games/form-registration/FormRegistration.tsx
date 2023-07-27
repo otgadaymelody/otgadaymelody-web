@@ -80,7 +80,6 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
-          success={true}
         />
         <Input
           value={formData.numPeople}
@@ -91,7 +90,6 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
-          help="Введите информацию"
         />
       </section>
       <Input
