@@ -1,14 +1,14 @@
 import React, { type FC } from 'react';
-import { NAV_LINKS_FRANCHISEE } from './nav-links-franchisee.consts';
+import { NAV_LINKS_ADMIN } from './nav-links-admin.consts';
 import HeaderLink from './HeaderLink';
 import { ReactComponent as Logo } from '@assets/images/header/logo.svg';
 
 import './Header.css';
-import PersonalInfo from '@components/acc-franchisee/personal-info/PersonalInfo';
+import PersonalInfo from '@components/admin/personal-info/PersonalInfo';
 import useDeviceType from '../../../hooks/useDeviceType';
 import { useNavigate } from 'react-router-dom';
 
-const HeaderFranchisee: FC = () => {
+const HeaderAdmin: FC = () => {
   const navigate = useNavigate();
 
   const deviceType = useDeviceType();
@@ -26,7 +26,7 @@ const HeaderFranchisee: FC = () => {
 
         {isDesktop && (
           <nav className="header__links">
-            {NAV_LINKS_FRANCHISEE.map((item, index) => (
+            {NAV_LINKS_ADMIN.map((item, index) => (
               <HeaderLink title={item.title} img={item.images} url={item.url} key={index} />
             ))}
           </nav>
@@ -39,4 +39,4 @@ const HeaderFranchisee: FC = () => {
   );
 };
 
-export default HeaderFranchisee;
+export default HeaderAdmin;

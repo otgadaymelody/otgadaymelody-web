@@ -1,6 +1,6 @@
 import { NAV_IMAGES } from './nav-images.consts';
 
-export const NAV_LINKS_FRANCHISEE = [
+export const NAV_LINKS_ADMIN = [
   {
     title: 'Игры',
     images: NAV_IMAGES[0],

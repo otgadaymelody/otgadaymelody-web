@@ -1,16 +1,16 @@
-.franchisee-games__bar {
+.admin-games__bar {
   display: flex;
   flex-grow: 1;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.franchisee-games__title {
+.admin-games__title {
   font-size: var(--text-5xl);
   margin-right: 48px;
 }
 
-.franchisee-games .base-btn {
+.admin-games .base-btn {
   margin-left: auto;
   padding-left: 40px;
   padding-right: 40px;

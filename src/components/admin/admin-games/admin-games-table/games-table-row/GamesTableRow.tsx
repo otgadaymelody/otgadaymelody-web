@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
 import { type GamesTableRowProps } from './GamesTableRowProps';
 
-import treeDots from '@assets/images/acc-franchisee/three-dots.svg';
+import treeDots from '@assets/images/admin/three-dots.svg';
 
 const GamesTableRow: FC<GamesTableRowProps> = ({
   title,

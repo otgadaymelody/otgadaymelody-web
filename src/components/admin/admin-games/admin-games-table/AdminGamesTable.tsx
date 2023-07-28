@@ -3,10 +3,10 @@ import React, { type FC } from 'react';
 import { GAMES_DATA } from './gamesData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
 
-import './FranchiseeGamesTable.css';
-import treeDots from '@assets/images/acc-franchisee/three-dots.svg';
+import './AdminGamesTable.css';
+import treeDots from '@assets/images/admin/three-dots.svg';
 
-const FranciseeGamesTable: FC = () => {
+const AdminGamesTable: FC = () => {
   return (
     <>
       <table className="games-table">
@@ -42,4 +42,4 @@ const FranciseeGamesTable: FC = () => {
   );
 };
 
-export default FranciseeGamesTable;
+export default AdminGamesTable;

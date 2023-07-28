@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as DropdownBtn } from '@assets/images/acc-franchisee/arrow.svg';
-import avatar from '@assets/images/acc-franchisee/avatar.png';
+import { ReactComponent as DropdownBtn } from '@assets/images/admin/arrow.svg';
+import avatar from '@assets/images/admin/avatar.png';
 import './PersonalInfo.css';
 
 const PersonalInfo = (): React.ReactElement => {
