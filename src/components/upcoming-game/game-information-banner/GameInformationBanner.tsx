@@ -12,12 +12,12 @@ const GameInformationBanner = (): React.ReactElement => {
   const onButtonClickHandler = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7623';
   };
-  const dateInfo = {
-    day: '6',
-    month: 'Янв',
-    time: '19:00',
-    dayOfWeek: 'Пятница',
-  };
+  // const dateInfo = {
+  //   day: '6',
+  //   month: 'Янв',
+  //   time: '19:00',
+  //   dayOfWeek: 'Пятница',
+  // };
   const addressInfo = {
     location: 'Пивзавод',
     address: 'Зеленский Съезд, 10',
@@ -28,7 +28,7 @@ const GameInformationBanner = (): React.ReactElement => {
     <div className="game-information-banner">
       <div className="game-information-banner__info">
         <div className="game-information-banner__date-place">
-          <DateInfoBlock dateInfo={dateInfo} className="game-information-banner__date-info" />
+          {/* <DateInfoBlock dateInfo={dateInfo} className="game-information-banner__date-info" /> */}
           <hr />
           <div className="game-information-banner__price">
             <div className="game-information-banner__price-amount">

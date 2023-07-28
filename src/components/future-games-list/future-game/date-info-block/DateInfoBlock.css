@@ -25,4 +25,5 @@
 .date-info-block__month,
 .date-info-block__day-of-week {
   font: var(--fonts-p-main-description-DEPRECATED);
+  text-transform: capitalize;
 }

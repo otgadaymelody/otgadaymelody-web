@@ -12,7 +12,18 @@
 
   border-radius: 32px;
 }
-
+.future-games__swiper-container{
+  display: flex;
+  justify-content: center;
+}
+.future-games__swiper-container-large{
+  max-width: 1191px;
+  width: 100%;
+}
+.future-games__swiper-container-small{
+  max-width:816px ;
+  width: 100%;
+}
 .future-games-list__game {
   width: auto;
 }
@@ -52,49 +63,64 @@
 
 /* Mediators */
 .future-games-list__mediator_top-left {
-  width: 28%;
+  width: 32%;
   height: auto;
-  top: -3rem;
-  left: -4rem;
+  left: -54px;
+  top: -102px;
+  rotate: 5deg;
 }
 
 .future-games-list__mediator_top-right {
-  width: 28%;
+  width: 38%;
   height: auto;
-  top: -3rem;
-  right: -4rem;
+  right: -190px;
+  top: -237px;
 }
 
 .future-games-list__mediator_bottom-left {
-  width: 42%;
+  width: 40%;
   height: auto;
-  bottom: -7rem;
-  left: -3rem;
+  left: -56px;
+  bottom: -409px;
+  rotate: 10deg;
 }
 
 .future-games-list__mediator_bottom-right {
   width: 28%;
   height: auto;
-  bottom: -3rem;
-  right: -4rem;
+  right: -159px;
+  bottom: -256px;
 }
 
-.future-games-list__slider-button-next,
-.future-games-list__slider-button-prev {
+.future-games-list__buttons-wrapper{
+  display: flex;
+  width: 105%;
+  justify-content: space-between;
   position: absolute;
-  top: 45%;
-  display: block;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 20;
-  cursor: pointer;
-  overflow: visible;
+  left: 50%;
 }
+.future-games-list__buttons-wrapper-none{
+  display: none;
+}
+/*.future-games-list__slider-button-next,*/
+/*.future-games-list__slider-button-prev {*/
+/*  position: absolute;*/
+/*  top: 45%;*/
+/*  display: block;*/
+/*  z-index: 20;*/
+/*  cursor: pointer;*/
+/*  overflow: visible;*/
+/*}*/
 
-.future-games-list__slider-button-prev {
-  left: var(--navigation-btn-padding);
-}
-.future-games-list__slider-button-next {
-  right: var(--navigation-btn-padding);
-}
+/*.future-games-list__slider-button-prev {*/
+/*  left: var(--navigation-btn-padding);*/
+/*}*/
+/*.future-games-list__slider-button-next {*/
+/*  right: var(--navigation-btn-padding);*/
+/*}*/
 
 @media (min-width: 744px) {
   .future-games-list {
@@ -106,6 +132,10 @@
   }
   .future-games-list__title {
     font-size: 36px;
+  }
+  .future-games-list__slider-button-prev,
+  .future-games-list__slider-button-next {
+    scale: 1.25;
   }
 }
 
