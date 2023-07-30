@@ -7,25 +7,44 @@ import useDeviceType from '../../hooks/useDeviceType';
 import GameInformationBanner from './game-information-banner/GameInformationBanner';
 import AtGameSlider from './at-game-slider/AtGameSlider';
 import axios from 'axios';
+import { type UpcomingGameResponseType } from '@components/upcoming-game/UpcomingGameProps';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
-  const [nextGame, setNextGame] = useState({});
+  const [nextGame, setNextGame] = useState<UpcomingGameResponseType>({
+    franchiseeId: 0,
+    gameAddress: {
+      building: '',
+      city: '',
+      street: '',
+    },
+    gameBasePrice: '',
+    gameCityId: 0,
+    gameCityName: '',
+    gameCurrencyPrice: '',
+    gameDate: '',
+    gameLocationName: '',
+    gameName: '',
+    gameTime: '',
+    gameType: '',
+    id: 0,
+    info: {
+      coordinates: [0, 0],
+      description: '',
+      imageSrc: '',
+    },
+  });
 
   useEffect(() => {
     axios
       .get('api/next-game')
       .then((res) => {
-        console.log(res);
-        setNextGame(res);
+        setNextGame(res.data);
       })
-      // .then((games) => console.log('games', games))
       .catch(() => console.log('error'));
   }, []);
-
-  console.log(nextGame);
 
   const mediatorClasses = {
     topLeft: 'banner__mediator_top-left',
@@ -35,7 +54,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   };
   return (
     <>
-      {Object.keys(nextGame).length === 0 && (
+      {Object.keys(nextGame).length > 0 && (
         <section className={`${className} upcoming-game`} id="upcoming-game">
           {isDesktop && (
             <div className="upcoming-game__img-block">
@@ -43,19 +62,25 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 mediatorsClasses={mediatorClasses}
                 className="upcoming-game__img-bg"
               />
-              <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
+              <img
+                className="upcoming-game__img"
+                src={womenImg}
+                // src={
+                //   nextGame.info.imageSrc
+                //     ? `https://www.otgadaymelody.ru/api${nextGame.info.imageSrc}`
+                //     : womenImg
+                // }
+                alt={nextGame.gameName}
+              />
             </div>
           )}
           <div className="upcoming-game__info-block">
             <div className="upcoming-game__main-info">
               <div className="upcoming-game__text-wrapper">
                 <span className="upcoming-game__title">Ближайшая игра</span>
-                <h3 className="upcoming-game__game-title">Россия #24</h3>
+                <h3 className="upcoming-game__game-title">{nextGame.gameName}</h3>
                 {!isMobile && (
-                  <p className="upcoming-game__game-description">
-                    Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами! Год самыми
-                    известными и любимыми караоке хитами!
-                  </p>
+                  <p className="upcoming-game__game-description">{nextGame.info.description}</p>
                 )}
               </div>
               {isMobile && (
@@ -67,15 +92,11 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                     />
                     <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
                   </div>
-                  <p className="upcoming-game__game-description">
-                    Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!
-                    <br />
-                    Год самыми известными и любимыми караоке хитами!
-                  </p>
+                  <p className="upcoming-game__game-description">{nextGame.info.description}</p>
                 </>
               )}
               <div className="upcoming-game__registration-info">
-                <GameInformationBanner />
+                <GameInformationBanner game={nextGame} />
               </div>
             </div>
             <AtGameSlider />
