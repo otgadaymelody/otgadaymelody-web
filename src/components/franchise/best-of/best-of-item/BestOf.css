@@ -52,6 +52,11 @@
     .best-of__container {
         max-width: 40vw;
     }
+
+    .best-of__description {
+        text-align: justify;
+    }
+
 }
 
 
@@ -66,5 +71,11 @@
 
     .best-of__description {
         font-size: var(--text-base);
+    }
+}
+
+@media (max-width: 2000px) and (min-width: 1691px) {
+    .best-of__container {
+        max-width: 33vw;
     }
 }

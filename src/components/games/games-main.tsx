@@ -6,7 +6,7 @@ import Description from './description/description';
 import GamesMap from './games-map/games-map';
 import FAQBlock from '../faq-block/FAQBlock';
 import PhotoNearBorderItem from './PhotoNearBorderItem/PhotoNearBorderItem';
-import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.svg';
+import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.png';
 import VectorUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-vector-first.svg';
 const GamesMain: FC = () => {
   return (

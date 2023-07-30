@@ -9,6 +9,107 @@ import {
   type ErrorMessagesData,
 } from './FormRegistration.interfaces';
 
+interface ValidationReturnType {
+  valid: boolean;
+  errorMessage: string;
+  formattedPhoneNumber?: string;
+}
+
+const validateTeamName = (value: string): ValidationReturnType => {
+  const validationName = /^[а-яА-Яa-zA-Z\s]+$/.test(value);
+  if (!validationName) {
+    return {
+      valid: false,
+      errorMessage: 'Недопустимые символы',
+    };
+  }
+  return {
+    valid: true,
+    errorMessage: '',
+  };
+};
+
+const validateNumPeople = (value: string): ValidationReturnType => {
+  const numPeople = parseInt(value, 10);
+  if (isNaN(numPeople) || numPeople < 2 || numPeople > 10) {
+    return {
+      valid: false,
+      errorMessage: 'Количество человек в команде должно быть от 2 до 10',
+    };
+  }
+  return {
+    valid: true,
+    errorMessage: '',
+  };
+};
+const validateTelNumber = (value: string): ValidationReturnType => {
+  const phoneNumber = value.replace(/[^\d]/g, '');
+
+  const phoneCheck = /^\+?([0-9]|\(|\)|\s)+$/.test(value);
+  if (!phoneCheck) {
+    return {
+      valid: false,
+      errorMessage: 'Вводите только цифры',
+    };
+  }
+  let formattedPhoneNumber = '+7(';
+  if (phoneNumber.length >= 1) {
+    if (phoneNumber.slice(1, 4) !== '') {
+      formattedPhoneNumber += `${phoneNumber.slice(1, 4)}`;
+    }
+  }
+  if (phoneNumber.length >= 4) {
+    if (phoneNumber.slice(4, 7) !== '') {
+      formattedPhoneNumber += `) ${phoneNumber.slice(4, 7)}`;
+    }
+  }
+
+  if (phoneNumber.length >= 7) {
+    if (phoneNumber.slice(7, 9) !== '') {
+      formattedPhoneNumber += ` ${phoneNumber.slice(7, 9)}`;
+    }
+  }
+  if (phoneNumber.length >= 9) {
+    if (phoneNumber.slice(9, 11) !== '') {
+      formattedPhoneNumber += ` ${phoneNumber.slice(9, 11)}`;
+    }
+  }
+  return {
+    valid: true,
+    errorMessage: '',
+    formattedPhoneNumber,
+  };
+};
+
+const validateSocialMediaPage = (value: string): ValidationReturnType => {
+  if (value.length > 250) {
+    return {
+      valid: false,
+      errorMessage: 'Слишком большая ссылка',
+    };
+  }
+  return {
+    valid: true,
+    errorMessage: '',
+  };
+};
+
+const validateBirthday = (value: string): ValidationReturnType => {
+  const today = new Date();
+  const selectedDate = new Date(value);
+  const age = today.getFullYear() - selectedDate.getFullYear();
+  if (isNaN(selectedDate.getTime()) || age > 120 || age < 16) {
+    return {
+      valid: false,
+      errorMessage: 'Неверный формат',
+    };
+  }
+  return {
+    valid: true,
+    errorMessage: '',
+  };
+};
+
 const RegistrationForm = (): React.ReactElement => {
   const [formData, setFormData] = useState<FormData>({
     teamName: '',
@@ -37,177 +138,29 @@ const RegistrationForm = (): React.ReactElement => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
-    setErrors({
-      ...errors,
-      [name]: false,
-    });
+    setErrors({ ...errors, [name]: false });
+
+    let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
 
     if (name === 'teamName') {
-      const validationName = /^[а-яА-Яa-zA-Z\s]+$/.test(value);
-      if (!validationName) {
-        setErrors({
-          ...errors,
-          [name]: true,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: 'Недопустимые символы',
-        });
-      } else {
-        setErrors({
-          ...errors,
-          [name]: false,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: '',
-        });
-      }
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
+      validationResult = validateTeamName(value);
+    } else if (name === 'numPeople') {
+      validationResult = validateNumPeople(value);
+    } else if (name === 'telNumber') {
+      validationResult = validateTelNumber(value);
+    } else if (name === 'socialMediaPage') {
+      validationResult = validateSocialMediaPage(value);
+    } else if (name === 'birthday') {
+      validationResult = validateBirthday(value);
     }
-    const numPeople = parseInt(value, 10);
-    if (isNaN(numPeople) || numPeople < 2 || numPeople > 10) {
-      setErrors({
-        ...errors,
-        [name]: true,
-      });
-      setErrorMessages({
-        ...errorMessages,
-        [name]: 'Количество человек в команде должно быть от 2 до 10',
-      });
-    } else {
-      setErrors({
-        ...errors,
-        [name]: false,
-      });
-      setErrorMessages({
-        ...errorMessages,
-        [name]: '',
-      });
-    }
+
+    setErrors({ ...errors, [name]: !validationResult.valid });
+    setErrorMessages({ ...errorMessages, [name]: validationResult.errorMessage });
+
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]: validationResult.formattedPhoneNumber ?? value,
     }));
-
-    if (name === 'telNumber') {
-      const phoneNumber = value.replace(/[^\d]/g, '');
-
-      if (!phoneNumber) {
-        setErrors({
-          ...errors,
-          [name]: true,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: 'Вводите только цифры',
-        });
-      } else {
-        let formattedPhoneNumber = '+7(';
-
-        if (phoneNumber.length >= 1) {
-          if (phoneNumber.slice(1, 4) !== '') {
-            formattedPhoneNumber += `${phoneNumber.slice(1, 4)}`;
-          }
-        }
-
-        if (phoneNumber.length >= 4) {
-          if (phoneNumber.slice(4, 7) !== '') {
-            formattedPhoneNumber += `) ${phoneNumber.slice(4, 7)}`;
-          }
-        }
-
-        if (phoneNumber.length >= 7) {
-          if (phoneNumber.slice(7, 9) !== '') {
-            formattedPhoneNumber += ` ${phoneNumber.slice(7, 9)}`;
-          }
-        }
-
-        if (phoneNumber.length >= 9) {
-          if (phoneNumber.slice(9, 11) !== '') {
-            formattedPhoneNumber += ` ${phoneNumber.slice(9, 11)}`;
-          }
-        }
-
-        setFormData((prevFormData) => ({
-          ...prevFormData,
-          [name]: formattedPhoneNumber,
-        }));
-
-        setErrors({
-          ...errors,
-          [name]: false,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: '',
-        });
-      }
-    } else {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
-    }
-
-    if (name === 'socialMediaPage') {
-      if (value.length > 250) {
-        setErrors({
-          ...errors,
-          [name]: true,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: 'Слишком большая ссылка',
-        });
-      } else {
-        setErrors({
-          ...errors,
-          [name]: false,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: '',
-        });
-      }
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
-    }
-
-    if (name === 'birthday') {
-      const today = new Date();
-      const selectedDate = new Date(value);
-      const age = today.getFullYear() - selectedDate.getFullYear();
-
-      if (isNaN(selectedDate.getTime()) || age > 120 || age < 16) {
-        setErrors({
-          ...errors,
-          [name]: true,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: 'Неверный формат',
-        });
-      } else {
-        setErrors({
-          ...errors,
-          [name]: false,
-        });
-        setErrorMessages({
-          ...errorMessages,
-          [name]: '',
-        });
-      }
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
-    }
   };
 
   const registrationBtnSendClasses = {
@@ -244,6 +197,8 @@ const RegistrationForm = (): React.ReactElement => {
           required={true}
           error={errors.numPeople}
           errorMessage={errorMessages.numPeople}
+          min={2}
+          max={10}
         />
       </section>
       <Input

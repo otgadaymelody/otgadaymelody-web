@@ -15,7 +15,7 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
       <div className="game-rules__wrapper">
         {!isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
         <section className="game-rules__main-info">
-          <h1 className="game-rules__title">Что такое &quot;Отгадай Мелодию&quot;?</h1>
+          <h2 className="game-rules__title">Что такое &quot;Отгадай Мелодию&quot;?</h2>
           {isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
           <article className="game-rules__description-wrapper">
             <p className="game-rules__description">

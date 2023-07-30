@@ -33,7 +33,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
 
   return (
     <div className={`photo-gallery ${className}`}>
-      <h1 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h1>
+      <h2 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h2>
       <div className="photo-gallery__swiper-wrapper">
         <Swiper
           className="photo-gallery__photos-list"
