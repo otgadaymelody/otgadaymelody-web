@@ -5,7 +5,7 @@ import BaseButton from '@components/ui/base-button/BaseButton';
 import SellingGirl from '../../assets/images/home-page/selling-block/selling-block-photo.png';
 import SellingArrow from './selling-block-arrow.svg';
 import GiftCertificate from './selling-block-gift.svg';
-import CorporateParty from './selling-block-confetti.svg';
+import CorporateParty from '../../assets/images/home-page/selling-block/selling-block-corporate-party-img.png';
 
 const SellingBlock: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const downloadBtnClasses = {
