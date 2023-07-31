@@ -55,7 +55,9 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
       .then((res) => {
         setFutureGames(res.data);
       })
-      .catch(() => console.log('error'));
+      .catch(() => {
+        console.log('error');
+      });
   }, []);
 
   return (
@@ -95,7 +97,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                   slidesPerView: 2,
                 },
                 1280: {
-                  slidesPerView: slidesPerView,
+                  slidesPerView,
                 },
               }}
             >
@@ -106,10 +108,10 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               ))}
               <div className={futureButtonsWrapper}>
                 <div className="future-games-list__slider-button-prev">
-                  <img src={sliderNextImg} />
+                  <img src={sliderNextImg} alt={'Предыдущий'} />
                 </div>
                 <div className="future-games-list__slider-button-next">
-                  <img src={sliderPrevImg} />
+                  <img src={sliderPrevImg} alt={'Следующий'} />
                 </div>
               </div>
             </Swiper>
