@@ -51,7 +51,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   useEffect(() => {
     axios
-      .get<FutureGameResponseType[]>('api/future-games?id=1')
+      .get<FutureGameResponseType[]>('api/future-games')
       .then((res) => {
         setFutureGames(res.data);
       })
