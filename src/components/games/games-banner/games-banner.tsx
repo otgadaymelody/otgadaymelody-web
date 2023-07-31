@@ -5,7 +5,12 @@ import vectorRightDown from '../../../assets/icons/games/games-banner-addition-l
 import vectorLeft from '../../../assets/icons/games/games-banner-addition-right-low.svg';
 import './games-banner.css';
 
-const GamesBanner: FC = () => {
+interface GameBannerProps {
+  gameTitle: string | undefined;
+  gameInfo: string | undefined;
+}
+
+const GamesBanner: FC<GameBannerProps> = ({ gameTitle, gameInfo }) => {
   return (
     <section className="gamesbanner">
       <div className="gamesbanner__container">
@@ -16,16 +21,13 @@ const GamesBanner: FC = () => {
           <img src={vectorRightDown}></img>
         </div>
         <div className="gamesbanner__content-container">
-          <h2 className="gamesbanner__title">РОК VS ПОПСА #123</h2>
+          <h2 className="gamesbanner__title">{gameTitle}</h2>
         </div>
         <div className="gamesbanner__img-container">
           <img src={bannerImg} className="gamesbanner__img"></img>
         </div>
         <div className="banner__description">
-          <p className="banner__part">
-            Наша уникальная игра – 7 раундов, 39 вопросов, 2+ часа и море позитива. В команде может
-            быть от 2 до 9 человек, игра открыта для всех: новых и опытных участников.
-          </p>
+          <p className="banner__part">{gameInfo}</p>
         </div>
         <div className="gamesbanner__addition-container-low">
           <img src={vectorLeft}></img>
