@@ -1,23 +1,29 @@
 .future-game {
   padding: 16px;
-  border-radius: 24px;
+  border-radius: var(--border-sm);
   background-color: var(--color-bg-white);
   box-shadow: var(--shadow);
-
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
 }
-
+.future-game__title-block{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .future-game__title {
-  height: 72px;
-  font: var(--fonts-h4-card-title-DEPRECATED);
+  font-family: var(--font-family-headers);
+  font-size: var(--text-2xl);
+  font-style: normal;
+  font-weight: var(--weight-medium);
+  line-height: var(--line-height-base);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 24px;
+
 }
 
 .future-game__info-block {
@@ -25,16 +31,18 @@
   background: var(--color-gradient);
   border-radius: 16px;
 }
-
-.future-game__description {
-  margin-bottom: 24px;
+.future-game__description-block{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .future-game__main-description {
   display: flex;
   justify-content: space-between;
-  font: var(--fonts-h5-card-description-DEPRECATED);
+  font: var(--fonts-question-title-DEPRECATED);
   color: var(--color-bg-gray-900);
+
 }
 
 .future-game__place {
@@ -53,7 +61,46 @@
 .future-game__address {
   margin-top: 6px;
   width: 100%;
-  font: var(--fonts-span-sub-description-DEPRECATED);
+  font: var(--fonts-navigation-link-DEPRECATED);
   color: var(--color-bg-gray-600);
   text-align: start;
+}
+@media (min-width: 744px){
+  .future-game{
+    border-radius: var(--border-base);
+    padding: 24px;
+    gap: 40px;
+  }
+  .future-game__title {
+    font-size: var(--text-4xl);
+    line-height: var(--line-height-small);
+    height: 72px;
+  }
+
+  .future-game__description-block{
+    gap: 24px;
+  }
+  .future-game__main-description {
+    display: flex;
+    justify-content: space-between;
+    font: var(--fonts-question-title-DEPRECATED);
+    color: var(--color-bg-gray-900);
+
+  }
+  .future-game__date .future-game__date-day,
+  .future-game__date .future-game__date-time {
+    font-size: var(--text-3xl);
+    line-height: var(--line-height-base);
+  }
+  .future-game__date .future-game__date-month,
+  .future-game__date .future-game__date-day-of-week{
+    font-size: var(--text-lg);
+  }
+  .future-game__main-description {
+    font: var(--fonts-h5-card-description-DEPRECATED);
+    color: var(--color-bg-gray-900);
+  }
+  .future-game__address {
+    font: var(--fonts-p-main-description-DEPRECATED);
+  }
 }

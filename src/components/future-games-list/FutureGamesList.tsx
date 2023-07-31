@@ -14,8 +14,15 @@ import 'swiper/css/pagination';
 
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import { type FutureGameResponseType } from '@components/future-games-list/future-game/FutureGameProps';
+import useDeviceType from '../../hooks/useDeviceType';
+import BaseButton from '@components/ui/base-button/BaseButton';
 
 const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement => {
+  const deviceType = useDeviceType();
+  const isDesktop = deviceType === 'desktop';
+  const isMobile = deviceType === 'mobile';
+  const isTablet = deviceType === 'tablet';
+  const isTabletLg = deviceType === 'tablet-lg';
   const mediatorClasses = {
     topLeft: 'future-games-list__mediator_top-left',
     topRight: 'future-games-list__mediator_top-right',
@@ -25,14 +32,10 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   const [futureGames, setFutureGames] = useState<FutureGameResponseType[]>([]);
 
-  useEffect(() => {
-    axios
-      .get('api/future-games')
-      .then((res) => {
-        setFutureGames(res.data);
-      })
-      .catch(() => console.log('error'));
-  }, []);
+  const showMoreBtnClasses = {
+    buttonForm: 'future-games__show-more-btn',
+    buttonTitle: 'future-games_show-more-btn-title',
+  };
 
   const slidesPerView = futureGames.length > 2 ? 3 : 2;
   const containerSliderSize = `future-games__swiper-container${
@@ -40,13 +43,39 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
   }`;
 
   const futureButtonsWrapper =
-    futureGames.length > 3
+    (futureGames.length > 2 && isTablet) || isTabletLg || (futureGames.length > 3 && isDesktop)
       ? 'future-games-list__buttons-wrapper'
       : 'future-games-list__buttons-wrapper-none';
 
+  const showMoreHandler = (): void => {};
+
+  useEffect(() => {
+    axios
+      .get<FutureGameResponseType[]>('api/future-games?id=1')
+      .then((res) => {
+        setFutureGames(res.data);
+      })
+      .catch(() => console.log('error'));
+  }, []);
+
   return (
     <>
-      {futureGames.length && (
+      {futureGames.length > 0 && isMobile ? (
+        <BlockBackground
+          className={`future-games-list ${className}`}
+          mediatorsClasses={mediatorClasses}
+        >
+          <h2 className="future-games-list__title">Предстоящие игры</h2>
+          <div className="future-game__games-wrapper">
+            {futureGames.map((item) => (
+              <div key={item.id}>
+                <FutureGame className={'future-games-list__game'} game={item} />
+              </div>
+            ))}
+          </div>
+          <BaseButton title="Показать ещё" styles={showMoreBtnClasses} onClick={showMoreHandler} />
+        </BlockBackground>
+      ) : (
         <BlockBackground
           className={`future-games-list ${className}`}
           mediatorsClasses={mediatorClasses}
@@ -62,22 +91,16 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               modules={[Navigation]}
               className="future-games-list__games_list"
               breakpoints={{
-                360: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 40,
                 },
                 1280: {
                   slidesPerView: slidesPerView,
-                  spaceBetween: 50,
                 },
               }}
             >
               {futureGames.map((item) => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={item.id} className={'future-games-list__game-slide'}>
                   <FutureGame className={'future-games-list__game'} game={item} />
                 </SwiperSlide>
               ))}
