@@ -3,9 +3,9 @@ import './selling-block.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import SellingGirl from '../../assets/images/home-page/selling-block/selling-block-photo.png';
-import GiftCertificate from '../../assets/images/home-page/selling-block/selling-block-gift-certificate-img.png';
-import CorporateParty from '../../assets/images/home-page/selling-block/selling-block-corporate-party-img.png';
 import SellingArrow from './selling-block-arrow.svg';
+import GiftCertificate from './selling-block-gift.svg';
+import CorporateParty from './selling-block-confetti.svg';
 
 const SellingBlock: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const downloadBtnClasses = {
@@ -28,6 +28,16 @@ const SellingBlock: FC<BaseComponent> = ({ className }): React.ReactElement => {
         </div>
         <img className="selling-franchise__image" src={SellingGirl} />
       </div>
+
+      <a href="https://otgadaymelody.ru/franchise" className="selling-link__franchise">
+        <div className="selling-item__container">
+          <img className="selling-item__img" src={GiftCertificate} />
+          <div className="selling-item__description">
+            <h1 className="selling-item__title">Открыть франшизу</h1>
+            <img className="selling-item__arrow" src={SellingArrow} />
+          </div>
+        </div>
+      </a>
 
       <a href="#" className="selling-link__certificate">
         <div className="selling-item__container">

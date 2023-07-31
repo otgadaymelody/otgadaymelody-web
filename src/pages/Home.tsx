@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       </div>
       <PhotoGallery className="home-page-block" />
       <FAQBlock className="home-page-block" />
-      <SellingBlock className="home-page-block" />
+      <SellingBlock className="home-page__selling-block home-page-block" />
     </div>
   );
 };

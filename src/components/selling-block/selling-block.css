@@ -1,9 +1,12 @@
 .selling__container {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-gap: 32px;
-margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+}
+
+.selling-link__franchise {
+    display: none;
 }
 
 .selling-franchise__container {
@@ -12,10 +15,11 @@ margin-top: 100px;
     justify-self: center;
     width: 720px;
     height: 282px;
-    background: linear-gradient(85.72deg, #FF921C -39.65%, #FF2F62 48.32%, #BC099C 134.47%);
+    background: var(--gragient-main);
     border-radius: var(--border-base);
     display: flex;
     position: relative;
+    margin-top: 100px;
 }
 
 .selling-franchise__description-container {
@@ -58,7 +62,7 @@ margin-top: 100px;
 .selling-item__container {
     width: 344px;
     height: 365px;
-    background: linear-gradient(88.01deg, #FF921C -44.84%, #FF2F62 109.57%, #BC099C 260.8%);
+    background: var(--gragient-main);
     border-radius: var(--border-base);
     display: flex;
     flex-direction: column;
@@ -68,7 +72,7 @@ margin-top: 100px;
 }
 
 .selling-link__certificate {
-justify-self: end;
+    justify-self: end;
 }
 
 .selling-link__corporate-event {
@@ -96,12 +100,32 @@ justify-self: end;
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .selling__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .selling-link__franchise {
+        display: inline;
+        text-decoration: none;
+        margin-top: 60px;
+    }
+
+    .selling-franchise__container {
+        display: none;
+    }
+}
+
 
 @media (min-width: 1024px) {
 
 .selling-franchise__container {
     width: 984px;
     height: 356px;
+
 }
 
 .selling-franchise__image {
