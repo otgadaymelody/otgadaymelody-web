@@ -11,9 +11,6 @@ import VectorUrl from '../../assets/images/image-vector/Vector 37.png';
 import axios from 'axios';
 
 const GamesMain: FC = () => {
-  // interface GameData {
-  //   gameName: string;
-  // }
   interface GameData {
     id?: number;
     gameName?: string;
@@ -34,11 +31,10 @@ const GamesMain: FC = () => {
     info: {
       description: string;
       imageSrc?: string;
-      coordinates?: number[];
+      coordinates: number[];
     };
   }
 
-  // const [apiData, setApiData] = useState<string[]>([]);
   const [apiData, setApiData] = useState<GameData>({
     gameName: '',
     gameDate: '',
@@ -50,6 +46,7 @@ const GamesMain: FC = () => {
     },
     info: {
       description: '',
+      coordinates: [],
     },
   });
 
@@ -57,12 +54,12 @@ const GamesMain: FC = () => {
     axios
       .get('api/game-registration?gameId=3')
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setApiData(res.data);
-        console.log(apiData);
+        // console.log(apiData.info);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }, []);
 
@@ -84,6 +81,7 @@ const GamesMain: FC = () => {
             gameLocationName={apiData.gameLocationName}
             gameAddressStreet={apiData.gameAddress.street}
             gameAddressBuilding={apiData.gameAddress.building}
+            gameCoordinates={apiData.info.coordinates}
           ></GamesMap>
           <Description></Description>
         </div>
@@ -104,55 +102,3 @@ const GamesMain: FC = () => {
 };
 
 export default GamesMain;
-
-// useEffect(() => {
-//   const fetchData = async () => {
-//     // const res = await axios.get('api/game-registration?gameId=3');
-//     // setApiData(res.data);
-//     try {
-//       const res = await axios.get('api/game-registration?gameId=3');
-//       console.log(res.data);
-//       setApiData(res.data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-//   fetchData();
-// }, []);
-
-// useEffect(() => {
-//   api
-//     .getGameForRegistration()
-//     .then((res) => {
-//       console.log(res);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }, []);
-
-// useEffect(() => {
-//   fetch('api/game-registration?gameId=3')
-//     .then(async (res) => {
-//       return await res.json();
-//     })
-//     .then((game) => {
-//       console.log(game);
-//       handleData(game.gameName);
-//       // setGameData({
-//       //   ...gameData,
-//       //   [gameData.gameName]: game.gameName,
-//       // });
-//       return game;
-//     })
-//     .catch((err) => console.log(err));
-// }, []);
-
-// const handleData = (game: string): void => {
-//   setGameData({
-//     ...gameData,
-//     [gameData.gameName]: game,
-//   });
-//   // gameName = game;
-//   // console.log(gameName);
-// };

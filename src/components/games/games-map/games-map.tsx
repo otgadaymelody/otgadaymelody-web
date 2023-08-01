@@ -10,6 +10,7 @@ interface GameMapProps {
   gameLocationName: string | undefined;
   gameAddressStreet: string;
   gameAddressBuilding: string;
+  gameCoordinates: number[];
 }
 
 const GamesMap: FC<GameMapProps> = ({
@@ -19,86 +20,43 @@ const GamesMap: FC<GameMapProps> = ({
   gameLocationName,
   gameAddressStreet,
   gameAddressBuilding,
+  gameCoordinates,
 }) => {
   const date: Date = new Date(gameDate);
+
   const gameDay: number = date.getDate();
+
   let gameMonth: string = '';
-  switch (date.getMonth()) {
-    case 0:
-      gameMonth = 'Янв';
-      break;
-    case 1:
-      gameMonth = 'Фев';
-      break;
-    case 2:
-      gameMonth = 'Мар';
-      break;
-    case 3:
-      gameMonth = 'Апр';
-      break;
-    case 4:
-      gameMonth = 'Май';
-      break;
-    case 5:
-      gameMonth = 'Июнь';
-      break;
-    case 6:
-      gameMonth = 'Июль';
-      break;
-    case 7:
-      gameMonth = 'Авг';
-      break;
-    case 8:
-      gameMonth = 'Сент';
-      break;
-    case 9:
-      gameMonth = 'Окт';
-      break;
-    case 10:
-      gameMonth = 'Ноя';
-      break;
-    case 11:
-      gameMonth = 'Дек';
-      break;
-  }
+  const monthsRu = [
+    'Янв',
+    'Фев',
+    'Мар',
+    'Апр',
+    'Май',
+    'Июн',
+    'Июл',
+    'Авг',
+    'Сен',
+    'Окт',
+    'Ноя',
+    'Дек',
+  ];
+  gameMonth = monthsRu[date.getMonth()];
 
   let gameDayOfWeek: string = '';
-  switch (date.getDay()) {
-    case 0:
-      gameDayOfWeek = 'Воскресенье';
-      break;
-    case 1:
-      gameDayOfWeek = 'Понедельник';
-      break;
-    case 2:
-      gameDayOfWeek = 'Вторник';
-      break;
-    case 3:
-      gameDayOfWeek = 'Среда';
-      break;
-    case 4:
-      gameDayOfWeek = 'Четверг';
-      break;
-    case 5:
-      gameDayOfWeek = 'Пятница';
-      break;
-    case 6:
-      gameDayOfWeek = 'Суббота';
-      break;
-  }
+  const dayRussian = [
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота',
+  ];
+  gameDayOfWeek = dayRussian[date.getDay()];
 
-  // (gameMonth === 0) ? 'Янв' :
-  // (gameMonth === 1) ? 'Фев' :
-  // (gameMonth === 2) ? 'Мар' :
-  // (gameMonth === 3) ? 'Апр' :
-  // (gameMonth === 4) ? 'Май' :
-  // (gameMonth === 5) ? 'Июнь' :
-  // (gameMonth === 6) ? 'Июль' :
-  // (gameMonth === 7) ? 'Авг' :
-  // (gameMonth === 8) ? 'Сент' :
-  // (gameMonth === 9) ? 'Окт' :
-  // (gameMonth === 10) ? 'Ноя' :
-  // (gameMonth === 11) ? 'Дек' : 'Месяц';
+  const coordinatesX: number = gameCoordinates[0];
+  const coordinatesY: number = gameCoordinates[0];
 
   return (
     <section className="games-map">
@@ -132,9 +90,14 @@ const GamesMap: FC<GameMapProps> = ({
           ))} */}
         </div>
         <div className="games-map__location">
-          <iframe
+          {/* <iframe
             className="games-map__location-img"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea43418cfa649a01497203b847acaceb80789082548582c57556bcd237af108b&amp;source=constructor"
+            height="328"
+          ></iframe> */}
+          <iframe
+            className="games-map__location-img"
+            src={`https://yandex.ru/map-widget/v1/?from=mapframe&ll=${coordinatesY}%2C${coordinatesX}&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njk4Mjg1NBJO0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0JfQtdC70LXQvdGB0LrQuNC5INGB0YrQtdC30LQsIDEwIgoNefwvQhVPUWFC&source=mapframe&utm_source=mapframe&z=14.73`}
             height="328"
           ></iframe>
         </div>
