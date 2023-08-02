@@ -5,9 +5,8 @@ import GamesBanner from './games-banner/games-banner';
 import Description from './description/description';
 import GamesMap from './games-map/games-map';
 import FAQBlock from '../faq-block/FAQBlock';
-import PhotoNearBorderItem from './PhotoNearBorderItem/PhotoNearBorderItem';
-import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.png';
-import VectorUrl from '../../assets/images/image-vector/Vector 37.png';
+import PhotoNearBorderLeft from './PhotoNearBorderLeft/PhotoNearBorderLeft';
+import PhotoGallery from '@components/photo-gallery/PhotoGallery';
 const GamesMain: FC = () => {
   return (
     <section className="gamesmain__container">
@@ -21,15 +20,11 @@ const GamesMain: FC = () => {
           <Description></Description>
         </div>
       </div>
+      <div className="gamesmain__photo-container">
+        <PhotoGallery className="gamesmain__photo-container"></PhotoGallery>
+      </div>
       <div className="gamesmain__block-container">
-        <PhotoNearBorderItem
-          game="game1"
-          className="gamesmain__block-imagepart-container"
-          ImageUrl={ImageUrl}
-          VectorUrl={VectorUrl}
-          ImageClassName="gamesmain__block-imagepart-image"
-          VectorClassName="gamesmain__block-imagepart-vector"
-        ></PhotoNearBorderItem>
+        <PhotoNearBorderLeft></PhotoNearBorderLeft>
         <FAQBlock className="gamesmain__block-faqpart"></FAQBlock>
       </div>
     </section>

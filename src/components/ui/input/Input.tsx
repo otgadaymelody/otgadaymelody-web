@@ -14,6 +14,8 @@ interface InputProps {
   error?: boolean;
   errorMessage?: string;
   success?: boolean;
+  min?: number;
+  max?: number;
 }
 
 const Input: FC<InputProps> = ({
@@ -29,6 +31,8 @@ const Input: FC<InputProps> = ({
   error,
   errorMessage,
   success,
+  min,
+  max,
 }) => {
   return (
     <div className="input-container">
@@ -43,6 +47,8 @@ const Input: FC<InputProps> = ({
         id="input-field"
         name={name}
         required={required}
+        min={type === 'number' ? min : undefined}
+        max={type === 'number' ? max : undefined}
       />
       <label htmlFor="input-field" className={`input-label ${value && 'label-filled'}`}>
         {placeholder}

@@ -10,7 +10,7 @@
 .gamesmain__map-container {
   display: grid;
   gap: 32px;
-  grid-template-rows: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
 }
 .gamesmain__block-container {
   display: flex;
@@ -18,44 +18,26 @@
   align-items: center;
 }
 
-.gamesmain__block-imagepart-container {
-  display: none;
-  position: relative;
-  width: 100%;
-}
-
 @media (min-width: 744px) {
   .gamesmain__mapregistartion-container {
     grid-template-columns: 0.85fr 0.9fr;
   }
-  /* .gamesmain__map-container {
-    gap: 10px;
-    grid-template-rows: 1fr 1.3fr;
-  }*/
+  .gamesmain__block-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .gamesmain__map-container {
+    grid-template-rows: 0.5fr 0.75fr;
+  }
+}
+@media (min-width: 1440px) {
+  .gamesmain__block-faqpart {
+    width: 802px;
+  }
   .gamesmain__block-container {
     display: grid;
     grid-template-columns: 45% 1fr;
     align-items: center;
-  }
-}
-@media (min-width: 1440px) {
-  .gamesmain__block-imagepart-image {
-    position: relative;
-    z-index: 2;
-  }
-  .gamesmain__block-imagepart-vector {
-    position: absolute;
-    left: 25%;
-    top: 40%;
-    z-index: 1;
-  }
-  .gamesmain__block-imagepart-container {
-    display: block;
-    max-width: 890px;
-    margin-left: calc(-100vw / 8);
-    max-height: 554px;
-  }
-  .gamesmain__block-faqpart {
-    width: 802px;
   }
 }
