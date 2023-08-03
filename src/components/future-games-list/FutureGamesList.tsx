@@ -1,9 +1,9 @@
-import React, { type FC, useEffect, useState } from 'react';
+import React, { type FC, useEffect, useRef, useState } from 'react';
 import BlockBackground from '../block-background/BlockBackground';
 import FutureGame from './future-game/FutureGame';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { type Swiper as SwiperType, Navigation } from 'swiper';
 
 import sliderNextImg from '../../assets/images/future-game/slider-next.svg';
 import sliderPrevImg from '../../assets/images/future-game/slider-prev.svg';
@@ -19,6 +19,8 @@ import BaseButton from '@components/ui/base-button/BaseButton';
 
 const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
+  const swiperRef = useRef<SwiperType>();
+
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
   const isTablet = deviceType === 'tablet';
@@ -33,21 +35,25 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
   const [futureGames, setFutureGames] = useState<FutureGameResponseType[]>([]);
 
   const showMoreBtnClasses = {
-    buttonForm: 'future-games__show-more-btn',
-    buttonTitle: 'future-games_show-more-btn-title',
+    buttonForm: 'future-games-list__show-more-btn',
+    buttonTitle: 'future-games-list__show-more-btn-title',
   };
 
-  const slidesPerView = futureGames.length > 2 ? 3 : 2;
-  const containerSliderSize = `future-games__swiper-container${
-    futureGames.length > 2 ? '-large' : '-small'
-  }`;
+  const slidesPerViewCountDesktop = futureGames.length > 2 ? 3 : 2;
+  const slidesPerViewCountLargeDesktop =
+    futureGames.length > 3 ? 4 : futureGames.length > 2 ? 3 : 2;
+  const containerSliderSize = isTablet
+    ? `future-games__swiper-container`
+    : futureGames.length > 2 && !isTabletLg
+    ? `future-games__swiper-container_large`
+    : `future-games__swiper-container_small`;
 
   const futureButtonsWrapper =
-    (futureGames.length > 2 && isTablet) || isTabletLg || (futureGames.length > 3 && isDesktop)
+    (futureGames.length > 2 && isTablet) ||
+    (futureGames.length > 2 && isTabletLg) ||
+    (futureGames.length > 3 && isDesktop)
       ? 'future-games-list__buttons-wrapper'
-      : 'future-games-list__buttons-wrapper-none';
-
-  const showMoreHandler = (): void => {};
+      : 'future-games-list__buttons-wrapper_none';
 
   useEffect(() => {
     axios
@@ -68,14 +74,35 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           mediatorsClasses={mediatorClasses}
         >
           <h2 className="future-games-list__title">Предстоящие игры</h2>
-          <div className="future-game__games-wrapper">
+          <Swiper
+            direction={'vertical'}
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            spaceBetween={16}
+            slidesPerView={3}
+            className="future-games-list__games-list_mobile"
+          >
             {futureGames.map((item) => (
-              <div key={item.id}>
+              <SwiperSlide key={item.id} className={'future-games-list__game-slide_mobile'}>
                 <FutureGame className={'future-games-list__game'} game={item} />
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
-          <BaseButton title="Показать ещё" styles={showMoreBtnClasses} onClick={showMoreHandler} />
+            <div
+              className={
+                futureGames.length === 2 && isMobile
+                  ? 'future-games-list__button-wrapper_mobile-none'
+                  : 'future-games-list__button-wrapper_mobile'
+              }
+            >
+              <BaseButton
+                title="Показать ещё"
+                styles={showMoreBtnClasses}
+                onClick={() => swiperRef.current?.slideNext()}
+              />
+            </div>
+          </Swiper>
         </BlockBackground>
       ) : (
         <BlockBackground
@@ -89,7 +116,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                 nextEl: '.future-games-list__slider-button-next',
                 prevEl: '.future-games-list__slider-button-prev',
               }}
-              spaceBetween={32}
+              spaceBetween={24}
               modules={[Navigation]}
               className="future-games-list__games_list"
               breakpoints={{
@@ -97,7 +124,10 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                   slidesPerView: 2,
                 },
                 1280: {
-                  slidesPerView,
+                  slidesPerView: slidesPerViewCountDesktop,
+                },
+                1920: {
+                  slidesPerView: slidesPerViewCountLargeDesktop,
                 },
               }}
             >

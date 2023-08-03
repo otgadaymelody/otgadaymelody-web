@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  box-sizing: border-box;
+  height: 100%;
+  justify-content: space-between;
 }
 .future-game__title-block{
   display: flex;
@@ -70,6 +73,7 @@
     border-radius: var(--border-base);
     padding: 24px;
     gap: 40px;
+    height: unset;
   }
   .future-game__title {
     font-size: var(--text-4xl);
