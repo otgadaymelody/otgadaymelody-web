@@ -49,9 +49,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
     : `future-games__swiper-container_small`;
 
   const futureButtonsWrapper =
-    (futureGames.length > 2 && isTablet) ||
-    (futureGames.length > 2 && isTabletLg) ||
-    (futureGames.length > 3 && isDesktop)
+    (futureGames.length > 2 && (isTablet || isTabletLg)) || (futureGames.length > 3 && isDesktop)
       ? 'future-games-list__buttons-wrapper'
       : 'future-games-list__buttons-wrapper_none';
 

@@ -1,10 +1,3 @@
-// export declare interface DateInfo {
-//   day: string;
-//   month: string;
-//   time: string;
-//   dayOfWeek: string;
-// }
-
 export declare interface FutureGameProps extends React.AllHTMLAttributes<HTMLDivElement> {
   game: FutureGameResponseType;
 }
