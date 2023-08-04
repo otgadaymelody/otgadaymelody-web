@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import AboutUs from '../components/about-us/AboutUs';
 import FAQBlock from '../components/faq-block/FAQBlock';
 import FutureGamesList from '../components/future-games-list/FutureGamesList';
@@ -8,20 +8,10 @@ import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import useOnScreen from '../hooks/useOnScreen';
-import axios from 'axios';
 
 const Home: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
-  useEffect(() => {
-    axios
-      .get('api/game-albums')
-      .then((res) => {
-        console.log(res);
-      })
-      // .then((games) => console.log('games', games))
-      .catch(() => console.log('error'));
-  }, []);
   return (
     <div className="home-page">
       <MainBanner />

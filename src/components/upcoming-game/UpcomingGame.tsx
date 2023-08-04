@@ -2,12 +2,12 @@ import React, { type FC, useEffect, useState } from 'react';
 import './UpcomingGame.css';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import BlockBackground from '../block-background/BlockBackground';
-import womenImg from '../../assets/images/home-page/upcoming-game/upcoming-banner-img.png';
 import useDeviceType from '../../hooks/useDeviceType';
 import GameInformationBanner from './game-information-banner/GameInformationBanner';
 import AtGameSlider from './at-game-slider/AtGameSlider';
 import axios from 'axios';
 import { type UpcomingGameResponseType } from '@components/upcoming-game/UpcomingGameProps';
+import { nextGameImg } from './UpcomingGameImg';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
@@ -43,7 +43,9 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
       .then((res) => {
         setNextGame(res.data);
       })
-      .catch(() => console.log('error'));
+      .catch(() => {
+        console.log('error');
+      });
   }, []);
 
   const mediatorClasses = {
@@ -52,6 +54,8 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
     bottomLeft: 'banner__mediator_bottom-left',
     bottomRight: 'banner__mediator_bottom-right',
   };
+  const nextGameImgKey = nextGame.info.imageSrc.replace(/^\/|\.png$/g, '');
+
   return (
     <>
       {Object.keys(nextGame).length > 0 && (
@@ -64,12 +68,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
               />
               <img
                 className="upcoming-game__img"
-                src={womenImg}
-                // src={
-                //   nextGame.info.imageSrc
-                //     ? `https://www.otgadaymelody.ru/api${nextGame.info.imageSrc}`
-                //     : womenImg
-                // }
+                src={nextGameImg[nextGameImgKey]}
                 alt={nextGame.gameName}
               />
             </div>
@@ -90,7 +89,11 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                       mediatorsClasses={mediatorClasses}
                       className="upcoming-game__img-bg"
                     />
-                    <img className="upcoming-game__img" src={womenImg} alt={'Женщины'} />
+                    <img
+                      className="upcoming-game__img"
+                      src={nextGameImg[nextGameImgKey]}
+                      alt={'Женщины'}
+                    />
                   </div>
                   <p className="upcoming-game__game-description">{nextGame.info.description}</p>
                 </>
