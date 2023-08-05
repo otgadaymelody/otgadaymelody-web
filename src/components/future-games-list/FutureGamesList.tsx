@@ -3,7 +3,7 @@ import BlockBackground from '../block-background/BlockBackground';
 import FutureGame from './future-game/FutureGame';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { type Swiper as SwiperType, Navigation } from 'swiper';
+import { Navigation, type Swiper as SwiperType } from 'swiper';
 
 import sliderNextImg from '../../assets/images/future-game/slider-next.svg';
 import sliderPrevImg from '../../assets/images/future-game/slider-prev.svg';
@@ -16,10 +16,18 @@ import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import { type FutureGameResponseType } from '@components/future-games-list/future-game/FutureGameProps';
 import useDeviceType from '../../hooks/useDeviceType';
 import BaseButton from '@components/ui/base-button/BaseButton';
+import NotificationError from '@components/ui/notifications/notification-error';
+import {
+  getSlidesPerViewCountDesktop,
+  getSlidesPerViewCountLargeDesktop,
+} from '../../utils/getSlidesPerView';
+import { getContainerSliderSize } from '../../utils/getContainerSliderSize';
+import { getButtonsWrapperClass } from '../../utils/getButtonsWrapperClass';
 
 const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const swiperRef = useRef<SwiperType>();
+  const [errorMessage, setErrorMessage] = useState('');
 
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
@@ -39,33 +47,31 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
     buttonTitle: 'future-games-list__show-more-btn-title',
   };
 
-  const slidesPerViewCountDesktop = futureGames.length > 2 ? 3 : 2;
-  const slidesPerViewCountLargeDesktop =
-    futureGames.length > 3 ? 4 : futureGames.length > 2 ? 3 : 2;
-  const containerSliderSize = isTablet
-    ? `future-games__swiper-container`
-    : futureGames.length > 2 && !isTabletLg
-    ? `future-games__swiper-container_large`
-    : `future-games__swiper-container_small`;
-
-  const futureButtonsWrapper =
-    (futureGames.length > 2 && (isTablet || isTabletLg)) || (futureGames.length > 3 && isDesktop)
-      ? 'future-games-list__buttons-wrapper'
-      : 'future-games-list__buttons-wrapper_none';
+  const slidesPerViewCountDesktop = getSlidesPerViewCountDesktop(futureGames.length);
+  const slidesPerViewCountLargeDesktop = getSlidesPerViewCountLargeDesktop(futureGames.length);
+  const containerSliderSize = getContainerSliderSize(isTablet, isTabletLg, futureGames.length);
+  const futureButtonsWrapper = getButtonsWrapperClass(
+    futureGames.length,
+    isTablet,
+    isTabletLg,
+    isDesktop,
+  );
 
   useEffect(() => {
     axios
       .get<FutureGameResponseType[]>('api/future-games')
       .then((res) => {
         setFutureGames(res.data);
+        setErrorMessage('');
       })
-      .catch(() => {
-        console.log('error');
+      .catch((err) => {
+        setErrorMessage(err.message);
       });
   }, []);
 
   return (
     <>
+      {errorMessage && <NotificationError message={errorMessage} />}
       {futureGames.length > 0 && isMobile ? (
         <BlockBackground
           className={`future-games-list ${className}`}

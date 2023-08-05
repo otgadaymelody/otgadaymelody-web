@@ -15,7 +15,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.R
   return (
     <div className={className ? concatStyles('future-game', className) : 'future-game'}>
       <div className="future-game__title-block">
-        <div className="future-game__title">{game.gameName}</div>
+        <h3 className="future-game__title">{game.gameName}</h3>
         <DateInfoBlock
           className={'future-game__date'}
           dateInfo={game.gameDate}

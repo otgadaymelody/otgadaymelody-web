@@ -8,6 +8,7 @@ import AtGameSlider from './at-game-slider/AtGameSlider';
 import axios from 'axios';
 import { type UpcomingGameResponseType } from '@components/upcoming-game/UpcomingGameProps';
 import { nextGameImg } from './UpcomingGameImg';
+import NotificationError from '@components/ui/notifications/notification-error';
 
 const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
@@ -36,15 +37,17 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
       imageSrc: '',
     },
   });
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     axios
       .get('api/next-game')
       .then((res) => {
         setNextGame(res.data);
+        setErrorMessage('');
       })
-      .catch(() => {
-        console.log('error');
+      .catch((err) => {
+        setErrorMessage(err.message);
       });
   }, []);
 
@@ -58,6 +61,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
 
   return (
     <>
+      {errorMessage && <NotificationError message={errorMessage} />}
       {Object.keys(nextGame).length > 0 && (
         <section className={`${className} upcoming-game`} id="upcoming-game">
           {isDesktop && (

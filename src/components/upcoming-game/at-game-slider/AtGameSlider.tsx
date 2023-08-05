@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useDeviceType from '../../../hooks/useDeviceType';
 import { Navigation } from 'swiper';
@@ -6,21 +6,23 @@ import './AtGameSlider.css';
 import { gameInfographicItems } from './game-infographic/GameInfographicItem.consts';
 import sliderPrevImg from '../../../assets/images/future-game/slider-prev.svg';
 import GameInfographicItem from './game-infographic/GameInfographicItem';
+import sliderNextImg from '@assets/images/future-game/slider-next.svg';
 
 const AtGameSlider = (): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
+  const [backBtnVisible, setBackBtnVisible] = useState(false);
 
   return (
     <Swiper
       className="at-game-slider"
       slidesPerView={'auto'}
       loop={true}
+      modules={[Navigation]}
       navigation={{
         nextEl: '.at-game-slider__slider-button-next',
         prevEl: '.at-game-slider__slider-button-prev',
       }}
-      modules={[Navigation]}
     >
       {gameInfographicItems.map((item, index) => (
         <SwiperSlide key={index}>
@@ -29,9 +31,22 @@ const AtGameSlider = (): React.ReactElement => {
       ))}
       {!isMobile && (
         <div className="at-game-slider__buttons-wrapper">
-          <button className="at-game-slider__slider-button-next">
-            <img src={sliderPrevImg} alt={'Кнопка вперед'} />
-          </button>
+          <div
+            className={
+              backBtnVisible
+                ? 'at-game-slider__slider-button-prev'
+                : 'at-game-slider__slider-button-prev_none'
+            }
+          >
+            <img src={sliderNextImg} alt={'Кнопка назад'} />
+          </div>
+          <div className="at-game-slider__slider-button-next">
+            <img
+              src={sliderPrevImg}
+              alt={'Кнопка вперед'}
+              onClick={() => setBackBtnVisible(true)}
+            />
+          </div>
         </div>
       )}
     </Swiper>

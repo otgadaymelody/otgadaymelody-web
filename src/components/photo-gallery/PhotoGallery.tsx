@@ -15,11 +15,13 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import axios from 'axios';
 import { type GameAlbumType } from '@components/photo-gallery/PhotoGalleryProps';
+import NotificationError from '@components/ui/notifications/notification-error';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const [loopedSlides, setLoopedSlides] = React.useState<number>(1);
   const [navigationClicked, setNavigationClicked] = React.useState<boolean>(false);
   const [photoGallery, setPhotoGallery] = useState<GameAlbumType[]>([]);
+  const [errorMessage, setErrorMessage] = useState('');
   const navigateToVkPost = (link: string): void => {
     window.location.href = link;
   };
@@ -39,15 +41,16 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
       .get('api/game-albums')
       .then((res) => {
         setPhotoGallery(res.data);
+        setErrorMessage('');
       })
       // .then((games) => console.log('games', games))
-      .catch(() => {
-        console.log('error');
+      .catch((err) => {
+        setErrorMessage(err.message);
       });
   }, []);
-  console.log(photoGallery);
   return (
     <div className={`photo-gallery ${className}`}>
+      {errorMessage && <NotificationError message={errorMessage} />}
       <h2 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h2>
       <div className="photo-gallery__swiper-wrapper">
         {photoGallery.length > 0 && (
@@ -79,10 +82,10 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
               onPrevSlideChange(swiperIns);
             }}
           >
-            {photoGallery.map((item) => {
+            {photoGallery.map((item, index) => {
               const photoGalleryImgKey = item.albumImgSrc.replace(/^\/|\.png$/g, '');
               return (
-                <SwiperSlide key={item.gameId}>
+                <SwiperSlide key={`${index}-${item.gameId}`}>
                   <img
                     className="photo-gallery__photo"
                     src={photoGalleryImg[photoGalleryImgKey]}
