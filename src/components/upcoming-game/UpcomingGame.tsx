@@ -61,7 +61,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
 
   return (
     <>
-      {errorMessage && <NotificationError message={errorMessage} />}
+      {errorMessage !== '' && <NotificationError message={errorMessage} />}
       {Object.keys(nextGame).length > 0 && (
         <section className={`${className} upcoming-game`} id="upcoming-game">
           {isDesktop && (

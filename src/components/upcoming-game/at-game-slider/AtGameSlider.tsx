@@ -44,7 +44,9 @@ const AtGameSlider = (): React.ReactElement => {
             <img
               src={sliderPrevImg}
               alt={'Кнопка вперед'}
-              onClick={() => setBackBtnVisible(true)}
+              onClick={() => {
+                setBackBtnVisible(true);
+              }}
             />
           </div>
         </div>

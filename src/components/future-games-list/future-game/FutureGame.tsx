@@ -7,13 +7,13 @@ import DateInfoBlock from './date-info-block/DateInfoBlock';
 import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
 
-const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {
+const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElement => {
   const onButtonClickHandler = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7623';
   };
 
   return (
-    <div className={className ? concatStyles('future-game', className) : 'future-game'}>
+    <div className={className != null ? concatStyles('future-game', className) : 'future-game'}>
       <div className="future-game__title-block">
         <h3 className="future-game__title">{game.gameName}</h3>
         <DateInfoBlock

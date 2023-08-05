@@ -19,7 +19,7 @@ import NotificationError from '@components/ui/notifications/notification-error';
 
 const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const [loopedSlides, setLoopedSlides] = React.useState<number>(1);
-  const [navigationClicked, setNavigationClicked] = React.useState<boolean>(false);
+  const [, setNavigationClicked] = React.useState<boolean>(false);
   const [photoGallery, setPhotoGallery] = useState<GameAlbumType[]>([]);
   const [errorMessage, setErrorMessage] = useState('');
   const navigateToVkPost = (link: string): void => {
@@ -50,7 +50,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
   }, []);
   return (
     <div className={`photo-gallery ${className}`}>
-      {errorMessage && <NotificationError message={errorMessage} />}
+      {errorMessage !== '' && <NotificationError message={errorMessage} />}
       <h2 className="photo-gallery__title">Посмотрите сами у&nbsp;нас всегда круто!</h2>
       <div className="photo-gallery__swiper-wrapper">
         {photoGallery.length > 0 && (
@@ -89,7 +89,9 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
                   <img
                     className="photo-gallery__photo"
                     src={photoGalleryImg[photoGalleryImgKey]}
-                    onClick={() => navigateToVkPost(item.albumAbsoluteLink)}
+                    onClick={() => {
+                      navigateToVkPost(item.albumAbsoluteLink);
+                    }}
                     alt={`Фото ${item.gameId}`}
                   />
                 </SwiperSlide>

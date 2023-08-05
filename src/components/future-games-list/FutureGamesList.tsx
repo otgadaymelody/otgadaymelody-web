@@ -71,7 +71,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   return (
     <>
-      {errorMessage && <NotificationError message={errorMessage} />}
+      {errorMessage !== '' && <NotificationError message={errorMessage} />}
       {futureGames.length > 0 && isMobile ? (
         <BlockBackground
           className={`future-games-list ${className}`}
