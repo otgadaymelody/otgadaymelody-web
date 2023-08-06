@@ -4,13 +4,9 @@ import vectorRightUp from '../../../assets/icons/games/games-banner-addition-rig
 import vectorRightDown from '../../../assets/icons/games/games-banner-addition-left.svg';
 import vectorLeft from '../../../assets/icons/games/games-banner-addition-right-low.svg';
 import './games-banner.css';
+import { type GameProps } from '../games-main.interfaces';
 
-interface GameBannerProps {
-  gameTitle: string | undefined;
-  gameInfo: string | undefined;
-}
-
-const GamesBanner: FC<GameBannerProps> = ({ gameTitle, gameInfo }) => {
+const GamesBanner: FC<GameProps> = ({ game }) => {
   return (
     <section className="gamesbanner">
       <div className="gamesbanner__container">
@@ -21,13 +17,13 @@ const GamesBanner: FC<GameBannerProps> = ({ gameTitle, gameInfo }) => {
           <img src={vectorRightDown}></img>
         </div>
         <div className="gamesbanner__content-container">
-          <h2 className="gamesbanner__title">{gameTitle}</h2>
+          <h2 className="gamesbanner__title">{game.gameName}</h2>
         </div>
         <div className="gamesbanner__img-container">
           <img src={bannerImg} className="gamesbanner__img"></img>
         </div>
         <div className="banner__description">
-          <p className="banner__part">{gameInfo}</p>
+          <p className="banner__part">{game.info.description}</p>
         </div>
         <div className="gamesbanner__addition-container-low">
           <img src={vectorLeft}></img>

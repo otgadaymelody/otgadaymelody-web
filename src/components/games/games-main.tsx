@@ -8,44 +8,37 @@ import FAQBlock from '../faq-block/FAQBlock';
 import PhotoNearBorderItem from './PhotoNearBorderItem/PhotoNearBorderItem';
 import ImageUrl from '../../assets/images/image-vector/gamesmain__imagevector-block-img-first.png';
 import VectorUrl from '../../assets/images/image-vector/Vector 37.png';
+import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
+import { type GameData } from './games-main.interfaces';
+
+// import { useParams } from 'react-router-dom';
 
 const GamesMain: FC = () => {
-  interface GameData {
-    id?: number;
-    gameName?: string;
-    gameType?: string;
-    gameDate: string;
-    gameTime?: string;
-    gameLocationName?: string;
-    franchiseeId?: number;
-    gameAddress: {
-      city?: string;
-      street: string;
-      building: string;
-    };
-    gameCityName?: string;
-    gameBasePrice: string;
-    gameCurrencyPrice?: string;
-    gameCityId?: number;
-    info: {
-      description: string;
-      imageSrc?: string;
-      coordinates: number[];
-    };
-  }
+  // const { id } = useParams() as { id: string };
+
+  const [error, setError] = useState('');
 
   const [apiData, setApiData] = useState<GameData>({
+    id: 0,
     gameName: '',
+    gameType: '',
     gameDate: '',
-    gameBasePrice: '',
+    gameTime: '',
+    gameLocationName: '',
+    franchiseeId: 0,
     gameAddress: {
       city: '',
       street: '',
       building: '',
     },
+    gameCityName: '',
+    gameBasePrice: '',
+    gameCurrencyPrice: '',
+    gameCityId: 0,
     info: {
       description: '',
+      imageSrc: '',
       coordinates: [],
     },
   });
@@ -53,51 +46,47 @@ const GamesMain: FC = () => {
   useEffect(() => {
     axios
       .get('api/game-registration?gameId=3')
+      // .get(`api/game-registration/gameId=${id}`)
       .then((res) => {
         // console.log(res.data);
         setApiData(res.data);
-        // console.log(apiData.info);
+        setError('');
       })
       .catch((err) => {
-        console.error(err);
+        setError(err.message);
       });
   }, []);
 
   return (
-    <section className="gamesmain__container">
-      <div className="gamesmain__mapregistartion-container">
-        <div className="gamesmain__registartion-container">
-          <GamesBanner
-            gameTitle={apiData.gameName}
-            gameInfo={apiData.info.description}
-          ></GamesBanner>
-          <RegistrationForm></RegistrationForm>
-        </div>
-        <div className="gamesmain__map-container">
-          <GamesMap
-            gameTime={apiData.gameTime}
-            gameDate={apiData.gameDate}
-            gamePrice={apiData.gameBasePrice}
-            gameLocationName={apiData.gameLocationName}
-            gameAddressStreet={apiData.gameAddress.street}
-            gameAddressBuilding={apiData.gameAddress.building}
-            gameCoordinates={apiData.info.coordinates}
-          ></GamesMap>
-          <Description></Description>
-        </div>
-      </div>
-      <div className="gamesmain__block-container">
-        <PhotoNearBorderItem
-          game="game1"
-          className="gamesmain__block-imagepart-container"
-          ImageUrl={ImageUrl}
-          VectorUrl={VectorUrl}
-          ImageClassName="gamesmain__block-imagepart-image"
-          VectorClassName="gamesmain__block-imagepart-vector"
-        ></PhotoNearBorderItem>
-        <FAQBlock className="gamesmain__block-faqpart"></FAQBlock>
-      </div>
-    </section>
+    <>
+      {error !== '' ? (
+        <NotificationError message={error} />
+      ) : (
+        <section className="games-main__container">
+          <div className="games-main__mapregistration-container">
+            <div className="games-main__registration-container">
+              <GamesBanner game={apiData}></GamesBanner>
+              <RegistrationForm></RegistrationForm>
+            </div>
+            <div className="games-main__map-container">
+              <GamesMap game={apiData}></GamesMap>
+              <Description></Description>
+            </div>
+          </div>
+          <div className="games-main__block-container">
+            <PhotoNearBorderItem
+              game="game1"
+              className="games-main__block-imagepart-container"
+              ImageUrl={ImageUrl}
+              VectorUrl={VectorUrl}
+              ImageClassName="games-main__block-imagepart-image"
+              VectorClassName="games-main__block-imagepart-vector"
+            ></PhotoNearBorderItem>
+            <FAQBlock className="games-main__block-faqpart"></FAQBlock>
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 
