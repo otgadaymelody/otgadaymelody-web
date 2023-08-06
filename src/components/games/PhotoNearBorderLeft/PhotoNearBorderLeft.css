@@ -1,0 +1,23 @@
+.gamesmain__block-imagepart-container {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  .gamesmain__block-imagepart-image {
+    position: relative;
+    z-index: 2;
+  }
+  .gamesmain__block-imagepart-vector {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    z-index: 1;
+  }
+  .gamesmain__block-imagepart-container {
+    display: block;
+    max-width: 890px;
+    margin-left: calc(-100vw / 8);
+    max-height: 554px;
+  }
+}
