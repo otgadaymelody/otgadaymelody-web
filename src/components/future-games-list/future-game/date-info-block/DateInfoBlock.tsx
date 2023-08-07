@@ -1,6 +1,7 @@
 import React, { type FC } from 'react';
 import './DateInfoBlock.css';
 import { type DateInfoBlockProps } from './DateInfoBlockProps';
+import { dateReformatted } from '../../../../utils/dateReformatted';
 
 const DateInfoBlock: FC<DateInfoBlockProps> = ({
   dateInfo,
@@ -8,24 +9,7 @@ const DateInfoBlock: FC<DateInfoBlockProps> = ({
   className,
   ...props
 }): React.ReactElement => {
-  let fullDate = {
-    date: '',
-    month: '',
-    weekDay: '',
-  };
-  const dateReformater = (str: string): { date: string; month: string; weekDay: string } => {
-    const parts = str.toString().split('/');
-    const myDate = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
-    const month = myDate.toLocaleString('ru', { month: 'short' }).slice(0, -1);
-    const date = myDate.getDate().toString();
-    const weekDay = myDate.toLocaleString('ru', { weekday: 'long' });
-    return (fullDate = {
-      date,
-      month,
-      weekDay,
-    });
-  };
-  dateReformater(dateInfo);
+  const fullDate = dateReformatted(dateInfo);
   return (
     <div className={className ? `${className} date-info-block` : 'date-info-block'}>
       <div

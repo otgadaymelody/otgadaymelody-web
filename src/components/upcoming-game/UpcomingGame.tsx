@@ -72,8 +72,8 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
               />
               <img
                 className="upcoming-game__img"
-                src={nextGameImg[nextGameImgKey]}
-                alt={nextGame.gameName}
+                src={nextGameImg[nextGameImgKey || 'women-img'].path}
+                alt={nextGameImg[nextGameImgKey || 'women-img'].name}
               />
             </div>
           )}
@@ -95,8 +95,8 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                     />
                     <img
                       className="upcoming-game__img"
-                      src={nextGameImg[nextGameImgKey]}
-                      alt={'Женщины'}
+                      src={nextGameImg[nextGameImgKey || 'women-img'].path}
+                      alt={nextGameImg[nextGameImgKey || 'women-img'].name}
                     />
                   </div>
                   <p className="upcoming-game__game-description">{nextGame.info.description}</p>
