@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useDeviceType from '../../../hooks/useDeviceType';
 import { Navigation } from 'swiper';
@@ -12,7 +12,9 @@ const AtGameSlider = (): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
   const [backBtnVisible, setBackBtnVisible] = useState(false);
-
+  const changeBtnVisibility = useCallback(() => {
+    setBackBtnVisible(true);
+  }, []);
   return (
     <Swiper
       className="at-game-slider"
@@ -41,13 +43,7 @@ const AtGameSlider = (): React.ReactElement => {
             <img src={sliderNextImg} alt={'Кнопка назад'} />
           </div>
           <div className="at-game-slider__slider-button-next">
-            <img
-              src={sliderPrevImg}
-              alt={'Кнопка вперед'}
-              onClick={() => {
-                setBackBtnVisible(true);
-              }}
-            />
+            <img src={sliderPrevImg} alt={'Кнопка вперед'} onClick={changeBtnVisibility} />
           </div>
         </div>
       )}

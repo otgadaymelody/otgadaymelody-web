@@ -43,7 +43,6 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
         setPhotoGallery(res.data);
         setErrorMessage('');
       })
-      // .then((games) => console.log('games', games))
       .catch((err) => {
         setErrorMessage(err.message);
       });
