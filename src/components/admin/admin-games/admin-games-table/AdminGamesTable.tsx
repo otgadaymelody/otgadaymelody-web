@@ -1,10 +1,7 @@
 import React, { type FC } from 'react';
-
 import { GAMES_DATA } from './gamesData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
-
 import './AdminGamesTable.css';
-import treeDots from '@assets/images/admin/three-dots.svg';
 
 const AdminGamesTable: FC = () => {
   return (
@@ -18,9 +15,7 @@ const AdminGamesTable: FC = () => {
             <th className="games-table__head-item">Цена</th>
             <th className="games-table__head-item">Мест на игре</th>
             <th className="games-table__head-item">Заявки</th>
-            <th className="games-table__head-item">
-              <img src={treeDots} alt="три вертикальные точки" />
-            </th>
+            <th className="games-table__head-item"></th>
           </tr>
         </thead>
         <tbody className="games-table__body tbody">

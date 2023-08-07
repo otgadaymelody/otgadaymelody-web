@@ -21,10 +21,11 @@
 }
 
 .games-switch__label {
-  width: 155px;
-  color: var(--color-bg-gray-500);
+  width: 50%;
+  text-align: center;
   font-size: var(--text-base);
   font-weight: 600;
+  color: var(--color-bg-gray-500);
   padding: 9px 20px;
   cursor: pointer;
   transition: color 0.15s ease-in;
@@ -37,8 +38,8 @@
 .games-switch__glider {
   position: absolute;
   display: flex;
-  height: 40px;
-  width: 155px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
   background-color: var(--color-bg-white);
   border-radius: var(--border-xxs);
   z-index: 1;
