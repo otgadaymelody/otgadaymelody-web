@@ -15,7 +15,7 @@ const HeaderAdmin: FC = () => {
   const isDesktop = deviceType === 'desktop';
 
   return (
-    <header className="header">
+    <header className="header header-admin">
       <div className="header__navbar">
         <Logo
           className="header__logo"
