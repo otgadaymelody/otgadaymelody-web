@@ -1,5 +1,5 @@
 import React, { type FC, useEffect, useState } from 'react';
-import './games-main.css';
+import './game-registration.css';
 import RegistrationForm from './form-registration/FormRegistration';
 import GamesBanner from './games-banner/games-banner';
 import Description from './description/description';
@@ -9,12 +9,13 @@ import PhotoNearBorderLeft from './PhotoNearBorderLeft/PhotoNearBorderLeft';
 import PhotoGallery from '@components/photo-gallery/PhotoGallery';
 import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
-import { type GameData } from './games-main.interfaces';
+import { type GameData } from './game-registration.interfaces';
 
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const GamesMain: FC = () => {
-  // const { id } = useParams() as { id: string };
+const GameRegistration: FC = () => {
+  const { gameId } = useParams() as { gameId: number | undefined };
+  // const { gameId } = useParams() as { gameId: string };
 
   const [error, setError] = useState('');
 
@@ -43,17 +44,20 @@ const GamesMain: FC = () => {
   });
 
   useEffect(() => {
-    axios
-      .get('api/game-registration?gameId=3')
-      // .get(`api/game-registration/gameId=${id}`)
-      .then((res) => {
-        // console.log(res.data);
-        setApiData(res.data);
-        setError('');
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
+    if (gameId) {
+      axios
+        .get(`/api/game-registration?gameId=${gameId}`)
+        .then((res) => {
+          // console.log(res.data);
+          setError('');
+          setApiData(res.data);
+        })
+        .catch((err) => {
+          setError(err.message);
+        });
+    } else {
+      setError('Такая игра не найдена');
+    }
   }, []);
 
   return (
@@ -85,4 +89,4 @@ const GamesMain: FC = () => {
   );
 };
 
-export default GamesMain;
+export default GameRegistration;

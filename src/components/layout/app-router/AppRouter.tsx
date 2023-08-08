@@ -13,8 +13,7 @@ const AppRouter = (): React.ReactElement => {
       <Route path="/" element={<Home />} />
       <Route path="/franchise" element={<Franchise />} />
       <Route path="/inprocess" element={<InProcess />} />
-      <Route path="/game-registration" element={<Games />} />
-      {/* <Route path="/game-registration/:id" element={<Games />} /> */}
+      <Route path="/game-registration/:gameId" element={<Games />} />
     </Routes>
   );
 };

@@ -2,7 +2,7 @@ import React, { type FC } from 'react';
 import GamesMapAddress from './games-map-address/games-map-address';
 import './games-map.css';
 import { monthsRussian, dayRussian } from './games-map.consts';
-import { type GameProps } from '../games-main.interfaces';
+import { type GameProps } from '../game-registration.interfaces';
 
 const GamesMap: FC<GameProps> = ({ game }): React.ReactElement => {
   const date: Date = new Date(game.gameDate);

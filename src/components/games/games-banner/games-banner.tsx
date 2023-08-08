@@ -1,10 +1,9 @@
 import React, { type FC } from 'react';
-import bannerImg from '../../../assets/images/games/games-banner.svg';
 import vectorRightUp from '../../../assets/icons/games/games-banner-addition-right-up.svg';
 import vectorRightDown from '../../../assets/icons/games/games-banner-addition-left.svg';
 import vectorLeft from '../../../assets/icons/games/games-banner-addition-right-low.svg';
 import './games-banner.css';
-import { type GameProps } from '../games-main.interfaces';
+import { type GameProps } from '../game-registration.interfaces';
 
 const GamesBanner: FC<GameProps> = ({ game }) => {
   return (
@@ -20,7 +19,7 @@ const GamesBanner: FC<GameProps> = ({ game }) => {
           <h2 className="gamesbanner__title">{game.gameName}</h2>
         </div>
         <div className="gamesbanner__img-container">
-          <img src={bannerImg} className="gamesbanner__img"></img>
+          <img src={`/assets/images${game.info.imageSrc}`} className="gamesbanner__img"></img>
         </div>
         <div className="banner__description">
           <p className="banner__part">{game.info.description}</p>
