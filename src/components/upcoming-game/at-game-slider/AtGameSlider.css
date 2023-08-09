@@ -20,12 +20,10 @@
   width: 100%;
   left: 50%;
 }
-.at-game-slider__slider-button-prev_none{
+.at-game-slider__slider-button_none{
   visibility: hidden;
 }
-.at-game-slider__slider-button-next_none{
-  visibility: hidden;
-}
+
 .at-game-slider__slider-button-next, .at-game-slider__slider-button-prev{
   cursor: pointer;
 }

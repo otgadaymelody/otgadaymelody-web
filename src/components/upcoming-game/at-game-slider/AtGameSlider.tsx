@@ -56,7 +56,7 @@ const AtGameSlider = (): React.ReactElement => {
             className={
               backBtnVisible
                 ? 'at-game-slider__slider-button-prev'
-                : 'at-game-slider__slider-button-prev_none'
+                : 'at-game-slider__slider-button_none'
             }
           >
             <img src={sliderNextImg} alt={'Кнопка назад'} />
@@ -66,7 +66,7 @@ const AtGameSlider = (): React.ReactElement => {
             className={
               forwardBtnVisible
                 ? "at-game-slider__slider-button-next"
-                : "at-game-slider__slider-button-next_none"
+                : "at-game-slider__slider-button_none"
             }
             >
             <img src={sliderPrevImg} alt={'Кнопка вперед'} onClick={changeBackBtnVisibility} />
