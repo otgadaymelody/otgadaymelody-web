@@ -16,7 +16,7 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
   const isMobile = deviceType === 'mobile';
   const [backBtnVisible, setBackBtnVisible] = useState(false);
   const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
-  let [countClicks, setCountClicks] = useState(0)
+  const [countClicks, setCountClicks] = useState(0)
   const checkCounter = useCallback(() => {
     countClicks > 0
     ? setBackBtnVisible(true)
@@ -26,11 +26,11 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
     : setForwardBtnVisible(false)
   }, [])
   const changeForwardBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks --)
+    setCountClicks(countClicks - 1)
     checkCounter()
   }, []);
   const changeBackBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks ++)
+    setCountClicks(countClicks + 1)
     checkCounter()
   }, []);
   return (
