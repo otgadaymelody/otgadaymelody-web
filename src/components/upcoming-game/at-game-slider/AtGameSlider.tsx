@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useDeviceType from '../../../hooks/useDeviceType';
 import { Navigation } from 'swiper';
@@ -7,23 +7,40 @@ import { gameInfographicItems } from './game-infographic/GameInfographicItem.con
 import sliderPrevImg from '../../../assets/images/future-game/slider-prev.svg';
 import GameInfographicItem from './game-infographic/GameInfographicItem';
 import sliderNextImg from '@assets/images/future-game/slider-next.svg';
+import type { AtGameSliderProps } from './AtGameSliderProps';
 
-const AtGameSlider = (): React.ReactElement => {
+const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactElement => {
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
   const [backBtnVisible, setBackBtnVisible] = useState(false);
-  const changeBtnVisibility = useCallback(() => {
-    setBackBtnVisible(true);
+  const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
+  const [countClicks, setCountClicks] = useState(0)
+  const checkCounter = useCallback(() => {
+    countClicks > 0
+    ? setBackBtnVisible(true)
+    : setBackBtnVisible(false)
+    countClicks < gameInfographicItems.length - quantityVisibleSlides
+    ? setForwardBtnVisible(true)
+    : setForwardBtnVisible(false)
+  }, [])
+  const changeForwardBtnVisibility = useCallback(() => {
+    setCountClicks(countClicks - 1)
+    checkCounter()
+  }, []);
+  const changeBackBtnVisibility = useCallback(() => {
+    setCountClicks(countClicks + 1)
+    checkCounter()
   }, []);
   return (
     <Swiper
       className="at-game-slider"
-      slidesPerView={'auto'}
-      loop={true}
+      slidesPerView={quantityVisibleSlides}
       modules={[Navigation]}
       navigation={{
-        nextEl: '.at-game-slider__slider-button-next',
-        prevEl: '.at-game-slider__slider-button-prev',
+        nextEl: navigationNextRef.current,
+        prevEl: navigationPrevRef.current,
       }}
     >
       {gameInfographicItems.map((item, index) => (
@@ -34,16 +51,25 @@ const AtGameSlider = (): React.ReactElement => {
       {!isMobile && (
         <div className="at-game-slider__buttons-wrapper">
           <div
+          onClick={changeForwardBtnVisibility}
+            ref={navigationPrevRef}
             className={
               backBtnVisible
                 ? 'at-game-slider__slider-button-prev'
-                : 'at-game-slider__slider-button-prev_none'
+                : 'at-game-slider__slider-button_none'
             }
           >
             <img src={sliderNextImg} alt={'Кнопка назад'} />
           </div>
-          <div className="at-game-slider__slider-button-next">
-            <img src={sliderPrevImg} alt={'Кнопка вперед'} onClick={changeBtnVisibility} />
+          <div 
+            ref={navigationNextRef} 
+            className={
+              forwardBtnVisible
+                ? "at-game-slider__slider-button-next"
+                : "at-game-slider__slider-button_none"
+            }
+            >
+            <img src={sliderPrevImg} alt={'Кнопка вперед'} onClick={changeBackBtnVisibility} />
           </div>
         </div>
       )}
