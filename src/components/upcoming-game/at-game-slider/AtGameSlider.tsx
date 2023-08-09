@@ -7,16 +7,16 @@ import { gameInfographicItems } from './game-infographic/GameInfographicItem.con
 import sliderPrevImg from '../../../assets/images/future-game/slider-prev.svg';
 import GameInfographicItem from './game-infographic/GameInfographicItem';
 import sliderNextImg from '@assets/images/future-game/slider-next.svg';
+import type { AtGameSliderProps } from './AtGameSliderProps';
 
-const AtGameSlider = (): React.ReactElement => {
-  const quantityVisibleSlides = 4
+const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactElement => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
   const [backBtnVisible, setBackBtnVisible] = useState(false);
   const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
-  let countClicks = 0;
+  let [countClicks, setCountClicks] = useState(0)
   const checkCounter = useCallback(() => {
     countClicks > 0
     ? setBackBtnVisible(true)
@@ -26,11 +26,11 @@ const AtGameSlider = (): React.ReactElement => {
     : setForwardBtnVisible(false)
   }, [])
   const changeForwardBtnVisibility = useCallback(() => {
-    countClicks --
+    setCountClicks(countClicks --)
     checkCounter()
   }, []);
   const changeBackBtnVisibility = useCallback(() => {
-    countClicks ++
+    setCountClicks(countClicks ++)
     checkCounter()
   }, []);
   return (
