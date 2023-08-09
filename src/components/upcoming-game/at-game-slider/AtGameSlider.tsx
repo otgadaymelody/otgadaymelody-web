@@ -17,22 +17,24 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
   const [backBtnVisible, setBackBtnVisible] = useState(false);
   const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
   const [countClicks, setCountClicks] = useState(0)
-  const checkCounter = useCallback(() => {
-    countClicks > 0
-    ? setBackBtnVisible(true)
-    : setBackBtnVisible(false)
-    countClicks < gameInfographicItems.length - quantityVisibleSlides
-    ? setForwardBtnVisible(true)
-    : setForwardBtnVisible(false)
-  }, [])
+  let changedCounter = countClicks
   const changeForwardBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks - 1)
+    setCountClicks(changedCounter -= 1)
     checkCounter()
   }, []);
   const changeBackBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks + 1)
+    setCountClicks(changedCounter += 1)
     checkCounter()
   }, []);
+  const checkCounter = useCallback(() => {
+    console.log(changedCounter)
+    changedCounter > 0
+    ? setBackBtnVisible(true)
+    : setBackBtnVisible(false)
+    changedCounter < gameInfographicItems.length - quantityVisibleSlides
+    ? setForwardBtnVisible(true)
+    : setForwardBtnVisible(false)
+  }, [])
   return (
     <Swiper
       className="at-game-slider"
