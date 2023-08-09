@@ -1,0 +1,9 @@
+.block-background {
+   background: var(--color-gradient);
+   position: relative;
+   overflow: hidden;
+}
+
+.block-background__mediator {
+   position: absolute;
+}

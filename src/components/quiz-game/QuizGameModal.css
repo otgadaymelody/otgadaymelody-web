@@ -1,0 +1,62 @@
+.quiz-game-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-game-modal__close {
+  top: -12%;
+  left: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.quiz-game-modal__info-block {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.quiz-game-modal__img {
+  scale: 0.9;
+}
+
+.quiz-game-modal__result-title {
+  font: var(--fonts-h1-main-title-DEPRECATED);
+}
+
+.quiz-game-modal__result-description {
+  font: var(--fonts-p-main-description-DEPRECATED);
+  text-align: center;
+  margin-bottom: 67px;
+}
+
+@media (min-width: 1440px) {
+  .quiz-game-modal__info-block {
+    width: 66%;
+
+    gap: 15px;
+  }
+  .quiz-game-modal__result-title {
+    font: var(--fonts-h4-subtitle-DEPRECATED);
+  }
+
+  .quiz-game-modal__result-description {
+    font: var(--fonts-h5-card-description-DEPRECATED);
+    text-align: center;
+    margin-bottom: 67px;
+  }
+}

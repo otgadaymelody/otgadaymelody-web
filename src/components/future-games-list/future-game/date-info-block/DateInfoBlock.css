@@ -1,0 +1,37 @@
+.date-info-block {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: var(--color-gradient);
+  color: var(--color-bg-white);
+  border-radius: var(--border-xs);
+  padding: 16px 0;
+}
+
+.date-info-block__date-block,
+.date-info-block__time-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.date-info-block__time,
+.date-info-block__day {
+  font-family: var(--font-family-descriptions);
+  font-size: var(--text-2xl);
+  font-style: normal;
+  font-weight: var(--weight-semibold);
+  line-height: var(--line-height-small);
+}
+
+.date-info-block__month,
+.date-info-block__day-of-week {
+  font-family: var(--font-family-descriptions);
+  font-size: var(--text-base);
+  font-style: normal;
+  font-weight: var(--weight-medium);
+  line-height: var(--line-height-base);
+  text-transform: capitalize;
+}

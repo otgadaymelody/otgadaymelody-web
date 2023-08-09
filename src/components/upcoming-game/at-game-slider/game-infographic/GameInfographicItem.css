@@ -1,0 +1,43 @@
+.game-infographic-item {
+  width: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-infographic-item__mediator {
+  width: 98px;
+}
+.game-infographic-item__content {
+  position: relative;
+  width: 142px;
+  display: flex;
+  align-items: center;
+  bottom: 28px;
+}
+.game-infographic-item__description-bg {
+  width: 100%;
+}
+.game-infographic-item__description {
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  color: var(--color-bg-white);
+  font: var(--fonts-p-infographic-description-DEPRECATED);
+}
+
+@media (min-width: 744px) {
+  .game-infographic-item {
+    width: 233px;
+  }
+  .game-infographic-item__content {
+    width: 204px;
+    bottom: 38px;
+  }
+  .game-infographic-item__mediator {
+    width: 147px;
+  }
+  .game-infographic-item__description {
+    font-size: 18px;
+  }
+}

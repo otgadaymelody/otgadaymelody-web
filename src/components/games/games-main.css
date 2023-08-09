@@ -1,0 +1,43 @@
+.gamesmain__mapregistartion-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+}
+.gamesmain__registartion-container {
+  display: grid;
+  gap: 32px;
+}
+.gamesmain__map-container {
+  display: grid;
+  gap: 32px;
+  grid-template-rows: 0.5fr 0.5fr;
+}
+.gamesmain__block-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (min-width: 744px) {
+  .gamesmain__mapregistartion-container {
+    grid-template-columns: 0.85fr 0.9fr;
+  }
+  .gamesmain__block-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .gamesmain__map-container {
+    grid-template-rows: 0.5fr 0.75fr;
+  }
+}
+@media (min-width: 1440px) {
+  .gamesmain__block-faqpart {
+    width: 802px;
+  }
+  .gamesmain__block-container {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    align-items: center;
+  }
+}

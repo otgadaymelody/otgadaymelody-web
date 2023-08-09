@@ -1,0 +1,82 @@
+.home-page-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1872px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.home-page-block {
+  margin-top: 80px;
+}
+
+.home-page__minigames-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.in-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.in-process__image {
+  max-height: 50%;
+  max-width: 100%;
+}
+
+.home-page__selling-block {
+  margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headers);
+}
+
+body {
+  font-family: var(--font-family-descriptions);
+}
+
+@media (min-width: 744px) {
+  .container {
+    padding: 0 24px;
+  }
+  .home-page-block {
+    margin-top: 100px;
+  }
+
+  .in-process__image {
+    max-width: 50%;
+    max-height: unset;   }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    padding: 0;
+  }
+
+  .home-page-block {
+    margin-top: 120px;
+  }
+
+  .home-page__minigames-block {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1920px) {
+}
