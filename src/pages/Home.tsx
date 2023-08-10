@@ -13,9 +13,7 @@ import useOnScreen from '../hooks/useOnScreen';
 const Home: React.FC = () => {
 
   useEffect(() => {
-    window.location.hash === '#future-games-list' && (
-      window.location.href = '#future-games-list'
-    )
+     window.location.hash && (window.location.href = window.location.hash)
   })
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
