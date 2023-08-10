@@ -6,7 +6,7 @@ export const NAV_LINKS = [
     title: 'Расписание игр',
     images: NAV_IMAGES[0],
     url: '',
-    hash: '#upcoming-game',
+    hash: '#future-games-list',
   },
   {
     title: 'Фотоотчеты',

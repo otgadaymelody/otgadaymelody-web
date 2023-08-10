@@ -17,7 +17,7 @@ const HeaderLink: FC<HeaderLinkProps> = ({ title, img, url, hash, linkTitleColor
     titleStyles = concatStyles(titleStyles, 'header-link__white');
   }
   const to = hash ? { pathname: `/${url}`, hash: `${hash}` } : `/${url}`;
-
+    
   // TODO delete start
   if (url.includes('media')) {
     return (
@@ -49,7 +49,7 @@ const HeaderLink: FC<HeaderLinkProps> = ({ title, img, url, hash, linkTitleColor
   }
   // TODO delete end
   return (
-    <Link className="header__header-link header-link" to={to} onClick={onClick}>
+    <Link reloadDocument className="header__header-link header-link" to={to} onClick={onClick}>
       <img className="header-link_hide-on-click" src={img[0]} alt="img"></img>
       <img className="header-link_show-on-click" src={img[1]} alt="img"></img>
       <span className={titleStyles}>{title}</span>

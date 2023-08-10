@@ -8,7 +8,7 @@ import useDeviceType from '../../hooks/useDeviceType';
 
 const MainBanner = (): React.ReactElement => {
   const onClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7623';
+    window.location.href = '#future-games-list';
   };
 
   const deviceType = useDeviceType();
@@ -41,7 +41,7 @@ const MainBanner = (): React.ReactElement => {
         <BaseButton
           title="Расписание игр"
           styles={registrationBtnClasses}
-          href="#upcoming-game"
+          href="#future-games-list"
           onClick={onClickHandler}
         />
       </div>
