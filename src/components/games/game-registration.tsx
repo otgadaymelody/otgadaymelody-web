@@ -10,13 +10,10 @@ import PhotoGallery from '@components/photo-gallery/PhotoGallery';
 import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
 import { type GameData } from './game-registration.interfaces';
-
 import { useParams } from 'react-router-dom';
 
 const GameRegistration: FC = () => {
   const { gameId } = useParams() as { gameId: number | undefined };
-  // const { gameId } = useParams() as { gameId: string };
-
   const [error, setError] = useState('');
 
   const [apiData, setApiData] = useState<GameData>({
@@ -44,11 +41,10 @@ const GameRegistration: FC = () => {
   });
 
   useEffect(() => {
-    if (gameId) {
+    if (gameId && Number(gameId)) {
       axios
         .get(`/api/game-registration?gameId=${gameId}`)
         .then((res) => {
-          // console.log(res.data);
           setError('');
           setApiData(res.data);
         })
