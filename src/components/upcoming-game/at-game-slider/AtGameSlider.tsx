@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useDeviceType from '../../../hooks/useDeviceType';
 import { Navigation } from 'swiper';
@@ -17,6 +17,15 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
   const [backBtnVisible, setBackBtnVisible] = useState(false);
   const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
   const [countClicks, setCountClicks] = useState(0)
+  useEffect(() => {
+    checkCounter()
+  }, [countClicks])
+  const changeCounterBack = useCallback(() => {
+    setCountClicks(countClicks - 1)
+  }, [countClicks])
+  const changeCounterForward = useCallback(() => {
+    setCountClicks(countClicks + 1)
+  }, [countClicks])
   const checkCounter = useCallback(() => {
     countClicks > 0
     ? setBackBtnVisible(true)
@@ -24,15 +33,7 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
     countClicks < gameInfographicItems.length - quantityVisibleSlides
     ? setForwardBtnVisible(true)
     : setForwardBtnVisible(false)
-  }, [])
-  const changeForwardBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks - 1)
-    checkCounter()
-  }, []);
-  const changeBackBtnVisibility = useCallback(() => {
-    setCountClicks(countClicks + 1)
-    checkCounter()
-  }, []);
+  }, [countClicks])
   return (
     <Swiper
       className="at-game-slider"
@@ -51,7 +52,7 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
       {!isMobile && (
         <div className="at-game-slider__buttons-wrapper">
           <div
-          onClick={changeForwardBtnVisibility}
+            onClick={changeCounterBack}
             ref={navigationPrevRef}
             className={
               backBtnVisible
@@ -62,6 +63,7 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
             <img src={sliderNextImg} alt={'Кнопка назад'} />
           </div>
           <div 
+            onClick={changeCounterForward}
             ref={navigationNextRef} 
             className={
               forwardBtnVisible
@@ -69,7 +71,7 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
                 : "at-game-slider__slider-button_none"
             }
             >
-            <img src={sliderPrevImg} alt={'Кнопка вперед'} onClick={changeBackBtnVisibility} />
+            <img src={sliderPrevImg} alt={'Кнопка вперед'}/>
           </div>
         </div>
       )}
