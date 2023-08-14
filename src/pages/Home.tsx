@@ -7,6 +7,7 @@ import MainBanner from '../components/main-banner/MainBanner';
 import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
+import SellingBlock from '../components/selling-block/selling-block';
 import useOnScreen from '../hooks/useOnScreen';
 
 const Home: React.FC = () => {
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       </div>
       <PhotoGallery className="home-page-block" />
       <FAQBlock className="home-page-block" />
+      <SellingBlock className="home-page__selling-block home-page-block" />
     </div>
   );
 };

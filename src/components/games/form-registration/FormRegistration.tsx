@@ -8,6 +8,14 @@ import {
   type ErrorData,
   type ErrorMessagesData,
 } from './FormRegistration.interfaces';
+import {
+  type ValidationReturnType,
+  validateTeamName,
+  validateNumPeople,
+  validateTelNumber,
+  validateSocialMediaPage,
+  validateBirthday,
+} from './registration-validators';
 
 const RegistrationForm = (): React.ReactElement => {
   const [formData, setFormData] = useState<FormData>({
@@ -37,26 +45,28 @@ const RegistrationForm = (): React.ReactElement => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
 
-    setErrors({
-      ...errors,
-      [name]: false,
-    });
+    setErrors({ ...errors, [name]: false });
 
-    // TODO need to refactor
-    if (name === 'telNumber' && !+value) {
-      setErrors({
-        ...errors,
-        [name]: true,
-      });
-      setErrorMessages({
-        ...errorMessages,
-        [name]: 'Вводите только цифры',
-      });
+    let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
+
+    if (name === 'teamName') {
+      validationResult = validateTeamName(value);
+    } else if (name === 'numPeople') {
+      validationResult = validateNumPeople(value);
+    } else if (name === 'telNumber') {
+      validationResult = validateTelNumber(value);
+    } else if (name === 'socialMediaPage') {
+      validationResult = validateSocialMediaPage(value);
+    } else if (name === 'birthday') {
+      validationResult = validateBirthday(value);
     }
+
+    setErrors({ ...errors, [name]: !validationResult.valid });
+    setErrorMessages({ ...errorMessages, [name]: validationResult.errorMessage });
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]: validationResult.formattedPhoneNumber ?? value,
     }));
   };
 
@@ -80,6 +90,8 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
+          error={errors.teamName}
+          errorMessage={errorMessages.teamName}
         />
         <Input
           value={formData.numPeople}
@@ -90,6 +102,10 @@ const RegistrationForm = (): React.ReactElement => {
           className="input"
           labelClassName="input-label"
           required={true}
+          error={errors.numPeople}
+          errorMessage={errorMessages.numPeople}
+          min={2}
+          max={10}
         />
       </section>
       <Input
@@ -112,6 +128,8 @@ const RegistrationForm = (): React.ReactElement => {
         className="input"
         labelClassName="input-label"
         required={true}
+        error={errors.socialMediaPage}
+        errorMessage={errorMessages.socialMediaPage}
       />
       <div>
         <Input
@@ -122,6 +140,8 @@ const RegistrationForm = (): React.ReactElement => {
           name="birthday"
           className="input date"
           labelClassName="input-label"
+          error={errors.birthday}
+          errorMessage={errorMessages.birthday}
         />
         <p className="form-registartion-body__description">
           Если в Вашей команде есть именинник (3 дня до и 3 после), пожалуйста, укажите как его
