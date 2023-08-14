@@ -1,9 +1,10 @@
 import React, { useState, type FC } from 'react';
 import Input from '@components/ui/input/Input';
 import BaseButton from '@components/ui/base-button/BaseButton';
-import './UserAuthForm.css';
-
 import { type AuthFormData } from './UserAuthForm.inteface';
+import axios from 'axios';
+import NotificationError from '@components/ui/notifications/notification-error';
+import './UserAuthForm.css';
 
 const UserAuthForm: FC = () => {
   const [authFormData, setAuthFormData] = useState<AuthFormData>({
@@ -11,23 +12,23 @@ const UserAuthForm: FC = () => {
     userPassword: '',
   });
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    fetch('/api/auth', {
-      method: 'POST',
-      body: JSON.stringify({ login: '', password: '' }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        sessionStorage.setItem('token', data);
+    axios
+      .post('/api/auth', {
+        login: authFormData.userEmail,
+        password: authFormData.userPassword,
       })
-      .catch((err) => console.log(err));
-
-    console.log('отправилось');
+      .then((res) => {
+        sessionStorage.setItem('token', res.data.token);
+        setErrorMessage('');
+      })
+      .catch((err) => {
+        console.log(err);
+        setErrorMessage(err.message);
+      });
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -45,6 +46,7 @@ const UserAuthForm: FC = () => {
 
   return (
     <>
+      {errorMessage !== '' && <NotificationError message={errorMessage} />}
       <h2 className="user-auth__title">Войдите в свою учетную запись</h2>
       <form className="user-auth__form form-auth" onSubmit={handleSubmit}>
         <Input
