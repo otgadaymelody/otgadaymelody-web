@@ -4,6 +4,7 @@ import BaseButton from '@components/ui/base-button/BaseButton';
 import { type AuthFormData } from './UserAuthForm.inteface';
 import axios from 'axios';
 import NotificationError from '@components/ui/notifications/notification-error';
+import { useNavigate } from 'react-router-dom';
 import './UserAuthForm.css';
 
 const UserAuthForm: FC = () => {
@@ -13,6 +14,7 @@ const UserAuthForm: FC = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -24,6 +26,7 @@ const UserAuthForm: FC = () => {
       .then((res) => {
         sessionStorage.setItem('token', res.data.token);
         setErrorMessage('');
+        navigate('/admin');
       })
       .catch((err) => {
         console.log(err);
