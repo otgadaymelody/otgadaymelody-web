@@ -6,6 +6,7 @@ import Franchise from '../../../pages/franchise';
 import InProcess from '../../../pages/in-process';
 import Games from '../../../pages/Games';
 import UserAuth from '../../../pages/UserAuth';
+import Admin from '../../../pages/Admin';
 
 const AppRouter = (): React.ReactElement => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = (): React.ReactElement => {
       <Route path="/inprocess" element={<InProcess />} />
       <Route path="/games" element={<Games />} />
       <Route path="/user-auth-admin" element={<UserAuth />} />
+      <Route path="/admin" element={<Admin />}></Route>
     </Routes>
   );
 };
