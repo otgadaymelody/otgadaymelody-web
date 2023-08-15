@@ -14,13 +14,17 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  right: -20px;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  left: 50%;
 }
-.at-game-slider__slider-button-next{
-  padding: 0;
-  border: none;
-  background: none;
+.at-game-slider__slider-button_none{
+  visibility: hidden;
+}
+
+.at-game-slider__slider-button-next, .at-game-slider__slider-button-prev{
   cursor: pointer;
 }
 @media (min-width: 744px) {

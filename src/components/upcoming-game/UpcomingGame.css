@@ -2,6 +2,7 @@
   width: 100%;
 }
 .upcoming-game__main-info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -36,7 +37,7 @@
 }
 .upcoming-game__img-block {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,14 +126,15 @@
     flex: 1 0 0;
     align-self: stretch;
   }
+  .upcoming-game__img-block {
+    overflow: visible;
+  }
   .upcoming-game__img-bg {
     width: 389px;
     height: 100%;
     border-radius: var(--border-lg);
   }
   .upcoming-game__img {
-    height: 545px;
-    left: -40px;
-    top: 35px;
+    left: -62px;
   }
 }
