@@ -1,0 +1,20 @@
+.header-admin .header__btns {
+  gap: 0;
+}
+
+.header-admin__name {
+  margin-right: 16px;
+  font-weight: var(--weight-semibold);
+}
+
+.dropdown {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+}
+
+@media (min-width: 744px) {
+  .header-admin .header__btns {
+    gap: 16px;
+  }
+}
