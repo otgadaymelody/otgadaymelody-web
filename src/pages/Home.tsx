@@ -9,13 +9,17 @@ import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import SellingBlock from '../components/selling-block/selling-block';
 import useOnScreen from '../hooks/useOnScreen';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const Home: React.FC = () => {
 
   useEffect(() => {
-     window.location.hash && (window.location.href = window.location.hash)
+     window.location.hash && (
+      scrollToSection(window.location.hash)
+     )
   })
   const ref = useRef<HTMLDivElement>(null);
+  const futureGamesRef = useRef(null)
   const isVisible = useOnScreen(ref);
   return (
     <div className="home-page">

@@ -24,7 +24,7 @@ import {
 import { getContainerSliderSize } from '../../utils/getContainerSliderSize';
 import { getButtonsWrapperClass } from '../../utils/getButtonsWrapperClass';
 
-const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement => {
+const FutureGamesList: FC<BaseComponent> = ({ className}): React.ReactElement => {
   const deviceType = useDeviceType();
   const swiperRef = useRef<SwiperType>();
   const [errorMessage, setErrorMessage] = useState('');
