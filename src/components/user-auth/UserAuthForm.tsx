@@ -7,6 +7,11 @@ import NotificationError from '@components/ui/notifications/notification-error';
 import { useNavigate } from 'react-router-dom';
 import './UserAuthForm.css';
 
+const USERAUTHFORMBTNCLASSES = {
+  buttonForm: 'form-auth__btn',
+  buttonTitle: 'form-auth__btn-title',
+};
+
 const UserAuthForm: FC = () => {
   const [authFormData, setAuthFormData] = useState<AuthFormData>({
     userEmail: '',
@@ -42,11 +47,6 @@ const UserAuthForm: FC = () => {
     }));
   };
 
-  const userAuthFormBtn = {
-    buttonForm: 'form-auth__btn',
-    buttonTitle: 'form-auth__btn-title',
-  };
-
   return (
     <>
       {errorMessage !== '' && <NotificationError message={errorMessage} />}
@@ -70,7 +70,7 @@ const UserAuthForm: FC = () => {
           required={false}
           error={false}
         />
-        <BaseButton title="Войти" styles={userAuthFormBtn} />
+        <BaseButton title="Войти" styles={USERAUTHFORMBTNCLASSES} />
       </form>
     </>
   );

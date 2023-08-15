@@ -42,7 +42,7 @@
     padding: 56px;
     max-width: 568px;
     border: var(--border-xxxs) solid var(--color-bg-slate-200);
-    border-radius: 56px;
+    border-radius: var(--border-base);
   }
 
   .user-auth__title {
