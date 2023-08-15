@@ -3,7 +3,7 @@ import AdminGames from '../components/admin/admin-games/AdminGames';
 import { Navigate } from 'react-router-dom';
 
 const Admin = (): React.ReactElement => {
-  const isAdmin = true;
+  const isAdmin = false;
 
   return (
     <>
