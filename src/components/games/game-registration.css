@@ -1,41 +1,41 @@
-.games-main__mapregistration-container {
+.games-registration__mapregistration-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 24px;
 }
-.games-main__registration-container {
+.games-registration__registration-container {
   display: grid;
   gap: 32px;
 }
-.games-main__map-container {
+.games-registration__map-container {
   display: grid;
   gap: 32px;
   grid-template-rows: 0.5fr 0.5fr;
 }
-.games-main__block-container {
+.games-registration__block-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 @media (min-width: 744px) {
-  .games-main__mapregistration-container {
+  .games-registration__mapregistration-container {
     grid-template-columns: 0.85fr 0.9fr;
   }
-  .games-main__block-container {
+  .games-registration__block-container {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
   }
-  .games-main__map-container {
+  .games-registration__map-container {
     grid-template-rows: 0.5fr 0.75fr;
   }
 }
 @media (min-width: 1440px) {
-  .games-main__block-faqpart {
+  .games-registration__block-faqpart {
     width: 802px;
   }
-  .games-main__block-container {
+  .games-registration__block-container {
     display: grid;
     grid-template-columns: 45% 1fr;
     align-items: center;

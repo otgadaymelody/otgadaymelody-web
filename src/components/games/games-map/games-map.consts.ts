@@ -1,4 +1,4 @@
-export const monthsRussian = [
+export const MONTHS = [
   'Янв',
   'Фев',
   'Мар',
@@ -13,7 +13,7 @@ export const monthsRussian = [
   'Дек',
 ];
 
-export const dayRussian = [
+export const WEEKDAYS = [
   'Воскресенье',
   'Понедельник',
   'Вторник',

@@ -1,0 +1,52 @@
+.admin-games {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+.admin-games__bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+.admin-games__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-bold);
+  margin-right: 48px;
+  color: var(--color-bg-gray-900);
+}
+
+.admin-games .base-btn {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (min-width: 744px) {
+  .admin-games {
+    margin-top: 0;
+  }
+
+  .admin-games__bar {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  .admin-games .base-btn {
+    margin-left: auto;
+  }
+
+  .admin-games__title {
+    margin-right: 48px;
+    font-size: var(--text-5xl);
+  }
+}
+
+@media (min-width: 1440px) {
+  .admin-games {
+    margin-top: 16px;
+  }
+}

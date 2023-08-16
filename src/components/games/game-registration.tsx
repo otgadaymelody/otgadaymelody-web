@@ -11,34 +11,12 @@ import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
 import { type GameData } from './game-registration.interfaces';
 import { useParams } from 'react-router-dom';
+import { initialApiData } from './game-registration.consts';
 
 const GameRegistration: FC = () => {
   const { gameId } = useParams() as { gameId: number | undefined };
   const [error, setError] = useState('');
-
-  const [apiData, setApiData] = useState<GameData>({
-    id: 0,
-    gameName: '',
-    gameType: '',
-    gameDate: '',
-    gameTime: '',
-    gameLocationName: '',
-    franchiseeId: 0,
-    gameAddress: {
-      city: '',
-      street: '',
-      building: '',
-    },
-    gameCityName: '',
-    gameBasePrice: '',
-    gameCurrencyPrice: '',
-    gameCityId: 0,
-    info: {
-      description: '',
-      imageSrc: '',
-      coordinates: [],
-    },
-  });
+  const [apiData, setApiData] = useState<GameData>(initialApiData);
 
   useEffect(() => {
     if (gameId && Number(gameId)) {
@@ -61,23 +39,23 @@ const GameRegistration: FC = () => {
       {error !== '' ? (
         <NotificationError message={error} />
       ) : (
-        <section className="games-main__container">
-          <div className="games-main__mapregistration-container">
-            <div className="games-main__registration-container">
+        <section className="games-registration__wrapper">
+          <div className="games-registration__mapregistration-container">
+            <div className="games-registration__registration-container">
               <GamesBanner game={apiData}></GamesBanner>
               <RegistrationForm></RegistrationForm>
             </div>
-            <div className="games-main__map-container">
+            <div className="games-registration__map-container">
               <GamesMap game={apiData}></GamesMap>
               <Description></Description>
             </div>
           </div>
-          <div className="games-main__block-container">
-            <PhotoGallery className="gamesmain__photo-container"></PhotoGallery>
+          <div className="games-registration__block-container">
+            <PhotoGallery className="games-registration__photo-container"></PhotoGallery>
           </div>
-          <div className="games-main__block-container">
+          <div className="games-registration__block-container">
             <PhotoNearBorderLeft></PhotoNearBorderLeft>
-            <FAQBlock className="games-main__block-faqpart"></FAQBlock>
+            <FAQBlock className="games-registration__block-faqpart"></FAQBlock>
           </div>
         </section>
       )}

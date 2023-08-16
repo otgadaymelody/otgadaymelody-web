@@ -6,34 +6,41 @@ import { ReactComponent as PriceImg } from '../../../assets/images/future-game/T
 import DateInfoBlock from './date-info-block/DateInfoBlock';
 import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
-import { useNavigate } from 'react-router-dom';
 
-const FutureGame: FC<FutureGameProps> = ({ game, className, ...props }): React.ReactElement => {
-  const navigate = useNavigate();
+const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElement => {
   const onButtonClickHandler = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7623';
   };
 
   return (
-    <div className={className ? concatStyles('future-game', className) : 'future-game'}>
+    <div className={className != null ? concatStyles('future-game', className) : 'future-game'}>
       <div className="future-game__title-block">
-        <div className="future-game__title">{game.title}</div>
-        <DateInfoBlock dateInfo={game.dateInfo} />
+        <h3 className="future-game__title">{game.gameName}</h3>
+        <DateInfoBlock
+          className={'future-game__date'}
+          dateInfo={game.gameDate}
+          gameTime={game.gameTime}
+        />
       </div>
       <div className="future-game__description-block">
         <div className="future-game__description">
           <div className="future-game__main-description">
             <div className="future-game__place">
               <LocationImg />
-              <span>{game.location}</span>
+              <span>{game.gameLocationName}</span>
             </div>
             <div className="future-game__price">
               <PriceImg />
-              <span>{game.price}</span>
+              <span>{game.gameBasePrice}</span>
+              <span>{game.gameCurrencyPrice === 'rub' ? 'р' : ''}</span>
             </div>
           </div>
-          <address className="future-game__address">{game.address}</address>
+          <address className="future-game__address">
+            {game.gameAddress.street}, {game.gameAddress.building}
+          </address>
         </div>
+      </div>
+      <div>
         <GameRegistrationButton onClick={onButtonClickHandler} />
       </div>
     </div>

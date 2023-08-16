@@ -1,14 +1,14 @@
 import React, { type FC } from 'react';
 import GamesMapAddress from './games-map-address/games-map-address';
 import './games-map.css';
-import { monthsRussian, dayRussian } from './games-map.consts';
+import { MONTHS, WEEKDAYS } from './games-map.consts';
 import { type GameProps } from '../game-registration.interfaces';
 
 const GamesMap: FC<GameProps> = ({ game }): React.ReactElement => {
   const date: Date = new Date(game.gameDate);
   const gameDay: number = date.getDate();
-  const gameMonth: string = monthsRussian[date.getMonth()];
-  const gameDayOfWeek: string = dayRussian[date.getDay()];
+  const gameMonth: string = MONTHS[date.getMonth()];
+  const gameDayOfWeek: string = WEEKDAYS[date.getDay()];
   const coordinatesX: number = game.info.coordinates[0];
   const coordinatesY: number = game.info.coordinates[1];
   const price: string = game.gameBasePrice;
