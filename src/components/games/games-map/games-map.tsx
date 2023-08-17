@@ -25,7 +25,11 @@ const GamesMap: FC<GameProps> = ({ game }): React.ReactElement => {
               <GamesMapAddress icon={false} header={game.gameTime} text={gameDayOfWeek} />
             </div>
             <div className="games-map__address-elements-border">
-              <GamesMapAddress icon={false} header={`${price} p`} text="C человека" />
+              {price ? (
+                <GamesMapAddress icon={false} header={`${price} p`} text="C человека" />
+              ) : (
+                <GamesMapAddress icon={false} header="0 p" text="C человека" />
+              )}
             </div>
             <GamesMapAddress
               icon={true}
