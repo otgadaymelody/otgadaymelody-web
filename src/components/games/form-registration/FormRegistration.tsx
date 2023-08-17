@@ -16,8 +16,15 @@ import {
   validateSocialMediaPage,
   validateBirthday,
 } from './registration-validators';
+import NotificationError from '@components/ui/notifications/notification-error';
+import axios from 'axios';
 
 const RegistrationForm = (): React.ReactElement => {
+  // const [errorNotification, setErrorNotification] = useState(false);
+  const [errorResponce, setErrorResponce] = useState('');
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  // let disableButton: boolean = true;
+
   const [formData, setFormData] = useState<FormData>({
     teamName: '',
     numPeople: '',
@@ -44,9 +51,8 @@ const RegistrationForm = (): React.ReactElement => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
-
+    setButtonDisabled(false);
     setErrors({ ...errors, [name]: false });
-
     let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
 
     if (name === 'teamName') {
@@ -70,6 +76,37 @@ const RegistrationForm = (): React.ReactElement => {
     }));
   };
 
+  const postInfo = (): void => {
+    setErrorResponce('');
+    axios
+      .post('/api/game-registration/apply', {
+        teamName: formData.teamName,
+        teamCount: formData.numPeople,
+        phoneNumber: formData.telNumber,
+        socialLink: formData.socialMediaPage,
+        birthDate: formData.birthday,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        setErrorResponce(err.message);
+      });
+  };
+
+  const handleSubmit = (event: any): void => {
+    event.preventDefault();
+    setButtonDisabled(false);
+    const noError = Object.values(errors).every((el) => el === false);
+
+    if (noError) {
+      // console.log(formData);
+      postInfo();
+    } else {
+      setButtonDisabled(true);
+    }
+  };
+
   const registrationBtnSendClasses = {
     buttonForm: 'form-registration__btn-send',
     buttonTitle: 'form-registration__btn-send-title',
@@ -77,6 +114,9 @@ const RegistrationForm = (): React.ReactElement => {
 
   return (
     <form className="form-registration">
+      {/* перенести куда то на страницу ответ от сервера с ошибкой */}
+      {errorResponce && <NotificationError message={errorResponce} />}
+
       <section>
         <h2 className="form-registration__title">Регистрация на игру</h2>
       </section>
@@ -149,8 +189,16 @@ const RegistrationForm = (): React.ReactElement => {
           композицию именинника на поздравление.
         </p>
       </div>
-      <BaseButton title="Отправить" styles={registrationBtnSendClasses} href="#form-registartion" />
+      <BaseButton
+        title="Отправить"
+        onClick={handleSubmit}
+        styles={registrationBtnSendClasses}
+        href="#form-registartion"
+        disabled={buttonDisabled}
+      />
       <div>
+        {buttonDisabled && <NotificationError message="Неверно заполнены поля" />}
+
         <p className="form-registartion-body__description">
           <span>Нажимая кнопку «Отправить» я подтверждаю, что согласен c </span>
           <span className="form-registartion-body__description-selection">
