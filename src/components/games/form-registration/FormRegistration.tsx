@@ -20,10 +20,8 @@ import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
 
 const RegistrationForm = (): React.ReactElement => {
-  // const [errorNotification, setErrorNotification] = useState(false);
   const [errorResponce, setErrorResponce] = useState('');
-  const [buttonDisabled, setButtonDisabled] = useState(false);
-  // let disableButton: boolean = true;
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const [formData, setFormData] = useState<FormData>({
     teamName: '',
@@ -74,6 +72,8 @@ const RegistrationForm = (): React.ReactElement => {
       ...prevFormData,
       [name]: validationResult.formattedPhoneNumber ?? value,
     }));
+
+    if (!validationResult.valid) setButtonDisabled(true);
   };
 
   const postInfo = (): void => {
@@ -99,12 +99,9 @@ const RegistrationForm = (): React.ReactElement => {
     setButtonDisabled(false);
     const noError = Object.values(errors).every((el) => el === false);
 
-    if (noError) {
+    if (noError)
       // console.log(formData);
       postInfo();
-    } else {
-      setButtonDisabled(true);
-    }
   };
 
   const registrationBtnSendClasses = {
@@ -197,8 +194,6 @@ const RegistrationForm = (): React.ReactElement => {
         disabled={buttonDisabled}
       />
       <div>
-        {buttonDisabled && <NotificationError message="Неверно заполнены поля" />}
-
         <p className="form-registartion-body__description">
           <span>Нажимая кнопку «Отправить» я подтверждаю, что согласен c </span>
           <span className="form-registartion-body__description-selection">
