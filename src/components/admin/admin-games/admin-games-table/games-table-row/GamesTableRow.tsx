@@ -2,8 +2,10 @@ import React, { type FC } from 'react';
 import { type GamesTableRowProps } from './GamesTableRowProps';
 import useDeviceType from '../../../../../hooks/useDeviceType';
 import treeDots from '@assets/images/admin/three-dots.svg';
+import { useNavigate } from 'react-router-dom';
 
 const GamesTableRow: FC<GamesTableRowProps> = ({
+  id,
   title,
   theme,
   dateInfo,
@@ -15,8 +17,10 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
 
+  const navigate = useNavigate();
+
   return (
-    <tr className="games-table__row tbody__row">
+    <tr className="games-table__row tbody__row" onClick={() => navigate(`/admin/game-info/${id}`)}>
       {isMobile ? (
         <td className="games-table__data td-flex-title">
           <p>{title}</p>

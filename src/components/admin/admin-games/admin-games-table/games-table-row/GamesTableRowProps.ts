@@ -4,6 +4,7 @@ export declare interface DateInfo {
 }
 
 export declare interface GamesTableRowProps extends React.AllHTMLAttributes<HTMLDivElement> {
+  id: string;
   title: string;
   theme: string;
   dateInfo: DateInfo;
