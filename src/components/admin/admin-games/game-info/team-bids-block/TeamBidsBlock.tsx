@@ -20,7 +20,7 @@ const TeamBidsBlock: React.FC  = (): React.ReactElement => {
   } 
   useEffect(() => {
     handleSort(propToFilter)
-  })
+  }, [])
   
   
   return (
