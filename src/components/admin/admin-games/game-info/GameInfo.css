@@ -25,8 +25,8 @@
   .game-info {
     margin-top: 8px;
     grid-template-areas:
-      'gamedata requests'
-      'photos requests';
+      'leftblock requests'
+      'applications requests';
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
   }

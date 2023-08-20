@@ -1,0 +1,23 @@
+.game-info__block {
+    padding: 32px;
+    border: 6px solid var(--color-bg-slate-100);
+    border-radius: var(--border-base);
+}
+
+.game-applications_scrollBlock {
+    height: 605px;
+    overflow-y: scroll;
+}
+
+.game-info__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: var(--font-family-descriptions);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-semibold);
+    color: var(--color-bg-gray-600);
+  }
+
+  
+
+
