@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import partyPopper from '@assets/images/pop-up/party-popper.svg';
 import './FormRegistration.css';
 import '../../ui/input/Input.css';
 import Input from '../../ui/input/Input';
+import PopUp from '@components/ui/pop-up/pop-up';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import {
   type FormData,
@@ -22,6 +24,7 @@ import axios from 'axios';
 const RegistrationForm = (): React.ReactElement => {
   const [errorResponce, setErrorResponce] = useState('');
   const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [popUpActive, setPopUpActive] = useState(false);
 
   const [formData, setFormData] = useState<FormData>({
     teamName: '',
@@ -87,7 +90,7 @@ const RegistrationForm = (): React.ReactElement => {
         birthDate: formData.birthday,
       })
       .then((response) => {
-        console.log(response);
+        setPopUpActive(true);
       })
       .catch((err) => {
         setErrorResponce(err.message);
@@ -97,10 +100,15 @@ const RegistrationForm = (): React.ReactElement => {
   const handleSubmit = (event: any): void => {
     event.preventDefault();
     setButtonDisabled(false);
-    const noError = Object.values(errors).every((el) => el === false);
 
-    if (noError)
-      // console.log(formData);
+    const noError = Object.values(errors).every((el) => el === false);
+    if (
+      noError &&
+      formData.teamName &&
+      formData.numPeople &&
+      formData.telNumber &&
+      formData.socialMediaPage
+    )
       postInfo();
   };
 
@@ -109,15 +117,29 @@ const RegistrationForm = (): React.ReactElement => {
     buttonTitle: 'form-registration__btn-send-title',
   };
 
+  const closePopUp = (): void => {
+    setPopUpActive(false);
+  };
+
   return (
     <form className="form-registration">
-      {/* перенести куда то на страницу ответ от сервера с ошибкой */}
-      {errorResponce && <NotificationError message={errorResponce} />}
+      <div className="server-error">
+        {errorResponce && <NotificationError message={errorResponce} />}
+      </div>
+      {popUpActive && (
+        <PopUp
+          clickClose={closePopUp}
+          title="Поздравляем с регистрацией на игру"
+          mainText="Приходите играть и наслаждаться музыкой вместе с нами!"
+          noteText="Не забудьте проверить свою почту, где мы отправили вам информацию об игре."
+          image={partyPopper}
+        />
+      )}
 
       <section>
         <h2 className="form-registration__title">Регистрация на игру</h2>
       </section>
-      <section className="form-registartion-body__firstblock">
+      <section className="form-registration-body__firstblock">
         <Input
           value={formData.teamName}
           type="text"
@@ -180,7 +202,7 @@ const RegistrationForm = (): React.ReactElement => {
           error={errors.birthday}
           errorMessage={errorMessages.birthday}
         />
-        <p className="form-registartion-body__description">
+        <p className="form-registration-body__description">
           Если в Вашей команде есть именинник (3 дня до и 3 после), пожалуйста, укажите как его
           зовут и мы обязательно поздравим его на мероприятии. Также Вы можете указать любимую
           композицию именинника на поздравление.
@@ -190,13 +212,13 @@ const RegistrationForm = (): React.ReactElement => {
         title="Отправить"
         onClick={handleSubmit}
         styles={registrationBtnSendClasses}
-        href="#form-registartion"
+        href="#form-registration"
         disabled={buttonDisabled}
       />
       <div>
-        <p className="form-registartion-body__description">
+        <p className="form-registration-body__description">
           <span>Нажимая кнопку «Отправить» я подтверждаю, что согласен c </span>
-          <span className="form-registartion-body__description-selection">
+          <span className="form-registration-body__description-selection">
             условиями пользовательского соглашения
           </span>
         </p>
