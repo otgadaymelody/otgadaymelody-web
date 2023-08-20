@@ -3,7 +3,7 @@ import arrowBack from '@assets/images/admin/arrow-back.svg';
 import './GameData.css';
 // import axios from 'axios';
 
-const GameData: FC = () => {
+const GameData= (): React.ReactElement => {
   //   const [gameData, setGameData] = useState();
 
   //   useEffect(() => {
