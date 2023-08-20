@@ -1,10 +1,10 @@
 import React from 'react';
-import GamesMain from '../components/games/games-main';
+import GameRegistration from '../components/games/game-registration';
 
 const Games = (): React.ReactElement => {
   return (
     <main>
-      <GamesMain />
+      <GameRegistration />
     </main>
   );
 };
