@@ -1,4 +1,4 @@
-export const GAMES_DATA = [
+export const GAMES_TABLE_DATA = [
   {
     id: '1',
     title: 'Новогодний Караоке Эдишн',

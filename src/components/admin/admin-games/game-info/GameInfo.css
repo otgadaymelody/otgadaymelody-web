@@ -1,9 +1,13 @@
 .game-info {
   margin-top: 24px;
   margin-bottom: 40px;
-  display: grid;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
   row-gap: 40px;
+}
+
+.game-info__gamedata {
+  margin-bottom: 40px;
 }
 
 .game-info__title {
@@ -21,26 +25,32 @@
   border-radius: var(--border-sm);
 }
 
+@media (min-width: 744px) {
+  .game-info {
+    margin-top: 0;
+  }
+
+  .game-info__leftblock {
+    width: 70%;
+  }
+
+  .game-info__applications {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-info {
+    flex-direction: row;
+    column-gap: 80px;
+  }
+}
+
 @media (min-width: 1440px) {
   .game-info {
     margin-top: 8px;
-    grid-template-areas:
-      'leftblock requests'
-      'applications requests';
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     column-gap: 80px;
-  }
-
-  .game-info__gamedata {
-    grid-area: gamedata;
-  }
-
-  .game-info__photos {
-    grid-area: photos;
-  }
-
-  .game-info__requests {
-    grid-area: requests;
   }
 
   .game-info__block {

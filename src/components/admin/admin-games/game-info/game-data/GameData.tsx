@@ -1,14 +1,27 @@
 import React, { FC, useEffect, useState } from 'react';
+import axios from 'axios';
+import { type GameDataType } from './GameDataProps';
+import { INITIAL_GAME_DATA } from './GameData.consts';
 import arrowBack from '@assets/images/admin/arrow-back.svg';
+import treeDots from '@assets/images/admin/three-dots.svg';
 import './GameData.css';
-// import axios from 'axios';
 
-const GameData= (): React.ReactElement => {
-  //   const [gameData, setGameData] = useState();
+const GameData = (): React.ReactElement => {
+  const [gameData, setGameData] = useState<GameDataType>(INITIAL_GAME_DATA);
 
-  //   useEffect(() => {
-  //     axios.get(`/api/admin/game-info?gameId=${gameId}`);
-  //   });
+  useEffect(() => {
+    axios
+      .get(`/api/admin/game-info?gameId=${1}`)
+      .then((res) => {
+        setGameData(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  console.log(gameData);
 
   return (
     <div className="game-info__gamedata gamedata">
@@ -16,26 +29,57 @@ const GameData= (): React.ReactElement => {
         <button className="gamedata__back-btn">
           <img src={arrowBack} alt="стрелка влево" />
         </button>
-        <h3 className="gamedata__title">Информация об игре</h3>
+        <h3 className="game-info__title">Информация об игре</h3>
       </div>
-      <div className="gamedata__container">
-        <p>Караоке Эдишн</p>
-        <p>дата</p>
-        <p>Название игры</p>
-        <p>Новогодний Караоке Эдишн</p>
-        <p>Описание игры</p>
-        <p>Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!</p>
-        <p>Место проведения</p>
-        <p>Бар “Пивзавод”</p>
-        <p>Зеленский Съезд, 10</p>
-        <p>Стоимость за одного игрока</p>
-        <p>500 р</p>
-        <p>Мест на игре</p>
-        <progress id="seats-progress" value={0.25}></progress>
-        <p>126 / 500</p>
-        <p>Зарегистрировано</p>
-        <span>8 команд</span>
-        <span>126 человека</span>
+      <div className="game-info__block">
+        <button className="dots-btn">
+          <img src={treeDots} alt="три вертикальные точки" />
+        </button>
+        <div className="gamedata__text_large">{gameData.gameType}</div>
+        <div className="gamedata__text_medium">{gameData.gameDate}</div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Название игры</div>
+          <span className="gamedata__text">{gameData.gameName}</span>
+        </div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Описание игры</div>
+          <span className="gamedata__text">Здесь будет описание</span>
+        </div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Место проведения</div>
+          <div className="gamedata__text">{gameData.gameLocationName}</div>
+          <span className="gamedata__text">
+            {gameData.gameAddress.street}, {gameData.gameAddress.building}
+          </span>
+        </div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Стоимость за одного игрока</div>
+          <span className="gamedata__text">
+            {gameData.gameBasePrice} {gameData.gameCurrencyPrice}
+          </span>
+        </div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Мест на игре</div>
+          <progress id="seats-progress" value={0.25}></progress>{' '}
+          <span className="gamedata__text">
+            {gameData.adminInfo.playersConfirmedCount} / {gameData.adminInfo.gameMaxPlayersCount}
+          </span>
+        </div>
+
+        <div className="gamedata__miniblock">
+          <div className="gamedata__subtitle">Зарегистрировано</div>
+          <div className="gamedata__text">
+            <span>
+              {gameData.adminInfo.teamsConfirmedCount} команд{' '}
+              {gameData.adminInfo.playersConfirmedCount} человек
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
