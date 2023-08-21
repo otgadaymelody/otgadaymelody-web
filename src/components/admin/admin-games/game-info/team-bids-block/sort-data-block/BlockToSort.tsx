@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import './SortDataBlock.css'
+import './BlockToSort.css'
 
 interface SortFDataBlockProps {
     onChange: any;
 }
 
-const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
+const BlockToSort: React.FC<SortFDataBlockProps> = ({onChange}) => {
     const [isActiveId, setActiveId] = useState('__all');
 
     const handleChoose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
@@ -19,7 +19,7 @@ const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
                 id='__all'
                 className={
                     isActiveId === '__all'
-                        ? 'sort-data__button--active'
+                        ? 'sort-data__button_active'
                         : 'sort-data__button'}>
                             Все
                 </button>
@@ -28,7 +28,7 @@ const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
                 id='__pending'
                 className={
                     isActiveId === '__pending'
-                        ? 'sort-data__button--active'
+                        ? 'sort-data__button_active'
                         : 'sort-data__button'}>В 
                         ожидании
                 </button>
@@ -37,7 +37,7 @@ const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
                 id='__approved'
                 className={
                     isActiveId === '__approved'
-                        ? 'sort-data__button--active'
+                        ? 'sort-data__button_active'
                         : 'sort-data__button'}>
                             Подтверждён
                 </button>
@@ -46,7 +46,7 @@ const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
                 id='__deleted'
                 className={
                     isActiveId === '__deleted'
-                        ? 'sort-data__button--active'
+                        ? 'sort-data__button_active'
                         : 'sort-data__button'}>
                             Удалён
                 </button>
@@ -54,4 +54,4 @@ const SortDataBlock: React.FC<SortFDataBlockProps> = ({onChange}) => {
   )
 }
 
-export default SortDataBlock
+export default BlockToSort

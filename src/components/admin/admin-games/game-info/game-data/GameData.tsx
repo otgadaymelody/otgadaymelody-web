@@ -4,12 +4,6 @@ import './GameData.css';
 // import axios from 'axios';
 
 const GameData= (): React.ReactElement => {
-  //   const [gameData, setGameData] = useState();
-
-  //   useEffect(() => {
-  //     axios.get(`/api/admin/game-info?gameId=${gameId}`);
-  //   });
-
   return (
     <div className="game-info__gamedata gamedata">
       <div className="gamedata__top">
@@ -19,23 +13,27 @@ const GameData= (): React.ReactElement => {
         <h3 className="gamedata__title">Информация об игре</h3>
       </div>
       <div className="gamedata__container">
-        <p>Караоке Эдишн</p>
-        <p>дата</p>
-        <p>Название игры</p>
-        <p>Новогодний Караоке Эдишн</p>
-        <p>Описание игры</p>
-        <p>Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!</p>
-        <p>Место проведения</p>
-        <p>Бар “Пивзавод”</p>
-        <p>Зеленский Съезд, 10</p>
-        <p>Стоимость за одного игрока</p>
-        <p>500 р</p>
-        <p>Мест на игре</p>
-        <progress id="seats-progress" value={0.25}></progress>
-        <p>126 / 500</p>
-        <p>Зарегистрировано</p>
-        <span>8 команд</span>
-        <span>126 человека</span>
+        <dl>
+          <dt>Караоке Эдишн</dt>
+          <dd>дата</dd>
+          <dt>Название игры</dt>
+          <dd>Новогодний Караоке Эдишн</dd>
+          <dt>Описание игры</dt>
+          <dd>Встречаем Новый 2023 Год самыми известными и любимыми караоке хитами!</dd>
+          <dt>Место проведения</dt>
+          <dd>Бар “Пивзавод”</dd>
+          <dd>Зеленский Съезд, 10</dd>
+          <dt>Стоимость за одного игрока</dt>
+          <dd>500 р</dd>
+          <dt>Мест на игре</dt>
+          <progress id="seats-progress" value={0.25}></progress>
+          <dd>126 / 500</dd>
+          <dt>Зарегистрировано</dt>
+          <dd>
+            <span>8 команд</span>
+            <span>126 человека</span>
+          </dd>
+        </dl>
       </div>
     </div>
   );
