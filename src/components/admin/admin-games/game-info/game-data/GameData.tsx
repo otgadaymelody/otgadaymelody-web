@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
+import React from 'react';
 import arrowBack from '@assets/images/admin/arrow-back.svg';
 import './GameData.css';
-// import axios from 'axios';
+
 
 const GameData= (): React.ReactElement => {
   return (
