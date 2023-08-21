@@ -34,11 +34,19 @@ export const validateNumPeople = (value: string): ValidationReturnType => {
 export const validateTelNumber = (value: string): ValidationReturnType => {
   const phoneNumber = value.replace(/[^\d]/g, '');
 
-  const phoneCheck = /^\+?([0-9]|\(|\)|\s)+$/.test(value);
-  if (!phoneCheck) {
+  const phoneCheckNumber = /[0-9]/.test(value);
+  const phoneCheck = /^((8|\+7)[-]?)?(\(?\d{3}\)?[-]?)?[\d\- ]{7,10}$/.test(value);
+
+  if (!phoneCheckNumber) {
     return {
       valid: false,
       errorMessage: 'Вводите только цифры',
+    };
+  }
+  if (value.length < 11) {
+    return {
+      valid: false,
+      errorMessage: 'Номер слишком короткий',
     };
   }
   let formattedPhoneNumber = '+7(';

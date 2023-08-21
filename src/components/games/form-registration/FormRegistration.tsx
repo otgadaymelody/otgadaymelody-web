@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import partyPopper from '@assets/images/pop-up/party-popper.svg';
 import './FormRegistration.css';
 import '../../ui/input/Input.css';
@@ -20,41 +20,38 @@ import {
 } from './registration-validators';
 import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
+import {
+  INITIAL_FORM_DATA,
+  INITIAL_ERRORS_STATE,
+  registrationBtnSendClasses,
+} from './FormRegistration.consts';
 
 const RegistrationForm = (): React.ReactElement => {
   const [errorResponce, setErrorResponce] = useState('');
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [popUpActive, setPopUpActive] = useState(false);
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
+  const [errors, setErrors] = useState<ErrorData>(INITIAL_ERRORS_STATE);
+  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>(INITIAL_FORM_DATA);
 
-  const [formData, setFormData] = useState<FormData>({
-    teamName: '',
-    numPeople: '',
-    telNumber: '',
-    socialMediaPage: '',
-    birthday: '',
-  });
-
-  const [errors, setErrors] = useState<ErrorData>({
-    teamName: false,
-    numPeople: false,
-    telNumber: false,
-    socialMediaPage: false,
-    birthday: false,
-  });
-
-  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>({
-    teamName: '',
-    numPeople: '',
-    telNumber: '',
-    socialMediaPage: '',
-    birthday: '',
-  });
+  useEffect(() => {
+    const noError = Object.values(errors).every((el) => el === false);
+    if (
+      noError &&
+      formData.teamName &&
+      formData.numPeople &&
+      formData.telNumber &&
+      formData.socialMediaPage
+    )
+      setButtonDisabled(false);
+    else setButtonDisabled(true);
+  }, [errors]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
-    setButtonDisabled(false);
-    setErrors({ ...errors, [name]: false });
     let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
+
+    setErrors({ ...errors, [name]: false });
 
     if (name === 'teamName') {
       validationResult = validateTeamName(value);
@@ -75,11 +72,10 @@ const RegistrationForm = (): React.ReactElement => {
       ...prevFormData,
       [name]: validationResult.formattedPhoneNumber ?? value,
     }));
-
-    if (!validationResult.valid) setButtonDisabled(true);
   };
 
-  const postInfo = (): void => {
+  const handleSubmit = (event: any): void => {
+    event.preventDefault();
     setErrorResponce('');
     axios
       .post('/api/game-registration/apply', {
@@ -95,26 +91,6 @@ const RegistrationForm = (): React.ReactElement => {
       .catch((err) => {
         setErrorResponce(err.message);
       });
-  };
-
-  const handleSubmit = (event: any): void => {
-    event.preventDefault();
-    setButtonDisabled(false);
-
-    const noError = Object.values(errors).every((el) => el === false);
-    if (
-      noError &&
-      formData.teamName &&
-      formData.numPeople &&
-      formData.telNumber &&
-      formData.socialMediaPage
-    )
-      postInfo();
-  };
-
-  const registrationBtnSendClasses = {
-    buttonForm: 'form-registration__btn-send',
-    buttonTitle: 'form-registration__btn-send-title',
   };
 
   const closePopUp = (): void => {

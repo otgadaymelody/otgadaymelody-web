@@ -19,17 +19,15 @@ const PopUp: FC<popUpProps> = ({
   ...props
 }): React.ReactElement => {
   return (
-    <div className={`pop-up`}>
+    <article className={`pop-up`}>
       <div className="pop-up__info-block">
-        <div className="pop-up__close" onClick={clickClose}>
-          <img src={closeIcon} />
-        </div>
+        <img className="pop-up__close" onClick={clickClose} src={closeIcon} />
         <img src={image} />
         <h1 className="pop-up__title">{title}</h1>
         <p className="pop-up__main-text">{mainText}</p>
         <p className="pop-up__note-text">{noteText}</p>
       </div>
-    </div>
+    </article>
   );
 };
 

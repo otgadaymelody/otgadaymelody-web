@@ -1,11 +1,11 @@
 import React from 'react';
 import GameRegistration from '../components/games/game-registration';
 
-const Games = (): React.ReactElement => {
+const Game = (): React.ReactElement => {
   return (
     <main>
       <GameRegistration />
     </main>
   );
 };
-export default Games;
+export default Game;
