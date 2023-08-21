@@ -43,7 +43,7 @@ const TeamBidData: React.FC<TeamBidDataType> = (
                     </button>
                   )}
                     <button className='button_delete'>
-                      Отменить
+                      {status === 'deleted'? 'Восстановить':'Отменить'}
                     </button>
                 </div>
           </div>

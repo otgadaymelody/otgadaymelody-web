@@ -124,7 +124,7 @@
     }
 
     .block_deposit{
-        bottom: 25px;
+        bottom: 10px;
     }
     .status--is_pending, .status--is_approved, .status--is_deleted{
         margin-bottom: 0;
