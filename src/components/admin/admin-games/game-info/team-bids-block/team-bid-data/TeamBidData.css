@@ -120,10 +120,13 @@
 @media(min-width: 400px) {
     .team-status__block{
         flex-direction: row;
-        align-items: end;
+        align-items: center;
     }
 
     .block_deposit{
         bottom: 25px;
+    }
+    .status--is_pending, .status--is_approved, .status--is_deleted{
+        margin-bottom: 0;
     }
     }
