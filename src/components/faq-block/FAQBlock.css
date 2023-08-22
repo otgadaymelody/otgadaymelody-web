@@ -16,7 +16,7 @@
   font: var(--fonts-h2-faq-title-DEPRECATED);
 
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .faq-block__questions-list {
@@ -42,7 +42,7 @@
   color: var(--color-bg-gray-900);
 
   position: relative;
-  z-index: 10;
+  z-index: 1;
   border-bottom: 1px solid var(--color-bg-gray-100);
 }
 

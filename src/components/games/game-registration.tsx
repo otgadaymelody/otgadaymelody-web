@@ -11,12 +11,12 @@ import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
 import { type GameData } from './game-registration.interfaces';
 import { useParams } from 'react-router-dom';
-import { initialApiData } from './game-registration.consts';
+import { INITIAL_API_DATA } from './game-registration.consts';
 
 const GameRegistration: FC = () => {
   const { gameId } = useParams() as { gameId: number | undefined };
   const [error, setError] = useState('');
-  const [apiData, setApiData] = useState<GameData>(initialApiData);
+  const [apiData, setApiData] = useState<GameData>(INITIAL_API_DATA);
 
   useEffect(() => {
     if (gameId && Number(gameId)) {

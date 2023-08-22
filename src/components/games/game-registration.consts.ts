@@ -1,4 +1,4 @@
-export const initialApiData = {
+export const INITIAL_API_DATA = {
   id: 0,
   gameName: '',
   gameType: '',
