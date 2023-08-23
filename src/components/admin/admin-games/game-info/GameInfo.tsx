@@ -5,7 +5,7 @@ import TeamBidsBlock from './team-bids-block/TeamBidsBlock';
 
 const GameInfo = (): React.ReactElement => {
   return (
-    <section className="game-info">
+    <article className="game-info">
       <div className="game-info__leftblock">
         <GameData />
         <div className="game-info__photos">
@@ -15,7 +15,7 @@ const GameInfo = (): React.ReactElement => {
       </div>
 
       <TeamBidsBlock />
-    </section>
+    </article>
   );
 };
 
