@@ -7,7 +7,7 @@ import NotificationError from '@components/ui/notifications/notification-error';
 import { useNavigate } from 'react-router-dom';
 import './UserAuthForm.css';
 
-const USERAUTHFORMBTNCLASSES = {
+const USER_AUTH_FORM_BTN_CLASSES = {
   buttonForm: 'form-auth__btn',
   buttonTitle: 'form-auth__btn-title',
 };
@@ -70,7 +70,7 @@ const UserAuthForm: FC = () => {
           required={false}
           error={false}
         />
-        <BaseButton title="Войти" styles={USERAUTHFORMBTNCLASSES} />
+        <BaseButton title="Войти" styles={USER_AUTH_FORM_BTN_CLASSES} />
       </form>
     </>
   );
