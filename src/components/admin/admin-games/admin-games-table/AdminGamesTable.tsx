@@ -1,5 +1,5 @@
 import React, { type FC } from 'react';
-import { GAMES_DATA } from './gamesData.consts';
+import { GAMES_TABLE_DATA } from './gamesTableData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
 import './AdminGamesTable.css';
 
@@ -19,9 +19,10 @@ const AdminGamesTable: FC = () => {
           </tr>
         </thead>
         <tbody className="games-table__body tbody">
-          {GAMES_DATA.map((item, index) => (
+          {GAMES_TABLE_DATA.map((item, index) => (
             <GamesTableRow
               key={index}
+              id={item.id}
               title={item.title}
               theme={item.theme}
               dateInfo={item.dateInfo}

@@ -7,6 +7,7 @@ import InProcess from '../../../pages/in-process';
 import Game from '../../../pages/Game';
 import UserAuth from '../../../pages/UserAuth';
 import Admin from '../../../pages/Admin';
+import GameInfo from '@components/admin/admin-games/game-info/GameInfo';
 
 const AppRouter = (): React.ReactElement => {
   return (
@@ -17,7 +18,8 @@ const AppRouter = (): React.ReactElement => {
       <Route path="/inprocess" element={<InProcess />} />
       <Route path="/game-registration/:gameId" element={<Game />} />
       <Route path="/user-auth-admin" element={<UserAuth />} />
-      <Route path="/admin" element={<Admin />}></Route>
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/admin/game-info/:gameId" element={<GameInfo />} />
     </Routes>
   );
 };

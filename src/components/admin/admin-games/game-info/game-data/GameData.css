@@ -1,0 +1,67 @@
+.gamedata__top {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.gamedata .game-info__title {
+  margin-bottom: 0;
+}
+
+.gamedata__back-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.gamedata .game-info__block {
+  position: relative;
+}
+
+.gamedata .dots-btn {
+  position: absolute;
+  right: 16px;
+}
+
+.gamedata__text_large,
+.gamedata__text_medium {
+  margin-bottom: 24px;
+}
+
+.gamedata__miniblock {
+  margin-top: 16px;
+}
+
+.gamedata__subtitle {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-500);
+}
+
+.gamedata__text {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-900);
+}
+
+.gamedata__text_large {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-900);
+}
+
+.gamedata__text_medium {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-500);
+}
+
+@media (min-width: 1440px) {
+  .gamedata .dots-btn {
+    right: 32px;
+  }
+}
