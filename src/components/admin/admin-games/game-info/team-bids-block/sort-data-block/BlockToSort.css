@@ -3,7 +3,7 @@
     height: 48px;
     border-radius: 12px;
     padding-inline: 4px;
-    background: #F3F4F6;
+    background: var(--color-bg-slate-100);
     display: flex;
     align-items: center;
     margin-bottom: 16px;
@@ -18,10 +18,10 @@
     border: none;
     cursor: pointer;
     font-weight: 600;
-    color: #6B7280;
+    color: var( --color-bg-gray-500);
   }
 
-  .sort-data__button--active{
+  .sort-data__button_active{
     height: 40px;
     border-radius: 10px;
     padding-inline: 20px;
@@ -30,5 +30,5 @@
     cursor: pointer;
     background: var(--color-bg-white);
     font-weight: 600;
-    color: #F01F77;
+    color: var(--color-pink);
   }

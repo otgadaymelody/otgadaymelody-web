@@ -20,7 +20,7 @@ const TeamBidData: React.FC<TeamBidDataType> = (
             <div className='team-name'>
               {teamName}
             </div>
-            <div className='count_players'>
+            <div className='count__players'>
               {playersCount} чел.
             </div>
           </div>
@@ -43,10 +43,9 @@ const TeamBidData: React.FC<TeamBidDataType> = (
                     </button>
                   )}
                     <button className='button_delete'>
-                      Отменить
+                      {status === 'deleted'? 'Восстановить':'Отменить'}
                     </button>
                 </div>
-                  {/* instead of 500, should be price of game from tableRows */}
           </div>
           <div className='block_deposit'>
               {playersCount*500} р

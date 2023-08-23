@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './TeamBidsBlock.css';
-import SortDataBlock from './sort-data-block/SortDataBlock';
+import BlockToSort from './sort-data-block/BlockToSort';
 import TeamBidData from './team-bid-data/TeamBidData';
 import { TeamBidsData } from './team-bid-data/TeamBidsData.consts';
 
@@ -23,9 +23,9 @@ const TeamBidsBlock: React.FC = (): React.ReactElement => {
   return (
     <div className="game-info__applications">
       <h3 className="game-info__title">Заявки на игру</h3>
-      <div className="game-info__block game-applications_wrapper">
-        <SortDataBlock onChange={handleSort} />
-        <div className="game-applications_scrollBlock">
+      <div className="game-info__block game-applications__wrapper">
+        <BlockToSort onChange={handleSort} />
+        <div className="game-applications__scrollBlock">
           {filtersData.map((item, index) => (
             <TeamBidData
               key={index}

@@ -1,4 +1,10 @@
-.game-applications_scrollBlock {
-  height: 605px;
-  overflow-y: scroll;
+.game-info__block {
+    padding: 32px;
+    border: 6px solid var(--color-bg-slate-100);
+    border-radius: var(--border-base);
+}
+
+.game-applications__scrollBlock {
+    height: 605px;
+    overflow-y: scroll;
 }
