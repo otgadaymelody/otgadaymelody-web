@@ -9,31 +9,29 @@ import GameInfographicItem from './game-infographic/GameInfographicItem';
 import sliderNextImg from '@assets/images/future-game/slider-next.svg';
 import type { AtGameSliderProps } from './AtGameSliderProps';
 
-const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactElement => {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+const AtGameSlider = ({ quantityVisibleSlides }: AtGameSliderProps): React.ReactElement => {
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
   const [backBtnVisible, setBackBtnVisible] = useState(false);
-  const [forwardBtnVisible, setForwardBtnVisible] = useState(true)
-  const [countClicks, setCountClicks] = useState(0)
+  const [forwardBtnVisible, setForwardBtnVisible] = useState(true);
+  const [countClicks, setCountClicks] = useState(0);
   useEffect(() => {
-    checkCounter()
-  }, [countClicks])
+    checkCounter();
+  }, [countClicks]);
   const changeCounterBack = useCallback(() => {
-    setCountClicks(countClicks - 1)
-  }, [countClicks])
+    setCountClicks(countClicks - 1);
+  }, [countClicks]);
   const changeCounterForward = useCallback(() => {
-    setCountClicks(countClicks + 1)
-  }, [countClicks])
+    setCountClicks(countClicks + 1);
+  }, [countClicks]);
   const checkCounter = useCallback(() => {
-    countClicks > 0
-    ? setBackBtnVisible(true)
-    : setBackBtnVisible(false)
+    countClicks > 0 ? setBackBtnVisible(true) : setBackBtnVisible(false);
     countClicks < gameInfographicItems.length - quantityVisibleSlides
-    ? setForwardBtnVisible(true)
-    : setForwardBtnVisible(false)
-  }, [countClicks])
+      ? setForwardBtnVisible(true)
+      : setForwardBtnVisible(false);
+  }, [countClicks]);
   return (
     <Swiper
       className="at-game-slider"
@@ -62,16 +60,16 @@ const AtGameSlider = ({quantityVisibleSlides}: AtGameSliderProps): React.ReactEl
           >
             <img src={sliderNextImg} alt={'Кнопка назад'} />
           </div>
-          <div 
+          <div
             onClick={changeCounterForward}
-            ref={navigationNextRef} 
+            ref={navigationNextRef}
             className={
               forwardBtnVisible
-                ? "at-game-slider__slider-button-next"
-                : "at-game-slider__slider-button_none"
+                ? 'at-game-slider__slider-button-next'
+                : 'at-game-slider__slider-button_none'
             }
-            >
-            <img src={sliderPrevImg} alt={'Кнопка вперед'}/>
+          >
+            <img src={sliderPrevImg} alt={'Кнопка вперед'} />
           </div>
         </div>
       )}
