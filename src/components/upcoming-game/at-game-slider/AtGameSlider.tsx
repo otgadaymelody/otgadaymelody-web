@@ -44,7 +44,10 @@ const AtGameSlider = ({ quantityVisibleSlides }: AtGameSliderProps): React.React
     >
       {gameInfographicItems.map((item, index) => (
         <SwiperSlide key={index}>
-          <GameInfographicItem title={item.title} />
+          <GameInfographicItem
+            title={item.title}
+            path={`assets/images/upcoming-game/mediator${index}.svg`}
+          />
         </SwiperSlide>
       ))}
       {!isMobile && (

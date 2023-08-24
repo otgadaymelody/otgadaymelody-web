@@ -7,6 +7,7 @@
 }
 .game-infographic-item__mediator {
   width: 98px;
+  min-height: 150px;
 }
 .game-infographic-item__content {
   position: relative;

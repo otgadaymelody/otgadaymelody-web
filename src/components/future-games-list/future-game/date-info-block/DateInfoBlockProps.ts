@@ -2,4 +2,5 @@ export declare interface DateInfoBlockProps extends React.AllHTMLAttributes<HTML
   dateInfo: string;
   gameTime: string;
   className?: string;
+  gameNumber: number;
 }

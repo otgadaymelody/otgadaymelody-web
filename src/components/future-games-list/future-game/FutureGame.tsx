@@ -7,7 +7,7 @@ import DateInfoBlock from './date-info-block/DateInfoBlock';
 import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
 
-const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElement => {
+const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.ReactElement => {
   const onButtonClickHandler = (): void => {
     window.location.href = 'https://vk.com/wall-164712588_7623';
   };
@@ -20,6 +20,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElemen
           className={'future-game__date'}
           dateInfo={game.gameDate}
           gameTime={game.gameTime}
+          gameNumber={index}
         />
       </div>
       <div className="future-game__description-block">

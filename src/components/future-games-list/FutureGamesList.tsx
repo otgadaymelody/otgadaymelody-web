@@ -85,12 +85,12 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               swiperRef.current = swiper;
             }}
             spaceBetween={16}
-            slidesPerView={3}
+            slidesPerView={4}
             className="future-games-list__games-list_mobile"
           >
-            {futureGames.map((item) => (
+            {futureGames.map((item, index) => (
               <SwiperSlide key={item.id} className={'future-games-list__game-slide_mobile'}>
-                <FutureGame className={'future-games-list__game'} game={item} />
+                <FutureGame className={'future-games-list__game'} game={item} index={index + 1} />
               </SwiperSlide>
             ))}
             <div
@@ -135,9 +135,9 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                 },
               }}
             >
-              {futureGames.map((item) => (
+              {futureGames.map((item, index) => (
                 <SwiperSlide key={item.id} className={'future-games-list__game-slide'}>
-                  <FutureGame className={'future-games-list__game'} game={item} />
+                  <FutureGame className={'future-games-list__game'} game={item} index={index + 1} />
                 </SwiperSlide>
               ))}
               <div className={futureButtonsWrapper}>
