@@ -6,6 +6,7 @@ import { ReactComponent as PriceImg } from '../../../assets/images/home-page/upc
 import GameButton from '@components/ui/game-button/GameButton';
 import { type GameInformationBannerProps } from '@components/upcoming-game/UpcomingGameProps';
 import DateInfoBlock from '@components/future-games-list/future-game/date-info-block/DateInfoBlock';
+import { Link } from 'react-router-dom';
 
 const GameInformationBanner: FC<GameInformationBannerProps> = ({
   game,
@@ -14,9 +15,8 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
 }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
-  const onButtonClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7623';
-  };
+  const path = `/game-registration/${game.id}`;
+
   return (
     <div className="game-information-banner">
       <div className="game-information-banner__info">
@@ -50,11 +50,12 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
       </div>
       <div className="game-information-banner__buttons">
         <GameButton styles="game-information-banner__btn-more" title="Подробнее" grey />
-        <GameButton
-          styles="game-information-banner__btn-registration"
-          title="Регистрация на игру"
-          onClick={onButtonClickHandler}
-        />
+        <Link to={path}>
+          <GameButton
+            styles="game-information-banner__btn-registration"
+            title="Регистрация на игру"
+          />
+        </Link>
       </div>
     </div>
   );

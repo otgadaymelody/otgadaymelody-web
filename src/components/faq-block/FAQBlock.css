@@ -76,14 +76,9 @@
 @media (min-width: 744px) {
   .faq-block {
     padding: 32px;
-    gap: 56px;
   }
   .faq-block__title {
-    font-size: 50px;
-  }
-
-  .faq-block__questions-list {
-    gap: 24px;
+    font-size: 40px;
   }
 
   .faq-block__question {
@@ -95,7 +90,7 @@
 
 @media (min-width: 1440px) {
   .faq-block {
-    padding: 48px;
+    padding: 0 35px;
   }
 }
 

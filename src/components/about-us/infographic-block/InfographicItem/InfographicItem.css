@@ -6,7 +6,8 @@
 }
 
 .infographic-item__image {
-  width: 207px;
+  width: 100%;
+  max-width: 207px;
   height: auto;
 }
 
@@ -21,38 +22,44 @@
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-
   color: var(--color-bg-white);
 }
 
-/* TO-DO: FIX AFTER CALL DESIGNER */
 .infographic-item__title {
   font: var(--fonts-h2-infographic-title-DEPRECATED);
-  font-size: 32px;
+  font-size: var(--text-4xl);
   font-weight: 700;
 }
 
 .infographic-item__description {
+  width: 80%;
   text-align: center;
   font: var(--fonts-p-infographic-description-DEPRECATED);
-  font-size: 18px;
+  font-size: var(--text-base);
   line-height: 1.2;
 }
 
 @media (min-width: 744px) {
   .infographic-item__text {
+    gap: 10px;
     padding: 0 35px;
   }
   .infographic-item__image {
-    width: 304px;
-    height: 224px;
+    max-width: 304px;
+    min-height: 224px;
   }
 
   .infographic-item__title {
-    font-size: 50px;
+    font-size: var(--text-5xl);
   }
 
   .infographic-item__description {
-    font-size: 24px;
+    font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 1440px) {
+  .infographic-item__description {
+    font-size: var(--text-3xl);
   }
 }

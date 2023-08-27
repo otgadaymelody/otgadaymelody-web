@@ -116,7 +116,6 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
               </div>
             </div>
 
-            {/* починить слайдер, не перелистывается */}
             {isMobile ? (
               <AtGameSlider quantityVisibleSlides={2} />
             ) : (
