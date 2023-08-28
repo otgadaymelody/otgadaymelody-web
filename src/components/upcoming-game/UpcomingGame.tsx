@@ -115,12 +115,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 <GameInformationBanner game={nextGame} />
               </div>
             </div>
-
-            {isMobile ? (
-              <AtGameSlider quantityVisibleSlides={2} />
-            ) : (
-              <AtGameSlider quantityVisibleSlides={4} />
-            )}
+            <AtGameSlider quantityVisibleSlides={4}></AtGameSlider>
           </div>
         </section>
       )}

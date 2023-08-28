@@ -16,6 +16,9 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
   const path = `/game-registration/${game.id}`;
+  const scrollToTop = (): void => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="game-information-banner">
@@ -52,6 +55,7 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
         <GameButton styles="game-information-banner__btn-more" title="Подробнее" grey />
         <Link to={path}>
           <GameButton
+            onClick={scrollToTop}
             styles="game-information-banner__btn-registration"
             title="Регистрация на игру"
           />

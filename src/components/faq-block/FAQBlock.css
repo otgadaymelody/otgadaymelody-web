@@ -8,7 +8,7 @@
   width: 95%;
   min-width: 336px;
   height: fit-content;
-  border-radius: 32px;
+  border-radius: var(--border-base);
   gap: 24px;
 }
 
@@ -78,7 +78,7 @@
     padding: 32px;
   }
   .faq-block__title {
-    font-size: 40px;
+    font-size: var(--text-6xl);
   }
 
   .faq-block__question {
@@ -95,16 +95,8 @@
 }
 
 @media (min-width: 1920px) {
-  .faq-block__title {
-    font-size: 50px;
-  }
-
-  .faq-block__question {
-    font-weight: 600;
-  }
-
   .faq-block__answer {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
   }
 }

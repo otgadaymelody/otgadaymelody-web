@@ -6,7 +6,7 @@
   align-items: center;
 }
 .game-infographic-item__mediator {
-  width: 98px;
+  width: 130px;
   min-height: 150px;
 }
 .game-infographic-item__content {
@@ -25,6 +25,21 @@
   text-align: center;
   color: var(--color-bg-white);
   font: var(--fonts-p-infographic-description-DEPRECATED);
+}
+
+@media (min-width: 480px) {
+  .game-infographic-item {
+    min-width: 170px;
+  }
+  .game-infographic-item__mediator {
+    min-width: 160px;
+  }
+  .game-infographic-item__content {
+    min-width: 165px;
+  }
+  .game-infographic-item__description {
+    font: var(--fonts-interesting-fact-DEPRECATED);
+  }
 }
 
 @media (min-width: 744px) {

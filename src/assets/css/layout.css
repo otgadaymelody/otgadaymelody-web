@@ -84,4 +84,7 @@ body {
 }
 
 @media (min-width: 1920px) {
+  .home-page-faq-block {
+    margin-left: calc(-100vw / 7);
+  }
 }

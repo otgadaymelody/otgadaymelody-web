@@ -85,7 +85,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               swiperRef.current = swiper;
             }}
             spaceBetween={16}
-            slidesPerView={4}
+            slidesPerView={1}
             className="future-games-list__games-list_mobile"
           >
             {futureGames.map((item, index) => (

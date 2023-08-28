@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom';
 
 const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.ReactElement => {
   const path = `/game-registration/${index}`;
+  const scrollToTop = (): void => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className={className != null ? concatStyles('future-game', className) : 'future-game'}>
@@ -42,7 +45,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.Reac
       </div>
       <div>
         <Link to={path}>
-          <GameRegistrationButton />
+          <GameRegistrationButton onClick={scrollToTop} />
         </Link>
       </div>
     </div>

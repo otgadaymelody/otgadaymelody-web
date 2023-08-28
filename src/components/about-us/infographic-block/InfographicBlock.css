@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 500px) {

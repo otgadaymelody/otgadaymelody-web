@@ -11,6 +11,13 @@
   height: auto;
 }
 
+.infographic-item__shadow {
+  max-height: 170px;
+  position: absolute;
+  top: 10px;
+  z-index: -1;
+}
+
 .infographic-item__text {
   display: flex;
   flex-direction: column;
@@ -49,6 +56,11 @@
     min-height: 224px;
   }
 
+  .infographic-item__shadow {
+    max-height: 260px;
+    top: 10px;
+  }
+
   .infographic-item__title {
     font-size: var(--text-5xl);
   }
@@ -58,8 +70,19 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .infographic-item__shadow {
+    max-height: 230px;
+    top: 20px;
+  }
+}
+
 @media (min-width: 1440px) {
   .infographic-item__description {
     font-size: var(--text-3xl);
+  }
+  .infographic-item__shadow {
+    max-height: 250px;
+    top: 30px;
   }
 }

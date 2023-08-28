@@ -35,11 +35,30 @@ const AtGameSlider = ({ quantityVisibleSlides }: AtGameSliderProps): React.React
   return (
     <Swiper
       className="at-game-slider"
-      slidesPerView={quantityVisibleSlides}
       modules={[Navigation]}
       navigation={{
         nextEl: navigationNextRef.current,
         prevEl: navigationPrevRef.current,
+      }}
+      breakpoints={{
+        240: {
+          slidesPerView: 1.5,
+        },
+        360: {
+          slidesPerView: 2.2,
+        },
+        768: {
+          slidesPerView: 2.9,
+        },
+        1024: {
+          slidesPerView: 4.1,
+        },
+        1280: {
+          slidesPerView: 3.3,
+        },
+        1440: {
+          slidesPerView: 3.9,
+        },
       }}
     >
       {gameInfographicItems.map((item, index) => (
