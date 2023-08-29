@@ -1,0 +1,52 @@
+.add-game {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  color: var(--color-bg-gray-900);
+}
+
+.add-game__header {
+  margin: 0;
+  font-family: var(--font-family-descriptions);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-600);
+}
+
+.add-game__steps {
+  border-bottom: 1px solid var(--color-bg-gray-200);
+}
+
+.add-game__steps span {
+  color: var(--color-pink);
+}
+
+.add-game__form .input {
+  margin-top: 8px;
+}
+
+.add-game__controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-game__step_one {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.add-game__btn {
+  height: 54px;
+  border-radius: var(--border-xs);
+}
+
+.add-form__cancel-btn {
+  margin-top: 24px;
+  background-color: white;
+
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-500);
+  border: none;
+}
