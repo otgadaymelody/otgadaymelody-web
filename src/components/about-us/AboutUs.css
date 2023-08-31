@@ -1,3 +1,6 @@
+* {
+  outline: 1px solid slateblue;
+}
 .about-us {
   width: 100%;
   display: flex;
@@ -13,7 +16,8 @@
 }
 
 .game-rules__title {
-  font: var(--fonts-h2-faq-title-DEPRECATED);
+  margin-top: 64px;
+  font: var(--fonts-h2-infographic-title-DEPRECATED);
   text-align: start;
 }
 
@@ -23,8 +27,8 @@
 }
 
 .game-rules__description {
-  margin-top: 24px;
-  font: var(--fonts-p-main-description-DEPRECATED);
+  margin-top: 18px;
+  font: var(--fonts-registration-button-title-DEPRECATED);
 }
 
 .game-rules__reg-btn {
@@ -38,28 +42,39 @@
   font-weight: 600;
 }
 
-.game-rules__preview-img {
-  max-width: 100%;
-  border-radius: 32px;
-  position: relative;
+.game-rules__main-info {
+  margin-bottom: 80px;
 }
 
+/* .game-rules__image-group {
+  position: relative;
+  width: 100%;
+  min-width: 95vw;
+  min-height: 275px;
+} */
+
+.game-rules__preview-img {
+  max-width: 97%;
+  border-radius: 32px;
+  /* position: relative; */
+}
+
+/* .game-rules__vector-img {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: -1;
+} */
+
 @media (min-width: 744px) {
-  .game-rules__main-info {
-    padding-right: 63px;
-  }
   .game-rules__title {
+    font: var(--fonts-h4-subtitle-DEPRECATED);
     margin-top: 97px;
-    font-size: 40px;
-  }
-  .game-rules__subtitle {
-    margin-top: 48px;
-    font-size: 24px;
   }
 
   .game-rules__description {
-    margin-top: 72px;
-    font-size: 20px;
+    margin-top: 40px;
   }
 
   .game-rules__reg-btn {
@@ -70,23 +85,53 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .about-us {
-    gap: 120px;
+@media (min-width: 1024px) {
+  .game-rules__main-info {
+    display: grid;
+    grid-template-columns: 40% 60%;
   }
+
   .game-rules__title {
+    grid-area: 1/2/2/3;
     margin-top: 0;
   }
-  .game-rules__wrapper {
-    flex-direction: row;
-    gap: 100px;
-  }
+
+  /* .game-rules__image-group {
+    grid-area: 1/1/3/2;
+    width: 40%;
+    min-width: 38vw;
+    min-height: 275px;
+  } */
+
   .game-rules__preview-img {
-    max-width: 853px;
+    max-width: 53vw;
     margin-left: calc(-100vw / 6);
-    max-height: 540px;
   }
+
+  /* .game-rules__vector-img {
+    top: 150px;
+  } */
+
   .game-rules__description {
+    grid-area: 2/2/3/3;
+    padding: 10px;
     margin-top: 18px;
   }
+}
+
+@media (min-width: 1440px) {
+  /* .game-rules__image-group {
+    min-width: 28vw;
+  } */
+  .game-rules__preview-img {
+    width: 45vw;
+    max-width: 834px;
+    /* margin-left: -20vw; */
+  }
+  /* .game-rules__vector-img {
+    top: 50px;
+    right: 1px;
+    width: 45vw;
+    max-width: 900px;
+  } */
 }

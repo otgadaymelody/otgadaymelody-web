@@ -73,9 +73,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 8px;
-  align-self: stretch;
+}
+
+.game-information-banner__btn-registration {
+  width: 100%;
 }
 
 @media (min-width: 744px) {

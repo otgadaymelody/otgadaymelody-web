@@ -1,5 +1,8 @@
 import React, { type FC } from 'react';
-import aboutUsPreview from '../../assets/images/home-page/about-us-preview.png';
+// import aboutUsPreview from '../../assets/images/home-page/about-us-preview.png';
+import aboutUsPreview from '../../assets/images/home-page/about-us-with-vector.png';
+
+import vectorImage from '../../assets/images/home-page/wave-bg.svg';
 import useDeviceType from '../../hooks/useDeviceType';
 import './AboutUs.css';
 import InfographicBlock from './infographic-block/InfographicBlock';
@@ -13,14 +16,21 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
   return (
     <div className={`about-us ${className}`}>
       <div className="game-rules__wrapper">
-        {!isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
+        {/* {!isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />} */}
+
         <section className="game-rules__main-info">
+          {/* <div className="game-rules__image-group">
+            <img src={aboutUsPreview} className="game-rules__preview-img" />
+            <img src={vectorImage} className="game-rules__vector-img" />
+          </div> */}
+          <img src={aboutUsPreview} className="game-rules__preview-img" />
+
           <h2 className="game-rules__title">Как проходят игры?</h2>
-          {isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />}
+          {/* {isMobile && <img src={aboutUsPreview} className="game-rules__preview-img" />} */}
           <article className="game-rules__description-wrapper">
             <p className="game-rules__description">
-              Отгадай Мелодию- это народное интеллектуально-музыкальное шоу в формате квиз игры, где
-              командам предстоит отгадывать знакомые мелодии, петь во весь голос, танцевать и
+              Отгадай Мелодию - это народное интеллектуально - музыкальное шоу в формате квиз игры,
+              где командам предстоит отгадывать знакомые мелодии, петь во весь голос, танцевать и
               веселиться от души в непередаваемой атмосфере.
             </p>
             <p className="game-rules__description">

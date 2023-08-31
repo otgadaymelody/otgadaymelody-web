@@ -20,18 +20,18 @@ const DateInfoBlock: FC<DateInfoBlockProps> = ({
 
   return (
     <div className={className ? `${className} date-info-block` : 'date-info-block'}>
-      {gameNumber && even && (
-        <img className="date-info-block__badge date-info-block__badge_left" src={badge1_1} />
-      )}
-      {gameNumber && even && (
-        <img className="date-info-block__badge date-info-block__badge_right" src={badge1_2} />
+      {gameNumber > 0 && even && (
+        <>
+          <img className="date-info-block__badge date-info-block__badge_left" src={badge1_1} />
+          <img className="date-info-block__badge date-info-block__badge_right" src={badge1_2} />
+        </>
       )}
 
-      {gameNumber && !even && (
-        <img className="date-info-block__badge date-info-block__badge_left" src={badge2_1} />
-      )}
-      {gameNumber && !even && (
-        <img className="date-info-block__badge date-info-block__badge_right" src={badge2_2} />
+      {gameNumber > 0 && !even && (
+        <>
+          <img className="date-info-block__badge date-info-block__badge_left" src={badge2_1} />
+          <img className="date-info-block__badge date-info-block__badge_right" src={badge2_2} />
+        </>
       )}
       <div
         className={
