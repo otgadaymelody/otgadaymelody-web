@@ -10,9 +10,11 @@ const TeamBidData: React.FC<TeamBidDataType> = (
     contactPlayerName,
     contactPlayerPhone,
     status,
-    teamName
+    teamName = 'Team Name',
+    gamesData = []
   }
 ): React.ReactElement => {
+
   return (
     <div className='team-data__wrapper'>
         <div className='team-data__insideblock'>
@@ -42,7 +44,7 @@ const TeamBidData: React.FC<TeamBidDataType> = (
                       Подтвердить
                     </button>
                   )}
-                    <button className='button_delete'>
+                    <button  className='button_delete'>
                       {status === 'deleted'? 'Восстановить':'Отменить'}
                     </button>
                 </div>

@@ -1,3 +1,5 @@
+import type { MouseEventHandler } from "react";
+
 export declare interface DateInfo {
   day: string;
   month: string;

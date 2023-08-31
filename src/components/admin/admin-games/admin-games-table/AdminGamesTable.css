@@ -71,6 +71,10 @@
   cursor: pointer;
 }
 
+.games-table__data__dots-btn {
+  position: relative;
+}
+
 .tbody__row:first-child .games-table__data:first-child {
   border-top-left-radius: var(--border-sm);
 }
