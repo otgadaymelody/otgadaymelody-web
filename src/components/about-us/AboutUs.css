@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid slateblue;
-}
 .about-us {
   width: 100%;
   display: flex;
@@ -13,22 +10,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .game-rules__title {
-  margin-top: 64px;
+  margin-top: -30px;
   font: var(--fonts-h2-infographic-title-DEPRECATED);
   text-align: start;
 }
 
 .game-rules__subtitle {
   margin-top: 32px;
-  font: var(--fonts-h4-card-title-DEPRECATED);
+  font: var(--fonts-h5-card-description-DEPRECATED);
 }
 
 .game-rules__description {
   margin-top: 18px;
   font: var(--fonts-registration-button-title-DEPRECATED);
+  color: var(--color-bg-gray-700);
 }
 
 .game-rules__reg-btn {
@@ -46,35 +45,18 @@
   margin-bottom: 80px;
 }
 
-/* .game-rules__image-group {
-  position: relative;
-  width: 100%;
-  min-width: 95vw;
-  min-height: 275px;
-} */
-
 .game-rules__preview-img {
-  max-width: 97%;
+  width: 100%;
   border-radius: 32px;
-  /* position: relative; */
 }
 
-/* .game-rules__vector-img {
-  width: 100%;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  z-index: -1;
-} */
+.game-rules__link {
+  text-decoration: none;
+}
 
 @media (min-width: 744px) {
   .game-rules__title {
     font: var(--fonts-h4-subtitle-DEPRECATED);
-    margin-top: 97px;
-  }
-
-  .game-rules__description {
-    margin-top: 40px;
   }
 
   .game-rules__reg-btn {
@@ -86,52 +68,50 @@
 }
 
 @media (min-width: 1024px) {
+  .game-rules__wrapper {
+    flex-direction: row;
+    gap: 48px;
+  }
+
   .game-rules__main-info {
-    display: grid;
-    grid-template-columns: 40% 60%;
+    margin-bottom: 50px;
   }
 
   .game-rules__title {
-    grid-area: 1/2/2/3;
+    padding-left: 10px;
     margin-top: 0;
   }
 
-  /* .game-rules__image-group {
-    grid-area: 1/1/3/2;
-    width: 40%;
-    min-width: 38vw;
-    min-height: 275px;
-  } */
-
-  .game-rules__preview-img {
-    max-width: 53vw;
-    margin-left: calc(-100vw / 6);
+  .game-rules__subtitle {
+    padding-left: 10px;
   }
 
-  /* .game-rules__vector-img {
-    top: 150px;
-  } */
+  .game-rules__preview-img {
+    max-width: 64vw;
+    margin-left: calc(-100vw / 4);
+  }
 
   .game-rules__description {
-    grid-area: 2/2/3/3;
     padding: 10px;
     margin-top: 18px;
   }
 }
 
-@media (min-width: 1440px) {
-  /* .game-rules__image-group {
-    min-width: 28vw;
-  } */
-  .game-rules__preview-img {
-    width: 45vw;
-    max-width: 834px;
-    /* margin-left: -20vw; */
+@media (min-width: 1280px) {
+  .game-rules__title {
+    font-size: var(--text-6xl);
   }
-  /* .game-rules__vector-img {
-    top: 50px;
-    right: 1px;
-    width: 45vw;
-    max-width: 900px;
-  } */
+
+  .game-rules__description {
+    font-size: var(--text-xl);
+  }
+
+  .game-rules__subtitle {
+    font: var(--fonts-h4-card-title-DEPRECATED);
+    font-size: var(--text-4xl);
+  }
+
+  .game-rules__preview-img {
+    margin-left: calc(-100vw / 5);
+  }
 }
