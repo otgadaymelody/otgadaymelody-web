@@ -17,11 +17,14 @@ const Header: FC = () => {
   const navigate = useNavigate();
 
   const deviceType = useDeviceType();
+  const isMobile = deviceType === 'mobile';
+  const isTablet = deviceType === 'tablet';
   const isDesktop = deviceType === 'desktop';
+  const isTabletLg = deviceType === 'tablet-lg';
 
   return (
     <header className="header">
-      {!isDesktop && (
+      {!isDesktop && !isTabletLg && (
         <BurgerBtn
           onClick={() => {
             setActiveMenu(true);
@@ -37,7 +40,7 @@ const Header: FC = () => {
           }}
         />
 
-        {isDesktop && (
+        {(isDesktop || isTabletLg) && (
           <nav className="header__links">
             {NAV_LINKS.map((item, index) => (
               <HeaderLink
@@ -57,9 +60,14 @@ const Header: FC = () => {
           <UserLogo className="header__social-btn" />
         </div>
       ) : (
-        <LocationBtn className="header__location-btn" />
+        <>
+          {!isMobile && !isTablet && <UserLogo className="header__social-btn" />}
+          <LocationBtn className="header__location-btn" />
+        </>
       )}
-      {!isDesktop && activeMenu && <BurgerMenu active={activeMenu} setActive={setActiveMenu} />}
+      {!isDesktop && !isTabletLg && activeMenu && (
+        <BurgerMenu active={activeMenu} setActive={setActiveMenu} />
+      )}
     </header>
   );
 };

@@ -95,6 +95,11 @@
     width: 174px;
     height: 52px;
   }
+
+  .header__location-btn {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 @media (min-width: 1440px) {

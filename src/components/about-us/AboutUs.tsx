@@ -1,6 +1,6 @@
 import React, { type FC, useEffect, useState } from 'react';
-import aboutUsPreview from '../../assets/images/home-page/about-us-with-vector.png';
-import aboutUsPreviewMobile from '../../assets/images/home-page/about-us-with-vector-mobile.png';
+import aboutUsPreview from '../../assets/images/home-page/about-us/about-us-with-vector.png';
+import aboutUsPreviewMobile from '../../assets/images/home-page/about-us/about-us-with-vector-mobile.png';
 import BaseButton from '../ui/base-button/BaseButton';
 import useDeviceType from '../../hooks/useDeviceType';
 import './AboutUs.css';

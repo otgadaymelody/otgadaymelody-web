@@ -1,13 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType, Navigation } from 'swiper';
-
 import './GameRulesCarousel.css';
 import 'swiper/css';
-
 import GameRulesSlide from './GameRulesSlide/GameRulesSlide';
 import { GAME_RULES_LIST } from './gameRules.consts';
-import carouselImg01 from '../../../assets/images/home-page/game-rules-carousel/01.png';
 import prevSlideImg from '../../../assets/images/home-page/game-rules-carousel/prev-slide-img.svg';
 import nextSlideImg from '../../../assets/images/home-page/game-rules-carousel/next-slide-img.svg';
 
@@ -17,7 +14,10 @@ const GameRulesCarousel = (): React.ReactElement => {
   return (
     <div className="game-rules-carousel">
       <div className="game-rules-carousel__image-wrapper">
-        <img className="game-rules-carousel__img" src={carouselImg01} />
+        <img
+          className="game-rules-carousel__img"
+          src={`assets/images/game-rules-carousel/0${currentSlide + 1}.png`}
+        />
       </div>
 
       <Swiper
