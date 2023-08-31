@@ -60,7 +60,7 @@ const InterestingFacts: FC<InterestingFactsProps> = ({ isVisible }): React.React
         navigation={{ nextEl: '.custom-button-next', prevEl: '.custom-button-prev' }}
         pagination={pagination}
         autoplay={{
-          delay: 2500,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
