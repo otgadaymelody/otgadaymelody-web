@@ -1,4 +1,4 @@
-import React, { useState, type FC } from 'react';
+import React, { useState, type FC, useCallback } from 'react';
 import GamesSwitch from './games-switch/GamesSwitch';
 import BaseButton from '../../ui/base-button/BaseButton';
 import AdminGamesTable from './admin-games-table/AdminGamesTable';
@@ -9,13 +9,13 @@ import './AdminGames.css';
 const AdminGames: FC = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleModalOpen = (): void => {
+  const handleModalOpen = useCallback(() => {
     setShowModal(true);
-  };
+  }, [showModal]);
 
-  const handleModalClose = (): void => {
+  const handleModalClose = useCallback(() => {
     setShowModal(false);
-  };
+  }, [showModal]);
 
   return (
     <section className="admin-games">

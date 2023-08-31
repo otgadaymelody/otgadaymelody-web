@@ -16,16 +16,14 @@
 .modal-content {
   width: 100%;
   max-width: 344px;
-  /* max-height: calc(100vh - 40px); */
-  background: white;
+  max-height: calc(100vh - 40px);
+  background: var(--color-bg-white);
   position: relative;
   margin: 0 8px;
   padding: 16px;
-  overflow: hidden;
+  overflow: auto;
   border-radius: var(--border-xs);
-  box-shadow: 0px 0px 0px 0px rgba(21, 41, 68, 0.03), -1px 7px 16px 0px rgba(21, 41, 68, 0.03),
-    -3px 30px 30px 0px rgba(21, 41, 68, 0.03), -7px 67px 40px 0px rgba(21, 41, 68, 0.02),
-    -13px 119px 48px 0px rgba(21, 41, 68, 0), -20px 185px 52px 0px rgba(21, 41, 68, 0);
+  box-shadow: var(--modal-shadow);
 }
 
 .modal-close-btn {

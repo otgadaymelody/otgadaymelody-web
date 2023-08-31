@@ -14,7 +14,6 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent): void => {
       const { target } = event;
-
       if (target instanceof Node && modalRef.current === target) {
         onClose?.();
       }
@@ -25,11 +24,12 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
         onClose?.();
       }
     };
-
+    document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('click', handleClickOutside);
     document.addEventListener('keydown', handleEscapePress);
 
     return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('click', handleClickOutside);
       document.removeEventListener('keydown', handleEscapePress);
     };
