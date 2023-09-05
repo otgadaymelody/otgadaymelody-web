@@ -30,7 +30,7 @@
   --weight-heavy: 900;
 
   /* === Border Radiuses === */
-  --border-xxxs:6px;
+  --border-xxxs: 6px;
   --border-xxs: 8px;
   --border-xs: 16px;
   --border-sm: 24px;
@@ -57,10 +57,12 @@
 
   --fonts-faq-block-DEPRECATED: 600 20px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-h5-card-description-DEPRECATED: 500 20px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-span-carousel-description-DEPRECATED: 400 20px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-span-carousel-description-DEPRECATED: 400 20px/1.4 var(--font-family-descriptions),
+    sans-serif;
 
   --fonts-question-title-DEPRECATED: 600 18px/1.4 var(--font-family-descriptions), sans-serif;
-  --fonts-registration-button-title-DEPRECATED: 500 18px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-registration-button-title-DEPRECATED: 500 18px/1.4 var(--font-family-descriptions),
+    sans-serif;
 
   --fonts-show-all-btn-title-DEPRECATED: 600 16px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-p-main-description-DEPRECATED: 500 16px/1.4 var(--font-family-descriptions), sans-serif;
@@ -70,7 +72,8 @@
   --fonts-navigation-link-DEPRECATED: 500 14px/1.4 var(--font-family-descriptions), sans-serif;
   --fonts-upcoming-title-DEPRECATED: 400 14px/1.4 var(--font-family-descriptions), sans-serif;
 
-  --fonts-p-infographic-description-DEPRECATED: 600 12px/1.4 var(--font-family-descriptions), sans-serif;
+  --fonts-p-infographic-description-DEPRECATED: 600 12px/1.4 var(--font-family-descriptions),
+    sans-serif;
 
   /* === Images === */
   /* header images */
@@ -96,21 +99,23 @@
   --color-bg-gray-700: rgba(55, 65, 81, 1);
   --color-bg-gray-600: rgba(75, 85, 99, 1);
   --color-bg-gray-500: rgba(107, 114, 128, 1);
-  --color-bg-gray-300:rgba(153, 160, 174, 1);
-  --color-bg-gray-200:rgba(229, 231, 235, 1);
+  --color-bg-gray-300: rgba(153, 160, 174, 1);
+  --color-bg-gray-200: rgba(229, 231, 235, 1);
   --color-bg-gray-100: rgba(205, 213, 228, 1);
-  --color-bg-gray-50:rgba(205, 207, 216, 1);
-  --color-bg-gray-0:rgba(248, 249, 251, 1);
+  --color-bg-gray-50: rgba(205, 207, 216, 1);
+  --color-bg-gray-0: rgba(248, 249, 251, 1);
   --color-bg-white: rgba(255, 255, 255, 1);
   --color-gradient: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);
   --color-pink: rgba(240, 31, 119, 1);
+  --color-pink-light: rgb(255, 229, 240);
   --color-red: rgba(255, 64, 86, 1);
   --color-lime: rgba(194, 215, 47, 1);
-  --color-lime-light: rgba(213, 234, 65, 1);
+  --color-lime-light: rgba(213, 234, 65, 0.1);
   --color-lime-dark: rgba(181, 202, 31, 1);
   --color-bg-slate-0: rgba(224, 224, 224, 1);
   --color-bg-slate-100: rgba(241, 245, 249, 1);
-  --color-bg-slate-200:rgba(243, 244, 246, 1);
+  --color-bg-slate-200: rgba(243, 244, 246, 1);
+  --color-bg-slate-200: rgba(243, 244, 246, 1);
   --color-bg-orange: rgba(242, 153, 74, 1);
 
   /* === Gradients === */
@@ -119,7 +124,7 @@
   /* === Effects === */
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02), -3px 30px 30px rgba(21, 41, 68, 0.03),
     -1px 7px 16px rgba(21, 41, 68, 0.03), 0px 0px 0px rgba(21, 41, 68, 0.03);
-  --box-shadow: - 0 4px 12px rgba(75, 85, 99, 0.15);
+  --box-shadow: -0 4px 12px rgba(75, 85, 99, 0.15);
 
   /* Masks */
   --banner-mask: linear-gradient(0deg, rgba(255, 64, 64, 0.1), rgba(255, 64, 64, 0.1)),
