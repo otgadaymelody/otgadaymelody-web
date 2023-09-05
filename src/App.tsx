@@ -9,11 +9,8 @@ import './assets/css/layout.css';
 import Layout from '@components/layout/Layout';
 
 function App(): React.ReactElement {
-  return (
-    <div className="App">
-      <Layout />
-    </div>
-  );
+  document.location.href = 'https://teletype.in/@otgaday.melody';
+  return <div className="App">{/* <Layout /> */}</div>;
 }
 
 export default App;
