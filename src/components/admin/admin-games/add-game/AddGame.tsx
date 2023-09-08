@@ -8,8 +8,8 @@ import { INITIAL_STEPS_DATA, type StepsProps } from './add-game-steps/StepsProps
 import './AddGame.css';
 
 const ADD_GAME_FORM_BTN_CLASSES = {
-  buttonForm: 'add-game__btn',
-  buttonTitle: 'add-game__btn-title',
+  buttonForm: 'game-form__add-btn',
+  buttonTitle: 'game-form__add-btn-title',
 };
 
 const AddGame: FC = (): React.ReactElement => {
@@ -32,6 +32,29 @@ const AddGame: FC = (): React.ReactElement => {
     setFormData(data);
   };
 
+  function getStepDescription(step: number) {
+    switch (step) {
+      case 1:
+        return (
+          <p id="dialogDesc" className="add-game__description">
+            Выберите тематику предстоящей игры
+          </p>
+        );
+      case 2:
+        return (
+          <p id="dialogDesc" className="add-game__description">
+            Добавьте название и описание для игры, их увидят игроки в списке предстоящих игр
+          </p>
+        );
+      case 3:
+        return (
+          <p id="dialogDesc" className="add-game__description">
+            Завершите добавление игры
+          </p>
+        );
+    }
+  }
+
   return (
     <article
       role="dialog"
@@ -48,30 +71,15 @@ const AddGame: FC = (): React.ReactElement => {
           <span>Шаг 2</span>
           <span>Шаг 3</span>
         </div>
-
-        {formStep === 1 && (
-          <p id="dialogDesc" className="add-game__description">
-            Выберите тематику предстоящей игры
-          </p>
-        )}
-        {formStep === 2 && (
-          <p id="dialogDesc" className="add-game__description">
-            Добавьте название и описание для игры, их увидят игроки в списке предстоящих игр
-          </p>
-        )}
-        {formStep === 3 && (
-          <p id="dialogDesc" className="add-game__description">
-            Завершите добавление игры
-          </p>
-        )}
+        {getStepDescription(formStep)}
       </div>
 
-      <form className="add-game__form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="add-game__form game-form" onSubmit={handleSubmit(onSubmit)}>
         {formStep === 1 && <StepOne control={control} />}
         {formStep === 2 && <StepTwo control={control} />}
         {formStep === 3 && <StepThree formData={formData} />}
 
-        <div className="add-game__controls">
+        <div className="game-form__controls">
           {formStep > 2 ? (
             <BaseButton title="Добавить игру" styles={ADD_GAME_FORM_BTN_CLASSES} />
           ) : (
@@ -82,9 +90,9 @@ const AddGame: FC = (): React.ReactElement => {
             />
           )}
           {formStep < 2 ? (
-            <button className="add-form__cancel-btn">Отменить</button>
+            <button className="game-form__cancel-btn">Отменить</button>
           ) : (
-            <button className="add-form__cancel-btn" onClick={prevStep}>
+            <button className="game-form__cancel-btn" onClick={prevStep}>
               Назад
             </button>
           )}

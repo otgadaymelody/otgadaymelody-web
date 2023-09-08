@@ -117,6 +117,7 @@
   --color-bg-slate-200: rgba(243, 244, 246, 1);
   --color-bg-slate-200: rgba(243, 244, 246, 1);
   --color-bg-orange: rgba(242, 153, 74, 1);
+  --color-bg-overlay: rgba(0, 0, 0, 0.25);
 
   /* === Gradients === */
   --gragient-main: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);

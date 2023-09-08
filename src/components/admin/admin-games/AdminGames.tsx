@@ -11,10 +11,12 @@ const AdminGames: FC = () => {
 
   const handleModalOpen = useCallback(() => {
     setShowModal(true);
+    document.body.style.overflow = 'hidden';
   }, [showModal]);
 
   const handleModalClose = useCallback(() => {
     setShowModal(false);
+    document.body.style.overflow = '';
   }, [showModal]);
 
   return (

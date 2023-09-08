@@ -14,6 +14,7 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent): void => {
       const { target } = event;
+
       if (target instanceof Node && modalRef.current === target) {
         onClose?.();
       }
@@ -39,7 +40,12 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
     return null;
   }
 
-  return createPortal(<div className="modal">{children}</div>, document.body);
+  return createPortal(
+    <div className="modal" ref={modalRef}>
+      {children}
+    </div>,
+    document.body,
+  );
 };
 
 export default Modal;

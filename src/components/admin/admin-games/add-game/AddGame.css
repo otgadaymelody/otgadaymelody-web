@@ -53,24 +53,24 @@
   margin-top: 8px;
 }
 
-.add-game__controls {
+.game-form__controls {
   display: flex;
   flex-direction: column;
 }
 
-.add-game__step {
+.game-form__step {
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 }
 
-.add-game__btn {
+.game-form__add-btn {
   height: 54px;
   border-radius: var(--border-xs);
 }
 
-.add-form__cancel-btn {
+.game-form__cancel-btn {
   margin-top: 24px;
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);

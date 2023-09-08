@@ -4,7 +4,7 @@ import Input from '@components/ui/input/Input';
 
 export const StepTwo: FC<any> = ({ control }) => {
   return (
-    <section className="add-game__step">
+    <section className="game-form__step">
       <Controller
         control={control}
         name="gameDate"
@@ -28,7 +28,7 @@ export const StepTwo: FC<any> = ({ control }) => {
             type="text"
             placeholder="Город"
             onChange={onChange}
-            className="add-game__input"
+            className="game-form__input"
             name="city"
           />
         )}
@@ -43,7 +43,7 @@ export const StepTwo: FC<any> = ({ control }) => {
             type="text"
             placeholder="Адрес"
             onChange={onChange}
-            className="add-game__input"
+            className="game-form__input"
             name="streetAndBuilding"
           />
         )}

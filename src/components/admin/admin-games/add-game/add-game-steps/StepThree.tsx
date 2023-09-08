@@ -2,7 +2,7 @@ import React, { type FC } from 'react';
 
 export const StepThree: FC<any> = ({ formData }) => {
   return (
-    <section className="add-game__step">
+    <section className="game-form__step">
       <div className="add-game__description_center">
         <p className="add-game__description_active">Почти готово!</p>
         <p className="add-game__description">
