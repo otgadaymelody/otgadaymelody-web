@@ -1,31 +1,43 @@
-import React, { type MouseEventHandler } from 'react'
-import './DropDownMenu.css'
+import React, { useCallback, type MouseEventHandler } from 'react';
+import './DropDownMenu.css';
 
 interface DropDownBtnsType {
-    nameBtn: string;
-    btnColor: string;
+  nameBtn: string;
+  btnColor: string;
 }
 
 interface DropDownMenuPropsType {
-    btns: DropDownBtnsType[];
-    stateVisible: string;
-    click: MouseEventHandler;
+  btns: DropDownBtnsType[];
+  onClick: MouseEventHandler;
 }
 
-const DropDownMenu: React.FC<DropDownMenuPropsType> = ({btns, stateVisible, click  }: DropDownMenuPropsType) => {
-
-    const clickToButtonMove = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-        click(e)
-    }
+const DropDownMenu: React.FC<DropDownMenuPropsType> = ({
+  btns,
+  onClick,
+}: DropDownMenuPropsType) => {
+  const clickToButtonMove = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+      onClick(e);
+    },
+    [],
+  );
   return (
-        <div className={`dropdown-menu__wrapper dropdown-menu__wrapper_${stateVisible}`} >
-            {btns.map((btn: DropDownBtnsType, index: number) => {
-            return <button onClick={e=> {clickToButtonMove(e)}} key={index} className={`dropdown-menu__button dropdown-menu__button_${btn.btnColor}`}>
-                {btn.nameBtn}
-            </button>
-            })}
-        </div>
-  )
-}
+    <div className={`dropdown-menu__wrapper`}>
+      {btns.map((btn: DropDownBtnsType, index: number) => {
+        return (
+          <button
+            onMouseDown={(e) => {
+              clickToButtonMove(e);
+            }}
+            key={index}
+            className={`dropdown-menu__button dropdown-menu__button_${btn.btnColor}`}
+          >
+            {btn.nameBtn}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
 
-export default DropDownMenu
+export default DropDownMenu;

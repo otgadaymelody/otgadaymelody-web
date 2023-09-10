@@ -84,7 +84,7 @@
         border: 2px solid var(--color-pink);
     }
     
-    .button_approve{
+    .button__approve{
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;
@@ -95,7 +95,7 @@
         cursor: pointer;
     }
     
-    .button_delete{
+    .button__delete{
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;

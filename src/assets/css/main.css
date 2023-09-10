@@ -119,7 +119,7 @@
   --color-bg-orange: rgba(242, 153, 74, 1);
 
   /* === Gradients === */
-  --gragient-main: linear-gradient(85.72deg, #FF921C -39.65%, #FF2F62 48.32%, #BC099C 134.47%);
+  --gragient-main: linear-gradient(85.72deg, #ff921c -39.65%, #ff2f62 48.32%, #bc099c 134.47%);
 
   /* === Effects === */
   --shadow: -7px 67px 40px rgba(21, 41, 68, 0.02), -3px 30px 30px rgba(21, 41, 68, 0.03),
@@ -136,4 +136,8 @@
 
 .not-found__title {
   font: var(--text-base);
+}
+
+.position_absolute {
+  position: absolute;
 }

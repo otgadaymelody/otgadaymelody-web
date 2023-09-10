@@ -1,10 +1,9 @@
-import React, { useState, type FC } from 'react';
+import React, { type FC } from 'react';
 import { GAMES_DATA } from './gamesData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
 import './AdminGamesTable.css';
 
 const AdminGamesTable: FC = () => {
-
   return (
     <>
       <table className="games-table">
