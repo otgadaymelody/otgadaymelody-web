@@ -49,52 +49,56 @@ export const StepTwo: FC<any> = ({ control }) => {
         )}
       />
 
-      <Controller
-        control={control}
-        name="gameLocationName"
-        render={({ field: { onChange, value } }) => (
-          <Input
-            value={value}
-            type="text"
-            placeholder="Название места проведения"
-            onChange={onChange}
-            className="add-game__input"
-            name="gameLocationName"
-          />
-        )}
-      />
-      <span>Например, Бар &quot;Пивзавод&quot;</span>
+      <div>
+        <Controller
+          control={control}
+          name="gameLocationName"
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              type="text"
+              placeholder="Название места проведения"
+              onChange={onChange}
+              className="add-game__input"
+              name="gameLocationName"
+            />
+          )}
+        />
+        <span className="game-form__example">Например, Бар &quot;Пивзавод&quot;</span>
+      </div>
 
-      <Controller
-        control={control}
-        name="gameMaxPlayersCount"
-        render={({ field: { onChange, value } }) => (
-          <Input
-            value={value}
-            type="number"
-            placeholder="Количество мест"
-            onChange={onChange}
-            className="add-game__input"
-            name="gameMaxPlayersCount"
-            min={0}
-          />
-        )}
-      />
+      <div className="game-form__step_innerblock">
+        <Controller
+          control={control}
+          name="gameMaxPlayersCount"
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              type="number"
+              placeholder="Количество мест"
+              onChange={onChange}
+              className="add-game__input"
+              name="gameMaxPlayersCount"
+              min={0}
+            />
+          )}
+        />
 
-      <Controller
-        control={control}
-        name="gameBasePrice"
-        render={({ field: { onChange, value } }) => (
-          <Input
-            value={value}
-            type="text"
-            placeholder="Стоимость за одного игрока"
-            onChange={onChange}
-            className="add-game__input"
-            name="gameBasePrice"
-          />
-        )}
-      />
+        <Controller
+          control={control}
+          name="gameBasePrice"
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              type="text"
+              placeholder="Стоимость за одного игрока"
+              onChange={onChange}
+              className="add-game__input"
+              name="gameBasePrice"
+            />
+          )}
+        />
+      </div>
     </section>
   );
 };

@@ -38,3 +38,17 @@
   cursor: pointer;
   color: var(--color-bg-gray-600);
 }
+
+@media (min-width: 744px) {
+  .modal-content {
+    max-width: 740px;
+    max-height: calc(100vh - 15px);
+    padding: 32px;
+    border-radius: var(--border-base);
+  }
+
+  .modal-close-btn {
+    top: 32px;
+    right: 32px;
+  }
+}

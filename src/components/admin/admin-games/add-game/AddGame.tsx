@@ -37,19 +37,20 @@ const AddGame: FC = (): React.ReactElement => {
       case 1:
         return (
           <p id="dialogDesc" className="add-game__description">
-            Выберите тематику предстоящей игры
+            Выберите тематику игры. Добавьте название и описание: их увидят игроки в списке
+            предстоящих игр.
           </p>
         );
       case 2:
         return (
           <p id="dialogDesc" className="add-game__description">
-            Добавьте название и описание для игры, их увидят игроки в списке предстоящих игр
+            Заполните основную информацию об игре.
           </p>
         );
       case 3:
         return (
           <p id="dialogDesc" className="add-game__description">
-            Завершите добавление игры
+            Завершите добавление игры.
           </p>
         );
     }
@@ -74,7 +75,7 @@ const AddGame: FC = (): React.ReactElement => {
         {getStepDescription(formStep)}
       </div>
 
-      <form className="add-game__form game-form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="game-form" onSubmit={handleSubmit(onSubmit)}>
         {formStep === 1 && <StepOne control={control} />}
         {formStep === 2 && <StepTwo control={control} />}
         {formStep === 3 && <StepThree formData={formData} />}
