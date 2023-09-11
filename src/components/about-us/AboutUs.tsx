@@ -35,9 +35,9 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
     <div className={`about-us ${className}`}>
       <div className="game-rules__wrapper">
         {isMobile ? (
-          <img src={aboutUsPreviewMobile} className="game-rules__preview-img" />
+          <img src={aboutUsPreviewMobile} className="game-rules__preview-img" alt="Фото команды" />
         ) : (
-          <img src={aboutUsPreview} className="game-rules__preview-img" />
+          <img src={aboutUsPreview} className="game-rules__preview-img" alt="Фото команды" />
         )}
 
         <section className="game-rules__main-info">
@@ -67,7 +67,6 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 title="Регистрация на игру"
                 styles={registrationBtnClasses}
                 href="#upcoming-game"
-                // onClick={onClickHandler}
               />
             </Link>
           )}

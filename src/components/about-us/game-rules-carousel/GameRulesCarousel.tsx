@@ -17,6 +17,7 @@ const GameRulesCarousel = (): React.ReactElement => {
         <img
           className="game-rules-carousel__img"
           src={`assets/images/game-rules-carousel/0${currentSlide + 1}.png`}
+          alt={`${GAME_RULES_LIST[currentSlide].title}`}
         />
       </div>
 

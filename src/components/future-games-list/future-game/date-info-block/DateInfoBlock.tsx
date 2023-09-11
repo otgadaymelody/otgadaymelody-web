@@ -15,19 +15,19 @@ const DateInfoBlock: FC<DateInfoBlockProps> = ({
   ...props
 }): React.ReactElement => {
   const fullDate = dateReformatted(dateInfo);
-  let even = false;
-  if (gameNumber % 2) even = true;
+  const oddGameNumberCount = gameNumber && gameNumber > 0 && gameNumber % 2 === 0;
+  const evenGameNumberCount = gameNumber && gameNumber > 0 && gameNumber % 2 !== 0;
 
   return (
     <div className={className ? `${className} date-info-block` : 'date-info-block'}>
-      {gameNumber > 0 && even && (
+      {oddGameNumberCount && (
         <>
           <img className="date-info-block__badge date-info-block__badge_left" src={badge1_1} />
           <img className="date-info-block__badge date-info-block__badge_right" src={badge1_2} />
         </>
       )}
 
-      {gameNumber > 0 && !even && (
+      {evenGameNumberCount && (
         <>
           <img className="date-info-block__badge date-info-block__badge_left" src={badge2_1} />
           <img className="date-info-block__badge date-info-block__badge_right" src={badge2_2} />

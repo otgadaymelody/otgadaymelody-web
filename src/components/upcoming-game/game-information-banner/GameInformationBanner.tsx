@@ -28,7 +28,6 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
             dateInfo={game.gameDate}
             gameTime={game.gameTime}
             className="game-information-banner__date-info"
-            gameNumber={0}
           />
           <hr />
           <div className="game-information-banner__price">

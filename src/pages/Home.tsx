@@ -8,7 +8,6 @@ import PhotoGallery from '../components/photo-gallery/PhotoGallery';
 import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import PhotoNearBorderLeft from '../components/games/PhotoNearBorderLeft/PhotoNearBorderLeft';
-// import SellingBlock from '../components/selling-block/selling-block';
 import useOnScreen from '../hooks/useOnScreen';
 
 const Home: React.FC = () => {
@@ -29,6 +28,7 @@ const Home: React.FC = () => {
         <PhotoNearBorderLeft></PhotoNearBorderLeft>
         <FAQBlock className="games-registration__block-faqpart"></FAQBlock>
       </div>
+      {/* TO DO: раскомментировать, когда блок будет доработан */}
       {/* <SellingBlock className="home-page__selling-block home-page-block" /> */}
     </div>
   );
