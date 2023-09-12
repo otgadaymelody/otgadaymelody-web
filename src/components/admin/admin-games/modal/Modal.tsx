@@ -6,9 +6,10 @@ interface ModalProps {
   showModal: boolean;
   children: any;
   onClose?: () => void;
+  clickOutside?: () => void;
 }
 
-const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
+const Modal: FC<ModalProps> = ({ showModal, children, onClose, clickOutside }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
       const { target } = event;
 
       if (target instanceof Node && modalRef.current === target) {
-        onClose?.();
+        clickOutside?.();
       }
     };
 
@@ -34,7 +35,7 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose }) => {
       document.removeEventListener('click', handleClickOutside);
       document.removeEventListener('keydown', handleEscapePress);
     };
-  }, [onClose]);
+  }, [onClose, clickOutside]);
 
   if (!showModal) {
     return null;

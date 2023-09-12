@@ -19,13 +19,18 @@ const AdminGames: FC = () => {
     document.body.style.overflow = '';
   }, [showModal]);
 
+  const handleClickOutside = useCallback(() => {
+    setShowModal(false);
+    document.body.style.overflow = '';
+  }, [showModal]);
+
   return (
     <section className="admin-games">
       <div className="admin-games__bar">
         <h2 className="admin-games__title">Игры</h2>
         <GamesSwitch />
         <BaseButton title="Добавить игру" onClick={handleModalOpen} />
-        <Modal showModal={showModal} onClose={handleModalClose}>
+        <Modal showModal={showModal} onClose={handleModalClose} clickOutside={handleClickOutside}>
           <ModalContent setShowModal={setShowModal} />
         </Modal>
       </div>
