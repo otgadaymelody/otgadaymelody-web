@@ -1,11 +1,15 @@
 .game-rules-slide__title {
-  color: var(--color-lime);
   font: var(--fonts-h2-infographic-title-DEPRECATED);
+  text-transform: lowercase;
+}
+
+.game-rules-slide__title::first-letter {
+  text-transform: capitalize;
 }
 
 .game-rules-slide__description {
   margin: 15px 0;
-  font: var(--fonts-p-main-description-DEPRECATED);
+  font: var(--fonts-registration-button-title-DEPRECATED);
 }
 
 @media (min-width: 744px) {
@@ -19,9 +23,17 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .game-rules-slide__title {
+    font-size: var(--text-5xl);
+  }
+  .game-rules-slide__description {
+    font-size: var(--text-xl);
+  }
+}
+
 @media (min-width: 1440px) {
   .game-rules-slide__description {
-    font-size: 20px;
     font-weight: 400;
     margin: 24px 0;
   }

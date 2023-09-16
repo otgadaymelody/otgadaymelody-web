@@ -1,5 +1,6 @@
 export declare interface FutureGameProps extends React.AllHTMLAttributes<HTMLDivElement> {
   game: FutureGameResponseType;
+  index: number;
 }
 export declare interface FutureGameResponseType {
   gameAddress: GameAddress;

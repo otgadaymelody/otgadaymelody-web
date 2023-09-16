@@ -10,21 +10,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .game-rules__title {
-  font: var(--fonts-h2-faq-title-DEPRECATED);
+  margin-top: -30px;
+  font: var(--fonts-h2-infographic-title-DEPRECATED);
   text-align: start;
 }
 
 .game-rules__subtitle {
   margin-top: 32px;
-  font: var(--fonts-h4-card-title-DEPRECATED);
+  font: var(--fonts-h5-card-description-DEPRECATED);
 }
 
 .game-rules__description {
-  margin-top: 24px;
-  font: var(--fonts-p-main-description-DEPRECATED);
+  margin-top: 18px;
+  font: var(--fonts-registration-button-title-DEPRECATED);
+  color: var(--color-bg-gray-700);
 }
 
 .game-rules__reg-btn {
@@ -38,28 +41,22 @@
   font-weight: 600;
 }
 
+.game-rules__main-info {
+  margin-bottom: 80px;
+}
+
 .game-rules__preview-img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 32px;
-  position: relative;
+}
+
+.game-rules__link {
+  text-decoration: none;
 }
 
 @media (min-width: 744px) {
-  .game-rules__main-info {
-    padding-right: 63px;
-  }
   .game-rules__title {
-    margin-top: 97px;
-    font-size: 40px;
-  }
-  .game-rules__subtitle {
-    margin-top: 48px;
-    font-size: 24px;
-  }
-
-  .game-rules__description {
-    margin-top: 72px;
-    font-size: 20px;
+    font: var(--fonts-h4-subtitle-DEPRECATED);
   }
 
   .game-rules__reg-btn {
@@ -70,23 +67,51 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .about-us {
-    gap: 120px;
-  }
-  .game-rules__title {
-    margin-top: 0;
-  }
+@media (min-width: 1024px) {
   .game-rules__wrapper {
     flex-direction: row;
-    gap: 100px;
+    gap: 48px;
   }
+
+  .game-rules__main-info {
+    margin-bottom: 50px;
+  }
+
+  .game-rules__title {
+    padding-left: 10px;
+    margin-top: 0;
+  }
+
+  .game-rules__subtitle {
+    padding-left: 10px;
+  }
+
   .game-rules__preview-img {
-    max-width: 853px;
-    margin-left: calc(-100vw / 6);
-    max-height: 540px;
+    max-width: 64vw;
+    margin-left: calc(-100vw / 4);
   }
+
   .game-rules__description {
+    padding: 10px;
     margin-top: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .game-rules__title {
+    font-size: var(--text-6xl);
+  }
+
+  .game-rules__description {
+    font-size: var(--text-xl);
+  }
+
+  .game-rules__subtitle {
+    font: var(--fonts-h4-card-title-DEPRECATED);
+    font-size: var(--text-4xl);
+  }
+
+  .game-rules__preview-img {
+    margin-left: calc(-100vw / 5);
   }
 }

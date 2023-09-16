@@ -1,16 +1,17 @@
 .infographic-block {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 35px;
   place-items: center;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 744px) {
+@media (min-width: 500px) {
   .infographic-block {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .infographic-block {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
