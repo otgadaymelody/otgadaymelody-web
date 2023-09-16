@@ -1,0 +1,159 @@
+.add-game {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  color: var(--color-bg-gray-900);
+}
+
+.add-game__header {
+  margin: 0;
+  font-family: var(--font-family-descriptions);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-600);
+}
+
+.add-game__steps {
+  border-bottom: 1px solid var(--color-bg-gray-200);
+}
+
+.add-game__progress {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-game__description {
+  margin-bottom: 16px;
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-600);
+}
+
+.add-game__description_center {
+  text-align: center;
+}
+
+.add-game__description_center :last-child {
+  margin-bottom: 0;
+}
+
+.add-game__description_active {
+  margin-bottom: 8px;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-900);
+}
+
+.add-game__steps span {
+  color: var(--color-pink);
+}
+
+.game-form .input {
+  margin-top: 8px;
+}
+
+.game-form__controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-form__step {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.game-form__example {
+  margin-top: 4px;
+  padding: 0px 8px;
+}
+
+.game-form__step_innerblock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.game-form__add-btn {
+  height: 54px;
+  border-radius: var(--border-xs);
+}
+
+.game-form__cancel-btn {
+  margin-top: 24px;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-bg-gray-500);
+  background-color: var(--color-bg-white);
+  border: none;
+  cursor: pointer;
+}
+
+.add-game__result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.add-game__result dt {
+  display: inline;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-500);
+}
+
+.add-game__result dt::after {
+  content: ': ';
+}
+
+.add-game__result dd {
+  margin-left: 8px;
+  display: inline;
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg-gray-900);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 744px) {
+  .add-game {
+    row-gap: 40px;
+  }
+
+  .game-form__step {
+    margin-bottom: 40px;
+  }
+
+  .game-form__step_innerblock {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
+
+  .game-form__controls {
+    flex-direction: row-reverse;
+    column-gap: 32px;
+  }
+
+  .game-form__add-btn {
+    height: 57px;
+  }
+
+  .game-form__add-btn-title {
+    font-size: var(--text-lg);
+  }
+
+  .game-form__cancel-btn {
+    margin-top: 0;
+  }
+
+  .add-game__description_active {
+    font-size: var(--text-xl);
+  }
+
+  .add-game__description_active ~ .add-game__description {
+    font-size: var(--text-lg);
+  }
+}
