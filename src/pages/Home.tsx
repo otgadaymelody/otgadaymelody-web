@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AboutUs from '../components/about-us/AboutUs';
 import FAQBlock from '../components/faq-block/FAQBlock';
 import FutureGamesList from '../components/future-games-list/FutureGamesList';
@@ -9,9 +9,14 @@ import QuizGame from '../components/quiz-game/QuizGame';
 import UpcomingGame from '../components/upcoming-game/UpcomingGame';
 import PhotoNearBorderLeft from '../components/games/PhotoNearBorderLeft/PhotoNearBorderLeft';
 import useOnScreen from '../hooks/useOnScreen';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    window.location.hash && scrollToSection(window.location.hash);
+  }, []);
   const ref = useRef<HTMLDivElement>(null);
+  const futureGamesRef = useRef(null);
   const isVisible = useOnScreen(ref);
   return (
     <div className="home-page">

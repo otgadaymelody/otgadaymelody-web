@@ -24,7 +24,7 @@ import {
 import { getContainerSliderSize } from '../../utils/getContainerSliderSize';
 import { getButtonsWrapperClass } from '../../utils/getButtonsWrapperClass';
 
-const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement => {
+const FutureGamesList: FC<BaseComponent> = ({ className}): React.ReactElement => {
   const deviceType = useDeviceType();
   const swiperRef = useRef<SwiperType>();
   const [errorMessage, setErrorMessage] = useState('');
@@ -70,7 +70,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
   }, []);
 
   return (
-    <>
+    <section id='future-games-list'>
       {errorMessage !== '' && <NotificationError message={errorMessage} />}
       {futureGames.length > 0 && isMobile ? (
         <BlockBackground
@@ -152,7 +152,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           </div>
         </BlockBackground>
       )}
-    </>
+    </section>
   );
 };
 

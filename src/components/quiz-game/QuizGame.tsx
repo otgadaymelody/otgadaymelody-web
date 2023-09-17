@@ -4,6 +4,7 @@ import './QuizGame.css';
 import { QUIZ_QUESTIONS } from './quizQuestions.consts';
 import QuizGameModal from './QuizGameModal';
 import { useNavigate } from 'react-router-dom';
+import { scrollToSection } from '../../utils/scrollToSection';
 
 const QuizGame = (): React.ReactElement => {
   const [step, setStep] = useState(0);
@@ -39,7 +40,7 @@ const QuizGame = (): React.ReactElement => {
       setModalActive((prev) => !prev);
       setAllCorrect(true);
       setStep(0);
-      navigate('inprocess');
+      scrollToSection('#future-games-list');
     } else {
       setModalActive((prev) => !prev);
       setStep((prev) => prev + 1);

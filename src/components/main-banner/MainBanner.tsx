@@ -5,10 +5,11 @@ import bannerImgWith from '../../assets/images/home-page/main-banner-photo.png';
 import bannerImgWithout from '../../assets/images/home-page/main-banner-photo-without-o.png';
 import dots from '../../assets/images/home-page/dots.svg';
 import useDeviceType from '../../hooks/useDeviceType';
+import { scrollToSection } from '../../utils/scrollToSection';
 
 const MainBanner = (): React.ReactElement => {
   const onClickHandler = (): void => {
-    window.location.href = 'https://vk.com/wall-164712588_7623';
+   scrollToSection('#future-games-list')
   };
 
   const deviceType = useDeviceType();
@@ -41,7 +42,7 @@ const MainBanner = (): React.ReactElement => {
         <BaseButton
           title="Расписание игр"
           styles={registrationBtnClasses}
-          href="#upcoming-game"
+          href="#future-games-list"
           onClick={onClickHandler}
         />
       </div>
