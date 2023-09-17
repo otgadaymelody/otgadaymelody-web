@@ -8,7 +8,7 @@ import InfographicBlock from './infographic-block/InfographicBlock';
 import GameRulesCarousel from './game-rules-carousel/GameRulesCarousel';
 import { type BaseComponent } from '../../shared/interfaces/baseComponent';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { scrollToSection } from '../../utils/scrollToSection';
 
 const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const [gameId, setGameId] = useState(1);
@@ -61,15 +61,12 @@ const AboutUs: FC<BaseComponent> = ({ className }): React.ReactElement => {
             </p>
           </article>
 
-          {gameId && (
-            <Link to={`/game-registration/${gameId}`} className="game-rules__link">
-              <BaseButton
-                title="Регистрация на игру"
-                styles={registrationBtnClasses}
-                href="#upcoming-game"
-              />
-            </Link>
-          )}
+          <BaseButton
+            onClick={() => scrollToSection('#future-games-list')}
+            title="Регистрация на игру"
+            styles={registrationBtnClasses}
+            href="#upcoming-game"
+          />
         </section>
       </div>
 

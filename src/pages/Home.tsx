@@ -12,20 +12,17 @@ import useOnScreen from '../hooks/useOnScreen';
 import { scrollToSection } from '../utils/scrollToSection';
 
 const Home: React.FC = () => {
-
   useEffect(() => {
-     window.location.hash && (
-      scrollToSection(window.location.hash)
-     )
-  })
+    window.location.hash && scrollToSection(window.location.hash);
+  }, []);
   const ref = useRef<HTMLDivElement>(null);
-  const futureGamesRef = useRef(null)
+  const futureGamesRef = useRef(null);
   const isVisible = useOnScreen(ref);
   return (
     <div className="home-page">
       <MainBanner />
       <UpcomingGame className="home-page-block" />
-      <FutureGamesList className="home-page-block"/>
+      <FutureGamesList className="home-page-block" />
       <AboutUs className="home-page-block" />
       <div ref={ref} className="home-page__minigames-block home-page-block">
         <InterestingFacts isVisible={isVisible} />
