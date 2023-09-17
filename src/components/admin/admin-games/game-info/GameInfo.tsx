@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './GameInfo.css';
 import GameData from './game-data/GameData';
 import TeamBidsBlock from './team-bids-block/TeamBidsBlock';
 
 const GameInfo = (): React.ReactElement => {
+  useEffect(() => {
+    console.log('update');
+  });
   return (
-    <article className="game-info">
+    <section className="game-info">
       <div className="game-info__leftblock">
         <GameData />
         <div className="game-info__photos">
@@ -15,7 +18,7 @@ const GameInfo = (): React.ReactElement => {
       </div>
 
       <TeamBidsBlock />
-    </article>
+    </section>
   );
 };
 

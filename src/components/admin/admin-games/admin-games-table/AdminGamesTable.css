@@ -50,13 +50,19 @@
   padding: 24px 20px;
 }
 
-.games-table__data:first-child {
+.game-table__data-title {
+  font-family: var(--font-family-descriptions);
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);
+  margin: 0;
 }
 
 .games-table__data:nth-child(6) {
   color: var(--color-pink);
+}
+
+.games-table__row {
+  position: relative;
 }
 
 #seats-progress {
@@ -69,6 +75,11 @@
   background: none;
   padding: 0;
   cursor: pointer;
+}
+
+.dropdown-menu_position-absolute {
+  position: absolute;
+  z-index: 1000;
 }
 
 .tbody__row:first-child .games-table__data:first-child {
@@ -137,6 +148,7 @@
     content: attr(data-label);
     width: 35%;
     font-size: var(--text-xs);
+
     color: var(--color-bg-gray-500);
   }
 
