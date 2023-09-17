@@ -2,10 +2,11 @@ import React, { useState, type FC } from 'react';
 import GamesSwitch from './games-switch/GamesSwitch';
 import BaseButton from '../../ui/base-button/BaseButton';
 import AdminGamesTable from './admin-games-table/AdminGamesTable';
+import { type SelectedOptions } from './admin-games-table/AdminGamesTableProps';
 import './AdminGames.css';
 
 const AdminGames: FC = () => {
-  const [selected, setSelected] = useState<string>('upcoming');
+  const [selected, setSelected] = useState<SelectedOptions>('upcoming');
 
   const handleChange = () => {
     setSelected(selected);

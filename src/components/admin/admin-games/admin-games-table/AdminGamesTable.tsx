@@ -1,13 +1,10 @@
 import React, { type FC } from 'react';
 import { GAMES_TABLE_DATA, PAST_GAMES_TABLE_DATA } from './gamesTableData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
+import { type SelectedOptions } from './AdminGamesTableProps';
 import './AdminGamesTable.css';
 
-interface AdminGamesTableProps {
-  selected: string;
-}
-
-const AdminGamesTable: FC<AdminGamesTableProps> = ({ selected }) => {
+const AdminGamesTable: FC<SelectedOptions> = (selected) => {
   return (
     <>
       <table className="games-table">
