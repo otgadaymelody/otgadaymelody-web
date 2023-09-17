@@ -1,19 +1,14 @@
-import React, { useState, type FC, useEffect, useCallback, useRef, ButtonHTMLAttributes, LegacyRef} from 'react';
+import React, { useState, type FC, useCallback } from 'react';
 import { type GamesTableRowProps } from './GamesTableRowProps';
 import useDeviceType from '../../../../../hooks/useDeviceType';
 import treeDots from '@assets/images/admin/three-dots.svg';
 import { useNavigate } from 'react-router-dom';
 import DropDownMenu from '@components/ui/drop-down-menu/DropDownMenu';
-import { MouseEventHandler } from 'react';
 
-const btns = [
-  {nameBtn: 'Редактировать',
-    btnColor: 'black'
-  },
-  {nameBtn: 'Удалить',
-    btnColor: 'pink'
-  },
-]
+const DROPDOWMENUBUTTONS = [
+  { nameBtn: 'Редактировать', btnColor: 'black' },
+  { nameBtn: 'Удалить', btnColor: 'pink' },
+];
 
 const GamesTableRow: FC<GamesTableRowProps> = ({
   id,
@@ -23,37 +18,64 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
   price,
   seatsOccupied,
   seats,
-  applications
+  applications,
 }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
-  const [dropDownIsVisible, setdropDownIsVisible] = useState(false)
+  const [isDropDownVisible, setisDropDownVisible] = useState(false);
+
+  const handleClickDropDown = useCallback(
+    (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+      setisDropDownVisible(!isDropDownVisible);
+      e.stopPropagation();
+    },
+    [isDropDownVisible],
+  );
+
+  const clickToButtonMove = useCallback((): void => {
+    console.log('click');
+  }, []);
+
+  const onBlurDropDownButton = useCallback(() => {
+    setisDropDownVisible(false);
+  }, []);
 
   const navigate = useNavigate();
 
-  const handleClickDropDown = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    setdropDownIsVisible(!dropDownIsVisible);
-    e.stopPropagation();
-  }
-  
-  
-  const clickToButtonMove = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    handleClickDropDown(e)
-  }
- 
+  const toNavigate = useCallback(() => {
+    navigate(`/admin/game-info/${id}`);
+  }, []);
+
   return (
-    <tr className="games-table__row tbody__row" onClick={() => {navigate(`/admin/game-info/${id}`)}}>
+    <tr className="games-table__row tbody__row" onMouseDown={toNavigate}>
       {isMobile ? (
         <td className="games-table__data td-flex-title">
-          <p>{title}</p>
-          <button className="dots-btn">
+          <h5 className="game-table__data-title">{title}</h5>
+          <button
+            className="dots-btn"
+            onMouseDown={(e) => {
+              handleClickDropDown(e);
+            }}
+            onBlur={onBlurDropDownButton}
+          >
             <img src={treeDots} alt="три вертикальные точки" />
           </button>
+          <div
+            className={`dropdown-menu_position-absolute dropdown-menu__wrapper_${
+              isDropDownVisible ? 'visible' : 'hidden'
+            }`}
+            onMouseDown={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <DropDownMenu onClick={clickToButtonMove} btns={DROPDOWMENUBUTTONS} />
+          </div>
         </td>
       ) : (
-        <td className="games-table__data">{title}</td>
+        <td className="games-table__data">
+          <h5 className="game-table__data-title">{title}</h5>
+        </td>
       )}
-
       <td className="games-table__data td-flex" data-label="Тематика игры">
         {theme}
       </td>
@@ -71,11 +93,26 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
         {applications}
       </td>
       {!isMobile && (
-        <td className="games-table__data games-table__data__dots-btn">
-          <button onBlur={() => {setTimeout(() => {setdropDownIsVisible(false)}, 100)}} onClick={(e) => {handleClickDropDown(e)}} className="dots-btn">
+        <td className="games-table__data games-table__data_position-absolute">
+          <div
+            className={`dropdown-menu_position-absolute dropdown-menu__wrapper_${
+              isDropDownVisible ? 'visible' : 'hidden'
+            }`}
+            onMouseDown={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <DropDownMenu onClick={clickToButtonMove} btns={DROPDOWMENUBUTTONS} />
+          </div>
+          <button
+            onBlur={onBlurDropDownButton}
+            onMouseDown={(e) => {
+              handleClickDropDown(e);
+            }}
+            className="dots-btn"
+          >
             <img src={treeDots} alt="кнопка меню" />
           </button>
-          <DropDownMenu  click={clickToButtonMove}  stateVisible={dropDownIsVisible ? 'visible' : 'hidden'} btns={btns}/>
         </td>
       )}
     </tr>

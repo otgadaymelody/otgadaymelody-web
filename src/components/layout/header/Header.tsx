@@ -15,13 +15,15 @@ import { useNavigate } from 'react-router-dom';
 const Header: FC = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const navigate = useNavigate();
-
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
+  const notDesktopOrTabletLg = !isDesktop && !(deviceType === 'tablet-lg');
+  const notMobileOrTablet = !(deviceType === 'mobile') && !(deviceType === 'tablet');
+  const desktopOrTabletLg = isDesktop || deviceType === 'tablet-lg';
 
   return (
     <header className="header">
-      {!isDesktop && (
+      {notDesktopOrTabletLg && (
         <BurgerBtn
           onClick={() => {
             setActiveMenu(true);
@@ -37,7 +39,7 @@ const Header: FC = () => {
           }}
         />
 
-        {isDesktop && (
+        {desktopOrTabletLg && (
           <nav className="header__links">
             {NAV_LINKS.map((item, index) => (
               <HeaderLink
@@ -51,15 +53,21 @@ const Header: FC = () => {
           </nav>
         )}
       </div>
-      {isDesktop ? (
+      {isDesktop 
+      ? (
         <div className="header__btns">
           <BaseButton title="Нижний Новгород" img={location} />
           <UserLogo className="header__social-btn" />
         </div>
       ) : (
-        <LocationBtn className="header__location-btn" />
+        <>
+          {notMobileOrTablet && <UserLogo className="header__social-btn" />}
+          <LocationBtn className="header__location-btn" />
+        </>
       )}
-      {!isDesktop && activeMenu && <BurgerMenu active={activeMenu} setActive={setActiveMenu} />}
+      {notMobileOrTablet && activeMenu && (
+        <BurgerMenu active={activeMenu} setActive={setActiveMenu} />
+      )}
     </header>
   );
 };

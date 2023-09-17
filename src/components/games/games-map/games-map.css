@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  row-gap: 20px;
 }
 .games-map__address-elements-border {
   border-left: 1px solid var(--color-bg-slate-0);

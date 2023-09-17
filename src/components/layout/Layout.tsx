@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import HeaderAdmin from './header/HeaderAdmin';
 
 const Layout = (): React.ReactElement => {
-  const isAdmin = true;
+  const isAdmin = false;
   return (
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
