@@ -12,7 +12,7 @@ const AdminGames: FC = () => {
 
   const [selected, setSelected] = useState<SelectedOptions>('upcoming');
 
-  const handleChange = () => {
+  const handleChange = (): void => {
     setSelected(selected);
   };
 
