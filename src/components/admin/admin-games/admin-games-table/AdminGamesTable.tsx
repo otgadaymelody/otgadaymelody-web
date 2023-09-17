@@ -4,7 +4,7 @@ import GamesTableRow from './games-table-row/GamesTableRow';
 import { type SelectedOptions } from './AdminGamesTableProps';
 import './AdminGamesTable.css';
 
-const AdminGamesTable: FC<SelectedOptions> = (selected) => {
+const AdminGamesTable: FC<{ selected: SelectedOptions }> = ({ selected }) => {
   return (
     <>
       <table className="games-table">
