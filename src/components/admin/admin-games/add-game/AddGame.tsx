@@ -1,4 +1,4 @@
-import React, { type FC, useState, ReactNode } from 'react';
+import React, { type FC, useState, type ReactNode } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import { StepOne } from './add-game-steps/StepOne';
