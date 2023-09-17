@@ -36,8 +36,7 @@
     width: 802px;
   }
   .games-registration__block-container {
-    display: grid;
-    grid-template-columns: 45% 1fr;
-    align-items: center;
+    margin: 100px auto 100px calc(-100vw / 8.5);
+    display: flex;
   }
 }
