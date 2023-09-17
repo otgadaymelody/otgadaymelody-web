@@ -7,7 +7,7 @@ interface ModalContentProps {
 }
 
 const ModalContent: FC<ModalContentProps> = ({ setShowModal }) => {
-  const handleClickCloseButton = () => {
+  const handleClickCloseButton = (): void => {
     setShowModal(false);
     document.body.style.overflow = '';
   };

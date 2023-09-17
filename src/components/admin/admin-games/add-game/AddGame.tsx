@@ -1,4 +1,4 @@
-import React, { type FC, useState } from 'react';
+import React, { type FC, useState, ReactNode } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import { StepOne } from './add-game-steps/StepOne';
@@ -32,7 +32,7 @@ const AddGame: FC = (): React.ReactElement => {
     setFormData(data);
   };
 
-  function getStepDescription(step: number) {
+  function getStepDescription(step: number): ReactNode {
     switch (step) {
       case 1:
         return (
@@ -75,7 +75,12 @@ const AddGame: FC = (): React.ReactElement => {
         {getStepDescription(formStep)}
       </div>
 
-      <form className="game-form" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="game-form"
+        onSubmit={(): void => {
+          handleSubmit(onSubmit);
+        }}
+      >
         {formStep === 1 && <StepOne control={control} />}
         {formStep === 2 && <StepTwo control={control} />}
         {formStep === 3 && <StepThree formData={formData} />}

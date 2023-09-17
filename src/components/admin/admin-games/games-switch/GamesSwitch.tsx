@@ -7,7 +7,7 @@ interface GamesSwitchProps {
 }
 
 const GamesSwitch: FC<GamesSwitchProps> = ({ onChange, selected }) => {
-  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>): void => {
     onChange(event.target.value);
   };
 
