@@ -7,10 +7,10 @@
   height: 48px;
   font-family: var(--font-family-descriptions);
   border: none;
-  cursor: pointer;
   padding: 15px 48px;
   gap: 16px;
   border-radius: 61px;
+  cursor: pointer;
 }
 
 .base-btn__title {
@@ -26,4 +26,9 @@
 
 .base-btn:active {
   background-color: var(--color-lime-dark);
+}
+
+.base-btn:disabled {
+  cursor: auto;
+  background-color: var(--color-bg-gray-500);
 }
