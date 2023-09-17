@@ -10,7 +10,7 @@
   height: 100%;
   justify-content: space-between;
 }
-.future-game__title-block{
+.future-game__title-block {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -27,7 +27,6 @@
   align-items: center;
   text-align: center;
   margin: 0;
-
 }
 
 .future-game__info-block {
@@ -35,7 +34,7 @@
   background: var(--color-gradient);
   border-radius: 16px;
 }
-.future-game__description-block{
+.future-game__description-block {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -46,7 +45,6 @@
   justify-content: space-between;
   font: var(--fonts-question-title-DEPRECATED);
   color: var(--color-bg-gray-900);
-
 }
 
 .future-game__place {
@@ -69,8 +67,8 @@
   color: var(--color-bg-gray-600);
   text-align: start;
 }
-@media (min-width: 744px){
-  .future-game{
+@media (min-width: 744px) {
+  .future-game {
     border-radius: var(--border-base);
     padding: 24px;
     gap: 40px;
@@ -82,7 +80,7 @@
     height: 72px;
   }
 
-  .future-game__description-block{
+  .future-game__description-block {
     gap: 24px;
   }
   .future-game__main-description {
@@ -90,7 +88,6 @@
     justify-content: space-between;
     font: var(--fonts-question-title-DEPRECATED);
     color: var(--color-bg-gray-900);
-
   }
   .future-game__date .future-game__date-day,
   .future-game__date .future-game__date-time {
@@ -98,7 +95,7 @@
     line-height: var(--line-height-base);
   }
   .future-game__date .future-game__date-month,
-  .future-game__date .future-game__date-day-of-week{
+  .future-game__date .future-game__date-day-of-week {
     font-size: var(--text-lg);
   }
   .future-game__main-description {

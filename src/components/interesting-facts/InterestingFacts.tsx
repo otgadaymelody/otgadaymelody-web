@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType, Navigation, Pagination, Autoplay } from 'swiper';
 import InterestingFactSlide from './interesting-fact-slide/InterestingFactSlide';
 import { FACTS_LIST } from './facts.consts';
-
 import './InterestingFacts.css';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

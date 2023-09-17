@@ -1,6 +1,5 @@
 .at-game-slider {
   width: 100%;
-  height: 130px;
   border-radius: 21px;
 }
 .at-game-slider__title {
@@ -20,16 +19,17 @@
   width: 100%;
   left: 50%;
 }
-.at-game-slider__slider-button_none{
+.at-game-slider__slider-button_none {
   visibility: hidden;
 }
 
-.at-game-slider__slider-button-next, .at-game-slider__slider-button-prev{
+.at-game-slider__slider-button-next,
+.at-game-slider__slider-button-prev {
   cursor: pointer;
 }
 @media (min-width: 744px) {
   .at-game-slider {
-    height: 197px;
+    min-height: 197px;
     border-radius: 32px;
   }
   .at-game-slider__title {

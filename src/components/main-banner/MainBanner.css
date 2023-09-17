@@ -49,6 +49,7 @@
 }
 .banner-image__img {
   width: 366px;
+  margin: 0 auto;
 }
 .banner__dots {
   padding-bottom: 12px;
@@ -89,6 +90,7 @@
   }
   .banner-image__img {
     width: 415px;
+    margin: 0;
   }
   .banner__reg-btn {
     padding: 16px 48px;
