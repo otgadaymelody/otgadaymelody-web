@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType, Navigation, Pagination, Autoplay } from 'swiper';
 import InterestingFactSlide from './interesting-fact-slide/InterestingFactSlide';
 import { FACTS_LIST } from './facts.consts';
-
 import './InterestingFacts.css';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -60,7 +58,7 @@ const InterestingFacts: FC<InterestingFactsProps> = ({ isVisible }): React.React
         navigation={{ nextEl: '.custom-button-next', prevEl: '.custom-button-prev' }}
         pagination={pagination}
         autoplay={{
-          delay: 2500,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}

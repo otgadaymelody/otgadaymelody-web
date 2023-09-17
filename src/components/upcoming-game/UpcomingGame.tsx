@@ -14,6 +14,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isDesktop = deviceType === 'desktop';
   const isMobile = deviceType === 'mobile';
+
   const [nextGame, setNextGame] = useState<UpcomingGameResponseType>({
     franchiseeId: 0,
     gameAddress: {
@@ -114,7 +115,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
                 <GameInformationBanner game={nextGame} />
               </div>
             </div>
-            <AtGameSlider quantityVisibleSlides={4} />
+            <AtGameSlider quantityVisibleSlides={4}></AtGameSlider>
           </div>
         </section>
       )}

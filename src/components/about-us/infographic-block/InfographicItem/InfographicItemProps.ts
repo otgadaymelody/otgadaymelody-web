@@ -2,4 +2,5 @@ export declare interface InfographicItemProps extends React.AllHTMLAttributes<HT
   img: string;
   title: string;
   description: string;
+  odd: boolean;
 }

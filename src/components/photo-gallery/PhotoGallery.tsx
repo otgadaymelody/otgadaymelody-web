@@ -38,7 +38,7 @@ const PhotoGallery: FC<BaseComponent> = ({ className }): React.ReactElement => {
 
   useEffect(() => {
     axios
-      .get('api/game-albums')
+      .get('/api/game-albums')
       .then((res) => {
         setPhotoGallery(res.data);
         setErrorMessage('');

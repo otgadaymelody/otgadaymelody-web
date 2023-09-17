@@ -5,10 +5,13 @@
 }
 
 .address__header {
+  display: flex;
+  gap: 8px;
   color: var(--color-bg-gray-900);
   font-weight: var(--weight-semibold);
   font-size: var(--text-xl);
 }
+
 .address__text {
   color: var(--color-bg-gray-900);
   font-weight: var(--weight-medium);

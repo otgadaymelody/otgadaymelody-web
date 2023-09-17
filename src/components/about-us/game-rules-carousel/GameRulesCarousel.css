@@ -8,9 +8,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 300px;
+  min-height: 350px;
   background-image: var(--images-mediator-top-left);
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .game-rules-carousel__img {
@@ -22,7 +23,6 @@
 .game-rules-carousel__carousel {
   height: fit-content;
   width: 100%;
-  margin-top: 20px;
 }
 
 .game-rules-carousel__slider {
@@ -50,11 +50,15 @@
 }
 
 @media (min-width: 744px) {
-  .game-rules-carousel__img {
-    border-radius: 80px;
+  .game-rules-carousel__image-wrapper {
+    justify-content: flex-start;
+    background-size: 50%;
+    background-position: 2%;
+    min-height: 350px;
   }
-  .game-rules-carousel__carousel {
-    margin-top: 60px;
+  .game-rules-carousel__img {
+    width: 55%;
+    border-radius: 80px;
   }
 
   .game-rules-carousel__slider {
@@ -63,17 +67,33 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .game-rules-carousel {
     flex-direction: row;
-    gap: 75px;
+    gap: 40px;
   }
 
   .game-rules-carousel__image-wrapper {
-    max-width: 50%;
-    min-height: 374px;
+    background-size: 100%;
+    background-position: right;
+    margin-left: calc(-100vw / 10);
+  }
+
+  .game-rules-carousel__img {
+    width: 110%;
+    margin-left: calc(-100vw / 13);
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
+  .game-rules-carousel__image-wrapper {
+    background-size: 100%;
+    background-position: center;
+    margin-left: 0;
+  }
+
+  .game-rules-carousel__img {
+    width: 100%;
+    margin-left: 0;
+  }
 }

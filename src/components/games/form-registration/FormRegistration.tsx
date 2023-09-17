@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import partyPopper from '@assets/images/pop-up/party-popper.svg';
 import './FormRegistration.css';
 import '../../ui/input/Input.css';
 import Input from '../../ui/input/Input';
+import PopUp from '@components/ui/pop-up/pop-up';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import {
   type FormData,
@@ -16,38 +18,40 @@ import {
   validateSocialMediaPage,
   validateBirthday,
 } from './registration-validators';
+import NotificationError from '@components/ui/notifications/notification-error';
+import axios from 'axios';
+import {
+  INITIAL_FORM_DATA,
+  INITIAL_ERRORS_STATE,
+  registrationBtnSendClasses,
+} from './FormRegistration.consts';
 
 const RegistrationForm = (): React.ReactElement => {
-  const [formData, setFormData] = useState<FormData>({
-    teamName: '',
-    numPeople: '',
-    telNumber: '',
-    socialMediaPage: '',
-    birthday: '',
-  });
+  const [errorResponce, setErrorResponce] = useState('');
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [popUpActive, setPopUpActive] = useState(false);
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
+  const [errors, setErrors] = useState<ErrorData>(INITIAL_ERRORS_STATE);
+  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>(INITIAL_FORM_DATA);
 
-  const [errors, setErrors] = useState<ErrorData>({
-    teamName: false,
-    numPeople: false,
-    telNumber: false,
-    socialMediaPage: false,
-    birthday: false,
-  });
-
-  const [errorMessages, setErrorMessages] = useState<ErrorMessagesData>({
-    teamName: '',
-    numPeople: '',
-    telNumber: '',
-    socialMediaPage: '',
-    birthday: '',
-  });
+  useEffect(() => {
+    const noError = Object.values(errors).every((el) => el === false);
+    if (
+      noError &&
+      formData.teamName &&
+      formData.numPeople &&
+      formData.telNumber &&
+      formData.socialMediaPage
+    )
+      setButtonDisabled(false);
+    else setButtonDisabled(true);
+  }, [errors]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
+    let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
 
     setErrors({ ...errors, [name]: false });
-
-    let validationResult: ValidationReturnType = { valid: true, errorMessage: '' };
 
     if (name === 'teamName') {
       validationResult = validateTeamName(value);
@@ -70,17 +74,48 @@ const RegistrationForm = (): React.ReactElement => {
     }));
   };
 
-  const registrationBtnSendClasses = {
-    buttonForm: 'form-registration__btn-send',
-    buttonTitle: 'form-registration__btn-send-title',
+  const handleSubmit = (event: any): void => {
+    event.preventDefault();
+    setErrorResponce('');
+    axios
+      .post('/api/game-registration/apply', {
+        teamName: formData.teamName,
+        teamCount: formData.numPeople,
+        phoneNumber: formData.telNumber,
+        socialLink: formData.socialMediaPage,
+        birthDate: formData.birthday,
+      })
+      .then((response) => {
+        setPopUpActive(true);
+      })
+      .catch((err) => {
+        setErrorResponce(err.message);
+      });
+  };
+
+  const closePopUp = (): void => {
+    setPopUpActive(false);
   };
 
   return (
     <form className="form-registration">
+      <div className="server-error">
+        {errorResponce && <NotificationError message={errorResponce} />}
+      </div>
+      {popUpActive && (
+        <PopUp
+          clickClose={closePopUp}
+          title="Поздравляем с регистрацией на игру"
+          mainText="Приходите играть и наслаждаться музыкой вместе с нами!"
+          noteText="Не забудьте проверить свою почту, где мы отправили вам информацию об игре."
+          image={partyPopper}
+        />
+      )}
+
       <section>
         <h2 className="form-registration__title">Регистрация на игру</h2>
       </section>
-      <section className="form-registartion-body__firstblock">
+      <section className="form-registration-body__firstblock">
         <Input
           value={formData.teamName}
           type="text"
@@ -143,17 +178,23 @@ const RegistrationForm = (): React.ReactElement => {
           error={errors.birthday}
           errorMessage={errorMessages.birthday}
         />
-        <p className="form-registartion-body__description">
+        <p className="form-registration-body__description">
           Если в Вашей команде есть именинник (3 дня до и 3 после), пожалуйста, укажите как его
           зовут и мы обязательно поздравим его на мероприятии. Также Вы можете указать любимую
           композицию именинника на поздравление.
         </p>
       </div>
-      <BaseButton title="Отправить" styles={registrationBtnSendClasses} href="#form-registartion" />
+      <BaseButton
+        title="Отправить"
+        onClick={handleSubmit}
+        styles={registrationBtnSendClasses}
+        href="#form-registration"
+        disabled={buttonDisabled}
+      />
       <div>
-        <p className="form-registartion-body__description">
+        <p className="form-registration-body__description">
           <span>Нажимая кнопку «Отправить» я подтверждаю, что согласен c </span>
-          <span className="form-registartion-body__description-selection">
+          <span className="form-registration-body__description-selection">
             условиями пользовательского соглашения
           </span>
         </p>

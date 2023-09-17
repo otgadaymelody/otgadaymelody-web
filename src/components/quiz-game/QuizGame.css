@@ -103,10 +103,13 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .quiz-game {
     margin-top: 0;
   }
+}
+
+@media (min-width: 1440px) {
   .quiz-game__title {
     font-size: 34px;
   }

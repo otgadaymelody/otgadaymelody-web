@@ -1,3 +1,3 @@
 export declare interface AtGameSliderProps {
-    quantityVisibleSlides: number;
+  quantityVisibleSlides: number;
 }

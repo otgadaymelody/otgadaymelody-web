@@ -1,4 +1,5 @@
 .date-info-block {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -34,4 +35,18 @@
   font-weight: var(--weight-medium);
   line-height: var(--line-height-base);
   text-transform: capitalize;
+}
+
+.date-info-block__badge {
+  position: absolute;
+}
+
+.date-info-block__badge_left {
+  bottom: -5%;
+  left: -2%;
+}
+
+.date-info-block__badge_right {
+  top: -25%;
+  right: -3%;
 }
