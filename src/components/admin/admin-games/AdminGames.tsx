@@ -9,6 +9,11 @@ import './AdminGames.css';
 
 const AdminGames: FC = () => {
   const [showModal, setShowModal] = useState(false);
+  const [selected, setSelected] = useState<SelectedOptions>('upcoming');
+
+  const handleChange = () => {
+    setSelected(selected);
+  };
 
   const handleModalOpen = useCallback(() => {
     setShowModal(true);
@@ -24,12 +29,6 @@ const AdminGames: FC = () => {
     setShowModal(false);
     document.body.style.overflow = '';
   }, [showModal]);
-
-  const [selected, setSelected] = useState<SelectedOptions>('upcoming');
-
-  const handleChange = () => {
-    setSelected(selected);
-  };
 
   return (
     <section className="admin-games">
