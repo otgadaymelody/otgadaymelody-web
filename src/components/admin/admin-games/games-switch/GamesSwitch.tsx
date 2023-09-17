@@ -1,7 +1,16 @@
-import React, { type FC } from 'react';
+import React, { useState, type FC } from 'react';
 import './GamesSwitch.css';
 
-const GamesSwitch: FC = () => {
+interface GamesSwitchProps {
+  selected: string;
+  onChange: any;
+}
+
+const GamesSwitch: FC<GamesSwitchProps> = ({ onChange, selected }) => {
+  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(event.target.value);
+  };
+
   return (
     <div className="games-switch">
       <input
@@ -9,12 +18,22 @@ const GamesSwitch: FC = () => {
         name="games"
         className="games-switch__input"
         id="switch-upcoming"
-        defaultChecked={true}
+        value={'upcoming'}
+        checked={selected === 'upcoming'}
+        onChange={handleChangeValue}
       />
       <label htmlFor="switch-upcoming" className="games-switch__label">
         Предстоящие
       </label>
-      <input type="radio" name="games" className="games-switch__input" id="switch-past" />
+      <input
+        type="radio"
+        name="games"
+        className="games-switch__input"
+        id="switch-past"
+        value={'past'}
+        checked={selected === 'past'}
+        onChange={handleChangeValue}
+      />
       <label htmlFor="switch-past" className="games-switch__label">
         Прошедшие
       </label>

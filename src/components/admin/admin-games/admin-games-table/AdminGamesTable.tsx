@@ -1,9 +1,10 @@
 import React, { type FC } from 'react';
-import { GAMES_TABLE_DATA } from './gamesTableData.consts';
+import { GAMES_TABLE_DATA, PAST_GAMES_TABLE_DATA } from './gamesTableData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
+import { type SelectedOptions } from './AdminGamesTableProps';
 import './AdminGamesTable.css';
 
-const AdminGamesTable: FC = () => {
+const AdminGamesTable: FC<{ selected: SelectedOptions }> = ({ selected }) => {
   return (
     <>
       <table className="games-table">
@@ -19,19 +20,33 @@ const AdminGamesTable: FC = () => {
           </tr>
         </thead>
         <tbody className="games-table__body tbody">
-          {GAMES_TABLE_DATA.map((item, index) => (
-            <GamesTableRow
-              key={index}
-              id={item.id}
-              title={item.title}
-              theme={item.theme}
-              dateInfo={item.dateInfo}
-              price={item.price}
-              seatsOccupied={item.seatsOccupied}
-              seats={item.seats}
-              applications={item.applications}
-            />
-          ))}
+          {selected === 'upcoming'
+            ? GAMES_TABLE_DATA.map((item, index) => (
+                <GamesTableRow
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  theme={item.theme}
+                  dateInfo={item.dateInfo}
+                  price={item.price}
+                  seatsOccupied={item.seatsOccupied}
+                  seats={item.seats}
+                  applications={item.applications}
+                />
+              ))
+            : PAST_GAMES_TABLE_DATA.map((item, index) => (
+                <GamesTableRow
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  theme={item.theme}
+                  dateInfo={item.dateInfo}
+                  price={item.price}
+                  seatsOccupied={item.seatsOccupied}
+                  seats={item.seats}
+                  applications={item.applications}
+                />
+              ))}
         </tbody>
       </table>
     </>
