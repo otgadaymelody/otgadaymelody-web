@@ -41,57 +41,59 @@ const GameData = (): React.ReactElement => {
             </button>
             <h3 className="game-info__title">Информация об игре</h3>
           </div>
-          <div className="game-info__block">
-            <button className="dots-btn">
-              <img src={treeDots} alt="три вертикальные точки" />
-            </button>
-            <div className="gamedata__text_large">{gameData.gameType}</div>
-            <div className="gamedata__text_medium">{gameData.gameDate}</div>
+          {!!gameData && (
+            <div className="game-info__block">
+              <button className="dots-btn">
+                <img src={treeDots} alt="три вертикальные точки" />
+              </button>
+              <div className="gamedata__text_large">{gameData.gameType}</div>
+              <div className="gamedata__text_medium">{gameData.gameDate}</div>
 
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Название игры</div>
-              <span className="gamedata__text">{gameData.gameName}</span>
-            </div>
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Название игры</div>
+                <span className="gamedata__text">{gameData.gameName}</span>
+              </div>
 
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Описание игры</div>
-              <span className="gamedata__text">Здесь будет описание</span>
-            </div>
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Описание игры</div>
+                <span className="gamedata__text">Здесь будет описание</span>
+              </div>
 
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Место проведения</div>
-              <div className="gamedata__text">{gameData.gameLocationName}</div>
-              <span className="gamedata__text">
-                {gameData.gameAddress.street}, {gameData.gameAddress.building}
-              </span>
-            </div>
-
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Стоимость за одного игрока</div>
-              <span className="gamedata__text">
-                {gameData.gameBasePrice} {gameData.gameCurrencyPrice}
-              </span>
-            </div>
-
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Мест на игре</div>
-              <progress id="seats-progress" value={0.25}></progress>{' '}
-              <span className="gamedata__text">
-                {gameData.adminInfo.playersConfirmedCount} /{' '}
-                {gameData.adminInfo.gameMaxPlayersCount}
-              </span>
-            </div>
-
-            <div className="gamedata__miniblock">
-              <div className="gamedata__subtitle">Зарегистрировано</div>
-              <div className="gamedata__text">
-                <span>
-                  {gameData.adminInfo.teamsConfirmedCount} команд{' '}
-                  {gameData.adminInfo.playersConfirmedCount} человек
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Место проведения</div>
+                <div className="gamedata__text">{gameData.gameLocationName}</div>
+                <span className="gamedata__text">
+                  {gameData.gameAddress.street}, {gameData.gameAddress.building}
                 </span>
               </div>
+
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Стоимость за одного игрока</div>
+                <span className="gamedata__text">
+                  {gameData.gameBasePrice} {gameData.gameCurrencyPrice}
+                </span>
+              </div>
+
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Мест на игре</div>
+                <progress id="seats-progress" value={0.25}></progress>{' '}
+                <span className="gamedata__text">
+                  {gameData.adminInfo.playersConfirmedCount} /{' '}
+                  {gameData.adminInfo.gameMaxPlayersCount}
+                </span>
+              </div>
+
+              <div className="gamedata__miniblock">
+                <div className="gamedata__subtitle">Зарегистрировано</div>
+                <div className="gamedata__text">
+                  <span>
+                    {gameData.adminInfo.teamsConfirmedCount} команд{' '}
+                    {gameData.adminInfo.playersConfirmedCount} человек
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </>

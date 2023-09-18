@@ -29,7 +29,7 @@ const UserAuthForm: FC = () => {
         password: authFormData.userPassword,
       })
       .then((res) => {
-        sessionStorage.setItem('token', res.data.token);
+        sessionStorage.setItem('userRole', 'admin');
         setErrorMessage('');
         navigate('/admin');
       })
