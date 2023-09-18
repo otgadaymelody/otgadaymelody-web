@@ -16,6 +16,7 @@ interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 const BaseButton: FC<BaseButtonProps> = ({ title, img, styles, href, disabled, ...props }) => {
   return (
     <button
+      type="button"
       className={styles?.buttonForm ? concatStyles('base-btn', styles.buttonForm) : 'base-btn'}
       onClick={props.onClick ? props.onClick : () => {}}
       disabled={disabled}
