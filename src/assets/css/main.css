@@ -141,3 +141,7 @@
 .not-found__title {
   font: var(--text-base);
 }
+
+.position_absolute {
+  position: absolute;
+}

@@ -1,4 +1,4 @@
-import React, { type FC, useState } from 'react';
+import React, { type FC, useState, type ReactNode } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import BaseButton from '@components/ui/base-button/BaseButton';
 import { StepOne } from './add-game-steps/StepOne';
@@ -17,6 +17,8 @@ const AddGame: FC = (): React.ReactElement => {
   const [formData, setFormData] = useState<any>();
 
   const nextStep = (): void => {
+    const valueCurrent = getValues();
+    setFormData({ ...formData, ...valueCurrent });
     setFormStep((current) => current + 1);
   };
 
@@ -24,15 +26,15 @@ const AddGame: FC = (): React.ReactElement => {
     setFormStep((current) => current - 1);
   };
 
-  const { handleSubmit, control } = useForm<StepsProps>({
+  const { control, formState, getValues } = useForm<StepsProps>({
     defaultValues: INITIAL_STEPS_DATA,
   });
 
-  const onSubmit: SubmitHandler<StepsProps> = (data) => {
-    setFormData(data);
+  const onSubmit = (): void => {
+    // TODO api request
   };
 
-  function getStepDescription(step: number) {
+  function getStepDescription(step: number): ReactNode {
     switch (step) {
       case 1:
         return (
@@ -75,14 +77,20 @@ const AddGame: FC = (): React.ReactElement => {
         {getStepDescription(formStep)}
       </div>
 
-      <form className="game-form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="game-form">
         {formStep === 1 && <StepOne control={control} />}
         {formStep === 2 && <StepTwo control={control} />}
         {formStep === 3 && <StepThree formData={formData} />}
 
         <div className="game-form__controls">
           {formStep > 2 ? (
-            <BaseButton title="Добавить игру" styles={ADD_GAME_FORM_BTN_CLASSES} />
+            <BaseButton
+              title="Добавить игру"
+              styles={ADD_GAME_FORM_BTN_CLASSES}
+              onClick={(): void => {
+                onSubmit();
+              }}
+            />
           ) : (
             <BaseButton
               title="Следующий шаг"
@@ -91,9 +99,11 @@ const AddGame: FC = (): React.ReactElement => {
             />
           )}
           {formStep < 2 ? (
-            <button className="game-form__cancel-btn">Отменить</button>
+            <button type="button" className="game-form__cancel-btn">
+              Отменить
+            </button>
           ) : (
-            <button className="game-form__cancel-btn" onClick={prevStep}>
+            <button type="button" className="game-form__cancel-btn" onClick={prevStep}>
               Назад
             </button>
           )}

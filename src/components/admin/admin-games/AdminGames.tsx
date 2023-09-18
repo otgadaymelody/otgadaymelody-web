@@ -11,7 +11,7 @@ const AdminGames: FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState<SelectedOptions>('upcoming');
 
-  const handleChange = () => {
+  const handleChange = (): void => {
     setSelected(selected);
   };
 

@@ -1,4 +1,5 @@
 import { NAV_IMAGES } from './nav-images.consts';
+import { scrollToSection } from '../../../utils/scrollToSection';
 import corp from '../../../assets/presentaions/corp.pdf';
 
 export const NAV_LINKS = [
@@ -6,7 +7,8 @@ export const NAV_LINKS = [
     title: 'Расписание игр',
     images: NAV_IMAGES[0],
     url: '',
-    hash: '#upcoming-game',
+    hash: '#future-games-list',
+    onClick: scrollToSection('#future-games-list')
   },
   {
     title: 'Фотоотчеты',

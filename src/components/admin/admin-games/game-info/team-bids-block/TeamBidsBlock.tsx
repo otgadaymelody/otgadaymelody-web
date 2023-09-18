@@ -1,46 +1,69 @@
 import React, { useEffect, useState } from 'react';
 import './TeamBidsBlock.css';
 import BlockToSort from './sort-data-block/BlockToSort';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import type { TeamBidDataType } from './team-bid-data/TeamBidData.interface';
 import TeamBidData from './team-bid-data/TeamBidData';
-import { TeamBidsData } from './team-bid-data/TeamBidsData.consts';
 
 const TeamBidsBlock: React.FC = (): React.ReactElement => {
-  const [filtersData, setFiltersData] = useState(TeamBidsData);
-  const [propToFilter, setPropToFilter] = useState('all');
+  const [propToFilter, setPropToFilter] = useState<'all' | 'deleted' | 'approved' | 'pending'>(
+    'all',
+  );
+  const [gamesData, setGamesData] = useState<TeamBidDataType[]>();
+  const [filtersData, setFiltersData] = useState<TeamBidDataType[]>();
+  const [isLoaded, setIsLoaded] = useState(false);
+  const paramsGameId = useParams().gameId;
 
-  const handleSort = (propToFilter: string): void => {
+  useEffect(() => {
+    if (paramsGameId !== undefined)
+      axios
+        .get(`/api/admin/game-applications?gameId=${paramsGameId}`)
+        .then((res) => {
+          setGamesData(res.data);
+          setIsLoaded(true);
+          isLoaded && handleSort(propToFilter);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+  }, [isLoaded]);
+
+  const handleSort = (propToFilter: 'all' | 'deleted' | 'approved' | 'pending'): void => {
     setPropToFilter(propToFilter);
     if (propToFilter === 'all') {
-      setFiltersData(TeamBidsData.filter((a) => a.status !== 'deleted'));
+      setFiltersData(gamesData?.filter((a) => a.status !== 'deleted'));
     } else {
-      setFiltersData(TeamBidsData.filter((a) => a.status === propToFilter));
+      setFiltersData(gamesData?.filter((a) => a.status === propToFilter));
     }
   };
-  useEffect(() => {
-    handleSort(propToFilter);
-  }, []);
 
   return (
-    <div className="game-info__applications">
+    <article className="game-info-applications">
       <h3 className="game-info__title">Заявки на игру</h3>
       <div className="game-info__block game-applications__wrapper">
         <BlockToSort onChange={handleSort} />
         <div className="game-applications__scrollBlock">
-          {filtersData.map((item, index) => (
-            <TeamBidData
-              key={index}
-              applicationId={item.applicationId}
-              gameId={item.gameId}
-              playersCount={item.playersCount}
-              contactPlayerName={item.contactPlayerName}
-              contactPlayerPhone={item.contactPlayerPhone}
-              status={item.status}
-              teamName={item.teamName}
-            />
-          ))}
+          {!isLoaded ? (
+            <div>Loading...</div>
+          ) : (
+            filtersData?.map((item: TeamBidDataType, index: number) => (
+              <TeamBidData
+                gamesData={gamesData}
+                key={index}
+                applicationId={item.applicationId}
+                gameId={item.gameId}
+                playersCount={item.playersCount}
+                contactPlayerName={item.contactPlayerName}
+                contactPlayerPhone={item.contactPlayerPhone}
+                status={item.status}
+                teamName={item.teamName}
+              />
+            ))
+          )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

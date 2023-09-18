@@ -29,7 +29,7 @@ const UserAuthForm: FC = () => {
         password: authFormData.userPassword,
       })
       .then((res) => {
-        sessionStorage.setItem('token', res.data.token);
+        sessionStorage.setItem('userRole', 'admin');
         setErrorMessage('');
         navigate('/admin');
       })
@@ -70,7 +70,7 @@ const UserAuthForm: FC = () => {
           required={false}
           error={false}
         />
-        <BaseButton title="Войти" styles={USER_AUTH_FORM_BTN_CLASSES} />
+        <BaseButton type="submit" title="Войти" styles={USER_AUTH_FORM_BTN_CLASSES} />
       </form>
     </>
   );

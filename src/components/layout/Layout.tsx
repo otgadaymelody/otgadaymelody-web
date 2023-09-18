@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import HeaderAdmin from './header/HeaderAdmin';
 
 const Layout = (): React.ReactElement => {
-  const isAdmin = false;
+  const isAdmin = sessionStorage.getItem('userRole') === 'admin';
   return (
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>

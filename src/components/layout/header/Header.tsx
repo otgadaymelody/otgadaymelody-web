@@ -53,7 +53,8 @@ const Header: FC = () => {
           </nav>
         )}
       </div>
-      {isDesktop ? (
+      {isDesktop 
+      ? (
         <div className="header__btns">
           <BaseButton title="Нижний Новгород" img={location} />
           <UserLogo className="header__social-btn" />

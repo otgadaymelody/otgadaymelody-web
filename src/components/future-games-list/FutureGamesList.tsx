@@ -70,7 +70,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
   }, []);
 
   return (
-    <>
+    <section id="future-games-list">
       {errorMessage !== '' && <NotificationError message={errorMessage} />}
       {futureGames.length > 0 && isMobile ? (
         <BlockBackground
@@ -79,7 +79,6 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
         >
           <h2 className="future-games-list__title">Предстоящие игры</h2>
           <Swiper
-            direction={'vertical'}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
@@ -152,7 +151,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           </div>
         </BlockBackground>
       )}
-    </>
+    </section>
   );
 };
 
