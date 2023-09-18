@@ -70,7 +70,7 @@ const UserAuthForm: FC = () => {
           required={false}
           error={false}
         />
-        <BaseButton title="Войти" styles={USER_AUTH_FORM_BTN_CLASSES} />
+        <BaseButton type="submit" title="Войти" styles={USER_AUTH_FORM_BTN_CLASSES} />
       </form>
     </>
   );
