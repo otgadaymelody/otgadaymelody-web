@@ -4,12 +4,12 @@ import './Modal.css';
 
 interface ModalProps {
   showModal: boolean;
-  children: any;
-  onClose?: () => void;
+  children: React.ReactNode;
+  clickEscape?: () => void;
   clickOutside?: () => void;
 }
 
-const Modal: FC<ModalProps> = ({ showModal, children, onClose, clickOutside }) => {
+const Modal: FC<ModalProps> = ({ showModal, children, clickEscape, clickOutside }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose, clickOutside }) =
 
     const handleEscapePress = (event: KeyboardEvent): void => {
       if (event.key === 'Escape') {
-        onClose?.();
+        clickEscape?.();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -35,7 +35,7 @@ const Modal: FC<ModalProps> = ({ showModal, children, onClose, clickOutside }) =
       document.removeEventListener('click', handleClickOutside);
       document.removeEventListener('keydown', handleEscapePress);
     };
-  }, [onClose, clickOutside]);
+  }, [clickEscape, clickOutside]);
 
   if (!showModal) {
     return null;

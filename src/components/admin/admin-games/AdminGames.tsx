@@ -3,16 +3,15 @@ import GamesSwitch from './games-switch/GamesSwitch';
 import BaseButton from '../../ui/base-button/BaseButton';
 import AdminGamesTable from './admin-games-table/AdminGamesTable';
 import Modal from './modal/Modal';
-import ModalContent from './modal/ModalContent';
+import ModalContentCreateGameForm from './create-game/ModalContentCreateGameForm';
 import { type SelectedOptions } from './admin-games-table/AdminGamesTableProps';
 import './AdminGames.css';
 
 const AdminGames: FC = () => {
   const [showModal, setShowModal] = useState(false);
-
   const [selected, setSelected] = useState<SelectedOptions>('upcoming');
 
-  const handleChange = (): void => {
+  const handleChange = (selected: SelectedOptions): void => {
     setSelected(selected);
   };
 
@@ -21,12 +20,17 @@ const AdminGames: FC = () => {
     document.body.style.overflow = 'hidden';
   }, [showModal]);
 
-  const handleModalClose = useCallback(() => {
+  const handleClickEscape = useCallback(() => {
     setShowModal(false);
     document.body.style.overflow = '';
   }, [showModal]);
 
   const handleClickOutside = useCallback(() => {
+    setShowModal(false);
+    document.body.style.overflow = '';
+  }, [showModal]);
+
+  const handleModalClose = useCallback(() => {
     setShowModal(false);
     document.body.style.overflow = '';
   }, [showModal]);
@@ -37,8 +41,12 @@ const AdminGames: FC = () => {
         <h2 className="admin-games__title">Игры</h2>
         <GamesSwitch onChange={handleChange} selected={selected} />
         <BaseButton title="Добавить игру" onClick={handleModalOpen} />
-        <Modal showModal={showModal} onClose={handleModalClose} clickOutside={handleClickOutside}>
-          <ModalContent setShowModal={setShowModal} />
+        <Modal
+          showModal={showModal}
+          clickEscape={handleClickEscape}
+          clickOutside={handleClickOutside}
+        >
+          <ModalContentCreateGameForm clickCloseModal={handleModalClose} />
         </Modal>
       </div>
       <AdminGamesTable selected={selected} />

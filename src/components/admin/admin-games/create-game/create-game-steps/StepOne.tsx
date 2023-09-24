@@ -4,7 +4,7 @@ import Input from '@components/ui/input/Input';
 
 export const StepOne: FC<any> = ({ control }) => {
   return (
-    <section className="game-form__step">
+    <section className="create-game-form__step">
       <Controller
         control={control}
         name="gameType"
@@ -28,7 +28,6 @@ export const StepOne: FC<any> = ({ control }) => {
             type="text"
             placeholder="Название игры"
             onChange={onChange}
-            className="game-form__input"
             name="gameName"
           />
         )}
@@ -43,7 +42,6 @@ export const StepOne: FC<any> = ({ control }) => {
             type="text"
             placeholder="Описание игры"
             onChange={onChange}
-            className="game-form__input"
             name="gameDescription"
           />
         )}

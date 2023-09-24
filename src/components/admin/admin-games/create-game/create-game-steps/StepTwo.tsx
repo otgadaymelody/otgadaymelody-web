@@ -4,7 +4,7 @@ import Input from '@components/ui/input/Input';
 
 export const StepTwo: FC<any> = ({ control }) => {
   return (
-    <section className="game-form__step">
+    <section className="create-game-form__step">
       <Controller
         control={control}
         name="gameDate"
@@ -23,14 +23,7 @@ export const StepTwo: FC<any> = ({ control }) => {
         control={control}
         name="city"
         render={({ field: { onChange, value } }) => (
-          <Input
-            value={value}
-            type="text"
-            placeholder="Город"
-            onChange={onChange}
-            className="game-form__input"
-            name="city"
-          />
+          <Input value={value} type="text" placeholder="Город" onChange={onChange} name="city" />
         )}
       />
 
@@ -43,7 +36,6 @@ export const StepTwo: FC<any> = ({ control }) => {
             type="text"
             placeholder="Адрес"
             onChange={onChange}
-            className="game-form__input"
             name="streetAndBuilding"
           />
         )}
@@ -59,15 +51,14 @@ export const StepTwo: FC<any> = ({ control }) => {
               type="text"
               placeholder="Название места проведения"
               onChange={onChange}
-              className="add-game__input"
               name="gameLocationName"
             />
           )}
         />
-        <span className="game-form__example">Например, Бар &quot;Пивзавод&quot;</span>
+        <span className="create-game-form__example">Например, Бар &quot;Пивзавод&quot;</span>
       </div>
 
-      <div className="game-form__step_innerblock">
+      <div className="create-game-form__step_innerblock">
         <Controller
           control={control}
           name="gameMaxPlayersCount"
@@ -77,7 +68,6 @@ export const StepTwo: FC<any> = ({ control }) => {
               type="number"
               placeholder="Количество мест"
               onChange={onChange}
-              className="add-game__input"
               name="gameMaxPlayersCount"
               min={0}
             />
@@ -93,7 +83,6 @@ export const StepTwo: FC<any> = ({ control }) => {
               type="text"
               placeholder="Стоимость за одного игрока"
               onChange={onChange}
-              className="add-game__input"
               name="gameBasePrice"
             />
           )}

@@ -2,15 +2,15 @@ import React, { type FC } from 'react';
 
 export const StepThree: FC<any> = ({ formData }) => {
   return (
-    <section className="game-form__step">
-      <div className="add-game__description_center">
-        <p className="add-game__description_active">Почти готово!</p>
-        <p className="add-game__description">
+    <section className="create-game-form__step">
+      <div className="create-game__description_center">
+        <p className="create-game__description_active">Почти готово!</p>
+        <p className="create-game__description">
           Проверьте всю информацию, которую вы ввели на предыдущих этапах. Если все в порядке,
           нажмите кнопку “Добавить игру” для сохранения информации.
         </p>
       </div>
-      <dl className="add-game__result">
+      <dl className="create-game__result">
         <div>
           <dt>Тематика игры</dt>
           <dd>{formData.gameType}</dd>

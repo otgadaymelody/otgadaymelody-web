@@ -1,14 +1,15 @@
 import React, { useState, type FC } from 'react';
+import { type SelectedOptions } from '../admin-games-table/AdminGamesTableProps';
 import './GamesSwitch.css';
 
 interface GamesSwitchProps {
-  selected: string;
-  onChange: any;
+  selected: SelectedOptions;
+  onChange: unknown;
 }
 
 const GamesSwitch: FC<GamesSwitchProps> = ({ onChange, selected }) => {
   const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    onChange(event.target.value);
+    if (typeof onChange === 'function') onChange(event.target.value);
   };
 
   return (
