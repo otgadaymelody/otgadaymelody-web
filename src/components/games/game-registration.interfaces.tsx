@@ -9,11 +9,7 @@ export declare interface GameData {
   gameTime: string;
   gameLocationName: string;
   franchiseeId: number;
-  gameAddress: {
-    city: string;
-    street: string;
-    building: string;
-  };
+  address: string;
   gameCityName: string;
   gameBasePrice: string;
   gameCurrencyPrice: string;
@@ -23,4 +19,5 @@ export declare interface GameData {
     imageSrc: string;
     coordinates: number[];
   };
+  priceValue: string;
 }

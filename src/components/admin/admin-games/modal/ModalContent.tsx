@@ -4,9 +4,10 @@ import AddGame from '../add-game/AddGame';
 
 interface ModalContentProps {
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  gameToEdit: any;
 }
 
-const ModalContent: FC<ModalContentProps> = ({ setShowModal }) => {
+const ModalContent: FC<ModalContentProps> = ({ setShowModal, gameToEdit }) => {
   const handleClickCloseButton = (): void => {
     setShowModal(false);
     document.body.style.overflow = '';
@@ -14,7 +15,7 @@ const ModalContent: FC<ModalContentProps> = ({ setShowModal }) => {
 
   return (
     <div className="modal-content">
-      <AddGame />
+      <AddGame gameToEdit={gameToEdit} />
       <button className="modal-close-btn" onClick={handleClickCloseButton}>
         <img src={closeIcon} alt="крестик" />
       </button>

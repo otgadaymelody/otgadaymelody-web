@@ -1,5 +1,3 @@
-
-
 export declare interface DateInfo {
   day: string;
   month: string;
@@ -9,10 +7,11 @@ export declare interface GamesTableRowProps extends React.AllHTMLAttributes<HTML
   id: string;
   title: string;
   theme: string;
-  dateInfo: DateInfo;
+  dateInfo: string;
   price: string;
   seatsOccupied: string;
   seats: string;
   applications: string;
-
+  showToUsers: boolean;
+  editGame: (id: number) => {};
 }

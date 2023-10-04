@@ -6,11 +6,7 @@ export const INITIAL_API_DATA = {
   gameTime: '',
   gameLocationName: '',
   franchiseeId: 0,
-  gameAddress: {
-    city: '',
-    street: '',
-    building: '',
-  },
+  address: '',
   gameCityName: '',
   gameBasePrice: '',
   gameCurrencyPrice: '',
@@ -20,4 +16,5 @@ export const INITIAL_API_DATA = {
     imageSrc: '',
     coordinates: [],
   },
+  priceValue: '222',
 };
