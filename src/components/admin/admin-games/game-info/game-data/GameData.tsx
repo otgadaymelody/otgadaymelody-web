@@ -14,19 +14,15 @@ const GameData = (): React.ReactElement => {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    if (gameId && Number(gameId)) {
-      axios
-        .get(`/api/admin/game-info?gameId=${gameId}`)
-        .then((res) => {
-          setGameData(res.data);
-          setErrorMessage('');
-        })
-        .catch((err) => {
-          setErrorMessage(err.messsage);
-        });
-    } else {
-      setErrorMessage('Такая игра не найдена');
-    }
+    axios
+      .get(`/api/admin/game?gameId=${gameId}`)
+      .then((res) => {
+        setGameData(res.data);
+        setErrorMessage('');
+      })
+      .catch((err) => {
+        setErrorMessage(err.messsage);
+      });
   }, []);
 
   return (

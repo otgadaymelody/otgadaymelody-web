@@ -8,8 +8,8 @@ import { concatStyles } from '../../../utils/concat-styles';
 import { type FutureGameProps } from './FutureGameProps';
 import { Link } from 'react-router-dom';
 
-const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.ReactElement => {
-  const path = `/game-registration/${index}`;
+const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElement => {
+  const path = `/game-registration/${game.id}`;
   const scrollToTop = (): void => {
     window.scrollTo(0, 0);
   };
@@ -22,7 +22,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.Reac
           className={'future-game__date'}
           dateInfo={game.gameDate}
           gameTime={game.gameTime}
-          gameNumber={index}
+          gameNumber={game.id}
         />
       </div>
       <div className="future-game__description-block">
@@ -38,9 +38,7 @@ const FutureGame: FC<FutureGameProps> = ({ game, className, index }): React.Reac
               <span>{game.gameCurrencyPrice === 'rub' ? 'р' : ''}</span>
             </div>
           </div>
-          <address className="future-game__address">
-            {game.gameAddress.street}, {game.gameAddress.building}
-          </address>
+          <address className="future-game__address">{game.address}</address>
         </div>
       </div>
       <div>

@@ -2,7 +2,7 @@
   display: flex;
   padding: 32px;
   width: 99%;
-  height: 468px;
+  min-height: 468px;
   background: var(--color-gradient);
   border-radius: var(--border-base);
 }

@@ -1,31 +1,31 @@
 .notification-error__container {
-    width: 300px;
-    height: 56px;
-    border-radius: var(--border-xs);
-    border: 2px solid var(--color-red);
-    background-color: var(--color-bg-white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 300px;
+  min-height: 56px;
+  border-radius: var(--border-xs);
+  border: 2px solid var(--color-red);
+  background-color: var(--color-bg-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .notification-error__message-wrapper {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-left: 5%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: 5%;
 }
 
 .notification-error__message {
-    font-weight: var(--weight-medium);
-    font-size: var(--text-base);
-    color: var(--bg-gray-900);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-base);
+  color: var(--bg-gray-900);
 }
 
 .notification-error__close-btn {
-    border: none;
-    background-color: var(--color-bg-white);
-    cursor: pointer;
-    padding-top: 5px;
-    padding-right: 5%;
+  border: none;
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+  padding-top: 5px;
+  padding-right: 5%;
 }

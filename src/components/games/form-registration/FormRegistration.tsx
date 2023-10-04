@@ -26,7 +26,7 @@ import {
   registrationBtnSendClasses,
 } from './FormRegistration.consts';
 
-const RegistrationForm = (): React.ReactElement => {
+const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement => {
   const [errorResponce, setErrorResponce] = useState('');
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [popUpActive, setPopUpActive] = useState(false);
@@ -84,12 +84,13 @@ const RegistrationForm = (): React.ReactElement => {
         phoneNumber: formData.telNumber,
         socialLink: formData.socialMediaPage,
         birthDate: formData.birthday,
+        gameId: gameId,
       })
       .then((response) => {
         setPopUpActive(true);
       })
       .catch((err) => {
-        setErrorResponce(err.message);
+        setErrorResponce(err?.response?.data?.message ?? err);
       });
   };
 

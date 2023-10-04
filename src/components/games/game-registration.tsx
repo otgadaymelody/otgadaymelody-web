@@ -43,16 +43,14 @@ const GameRegistration: FC = () => {
           <div className="games-registration__mapregistration-container">
             <div className="games-registration__registration-container">
               <GamesBanner game={apiData}></GamesBanner>
-              <RegistrationForm></RegistrationForm>
+              <RegistrationForm gameId={gameId ?? 0}></RegistrationForm>
             </div>
             <div className="games-registration__map-container">
               <GamesMap game={apiData}></GamesMap>
               <Description></Description>
             </div>
           </div>
-          <div className="games-registration__block-container">
-            <PhotoGallery className="games-registration__photo-container"></PhotoGallery>
-          </div>
+          <PhotoGallery className="games-registration__photo-container"></PhotoGallery>
           <div className="games-registration__block-container">
             <PhotoNearBorderLeft></PhotoNearBorderLeft>
             <FAQBlock className="games-registration__block-faqpart"></FAQBlock>

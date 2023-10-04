@@ -24,16 +24,20 @@ export const StepThree: FC<any> = ({ formData }) => {
           <dd>{formData.gameDescription}</dd>
         </div>
         <div>
+          <dt>Время начала</dt>
+          <dd>{formData.gameTime}</dd>
+        </div>
+        <div>
           <dt>Дата проведения</dt>
           <dd>{formData.gameDate}</dd>
         </div>
         <div>
           <dt>Город</dt>
-          <dd>{formData.city}</dd>
+          <dd>{formData.cityName}</dd>
         </div>
         <div>
           <dt>Адрес</dt>
-          <dd>{formData.streetAndBuilding}</dd>
+          <dd>{formData.address}</dd>
         </div>
         <div>
           <dt>Название места проведения</dt>
@@ -41,11 +45,15 @@ export const StepThree: FC<any> = ({ formData }) => {
         </div>
         <div>
           <dt>Количество мест</dt>
-          <dd>{formData.gameMaxPlayersCount}</dd>
+          <dd>{formData.maxPlayersCount}</dd>
         </div>
         <div>
           <dt>Стоимость за одного игрока</dt>
-          <dd>{formData.gameBasePrice}</dd>
+          <dd>{formData.priceValue}</dd>
+        </div>
+        <div>
+          <dt>Видна пользователям</dt>
+          <dd>{formData.showToUsers ? 'ДА' : 'НЕТ'}</dd>
         </div>
       </dl>
     </section>

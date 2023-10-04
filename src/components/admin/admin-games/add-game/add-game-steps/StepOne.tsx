@@ -2,20 +2,23 @@ import React, { type FC } from 'react';
 import { Controller } from 'react-hook-form';
 import Input from '@components/ui/input/Input';
 
-export const StepOne: FC<any> = ({ control }) => {
+export const StepOne: FC<any> = ({ control, gameTypes }) => {
   return (
     <section className="game-form__step">
       <Controller
         control={control}
         name="gameType"
         render={({ field: { onChange, value } }) => (
-          <Input
-            value={value}
-            type="text"
-            placeholder="Тематика игры"
-            onChange={onChange}
-            name="gameType"
-          />
+          <select value={value} placeholder="Тематика игры" onChange={onChange} name="gameType">
+            <option value="">----------Выбери тематику--------</option>
+            {gameTypes
+              ? gameTypes.map((gameType: { id: string; gameTypeName: string }) => (
+                  <option value={gameType.id} key={gameType.id}>
+                    {gameType.gameTypeName}
+                  </option>
+                ))
+              : ''}
+          </select>
         )}
       />
 

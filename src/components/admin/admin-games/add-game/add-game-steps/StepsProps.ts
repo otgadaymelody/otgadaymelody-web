@@ -3,11 +3,13 @@ export declare interface StepsProps {
   gameName: string;
   gameDescription: string;
   gameDate: string;
-  city: string;
-  streetAndBuilding: string;
+  cityName: string;
+  address: string;
   gameLocationName: string;
-  gameMaxPlayersCount: string;
-  gameBasePrice: string;
+  maxPlayersCount: string;
+  priceValue: string;
+  showToUsers: boolean;
+  gameTime: string;
 }
 
 export const INITIAL_STEPS_DATA = {
@@ -15,9 +17,11 @@ export const INITIAL_STEPS_DATA = {
   gameName: '',
   gameDescription: '',
   gameDate: '',
-  city: '',
-  streetAndBuilding: '',
+  cityName: '',
+  address: '',
   gameLocationName: '',
-  gameMaxPlayersCount: '',
-  gameBasePrice: '',
+  maxPlayersCount: '',
+  priceValue: '',
+  showToUsers: false,
+  gameTime: '',
 };

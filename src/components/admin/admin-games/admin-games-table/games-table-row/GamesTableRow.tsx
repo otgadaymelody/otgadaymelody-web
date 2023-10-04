@@ -19,6 +19,8 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
   seatsOccupied,
   seats,
   applications,
+  showToUsers,
+  editGame,
 }): React.ReactElement => {
   const deviceType = useDeviceType();
   const isMobile = deviceType === 'mobile';
@@ -68,7 +70,11 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
               e.stopPropagation();
             }}
           >
-            <DropDownMenu onClick={clickToButtonMove} btns={DROPDOWMENUBUTTONS} />
+            <DropDownMenu
+              onClick={clickToButtonMove}
+              btns={DROPDOWMENUBUTTONS}
+              editGame={() => editGame(Number(id))}
+            />
           </div>
         </td>
       ) : (
@@ -80,7 +86,7 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
         {theme}
       </td>
       <td className="games-table__data td-flex" data-label="Дата">
-        {dateInfo.day} {dateInfo.month}
+        {dateInfo}
       </td>
       <td className="games-table__data td-flex" data-label="Цена">
         {price}
@@ -92,6 +98,9 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
       <td className="games-table__data td-flex" data-label="Регистраций">
         {applications}
       </td>
+      <td className="games-table__data td-flex" data-label="Показать пользователю">
+        {showToUsers ? 'ДА' : 'НЕТ'}
+      </td>
       {!isMobile && (
         <td className="games-table__data games-table__data_position-absolute">
           <div
@@ -102,7 +111,11 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
               e.stopPropagation();
             }}
           >
-            <DropDownMenu onClick={clickToButtonMove} btns={DROPDOWMENUBUTTONS} />
+            <DropDownMenu
+              onClick={clickToButtonMove}
+              btns={DROPDOWMENUBUTTONS}
+              editGame={() => editGame(Number(id))}
+            />
           </div>
           <button
             onBlur={onBlurDropDownButton}

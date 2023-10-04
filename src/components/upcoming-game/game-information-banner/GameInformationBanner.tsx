@@ -33,8 +33,8 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
           <div className="game-information-banner__price">
             <div className="game-information-banner__price-amount">
               <PriceImg />
-              <span>{game.gameBasePrice}</span>
-              <span>{game.gameCurrencyPrice === 'rub' ? 'р' : ''}</span>
+              <span>{game.priceValue}</span>
+              <span>р</span>
             </div>
             <span className="game-information-banner__price-person">С человека</span>
           </div>
@@ -45,9 +45,7 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
             <LocationImg />
             <span>{game.gameLocationName}</span>
           </div>
-          <address className="game-information-banner__address">
-            {game.gameCityName}, {game.gameAddress.street}, {game.gameAddress.building}
-          </address>
+          <address className="game-information-banner__address">{game.address}</address>
         </div>
       </div>
       <div className="game-information-banner__buttons">
