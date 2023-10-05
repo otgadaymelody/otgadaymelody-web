@@ -15,7 +15,7 @@ const GameData = (): React.ReactElement => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!!gameId) {
+    if (gameId) {
       axios
         .get(`/api/admin/game?gameId=${gameId}`)
         .then((res) => {
