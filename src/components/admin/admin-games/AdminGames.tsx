@@ -21,8 +21,8 @@ const AdminGames: FC = () => {
     setSelected(value);
   };
 
-  const editGame = (id: number) => {
-    const gameToEdit = games.find((game) => game.id == String(id));
+  const editGame = (id: number): void => {
+    const gameToEdit = games.find((game) => String(game.id) === String(id));
     setGameToEdit(gameToEdit);
     setShowModal(true);
     document.body.style.overflow = 'hidden';
