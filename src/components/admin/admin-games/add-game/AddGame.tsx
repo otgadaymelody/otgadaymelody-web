@@ -7,6 +7,7 @@ import { StepThree } from './add-game-steps/StepThree';
 import { INITIAL_STEPS_DATA, type StepsProps } from './add-game-steps/StepsProps';
 import './AddGame.css';
 import axios from 'axios';
+import { GameAdmin } from '../admin-games-table/AdminGamesTableProps';
 
 const ADD_GAME_FORM_BTN_CLASSES = {
   buttonForm: 'game-form__add-btn',
@@ -30,7 +31,7 @@ interface Location {
   locationName: string;
 }
 
-const AddGame: FC<any> = ({ gameToEdit }) => {
+const AddGame: FC<any> = ({ gameToEdit }: { gameToEdit: GameAdmin }) => {
   const [formStep, setFormStep] = useState<number>(1);
   const [formData, setFormData] = useState<any>();
   const [gameTypes, setGameTypes] = useState<GameType[]>([]);
@@ -48,10 +49,10 @@ const AddGame: FC<any> = ({ gameToEdit }) => {
     setFormStep((current) => current - 1);
   };
 
-  if (gameToEdit && gameToEdit.gameDate.split) {
+  if (gameToEdit?.gameDate?.split) {
     copyGameToEdit = { ...gameToEdit };
     const d = gameToEdit.gameDate.split('/');
-    copyGameToEdit.gameDate = d[2] + '-' + d[1] + '-' + d[0];
+    copyGameToEdit.gameDate = `${d[2]}-${d[1]}-'${d[0]}`;
   }
 
   const { control, formState, getValues, setValue, reset } = useForm<StepsProps>({
@@ -79,8 +80,8 @@ const AddGame: FC<any> = ({ gameToEdit }) => {
           window.location.reload();
           alert('Игра добавлена');
         })
-        .catch((err: any) => {
-          alert(`Ошибка: ${err?.response?.data?.message ?? ''}`);
+        .catch((err: { response: { data: { message: string } } }) => {
+          alert(`Ошибка: ${String(err?.response?.data?.message) ?? ''}`);
         });
     } else {
       axios
@@ -102,7 +103,7 @@ const AddGame: FC<any> = ({ gameToEdit }) => {
           window.location.reload();
           alert('Игра обновлена');
         })
-        .catch((err: any) => {
+        .catch((err: { response: { data: { message: string } } }) => {
           alert(`Ошибка: ${err?.response?.data?.message ?? ''}`);
         });
     }
