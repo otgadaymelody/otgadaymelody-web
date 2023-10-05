@@ -7,7 +7,7 @@ import { StepThree } from './add-game-steps/StepThree';
 import { INITIAL_STEPS_DATA, type StepsProps } from './add-game-steps/StepsProps';
 import './AddGame.css';
 import axios from 'axios';
-import { GameAdmin } from '../admin-games-table/AdminGamesTableProps';
+import { type GameAdmin } from '../admin-games-table/AdminGamesTableProps';
 
 const ADD_GAME_FORM_BTN_CLASSES = {
   buttonForm: 'game-form__add-btn',
@@ -56,7 +56,7 @@ const AddGame: FC<any> = ({ gameToEdit }: { gameToEdit: GameAdmin }) => {
   }
 
   const { control, formState, getValues, setValue, reset } = useForm<StepsProps>({
-    defaultValues: copyGameToEdit || INITIAL_STEPS_DATA,
+    defaultValues: copyGameToEdit ?? INITIAL_STEPS_DATA,
   });
 
   const onSubmit = (): void => {

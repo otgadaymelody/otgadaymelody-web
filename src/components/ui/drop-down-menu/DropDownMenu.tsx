@@ -9,7 +9,7 @@ interface DropDownBtnsType {
 interface DropDownMenuPropsType {
   btns: DropDownBtnsType[];
   onClick: MouseEventHandler;
-  editGame: () => {};
+  editGame: () => unknown;
 }
 
 const DropDownMenu: React.FC<DropDownMenuPropsType> = ({

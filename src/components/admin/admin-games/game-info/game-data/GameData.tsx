@@ -15,15 +15,17 @@ const GameData = (): React.ReactElement => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get(`/api/admin/game?gameId=${gameId}`)
-      .then((res) => {
-        setGameData(res.data);
-        setErrorMessage('');
-      })
-      .catch((err) => {
-        setErrorMessage(err.messsage);
-      });
+    if (!!gameId) {
+      axios
+        .get(`/api/admin/game?gameId=${gameId}`)
+        .then((res) => {
+          setGameData(res.data);
+          setErrorMessage('');
+        })
+        .catch((err) => {
+          setErrorMessage(err.messsage);
+        });
+    }
   }, []);
 
   const toNavigate = useCallback(() => {
