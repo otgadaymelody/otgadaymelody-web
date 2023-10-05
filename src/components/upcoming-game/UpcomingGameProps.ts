@@ -5,19 +5,23 @@ export declare interface GameInformationBannerProps
   game: UpcomingGameResponseType;
 }
 export declare interface UpcomingGameResponseType {
-  franchiseeId: number;
-  gameAddress: GameAddress;
-  gameBasePrice: string;
-  gameCityId: number;
-  gameCityName: string;
-  gameCurrencyPrice: string;
+  franchiseeId?: number;
+  gameBasePrice?: string;
+  gameCityId?: number;
+  gameCityName?: string;
+  gameCurrencyPrice?: string;
   gameDate: string;
   gameLocationName: string;
   gameName: string;
   gameTime: string;
   gameType: string;
-  id: number;
+  id: string;
   info: InfoType;
+  address: string;
+  cityName: string;
+  gameDescription: string;
+  priceValue: number;
+  gameLocationId: string;
 }
 
 interface GameAddress {

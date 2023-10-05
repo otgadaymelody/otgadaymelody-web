@@ -61,7 +61,7 @@ input[type='date']::-webkit-clear-button {
   position: fixed;
   top: 11%;
   right: 1%;
-  z-index: 1;
+  z-index: 1000;
 }
 
 @media (min-width: 744px) {

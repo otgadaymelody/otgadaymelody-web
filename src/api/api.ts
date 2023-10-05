@@ -1,9 +1,16 @@
 import axios from 'axios';
 
-export const instance = axios.create({
-  baseURL: 'https://www.otgadaymelody.ru/api/',
-  withCredentials: true,
-});
+export const instance = axios.create();
+
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response.status === 403) {
+      // redirect to 403 page
+      window.location.href = '/403';
+    }
+  },
+);
 
 export const api = {
   async getNextGame() {

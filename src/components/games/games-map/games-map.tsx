@@ -9,11 +9,10 @@ const GamesMap: FC<GameProps> = ({ game }): React.ReactElement => {
   const gameDay: number = date.getDate();
   const gameMonth: string = MONTHS[date.getMonth()];
   const gameDayOfWeek: string = WEEKDAYS[date.getDay()];
-  const coordinatesX: number = game.info.coordinates[0];
-  const coordinatesY: number = game.info.coordinates[1];
-  const price: string = game.gameBasePrice;
-  const street: string = game.gameAddress.street;
-  const building: string = game.gameAddress.building;
+  const coordinatesY: number = Number(game.info.coordinates[0]);
+  const coordinatesX: number = Number(game.info.coordinates[1]);
+  const price: string = game.priceValue;
+  const address: string = game.address;
 
   return (
     <section className="games-map">
@@ -31,11 +30,7 @@ const GamesMap: FC<GameProps> = ({ game }): React.ReactElement => {
                 <GamesMapAddress icon={false} header="0 p" text="C человека" />
               )}
             </div>
-            <GamesMapAddress
-              icon={true}
-              header={game.gameLocationName}
-              text={`${street}, ${building}`}
-            />
+            <GamesMapAddress icon={true} header={game.gameLocationName} text={`${address}`} />
           </div>
         </div>
         <div className="games-map__location">

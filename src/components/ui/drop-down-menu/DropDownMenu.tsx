@@ -9,11 +9,13 @@ interface DropDownBtnsType {
 interface DropDownMenuPropsType {
   btns: DropDownBtnsType[];
   onClick: MouseEventHandler;
+  editGame: () => {};
 }
 
 const DropDownMenu: React.FC<DropDownMenuPropsType> = ({
   btns,
   onClick,
+  editGame,
 }: DropDownMenuPropsType) => {
   const clickToButtonMove = useCallback(
     (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
@@ -23,19 +25,23 @@ const DropDownMenu: React.FC<DropDownMenuPropsType> = ({
   );
   return (
     <div className={`dropdown-menu__wrapper`}>
-      {btns.map((btn: DropDownBtnsType, index: number) => {
-        return (
-          <button
-            onMouseDown={(e) => {
-              clickToButtonMove(e);
-            }}
-            key={index}
-            className={`dropdown-menu__button dropdown-menu__button_${btn.btnColor}`}
-          >
-            {btn.nameBtn}
-          </button>
-        );
-      })}
+      <button
+        onMouseDown={() => {
+          editGame();
+        }}
+        className={`dropdown-menu__button dropdown-menu__button_black`}
+      >
+        Редактировать
+      </button>
+
+      <button
+        onMouseDown={(e) => {
+          clickToButtonMove(e);
+        }}
+        className={`dropdown-menu__button dropdown-menu__button_pink`}
+      >
+        Удалить
+      </button>
     </div>
   );
 };

@@ -89,7 +89,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
           >
             {futureGames.map((item, index) => (
               <SwiperSlide key={item.id} className={'future-games-list__game-slide_mobile'}>
-                <FutureGame className={'future-games-list__game'} game={item} index={index + 1} />
+                <FutureGame className={'future-games-list__game'} game={item} />
               </SwiperSlide>
             ))}
             <div
@@ -136,7 +136,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
             >
               {futureGames.map((item, index) => (
                 <SwiperSlide key={item.id} className={'future-games-list__game-slide'}>
-                  <FutureGame className={'future-games-list__game'} game={item} index={index + 1} />
+                  <FutureGame className={'future-games-list__game'} game={item} />
                 </SwiperSlide>
               ))}
               <div className={futureButtonsWrapper}>

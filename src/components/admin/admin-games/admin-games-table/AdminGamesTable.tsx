@@ -1,10 +1,13 @@
 import React, { type FC } from 'react';
-import { GAMES_TABLE_DATA, PAST_GAMES_TABLE_DATA } from './gamesTableData.consts';
 import GamesTableRow from './games-table-row/GamesTableRow';
-import { type SelectedOptions } from './AdminGamesTableProps';
+import { type GameAdmin, type SelectedOptions } from './AdminGamesTableProps';
 import './AdminGamesTable.css';
 
-const AdminGamesTable: FC<{ selected: SelectedOptions }> = ({ selected }) => {
+const AdminGamesTable: FC<{
+  selected: SelectedOptions;
+  games: GameAdmin[];
+  editGame: (id: number) => any;
+}> = ({ selected, games = [], editGame }) => {
   return (
     <>
       <table className="games-table">
@@ -16,35 +19,40 @@ const AdminGamesTable: FC<{ selected: SelectedOptions }> = ({ selected }) => {
             <th className="games-table__head-item">Цена</th>
             <th className="games-table__head-item">Мест на игре</th>
             <th className="games-table__head-item">Заявки</th>
+            <th className="games-table__head-item">Видна пользователю</th>
             <th className="games-table__head-item"></th>
           </tr>
         </thead>
         <tbody className="games-table__body tbody">
           {selected === 'upcoming'
-            ? GAMES_TABLE_DATA.map((item, index) => (
+            ? games.map((item, index) => (
                 <GamesTableRow
                   key={index}
                   id={item.id}
-                  title={item.title}
-                  theme={item.theme}
-                  dateInfo={item.dateInfo}
-                  price={item.price}
-                  seatsOccupied={item.seatsOccupied}
-                  seats={item.seats}
-                  applications={item.applications}
+                  title={item.gameName}
+                  theme={item.gameType}
+                  dateInfo={item.gameDate}
+                  price={item.priceValue}
+                  seatsOccupied={'Null'}
+                  seats={item.maxPlayersCount}
+                  showToUsers={item.showToUsers}
+                  applications={'Null'}
+                  editGame={(id) => editGame(Number(item.id))}
                 />
               ))
-            : PAST_GAMES_TABLE_DATA.map((item, index) => (
+            : games.map((item, index) => (
                 <GamesTableRow
                   key={index}
                   id={item.id}
-                  title={item.title}
-                  theme={item.theme}
-                  dateInfo={item.dateInfo}
-                  price={item.price}
-                  seatsOccupied={item.seatsOccupied}
-                  seats={item.seats}
-                  applications={item.applications}
+                  title={item.gameName}
+                  theme={item.gameType}
+                  dateInfo={item.gameDate}
+                  price={item.priceValue}
+                  seatsOccupied={'Null'}
+                  seats={item.maxPlayersCount}
+                  showToUsers={item.showToUsers}
+                  applications={'Null'}
+                  editGame={(id) => editGame(Number(item.id))}
                 />
               ))}
         </tbody>
