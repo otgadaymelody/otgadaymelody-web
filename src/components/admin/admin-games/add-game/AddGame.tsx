@@ -31,7 +31,13 @@ interface Location {
   locationName: string;
 }
 
-const AddGame: FC<any> = ({ gameToEdit }: { gameToEdit: GameAdmin }) => {
+const AddGame: FC<any> = ({
+  gameToEdit,
+  close,
+}: {
+  gameToEdit: GameAdmin;
+  close: () => unknown;
+}) => {
   const [formStep, setFormStep] = useState<number>(1);
   const [formData, setFormData] = useState<any>();
   const [gameTypes, setGameTypes] = useState<GameType[]>([]);
@@ -143,18 +149,14 @@ const AddGame: FC<any> = ({ gameToEdit }: { gameToEdit: GameAdmin }) => {
       .then((res) => {
         setGameTypes(res.data as unknown as GameType[]);
       })
-      .catch((err) => {
-        console.log('2', err);
-      });
+      .catch(() => {});
 
     axios
       .get('/api/admin/game/locations')
       .then((res) => {
         setLocations(res.data as unknown as Location[]);
       })
-      .catch((err) => {
-        console.log('2', err);
-      });
+      .catch(() => {});
   }, []);
 
   function getStepDescription(step: number): ReactNode {
@@ -228,7 +230,7 @@ const AddGame: FC<any> = ({ gameToEdit }: { gameToEdit: GameAdmin }) => {
             />
           )}
           {formStep < 2 ? (
-            <button type="button" className="game-form__cancel-btn">
+            <button type="button" className="game-form__cancel-btn" onClick={close}>
               Отменить
             </button>
           ) : (

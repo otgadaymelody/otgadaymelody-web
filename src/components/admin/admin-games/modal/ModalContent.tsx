@@ -15,7 +15,7 @@ const ModalContent: FC<ModalContentProps> = ({ setShowModal, gameToEdit }) => {
 
   return (
     <div className="modal-content">
-      <AddGame gameToEdit={gameToEdit} />
+      <AddGame gameToEdit={gameToEdit} close={handleClickCloseButton} />
       <button className="modal-close-btn" onClick={handleClickCloseButton}>
         <img src={closeIcon} alt="крестик" />
       </button>

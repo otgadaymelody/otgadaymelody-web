@@ -53,19 +53,29 @@ const Header: FC = () => {
           </nav>
         )}
       </div>
-      {isDesktop 
-      ? (
+      {isDesktop ? (
         <div className="header__btns">
-          <BaseButton title="Нижний Новгород" img={location} />
-          <UserLogo className="header__social-btn" />
+          <BaseButton
+            title="Нижний Новгород"
+            img={location}
+            onClick={() => {
+              navigate('/');
+            }}
+          />
+          {/* <UserLogo className="header__social-btn" /> */}
         </div>
       ) : (
         <>
-          {notMobileOrTablet && <UserLogo className="header__social-btn" />}
-          <LocationBtn className="header__location-btn" />
+          {/* {notMobileOrTablet && <UserLogo className="header__social-btn" />} */}
+          <LocationBtn
+            className="header__location-btn"
+            onClick={() => {
+              navigate('/');
+            }}
+          />
         </>
       )}
-      {notMobileOrTablet && activeMenu && (
+      {!notMobileOrTablet && activeMenu && (
         <BurgerMenu active={activeMenu} setActive={setActiveMenu} />
       )}
     </header>

@@ -7,7 +7,7 @@ import type { TeamBidDataType } from './team-bid-data/TeamBidData.interface';
 import TeamBidData from './team-bid-data/TeamBidData';
 
 const TeamBidsBlock: React.FC = (): React.ReactElement => {
-  const [propToFilter, setPropToFilter] = useState<'all' | 'deleted' | 'approved' | 'pending'>(
+  const [propToFilter, setPropToFilter] = useState<'all' | 'cancel' | 'approved' | 'pending'>(
     'all',
   );
   const [gamesData, setGamesData] = useState<TeamBidDataType[]>();
@@ -24,15 +24,13 @@ const TeamBidsBlock: React.FC = (): React.ReactElement => {
           setIsLoaded(true);
           isLoaded && handleSort(propToFilter);
         })
-        .catch((err) => {
-          console.log(err);
-        });
+        .catch(() => {});
   }, [isLoaded]);
 
-  const handleSort = (propToFilter: 'all' | 'deleted' | 'approved' | 'pending'): void => {
+  const handleSort = (propToFilter: 'all' | 'cancel' | 'approved' | 'pending'): void => {
     setPropToFilter(propToFilter);
     if (propToFilter === 'all') {
-      setFiltersData(gamesData?.filter((a) => a.status !== 'deleted'));
+      setFiltersData(gamesData?.filter((a) => a.status !== 'cancel'));
     } else {
       setFiltersData(gamesData?.filter((a) => a.status === propToFilter));
     }
@@ -48,17 +46,7 @@ const TeamBidsBlock: React.FC = (): React.ReactElement => {
             <div>Loading...</div>
           ) : (
             filtersData?.map((item: TeamBidDataType, index: number) => (
-              <TeamBidData
-                gamesData={gamesData}
-                key={index}
-                applicationId={item.applicationId}
-                gameId={item.gameId}
-                playersCount={item.playersCount}
-                contactPlayerName={item.contactPlayerName}
-                contactPlayerPhone={item.contactPlayerPhone}
-                status={item.status}
-                teamName={item.teamName}
-              />
+              <TeamBidData key={index} teamBid={item} gamePrice={'500'} />
             ))
           )}
         </div>

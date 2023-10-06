@@ -34,9 +34,7 @@ const GamesTableRow: FC<GamesTableRowProps> = ({
     [isDropDownVisible],
   );
 
-  const clickToButtonMove = useCallback((): void => {
-    console.log('click');
-  }, []);
+  const clickToButtonMove = useCallback((): void => {}, []);
 
   const onBlurDropDownButton = useCallback(() => {
     setisDropDownVisible(false);

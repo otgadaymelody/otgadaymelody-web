@@ -34,7 +34,6 @@ const UserAuthForm: FC = () => {
         navigate('/admin');
       })
       .catch((err) => {
-        console.log(err);
         setErrorMessage(err.message);
       });
   };
@@ -63,7 +62,7 @@ const UserAuthForm: FC = () => {
         />
         <Input
           value={authFormData.userPassword}
-          type="text"
+          type="password"
           placeholder="Пароль"
           onChange={handleChange}
           name="userPassword"

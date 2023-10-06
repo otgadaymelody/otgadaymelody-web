@@ -1,132 +1,135 @@
-@media(min-width: 200px) {
-    .team-status__block{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
+@media (min-width: 200px) {
+  .team-status__block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 
-    .status--is_pending, .status--is_approved, .status--is_deleted{
-        margin-bottom: 16px;
-    }
+  .status--is_pending,
+  .status--is_approved,
+  .status--is_deleted {
+    margin-bottom: 16px;
+  }
 
-    .block_deposit{
-        right: 0;
-        bottom: 50px;
-    }
+  .block_deposit {
+    right: 0;
+    bottom: 50px;
+  }
 
-    .team-data__wrapper {
-        border-radius: 8px;
-        border: 1px solid var(--color-bg-slate-0);
-        padding: 24px;
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-    
-    .team-data__insideblock {
-        position: relative;
-    }
-    
-    
-    
-    .up_block {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 16px;
-    }
-    
-    .team-name {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 25px;
-        color: var(--color-bg-gray-900);
-    }
-    
-    .team-leader__data{
-        margin-right: 16px;
-        margin-bottom: 16px;
-    }
-    
-    .team-leader__data-name{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        margin-right: 16px;
-    }
-    
-    .team-leader__data-phone{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-    }
-    
-    .status--is_pending, .status--is_approved,  .status--is_deleted{
-        width: 124px;
-        height: 36px;
-        padding: 8px ;
-        border-radius: 8px;
-        gap: 10px;
-        background-color: var(--color-bg-slate-100);
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        color: #4b5563;
-        margin-right: 16px;
-        text-align: center;
-    }
-    
-    .status--is_approved{
-        background-color: var(--color-lime-light);
-        border: 2px solid var(--color-lime-dark);
-    }
-    
-    .status--is_deleted {
-        background-color: var(--color-pink-light);
-        border: 2px solid var(--color-pink);
-    }
-    
-    .button__approve{
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        color: #F01F77;
-        background-color: inherit;
-        border: none;
-        margin-right: 16px;
-        cursor: pointer;
-    }
-    
-    .button__delete{
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        color: #6B7280;
-        background-color: inherit;
-        border: none;
-        cursor: pointer;
-    
-    }
-    
-    .block_deposit{
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 25px;
-        color: var(--color-bg-gray-900);
-        position: absolute;
-        right: 0;
-        bottom: 5px;
-    }
+  .team-data__wrapper {
+    border-radius: 8px;
+    border: 1px solid var(--color-bg-slate-0);
+    padding: 24px;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .team-data__insideblock {
+    position: relative;
+  }
+
+  .up_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .team-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--color-bg-gray-900);
+  }
+
+  .team-leader__data {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  .team-leader__data-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-right: 16px;
+  }
+
+  .team-leader__data-phone {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .status--is_pending,
+  .status--is_approved,
+  .status--is_deleted {
+    width: 124px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 8px;
+    gap: 10px;
+    background-color: var(--color-bg-slate-100);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #4b5563;
+    margin-right: 16px;
+    text-align: center;
+  }
+
+  .status--is_approved {
+    background-color: var(--color-lime-light);
+    border: 2px solid var(--color-lime-dark);
+  }
+
+  .status--is_deleted {
+    background-color: var(--color-pink-light);
+    border: 2px solid var(--color-pink);
+  }
+
+  .button__approve {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #f01f77;
+    background-color: inherit;
+    border: none;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .button__delete {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #6b7280;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  .block_deposit {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--color-bg-gray-900);
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+  }
 }
 
-@media(min-width: 400px) {
-    .team-status__block{
-        flex-direction: row;
-        align-items: center;
-    }
+@media (min-width: 400px) {
+  .team-status__block {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .block_deposit{
-        bottom: 10px;
-    }
-    .status--is_pending, .status--is_approved, .status--is_deleted{
-        margin-bottom: 0;
-    }
-    }
+  .block_deposit {
+    bottom: 10px;
+  }
+  .status--is_pending,
+  .status--is_approved,
+  .status--is_deleted {
+    margin-bottom: 0;
+  }
+}
