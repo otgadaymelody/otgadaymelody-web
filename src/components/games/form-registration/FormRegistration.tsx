@@ -196,7 +196,7 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
         <p className="form-registration-body__description">
           <span>Нажимая кнопку «Отправить» я подтверждаю, что согласен c </span>
           <span className="form-registration-body__description-selection">
-            условиями пользовательского соглашения
+            <a href={'https://vk.com/otgaday.melody'}>условиями пользовательского соглашения</a>
           </span>
         </p>
       </div>

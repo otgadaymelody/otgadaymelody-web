@@ -49,7 +49,12 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   const slidesPerViewCountDesktop = getSlidesPerViewCountDesktop(futureGames.length);
   const slidesPerViewCountLargeDesktop = getSlidesPerViewCountLargeDesktop(futureGames.length);
-  const containerSliderSize = getContainerSliderSize(isTablet, isTabletLg, futureGames.length);
+  const containerSliderSize = getContainerSliderSize(
+    isTablet,
+    isTabletLg,
+    isMobile,
+    futureGames.length,
+  );
   const futureButtonsWrapper = getButtonsWrapperClass(
     futureGames.length,
     isTablet,
