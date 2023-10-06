@@ -50,7 +50,7 @@
 }
 .upcoming-game__img {
   position: absolute;
-  height: 90%;
+  height: 84%;
   top: 0;
 }
 .banner__mediator_top-right {
@@ -135,6 +135,6 @@
     border-radius: var(--border-lg);
   }
   .upcoming-game__img {
-    left: -62px;
+    left: -38px;
   }
 }
