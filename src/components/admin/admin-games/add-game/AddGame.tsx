@@ -149,14 +149,14 @@ const AddGame: FC<any> = ({
       .then((res) => {
         setGameTypes(res.data as unknown as GameType[]);
       })
-      .catch((err) => {});
+      .catch(() => {});
 
     axios
       .get('/api/admin/game/locations')
       .then((res) => {
         setLocations(res.data as unknown as Location[]);
       })
-      .catch((err) => {});
+      .catch(() => {});
   }, []);
 
   function getStepDescription(step: number): ReactNode {

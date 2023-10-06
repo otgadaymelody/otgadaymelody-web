@@ -24,7 +24,7 @@ const TeamBidsBlock: React.FC = (): React.ReactElement => {
           setIsLoaded(true);
           isLoaded && handleSort(propToFilter);
         })
-        .catch((err) => {});
+        .catch(() => {});
   }, [isLoaded]);
 
   const handleSort = (propToFilter: 'all' | 'cancel' | 'approved' | 'pending'): void => {

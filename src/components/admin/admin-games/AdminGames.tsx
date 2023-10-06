@@ -57,7 +57,6 @@ const AdminGames: FC = () => {
             // redirect to 403 page
             window.location.href = '/user-auth-admin';
           }
-          console.log('2', err);
         });
     } else {
       axios
