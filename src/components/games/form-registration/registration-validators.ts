@@ -46,7 +46,7 @@ export const validateTelNumber = (value: string): ValidationReturnType => {
   if (value.length < 11) {
     return {
       valid: false,
-      errorMessage: 'Номер слишком короткий',
+      errorMessage: 'Номер слишком короткий, начните с 7 или 8',
     };
   }
   let formattedPhoneNumber = '+7(';
