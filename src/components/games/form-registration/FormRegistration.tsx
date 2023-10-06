@@ -108,7 +108,7 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
           clickClose={closePopUp}
           title="Поздравляем с регистрацией на игру"
           mainText="Приходите играть и наслаждаться музыкой вместе с нами!"
-          noteText="Не забудьте проверить свою почту, где мы отправили вам информацию об игре."
+          noteText="Наш менеджер скоро свяжется с вами по указанному номеру"
           image={partyPopper}
         />
       )}
