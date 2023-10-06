@@ -9,7 +9,7 @@ import { scrollToSection } from '../../utils/scrollToSection';
 
 const MainBanner = (): React.ReactElement => {
   const onClickHandler = (): void => {
-   scrollToSection('#future-games-list')
+    scrollToSection('#future-games-list');
   };
 
   const deviceType = useDeviceType();
@@ -53,11 +53,6 @@ const MainBanner = (): React.ReactElement => {
           alt={'Девушка с микрофоном'}
         />
       </div>
-      {isMobile && (
-        <div className="banner__dots">
-          <img src={dots} alt={'Точки'} />
-        </div>
-      )}
     </section>
   );
 };
