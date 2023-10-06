@@ -42,7 +42,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
       .get('api/next-game')
       .then((res) => {
         setNextGame(res.data);
-        setNextGameImgKey(res.data.info.imageSrc.replace(/^\/|\.png$/g, ''));
+        setNextGameImgKey(res.data.gameType);
         setErrorMessage('');
       })
       .catch((err) => {
@@ -56,6 +56,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
     bottomLeft: 'banner__mediator_bottom-left',
     bottomRight: 'banner__mediator_bottom-right',
   };
+  console.log('nextGameImgKey', nextGameImgKey);
   return (
     <>
       {errorMessage !== '' && <NotificationError message={errorMessage} />}
