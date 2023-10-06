@@ -40,6 +40,10 @@
   height: 56px;
 }
 
+input[type='date'] {
+  width: 100%;
+}
+
 .input:focus {
   outline: none;
   border-color: var(--color-bg-gray-500);

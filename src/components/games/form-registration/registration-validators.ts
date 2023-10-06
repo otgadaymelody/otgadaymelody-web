@@ -79,10 +79,11 @@ export const validateTelNumber = (value: string): ValidationReturnType => {
 };
 
 export const validateSocialMediaPage = (value: string): ValidationReturnType => {
-  if (value.length > 250) {
+  const valid = /^(ftp|http|https):\/\/[^ "]+$/.test(value);
+  if (!valid && value) {
     return {
       valid: false,
-      errorMessage: 'Слишком большая ссылка',
+      errorMessage: 'Вставьте ссылку или оставьте пустым',
     };
   }
   return {
@@ -98,7 +99,7 @@ export const validateBirthday = (value: string): ValidationReturnType => {
   if (isNaN(selectedDate.getTime()) || age > 120 || age < 16) {
     return {
       valid: false,
-      errorMessage: 'Неверный формат',
+      errorMessage: 'Игра от 16 лет',
     };
   }
   return {
