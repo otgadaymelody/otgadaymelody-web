@@ -32,9 +32,7 @@ const HeaderAdmin: FC = () => {
           </nav>
         )}
       </div>
-      <div className="header__btns">
-        <PersonalInfo />
-      </div>
+      <div className="header__btns">{/* <PersonalInfo /> */}</div>
     </header>
   );
 };

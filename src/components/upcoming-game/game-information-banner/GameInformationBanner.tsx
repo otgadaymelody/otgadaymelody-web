@@ -49,7 +49,9 @@ const GameInformationBanner: FC<GameInformationBannerProps> = ({
         </div>
       </div>
       <div className="game-information-banner__buttons">
-        <GameButton styles="game-information-banner__btn-more" title="Подробнее" grey />
+        <Link to={path}>
+          <GameButton styles="game-information-banner__btn-more" title="Подробнее" grey />
+        </Link>
         <Link to={path}>
           <GameButton
             onClick={scrollToTop}

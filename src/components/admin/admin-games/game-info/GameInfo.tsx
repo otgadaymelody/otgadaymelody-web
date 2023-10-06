@@ -10,7 +10,7 @@ const GameInfo = (): React.ReactElement => {
         <GameData />
         <div className="game-info__photos">
           <h3 className="game-info__title">Фотоотчет</h3>
-          <div className="game-info__block">Добавить фотоотчет</div>
+          <div className="game-info__block">... функционал в разработке</div>
         </div>
       </div>
 

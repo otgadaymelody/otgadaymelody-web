@@ -37,6 +37,7 @@
   background: inherit;
   padding: 0;
   cursor: pointer;
+  width: 100%;
 }
 .dropdown-menu__button:not(:last-child) {
   margin-bottom: 16px;

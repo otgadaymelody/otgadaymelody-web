@@ -70,8 +70,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
               <img
                 className="upcoming-game__img"
                 src={
-                  nextGameImg[nextGameImgKey || 'women-img'] &&
-                  nextGameImg[nextGameImgKey || 'women-img']?.path
+                  nextGameImg?.[nextGameImgKey || 'women-img']?.path
                     ? nextGameImg[nextGameImgKey || 'women-img']?.path
                     : nextGameImg['women-img']?.path
                 }

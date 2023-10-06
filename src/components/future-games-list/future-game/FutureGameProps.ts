@@ -13,6 +13,7 @@ export declare interface FutureGameResponseType {
   gameTime: string;
   gameType: string;
   id: number;
+  priceValue?: string;
 }
 
 export declare interface GameAddress {

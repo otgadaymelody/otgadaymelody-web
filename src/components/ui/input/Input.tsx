@@ -3,7 +3,7 @@ import './Input.css';
 
 interface InputProps {
   value: string;
-  type?: 'text' | 'tel' | 'date' | 'number';
+  type?: 'text' | 'tel' | 'date' | 'number' | 'password';
   placeholder?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;

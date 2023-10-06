@@ -44,11 +44,13 @@ const AdminGames: FC = () => {
   }, [showModal]);
 
   useEffect(() => {
+    setGames([]);
     if (selected === 'past') {
       axios
         .get('/api/admin/game/list/past')
         .then((res) => {
-          setGames(res.data as unknown as GameAdmin[]);
+          const gamesValues = (res.data as unknown as GameAdmin[]).reverse();
+          setGames(gamesValues);
         })
         .catch((err) => {
           if (err.response.status === 403) {
@@ -61,7 +63,8 @@ const AdminGames: FC = () => {
       axios
         .get('/api/admin/game/list/future')
         .then((res) => {
-          setGames(res.data as unknown as GameAdmin[]);
+          const gamesValues = (res.data as unknown as GameAdmin[]).reverse();
+          setGames(gamesValues);
         })
         .catch((err) => {
           if (err.response.status === 403) {
@@ -82,8 +85,10 @@ const AdminGames: FC = () => {
           <ModalContent setShowModal={setShowModal} gameToEdit={gameToEdit} />
         </Modal>
       </div>
-      {games?.length && (
+      {games?.length ? (
         <AdminGamesTable selected={selected} games={games} editGame={(id) => editGame(id)} />
+      ) : (
+        'Пока что нет игр...'
       )}
     </section>
   );

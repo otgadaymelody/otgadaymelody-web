@@ -7,19 +7,31 @@ import treeDots from '@assets/images/admin/three-dots.svg';
 import './GameData.css';
 import NotificationError from '@components/ui/notifications/notification-error';
 import { useNavigate, useParams } from 'react-router-dom';
+import { type GameAdmin } from '../../admin-games-table/AdminGamesTableProps';
+import DropDownMenu from '@components/ui/drop-down-menu/DropDownMenu';
 
 const GameData = (): React.ReactElement => {
-  const [gameData, setGameData] = useState<GameDataType>(INITIAL_GAME_DATA);
+  const [gameData, setGameData] = useState<GameAdmin>(INITIAL_GAME_DATA);
   const { gameId } = useParams() as { gameId: number | undefined };
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
+  const [isDropDownVisible, setisDropDownVisible] = useState(false);
+
+  const handleClickDropDown = useCallback(
+    (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+      setisDropDownVisible(!isDropDownVisible);
+      e.stopPropagation();
+    },
+    [isDropDownVisible],
+  );
+
   useEffect(() => {
     if (gameId) {
       axios
-        .get(`/api/admin/game?gameId=${gameId}`)
+        .get(`/api/admin/game/action/${gameId}`)
         .then((res) => {
-          setGameData(res.data);
+          setGameData(res.data.response);
           setErrorMessage('');
         })
         .catch((err) => {
@@ -47,9 +59,6 @@ const GameData = (): React.ReactElement => {
           <>
             {!!gameData && (
               <div className="game-info__block">
-                <button className="dots-btn">
-                  <img src={treeDots} alt="три вертикальные точки" />
-                </button>
                 <div className="gamedata__text_large">{gameData.gameType}</div>
                 <div className="gamedata__text_medium">{gameData.gameDate}</div>
 
@@ -66,34 +75,24 @@ const GameData = (): React.ReactElement => {
                 <div className="gamedata__miniblock">
                   <div className="gamedata__subtitle">Место проведения</div>
                   <div className="gamedata__text">{gameData.gameLocationName}</div>
-                  <span className="gamedata__text">
-                    {gameData.gameAddress.street}, {gameData.gameAddress.building}
-                  </span>
+                  <span className="gamedata__text">{gameData.address}</span>
                 </div>
 
                 <div className="gamedata__miniblock">
                   <div className="gamedata__subtitle">Стоимость за одного игрока</div>
-                  <span className="gamedata__text">
-                    {gameData.gameBasePrice} {gameData.gameCurrencyPrice}
-                  </span>
+                  <span className="gamedata__text">{gameData.priceValue}</span>
                 </div>
 
                 <div className="gamedata__miniblock">
                   <div className="gamedata__subtitle">Мест на игре</div>
                   <progress id="seats-progress" value={0.25}></progress>{' '}
-                  <span className="gamedata__text">
-                    {gameData.adminInfo.playersConfirmedCount} /{' '}
-                    {gameData.adminInfo.gameMaxPlayersCount}
-                  </span>
+                  <span className="gamedata__text">NULL / {gameData.maxPlayersCount}</span>
                 </div>
 
                 <div className="gamedata__miniblock">
                   <div className="gamedata__subtitle">Зарегистрировано</div>
                   <div className="gamedata__text">
-                    <span>
-                      {gameData.adminInfo.teamsConfirmedCount} команд{' '}
-                      {gameData.adminInfo.playersConfirmedCount} человек
-                    </span>
+                    <span>NULL команд NULL человек</span>
                   </div>
                 </div>
               </div>

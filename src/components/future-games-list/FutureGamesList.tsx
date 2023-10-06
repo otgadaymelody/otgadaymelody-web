@@ -83,6 +83,10 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
+            navigation={{
+              nextEl: '.future-games-list__slider-button-next',
+              prevEl: '.future-games-list__slider-button-prev',
+            }}
             spaceBetween={16}
             slidesPerView={1}
             className="future-games-list__games-list_mobile"
@@ -92,13 +96,15 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                 <FutureGame className={'future-games-list__game'} game={item} />
               </SwiperSlide>
             ))}
-            <div
-              className={
-                futureGames.length === 2 && isMobile
-                  ? 'future-games-list__button-wrapper_mobile-none'
-                  : 'future-games-list__button-wrapper_mobile'
-              }
-            >
+            <div className={'future-games-list__buttons-wrapper'}>
+              <div className="future-games-list__slider-button-prev">
+                <img src={sliderNextImg} alt={'Предыдущий'} />
+              </div>
+              <div className="future-games-list__slider-button-next">
+                <img src={sliderPrevImg} alt={'Следующий'} />
+              </div>
+            </div>
+            <div className={'future-games-list__button-wrapper_mobile-none'}>
               <BaseButton
                 title="Показать ещё"
                 styles={showMoreBtnClasses}

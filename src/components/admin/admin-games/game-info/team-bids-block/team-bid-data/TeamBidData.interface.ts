@@ -1,10 +1,10 @@
 export interface TeamBidDataType {
-        gamesData?: TeamBidDataType[]
-        applicationId: number;
-        gameId: number;
-        playersCount: number;
-        contactPlayerName: string;
-        contactPlayerPhone: string;
-        status: string;
-        teamName?: string;
+  status: string;
+  teamName?: string;
+  id: string;
+  teamCount: string;
+  phoneNumber: string;
+  socialLink: string;
+  birthDate: string;
+  comment: string;
 }

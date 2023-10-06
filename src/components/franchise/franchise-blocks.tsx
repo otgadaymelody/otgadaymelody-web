@@ -8,12 +8,13 @@ import FranAudience from './franchise-audience/franchise-audience';
 
 const FranchisePage: FC = () => {
   return (
-    <main className="franchise-page">
-      <FranchiseAboutUs />
+    <main className="franchise-page" style={{ minHeight: '80vh' }}>
+      Страница в разработке...
+      {/* <FranchiseAboutUs />
       <BestOfBlock />
       <Download />
       <WhyUs />
-      <FranAudience />
+      <FranAudience /> */}
     </main>
   );
 };

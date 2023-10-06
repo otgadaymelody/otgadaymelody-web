@@ -41,11 +41,11 @@ export const StepOne: FC<any> = ({ control, gameTypes }) => {
         control={control}
         name="gameDescription"
         render={({ field: { onChange, value } }) => (
-          <Input
+          <textarea
             value={value}
-            type="text"
             placeholder="Описание игры"
             onChange={onChange}
+            style={{ height: '200px' }}
             className="game-form__input"
             name="gameDescription"
           />

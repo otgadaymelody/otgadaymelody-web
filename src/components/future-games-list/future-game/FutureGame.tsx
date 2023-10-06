@@ -34,8 +34,8 @@ const FutureGame: FC<FutureGameProps> = ({ game, className }): React.ReactElemen
             </div>
             <div className="future-game__price">
               <PriceImg />
-              <span>{game.gameBasePrice}</span>
-              <span>{game.gameCurrencyPrice === 'rub' ? 'р' : ''}</span>
+              <span>{game.priceValue}</span>
+              <span>р</span>
             </div>
           </div>
           <address className="future-game__address">{game.address}</address>

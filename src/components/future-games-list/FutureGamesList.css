@@ -1,3 +1,13 @@
+.future-games-list__buttons-wrapper {
+  display: flex;
+  width: 111%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  left: 50%;
+}
 .future-games-list {
   display: flex;
   flex-direction: column;
