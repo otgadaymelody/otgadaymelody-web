@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 1fr;
   text-align: start;
+  margin-right: 8px;
 }
 
 .address__header {
