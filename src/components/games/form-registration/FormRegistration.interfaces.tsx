@@ -3,7 +3,7 @@ export interface FormData {
   numPeople: string;
   telNumber: string;
   socialMediaPage: string;
-  birthday: string;
+  comment: string;
 }
 
 export interface ErrorData {
@@ -11,7 +11,7 @@ export interface ErrorData {
   numPeople: boolean;
   telNumber: boolean;
   socialMediaPage: boolean;
-  birthday: boolean;
+  comment: boolean;
 }
 
 export interface ErrorMessagesData {
@@ -19,5 +19,5 @@ export interface ErrorMessagesData {
   numPeople: string;
   telNumber: string;
   socialMediaPage: string;
-  birthday: string;
+  comment: string;
 }

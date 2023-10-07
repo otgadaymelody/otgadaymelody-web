@@ -28,6 +28,11 @@ const AdminGames: FC = () => {
     document.body.style.overflow = 'hidden';
   };
 
+  const createGame = (): void => {
+    setGameToEdit(null);
+    handleModalOpen();
+  };
+
   const handleModalOpen = useCallback(() => {
     setShowModal(true);
     document.body.style.overflow = 'hidden';
@@ -79,7 +84,7 @@ const AdminGames: FC = () => {
       <div className="admin-games__bar">
         <h2 className="admin-games__title">Игры</h2>
         <GamesSwitch onChange={handleChange} selected={selected} />
-        <BaseButton title="Добавить игру" onClick={handleModalOpen} />
+        <BaseButton title="Добавить игру" onClick={createGame} />
         <Modal showModal={showModal} onClose={handleModalClose} clickOutside={handleClickOutside}>
           <ModalContent setShowModal={setShowModal} gameToEdit={gameToEdit} />
         </Modal>
