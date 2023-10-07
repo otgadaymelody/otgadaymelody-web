@@ -55,10 +55,8 @@ const AddGame: FC<any> = ({
     setFormStep((current) => current - 1);
   };
 
-  if (gameToEdit?.gameDate?.split) {
+  if (gameToEdit?.gameDate) {
     copyGameToEdit = { ...gameToEdit };
-    const d = gameToEdit.gameDate.split('/');
-    copyGameToEdit.gameDate = `${d[2]}-${d[1]}-'${d[0]}`;
   }
 
   const { control, formState, getValues, setValue, reset } = useForm<StepsProps>({
@@ -230,7 +228,13 @@ const AddGame: FC<any> = ({
             />
           )}
           {formStep < 2 ? (
-            <button type="button" className="game-form__cancel-btn" onClick={close}>
+            <button
+              type="button"
+              className="game-form__cancel-btn"
+              onClick={() => {
+                close();
+              }}
+            >
               Отменить
             </button>
           ) : (

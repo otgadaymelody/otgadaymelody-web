@@ -17,6 +17,7 @@ import {
   validateTelNumber,
   validateSocialMediaPage,
   validateBirthday,
+  validateComment,
 } from './registration-validators';
 import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
@@ -61,8 +62,8 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
       validationResult = validateTelNumber(value);
     } else if (name === 'socialMediaPage') {
       validationResult = validateSocialMediaPage(value);
-    } else if (name === 'birthday') {
-      validationResult = validateBirthday(value);
+    } else if (name === 'comment') {
+      validationResult = validateComment(value);
     }
 
     setErrors({ ...errors, [name]: !validationResult.valid });
@@ -83,7 +84,7 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
         teamCount: formData.numPeople,
         phoneNumber: formData.telNumber,
         socialLink: formData.socialMediaPage,
-        birthDate: formData.birthday,
+        comment: formData.comment,
         gameId: gameId,
       })
       .then((response) => {
@@ -169,15 +170,15 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
       />
       <div>
         <Input
-          value={formData.birthday}
-          type="date"
-          placeholder="День рождения"
+          value={formData.comment}
+          type="text"
+          placeholder="Комментарий к заявке"
           onChange={handleChange}
-          name="birthday"
+          name="comment"
           className="input date"
           labelClassName="input-label"
-          error={errors.birthday}
-          errorMessage={errorMessages.birthday}
+          error={errors.comment}
+          errorMessage={errorMessages.comment}
         />
         <p className="form-registration-body__description">
           Если в Вашей команде есть именинник (3 дня до и 3 после), пожалуйста, укажите как его

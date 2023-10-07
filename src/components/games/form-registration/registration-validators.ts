@@ -79,11 +79,11 @@ export const validateTelNumber = (value: string): ValidationReturnType => {
 };
 
 export const validateSocialMediaPage = (value: string): ValidationReturnType => {
-  const valid = /^(ftp|http|https):\/\/[^ "]+$/.test(value);
+  const valid = typeof value === 'string';
   if (!valid && value) {
     return {
       valid: false,
-      errorMessage: 'Вставьте ссылку или оставьте пустым',
+      errorMessage: 'Вставьте ссылку или никнейм',
     };
   }
   return {
@@ -102,6 +102,13 @@ export const validateBirthday = (value: string): ValidationReturnType => {
       errorMessage: 'Игра от 16 лет',
     };
   }
+  return {
+    valid: true,
+    errorMessage: '',
+  };
+};
+
+export const validateComment = (value: string): ValidationReturnType => {
   return {
     valid: true,
     errorMessage: '',

@@ -3,7 +3,7 @@ export const INITIAL_FORM_DATA = {
   numPeople: '',
   telNumber: '',
   socialMediaPage: '',
-  birthday: '',
+  comment: '',
 };
 
 export const INITIAL_ERRORS_STATE = {
@@ -11,7 +11,7 @@ export const INITIAL_ERRORS_STATE = {
   numPeople: false,
   telNumber: false,
   socialMediaPage: false,
-  birthday: false,
+  comment: false,
 };
 
 export const registrationBtnSendClasses = {

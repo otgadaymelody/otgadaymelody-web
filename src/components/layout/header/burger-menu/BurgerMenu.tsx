@@ -16,7 +16,8 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
       <div className="burger-menu">
         <CloseBtn
           className="burger-menu__close-btn"
-          onClick={() => {
+          onClick={(event) => {
+            event.stopPropagation();
             setActive(false);
           }}
         />
@@ -30,7 +31,8 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
                 key={index}
                 hash={item.hash}
                 linkTitleColor="white"
-                onClick={() => {
+                onClick={(event) => {
+                  event.stopPropagation();
                   setActive(false);
                 }}
               />
@@ -42,7 +44,8 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ active, setActive }) => {
               href={SOCIAL_URL.VK}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
+              onClick={(event) => {
+                event.stopPropagation();
                 setActive(false);
               }}
             />
