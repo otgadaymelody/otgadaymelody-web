@@ -22,8 +22,8 @@ const DateInfoBlock: FC<DateInfoBlockProps> = ({
     <div className={className ? `${className} date-info-block` : 'date-info-block'}>
       {oddGameNumberCount && (
         <>
-          <img className="date-info-block__badge date-info-block__badge_left" src={badge1_1} />
-          <img className="date-info-block__badge date-info-block__badge_right" src={badge1_2} />
+          <img className="date-info-block__badge date-info-block__badge_left" src={badge2_1} />
+          <img className="date-info-block__badge date-info-block__badge_right" src={badge2_2} />
         </>
       )}
 

@@ -56,7 +56,7 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
     bottomLeft: 'banner__mediator_bottom-left',
     bottomRight: 'banner__mediator_bottom-right',
   };
-  console.log('nextGameImgKey', nextGameImgKey);
+
   return (
     <>
       {errorMessage !== '' && <NotificationError message={errorMessage} />}
@@ -64,10 +64,6 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
         <section className={`${className} upcoming-game`} id="upcoming-game">
           {isDesktop && (
             <div className="upcoming-game__img-block">
-              <BlockBackground
-                mediatorsClasses={mediatorClasses}
-                className="upcoming-game__img-bg"
-              />
               <img
                 className="upcoming-game__img"
                 src={

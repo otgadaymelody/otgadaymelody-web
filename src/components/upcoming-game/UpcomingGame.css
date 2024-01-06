@@ -1,70 +1,76 @@
 .upcoming-game {
   width: 100%;
 }
+
 .upcoming-game__main-info {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .upcoming-game__info-block {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
+
 .upcoming-game__images-wrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .upcoming-game__registration-info {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .upcoming-game__title {
   color: var(--color-bg-gray-500);
   font: var(--fonts-upcoming-title-DEPRECATED);
   margin: 0;
 }
+
 .upcoming-game__game-title {
   font: var(--fonts-h2-faq-title-DEPRECATED);
   margin: 0;
 }
+
 .upcoming-game__game-description {
   font: var(--fonts-p-main-description-DEPRECATED);
   color: var(--color-bg-gray-700);
 }
+
 .upcoming-game__img-block {
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 .upcoming-game__img-bg {
   height: 452px;
   width: 100%;
   overflow: hidden;
   border-radius: var(--border-base);
 }
-.upcoming-game__img {
-  position: absolute;
-  height: 84%;
-  top: 0;
-}
+
+.upcoming-game__img {}
+
 .banner__mediator_top-right {
   width: 50%;
   height: 50%;
   right: -20%;
   top: -10%;
 }
+
 .banner__mediator_top-left {
   width: 50%;
   height: 40%;
   left: -10%;
   top: -7%;
 }
+
 .banner__mediator_bottom-left {
   width: 70%;
   height: 60%;
@@ -72,6 +78,7 @@
   left: -40%;
   bottom: -40%;
 }
+
 .banner__mediator_bottom-right {
   width: 60%;
   height: 60%;
@@ -79,10 +86,12 @@
   right: -20%;
   bottom: -30%;
 }
+
 .upcoming-game__img-bg svg.banner__mediator_bottom-left {
   z-index: 1;
   filter: blur(9px);
 }
+
 .upcoming-game__img-bg svg.banner__mediator_bottom-right {
   z-index: 1;
   filter: blur(9px);
@@ -92,6 +101,7 @@
   .upcoming-game__main-info {
     gap: 24px;
   }
+
   .upcoming-game__registration-info {
     display: flex;
     flex-direction: column;
@@ -100,12 +110,15 @@
     gap: 16px;
     align-self: stretch;
   }
+
   .upcoming-game__title {
     font-size: var(--text-base);
   }
+
   .upcoming-game__game-title {
     font-size: var(--text-5xl);
   }
+
   .upcoming-game__game-description {
     padding-top: 16px;
     font-size: var(--text-lg);
@@ -117,6 +130,7 @@
     display: flex;
     gap: 88px;
   }
+
   .upcoming-game__info-block {
     width: 757px;
     display: flex;
@@ -126,15 +140,14 @@
     flex: 1 0 0;
     align-self: stretch;
   }
+
   .upcoming-game__img-block {
     overflow: visible;
   }
+
   .upcoming-game__img-bg {
     width: 389px;
     height: 100%;
     border-radius: var(--border-lg);
-  }
-  .upcoming-game__img {
-    left: -38px;
   }
 }
