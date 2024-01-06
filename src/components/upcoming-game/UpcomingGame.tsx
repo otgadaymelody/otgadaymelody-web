@@ -91,10 +91,6 @@ const UpcomingGame: FC<BaseComponent> = ({ className }): React.ReactElement => {
               {isMobile && (
                 <>
                   <div className="upcoming-game__img-block">
-                    <BlockBackground
-                      mediatorsClasses={mediatorClasses}
-                      className="upcoming-game__img-bg"
-                    />
                     <img
                       className="upcoming-game__img"
                       src={nextGameImg[nextGameImgKey || 'women-img']?.path}
