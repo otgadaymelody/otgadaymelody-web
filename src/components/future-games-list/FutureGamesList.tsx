@@ -42,6 +42,8 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   const [futureGames, setFutureGames] = useState<FutureGameResponseType[]>([]);
 
+
+
   const showMoreBtnClasses = {
     buttonForm: 'future-games-list__show-more-btn',
     buttonTitle: 'future-games-list__show-more-btn-title',
@@ -49,6 +51,18 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
 
   const slidesPerViewCountDesktop = getSlidesPerViewCountDesktop(futureGames.length);
   const slidesPerViewCountLargeDesktop = getSlidesPerViewCountLargeDesktop(futureGames.length);
+
+  const [breakPointsSLider, setBreakPointsSLider] = useState({
+    768: {
+      slidesPerView: 2,
+    },
+    1280: {
+      slidesPerView: slidesPerViewCountDesktop,
+    },
+    1920: {
+      slidesPerView: slidesPerViewCountLargeDesktop,
+    },
+  });
   const containerSliderSize = getContainerSliderSize(
     isTablet,
     isTabletLg,
@@ -67,6 +81,17 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
       .get<FutureGameResponseType[]>('api/future-games')
       .then((res) => {
         setFutureGames(res.data);
+        setBreakPointsSLider({
+            768: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: getSlidesPerViewCountDesktop(res?.data.length),
+            },
+            1920: {
+              slidesPerView: getSlidesPerViewCountLargeDesktop(res?.data.length),
+            },
+        });
         setErrorMessage('');
       })
       .catch((err) => {
@@ -125,7 +150,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
         >
           <h2 className="future-games-list__title">Предстоящие игры</h2>
           <div className={containerSliderSize}>
-            <Swiper
+            { (futureGames.length > 0) && <Swiper
               navigation={{
                 nextEl: '.future-games-list__slider-button-next',
                 prevEl: '.future-games-list__slider-button-prev',
@@ -133,17 +158,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
               spaceBetween={24}
               modules={[Navigation]}
               className="future-games-list__games_list"
-              breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                },
-                1280: {
-                  slidesPerView: slidesPerViewCountDesktop,
-                },
-                1920: {
-                  slidesPerView: slidesPerViewCountLargeDesktop,
-                },
-              }}
+              breakpoints={breakPointsSLider}
             >
               {futureGames.map((item, index) => (
                 <SwiperSlide key={item.id} className={'future-games-list__game-slide'}>
@@ -158,7 +173,7 @@ const FutureGamesList: FC<BaseComponent> = ({ className }): React.ReactElement =
                   <img src={sliderPrevImg} alt={'Следующий'} />
                 </div>
               </div>
-            </Swiper>
+            </Swiper>}
           </div>
         </BlockBackground>
       )}

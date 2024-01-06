@@ -5,7 +5,6 @@ export const dateReformatted = (str: string): { date: string; month: string; wee
   const month = myDate.toLocaleString('ru', { month: 'short' });
   const date = myDate.getDate().toString();
   const weekDay = myDate.toLocaleString('ru', { weekday: 'long' });
-
   return {
     date,
     month,
