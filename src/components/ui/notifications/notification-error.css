@@ -1,5 +1,5 @@
 .notification-error__container {
-  width: 300px;
+  width: 360px;
   min-height: 56px;
   border-radius: var(--border-xs);
   border: 2px solid var(--color-red);

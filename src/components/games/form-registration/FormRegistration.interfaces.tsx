@@ -4,6 +4,7 @@ export interface FormData {
   telNumber: string;
   socialMediaPage: string;
   comment: string;
+  email: string;
 }
 
 export interface ErrorData {
@@ -12,6 +13,7 @@ export interface ErrorData {
   telNumber: boolean;
   socialMediaPage: boolean;
   comment: boolean;
+  email: boolean;
 }
 
 export interface ErrorMessagesData {
@@ -20,4 +22,5 @@ export interface ErrorMessagesData {
   telNumber: string;
   socialMediaPage: string;
   comment: string;
+  email: string;
 }

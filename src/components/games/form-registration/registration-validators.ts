@@ -35,7 +35,9 @@ export const validateTelNumber = (value: string): ValidationReturnType => {
   const phoneNumber = value.replace(/[^\d]/g, '');
 
   const phoneCheckNumber = /[0-9]/.test(value);
-  const phoneCheck = /^((8|\+7)[-]?)?(\(?\d{3}\)?[-]?)?[\d\- ]{7,10}$/.test(value);
+  // const phoneCheck = /^((8|\+7)[-]?)?(\(?\d{3}\)?[-]?)?[\d\- ]{7,10}$/.test(value);
+
+  // console.log('phoneCheck', phoneCheck);
 
   if (!phoneCheckNumber) {
     return {
@@ -43,10 +45,10 @@ export const validateTelNumber = (value: string): ValidationReturnType => {
       errorMessage: 'Вводите только цифры',
     };
   }
-  if (value.length < 11) {
+  if (phoneNumber.length < 11) {
     return {
       valid: false,
-      errorMessage: 'Номер слишком короткий, начните с 7 или 8',
+      errorMessage: 'Номер слишком короткий',
     };
   }
   let formattedPhoneNumber = '+7(';
@@ -113,4 +115,20 @@ export const validateComment = (value: string): ValidationReturnType => {
     valid: true,
     errorMessage: '',
   };
+};
+
+export const validateMail = (value: string): ValidationReturnType => {
+  const re = /\S+@\S+\.\S+/;
+  const isEmail = re.test(value);
+  if (isEmail) {
+    return {
+      valid: true,
+      errorMessage: '',
+    };
+  }
+  return {
+    valid: false,
+    errorMessage: 'неверный формат email',
+  };
+
 };

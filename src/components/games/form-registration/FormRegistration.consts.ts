@@ -4,6 +4,7 @@ export const INITIAL_FORM_DATA = {
   telNumber: '',
   socialMediaPage: '',
   comment: '',
+  email: '',
 };
 
 export const INITIAL_ERRORS_STATE = {
@@ -12,6 +13,7 @@ export const INITIAL_ERRORS_STATE = {
   telNumber: false,
   socialMediaPage: false,
   comment: false,
+  email: false
 };
 
 export const registrationBtnSendClasses = {
