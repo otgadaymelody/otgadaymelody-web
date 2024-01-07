@@ -18,6 +18,7 @@ import {
   validateSocialMediaPage,
   validateBirthday,
   validateComment,
+  validateMail,
 } from './registration-validators';
 import NotificationError from '@components/ui/notifications/notification-error';
 import axios from 'axios';
@@ -42,7 +43,8 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
       formData.teamName &&
       formData.numPeople &&
       formData.telNumber &&
-      formData.socialMediaPage
+      formData.socialMediaPage &&
+      formData.email
     )
       setButtonDisabled(false);
     else setButtonDisabled(true);
@@ -64,6 +66,8 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
       validationResult = validateSocialMediaPage(value);
     } else if (name === 'comment') {
       validationResult = validateComment(value);
+    } else if (name === 'email') {
+      validationResult = validateMail(value);
     }
 
     setErrors({ ...errors, [name]: !validationResult.valid });
@@ -85,7 +89,8 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
         phoneNumber: formData.telNumber,
         socialLink: formData.socialMediaPage,
         comment: formData.comment,
-        gameId: gameId,
+        email: formData.email,
+        gameId,
       })
       .then((response) => {
         setPopUpActive(true);
@@ -156,6 +161,18 @@ const RegistrationForm = ({ gameId }: { gameId: number }): React.ReactElement =>
         required={true}
         error={errors.telNumber}
         errorMessage={errorMessages.telNumber}
+      />
+      <Input
+        value={formData.email}
+        type="mail"
+        placeholder="E-mail капитана"
+        onChange={handleChange}
+        name="email"
+        className="input"
+        labelClassName="input-label"
+        required={true}
+        error={errors.email}
+        errorMessage={errorMessages.email}
       />
       <Input
         value={formData.socialMediaPage}

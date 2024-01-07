@@ -9,7 +9,9 @@
   padding: 24px;
   gap: 14px;
   border: var(--border-xxxs) solid var(--color-bg-slate-200);
+  height: min-content;
 }
+
 .form-registration__title {
   font-weight: var(--weight-bold);
   font-size: var(--text-xl);
@@ -22,20 +24,25 @@
   gap: 15px;
   width: 100%;
 }
+
 .form-registration__btn-send {
   width: 100%;
 }
+
 .form-registration-body__description {
   margin-top: 5px;
   text-align: start;
   font-size: var(--text-sm);
 }
+
 .form-registration-body__description-selection {
   color: var(--color-pink);
 }
+
 input[class~='date']:not(:focus) {
   color: transparent;
 }
+
 input[type='date'] {
   position: relative;
 }
@@ -68,18 +75,22 @@ input[type='date']::-webkit-clear-button {
   .form-registration-body__firstblock {
     flex-direction: column;
   }
+
   .form-registration__title {
     font-size: var(--text-4xl);
   }
+
   .form-registration {
     padding: 32px;
     gap: 24px;
     min-height: 647px;
   }
+
   .server-error {
     top: 14%;
   }
 }
+
 @media (min-width: 1440px) {
   .form-registration-body__firstblock {
     flex-direction: row;
