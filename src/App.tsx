@@ -9,6 +9,16 @@ import './assets/css/layout.css';
 import Layout from '@components/layout/Layout';
 
 function App(): React.ReactElement {
+  const searchParams = new URLSearchParams(document.location.search);
+
+  if (searchParams.get('demoVersion') != null) {
+    return (
+      <div className="App">
+        <Layout />
+      </div>
+    );
+  }
+
   window.location.replace('https://vk.com/otgaday.melody');
 
   return (
